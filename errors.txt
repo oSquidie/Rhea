@@ -1,0 +1,14 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 27: expected ':' not found.
+    transform xflip
+                   ^
+
+File "game/script.rpy", line 28: expected statement.
+    xzoom -1
+            ^
+
+Ren'Py Version: Ren'Py 7.4.0.1167
+Fri Feb 12 11:43:58 2021
