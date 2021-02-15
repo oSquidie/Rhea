@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 3496: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
-    "Although Emma also looked like she was in the state of shock her words were still headstrong."
-    ^
+File "game/script.rpy", line 1704: end of line expected.
+    show Mingluo no eyes at right dissolve
+                                  ^
 
-File "game/script.rpy", line 3519: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "It’s ok if I don’t know."
-                              ^
-
-Ren'Py Version: Ren'Py 7.4.2.1281
-Mon Feb 15 01:42:01 2021
+Ren'Py Version: Ren'Py 7.4.0.1167
+Mon Feb 15 14:36:28 2021

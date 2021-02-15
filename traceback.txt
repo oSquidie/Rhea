@@ -1,22 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 217, in script
-    jump OkSeeker
-ScriptError: could not find label 'OkSeeker'.
+  File "game/images.rpy", line 20, in script
+    define shake = Shake((0, 0, 0, 0), 1.0, dist=15)
+  File "game/images.rpy", line 20, in script
+    define shake = Shake((0, 0, 0, 0), 1.0, dist=15)
+  File "game/images.rpy", line 20, in <module>
+    define shake = Shake((0, 0, 0, 0), 1.0, dist=15)
+NameError: name 'Shake' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 217, in script
-    jump OkSeeker
-  File "renpy/ast.py", line 1711, in execute
-    rv = renpy.game.script.lookup(target)
-  File "renpy/script.py", line 900, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'OkSeeker'.
+  File "renpy/bootstrap.py", line 326, in bootstrap
+    renpy.main.main()
+  File "renpy/main.py", line 515, in main
+    renpy.game.context().run(node)
+  File "game/images.rpy", line 20, in script
+    define shake = Shake((0, 0, 0, 0), 1.0, dist=15)
+  File "game/images.rpy", line 20, in script
+    define shake = Shake((0, 0, 0, 0), 1.0, dist=15)
+  File "renpy/ast.py", line 2148, in execute
+    self.set()
+  File "renpy/ast.py", line 2159, in set
+    value = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "renpy/python.py", line 2135, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/images.rpy", line 20, in <module>
+    define shake = Shake((0, 0, 0, 0), 1.0, dist=15)
+NameError: name 'Shake' is not defined
 
-Windows-10-10.0.19041
-Ren'Py 7.4.2.1281
-Search and Find 1.0
-Sun Feb 14 18:30:51 2021
