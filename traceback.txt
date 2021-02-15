@@ -1,65 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-Executing ATL code at game/images.rpy:20
-  File "game/script.rpy", line 31, in script
-    L "Hey...Have you guys ever wondered what it's like living in a world filled with light?"
-Exception: ATL appears to be in an infinite loop.
+While running game code:
+  File "game/script.rpy", line 217, in script
+    jump OkSeeker
+ScriptError: could not find label 'OkSeeker'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 31, in script
-    L "Hey...Have you guys ever wondered what it's like living in a world filled with light?"
-  File "renpy/ast.py", line 706, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "renpy/exports.py", line 1384, in say
-    who(what, *args, **kwargs)
-  File "renpy/character.py", line 1179, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "renpy/character.py", line 851, in do_display
-    **display_args)
-  File "renpy/character.py", line 601, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "renpy/ui.py", line 298, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "renpy/display/core.py", line 2978, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "renpy/display/core.py", line 3477, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "renpy/display/core.py", line 2359, in draw_screen
-    renpy.config.screen_height,
-  File "render.pyx", line 492, in renpy.display.render.render_screen
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 751, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 751, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 751, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/transform.py", line 927, in render
-    return transform_render(self, width, height, st, at)
-  File "accelerator.pyx", line 116, in renpy.display.accelerator.transform_render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/image.py", line 501, in render
-    return wrap_render(self.target, width, height, st, at)
-  File "renpy/display/image.py", line 307, in wrap_render
-    rend = render(child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/transform.py", line 927, in render
-    return transform_render(self, width, height, st, at)
-  File "accelerator.pyx", line 97, in renpy.display.accelerator.transform_render
-  File "renpy/display/transform.py", line 1105, in update_state
-    fr = self.execute(self, self.st, self.at)
-  File "renpy/atl.py", line 631, in execute
-    action, arg, pause = block.execute(trans, timebase, self.atl_state, events)
-  File "renpy/atl.py", line 866, in execute
-    raise Exception("ATL appears to be in an infinite loop.")
-Exception: ATL appears to be in an infinite loop.
+  File "game/script.rpy", line 217, in script
+    jump OkSeeker
+  File "renpy/ast.py", line 1711, in execute
+    rv = renpy.game.script.lookup(target)
+  File "renpy/script.py", line 900, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'OkSeeker'.
 
+Windows-10-10.0.19041
+Ren'Py 7.4.2.1281
+Search and Find 1.0
+Sun Feb 14 18:30:51 2021
