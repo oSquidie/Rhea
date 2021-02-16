@@ -19,7 +19,7 @@ transform slide:
 
 
 define fade = Fade(0.5, 0.0, 0.5) #scene transistions
-#Lila Sprites#
+#Lila Sprites##
 image Lila happy =  im.Scale("LilaHappy.png", 800, 950)
 image Lila sad = im.Scale("LilaSad.png", 800, 950)
 image Lila angry = im.Scale("LilaAngry.png", 800, 950)
