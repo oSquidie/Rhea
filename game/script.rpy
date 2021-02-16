@@ -1,5 +1,5 @@
 ﻿define L = Character(_("Lila"), color="#ced0ff")
-define m = Character(_("Mingluo"), color="#2e37ff")
+define m = Character(_("Mingluo"), color="#87ddfb")
 define fa = Character(_("Emma"), color="#73fff0")
 define fb = Character(_("Liam"), color="#a673ff")
 define Q = Character ("?")
@@ -3388,6 +3388,9 @@ label VeryUncomfy:
     "What was it that Minglou was hiding?"
     "Not only was she feeling uncomfortable, she was also very curious."
     scene image "InsideDen.png" with fade
+    window hide
+    pause
+    window show
     "When she arrived at the den she noticed that there really was nothing special about the den."
     "Feeling a sense of disappointment, she inch closer hopping whatever is inside might be what she's looking for."
     "But she was stopped by another voice."
