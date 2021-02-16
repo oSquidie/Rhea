@@ -3387,7 +3387,7 @@ label VeryUncomfy:
     "Before Minglou could say anything she ran to the den."
     "What was it that Minglou was hiding?"
     "Not only was she feeling uncomfortable, she was also very curious."
-    scene image "InsideDen.png" with fade
+    scene image "OutsideDen.png" with fade
     window hide
     pause
     window show
