@@ -768,13 +768,14 @@ label WarmCave:
     "While her eyes were still glued to the paper Minglou picked it up and in a one moment the paper went into flames."
     scene image "Cave.png" with fade
     L "Minglou!"
+    show Mingluo page at right with dissolve
     show Lila shocked at left with dissolve
     "Lila panicked as she screamed for Minglou."
     "Minglou is a water spirit."
     "Fire might cause her harm."
     "Yet in a blink of an eye the flames went out."
     "Standing in front of her was Minglou smiling while handing over the paper to Lila."
-    "he blank piece of paper now filled with symbols is in her face."
+    "The blank piece of paper now filled with symbols is in her face."
     show Lila stunned at left with dissolve
     show Mingluo smile at right with dissolve
     "Trying to wrap her head around everything Lila became very confused."
@@ -957,7 +958,7 @@ label MingOk:
     m "I even went so far to show you this priceless artifact."
     m "Why don’t you appreciate this moment you have?"
     m "It’s a bit useless to worry about unnecessary things."
-
+    show Mingluo page at right with dissolve
     "Minglou handed Lila the paper that was in flames."
     "She took the paper and looked at it."
     "Not even a single sign showed that it was in flames."
@@ -1069,8 +1070,8 @@ label MissedY:
     show Liam surprised at right with dissolve
     fb "That is so interesting…"
     show Emma pout at emmaflip with dissolve
+    show Liam page at right with dissolve
     "Liam said as he held out a similar paper."
-    show Liam smug at right with dissolve
     show Lila surprised at left with dissolve
     L "Huh?"
     L "Where did you find that?"
@@ -1205,8 +1206,8 @@ label LiamLook:
      show Liam surprised at right with dissolve
      fb "That is so interesting…"
      show Emma pout at emmaflip with dissolve
+     show Liam page at right with dissolve
      "Liam said as he held out a similar paper."
-     show Liam smug at right with dissolve
      show Lila surprised at left with dissolve
      L "Huh?"
      L "Where did you find that?"
@@ -1348,8 +1349,8 @@ label MinglouHi:
      show Liam surprised at right with dissolve
      fb "That is so interesting…"
      show Emma pout at emmaflip with dissolve
+     show Liam page at right with dissolve
      "Liam said as he held out a similar paper."
-     show Liam smug at right with dissolve
      show Lila surprised at left with dissolve
      L "Huh?"
      L "Where did you find that?"
@@ -1517,8 +1518,9 @@ label CallOut:
     show Liam surprised at right with dissolve
     fb "That is so interesting…"
     show Emma pout at emmaflip with dissolve
+    show Liam page at right with dissolve
     "Liam said as he held out a similar paper."
-    show Liam smug at right with dissolve
+
     show Lila surprised at left with dissolve
     L "Huh?"
     L "Where did you find that?"
@@ -1957,6 +1959,7 @@ label WarmPlace:
     scene image "Cave.png" with fade
     L "Minglou!"
     show Lila shocked at left with dissolve
+    show Mingluo page at right with dissolve
     "Lila panicked as she screamed for Minglou."
     "Minglou is a water spirit."
     "Fire might cause her harm."
@@ -2044,6 +2047,7 @@ label MinglouH:
      L "Ok!"
 
      "Just as the two were about to leave."
+     show Mingluo mushroom at right with dissolve
      "Minglou handed her a mushroom."
 
      L "Huh?"
@@ -2141,8 +2145,8 @@ label HiGuys:
     show Liam surprised at right with dissolve
     fb "That is so interesting…"
     show Emma pout at emmaflip with dissolve
+    show Liam page at right with dissolve
     "Liam said as he held out a similar paper."
-
     L "Huh?"
     L "Where did you find that?"
     show Liam surprised at right with dissolve
@@ -2282,6 +2286,7 @@ label LookYouL:
      show Liam surprised at right with dissolve
      fb "That is so interesting…"
      show Emma pout at emmaflip with dissolve
+     show Liam page at right with dissolve
      "Liam said as he held out a similar paper."
 
      L "Huh?"
@@ -2412,7 +2417,8 @@ label IsMingOk:
     m "I even went so far to show you this priceless artifact."
     m "Why don’t you appreciate this moment you have?"
     m "It’s a bit useless to worry about unnecessary things."
-
+    show Mingluo page at right with dissolve
+    show Mingluo skeptical at right with dissolve
     "Minglou handed Lila the paper that was in flames."
     "She took the paper and looked at it."
     "Not even a single sign showed that it was in flames."
@@ -2473,9 +2479,9 @@ label IDontCave:
     hide Mingluo disgust at right with dissolve
     hide Lila stunned at left with dissolve
     "As the two were walking out of the cave Lila noticed that the warmth was slowly seeping away from her body."
+    show Mingluo mushroom at right with dissolve
     "Noticing her shivering Minglou held out an enoki mushroom."
     show Lila smile at left with dissolve
-    show Mingluo default at right with dissolve
     m "Take it."
     m "I have no use for it."
 
@@ -2538,6 +2544,7 @@ label NvmGood:
     m "You’re so easy to read…."
     hide Mingluo annoyed at right with dissolve
     hide Lila smile at left with dissolve
+    show Mingluo mushroom at right with dissolve
     "Minglou said as she plucked a few enoki mushrooms."
     "Then she gave them to Lila."
 
@@ -2735,6 +2742,7 @@ label LiamWhaFind:
     show Emma shocked at emmaflip with dissolve
     fb "Ok...So I picked this up in the den..."
     show Lila surprised at left with dissolve
+    show Liam page at right with dissolve
     "Liam said as he held out a piece of paper."
     "The paper was in terrible condition yet the symbols written on the paper seemed to be freshly made."
 
@@ -2804,7 +2812,7 @@ label EmmaLook:
     "Meanwhile, Emma slowly cooled down as well and nodded just as eager to find out why Liam was being so secretive. "
 
     fb "Ok...So I picked this up in the den..."
-
+    show Liam page at right with dissolve
     "Liam said as he held out a piece of paper."
     "The paper was in terrible condition yet the symbols written on the paper seemed to be freshly made."
 
@@ -3107,10 +3115,10 @@ label HUHYOU:
      fb "I’m not sure how I can explain this..."
      fb "A Lot has happened."
      fb "I guess I should start with this."
-
+     show Liam page at right with dissolve
      "Liam said as he held out a piece of paper."
      "The paper was in terrible condition yet the symbols written on the paper seemed to be freshly made."
-     "Emma’s face also darkened."
+     #"Emma’s face also darkened."
      show Lila stunned at left with dissolve
      L "Huh?"
      L "What is it…"
@@ -3163,7 +3171,7 @@ label UsWorried:
     fb "I’m not sure how I can explain this..."
     fb "A Lot has happened."
     fb "I guess I should start with this."
-
+    show Liam page at right with dissolve
     "Liam said as he held out a piece of paper."
     "The paper was in terrible condition yet the symbols written on the paper seemed to be freshly made."
     #"Emma’s face also darkened."
@@ -3243,7 +3251,7 @@ label  ICanHandle:
      "Liam gently smiled at their engarness but soon his gentle demeanor was replaced with a serious tone."
 
      fb "Ok...So I picked this up in the den..."
-
+     show Liam page at right with dissolve
      "Liam said as he held out a piece of paper."
      "The paper was in terrible condition yet the symbols written on the paper seemed to be freshly made."
 

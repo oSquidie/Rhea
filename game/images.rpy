@@ -57,6 +57,8 @@ image Mingluo skeptical =  im.Scale("MingluoSkeptical.png", 960, 1000)
 image Mingluo smile =  im.Scale("MingluoSmile.png", 960, 1000)
 image Mingluo soft =  im.Scale("MingluoSoft.png", 960, 1000)
 image Mingluo sad = im.Scale("MingluoSad.png", 960, 1000)
+image Mingluo mushroom = im.Scale("MingluoMushroom.png", 960, 1000)
+image Mingluo page = im.Scale("MingluoPage.png", 960, 1000)
 ############################################################################
 #Emma Sprites#
 image Emma happy = im.Scale("EmmaHappy.png", 760, 1000)
@@ -84,3 +86,4 @@ image Liam smug = im.Scale("LiamSmug.png", 960, 1200)
 image Liam surprised = im.Scale("Liamsurprised.png", 960, 1200)
 image Liam wink = im.Scale("LiamWink.png", 960, 1200)
 image Liam angry = im.Scale("LiamAngry.png", 960, 1200)
+image Liam page = im.Scale("LiamPage.png", 960, 1200)
