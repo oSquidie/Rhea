@@ -274,7 +274,7 @@ label SeekerLila:
     fa "Hey Liam."
     fa "She already-"
     show Liam wink at right with dissolve
-    fb "What if I wanted to be the seeker and I really want to be ‘it'"
+    fb "What if I wanted to be the seeker and I really want to be 'it'"
     show Emma pout at emmaflip with dissolve
     #"Emma frowned."
     "She knew Liam was going to play with Lila's heart strings."
@@ -294,7 +294,7 @@ label SeekerLila:
     show Emma pout at emmaflip with dissolve
     #"Emma frowned."
 
-    fa "Your favoritism is so obvious and I hate it…"
+    fa "Your favoritism is so obvious and I hate it..."
 
     "Emma grumbled but it was so quiet the other two didn't hear her."
 
@@ -320,7 +320,7 @@ label SeekerLila:
 
     "Despite the danger these do look like good hiding places."
 
-    L "Which way should I go"
+    L "Which way should I go?"
 
 menu:
     "The endless cave":
@@ -338,7 +338,7 @@ label LiamOk:
     fb "I'm perfectly fine."
     show Emma pout at emmaflip with dissolve
     fa "Of course he's fine!"
-    fa "I was the one hurt…."
+    fa "I was the one hurt..."
 
     #"Emma responded with a frown as she grinded her teeth."
     show Lila surprised at yflip with dissolve
@@ -388,7 +388,7 @@ label LiamSeeker:
     show Liam smile at right with dissolve
     fb "It's ok Emma. It would be more fair if I play as the seeker next."
 
-    fa "...."
+    fa "..."
     show Lila nervous at yflip with dissolve
     "Lila anxiously wondered what she had done this time to bother Emma {cps=2}...{/cps}again."
     show Emma concern at emmaflip with dissolve
@@ -463,7 +463,7 @@ label OkSeeker:
     fa "Hey Liam."
     fa "She already-"
     show Liam wink at right with dissolve
-    fb "What if I wanted to be the seeker and I really want to be ‘it'"
+    fb "What if I wanted to be the seeker and I really want to be 'it'"
     show Emma pout at emmaflip with dissolve
     #"Emma frowned."
     "She knew Liam was going to play with Lila's heart strings."
@@ -483,7 +483,7 @@ label OkSeeker:
     show Emma pout at emmaflip with dissolve
     #"Emma frowned."
 
-    fa "Your favoritism is so obvious and I hate it…"
+    fa "Your favoritism is so obvious and I hate it..."
 
     "Emma grumbled but it was so quiet the other two didn't hear her."
 
@@ -592,7 +592,7 @@ label EMush:
     show Mingluo angry at right with dissolve
     "All in that one moment, Minglou is back to her grumpy self."
     show Mingluo disgust at right with dissolve
-    m "Just as I was about to say I was proud… I wasn't talking about those tiny enoki mushrooms."
+    m "Just as I was about to say I was proud... I wasn't talking about those tiny enoki mushrooms."
     show Lila default at yflip with dissolve
     L "But you just said I was correct."
 
@@ -673,11 +673,11 @@ label PleaseEx:
     show Mingluo default at right with dissolve
     m "Forget it."
     m "I'll do you a favor."
-    m "You are my last hope after all…."
+    m "You are my last hope after all...."
 
     "Minglou murmured but Lila didn't catch any of what she said."
 
-    m "Just follow me…."
+    m "Just follow me...."
 
     "Lila quietly followed Minglou."
     hide Mingluo default at right with dissolve
@@ -870,7 +870,7 @@ label MContext:
      m "Him."
      m "At least you're not that dimwitted to not know your own friend's name."
      show Lila angry at left with dissolve
-     L "Why do I feel like you said something rude again…"
+     L "Why do I feel like you said something rude again..."
 
      "Lila always hated the way Minglou spoke."
      "Even someone as level headed as Liam got pissed at Minglou once."
@@ -908,7 +908,7 @@ label MContext:
 
      L "Uhhhh...."
 
-     L "As important as I don't know how to get back…"
+     L "As important as I don't know how to get back..."
      show Mingluo disgust at right with dissolve
      m "Was that the question?"
 
@@ -916,7 +916,7 @@ label MContext:
 
      m "...."
      show Lila smile at left with dissolve
-     L " Yeah…"
+     L " Yeah..."
 
      #"Lila said smiling."
      #"Minglou sighed."
@@ -941,7 +941,7 @@ label MingOk:
     show Mingluo annoyed at right with dissolve
     "Minglou sounded almost a bit annoyed but she wasn't as harsh as the other times Lila pissed her off."
 
-    L "B-But you're a water spirit…"
+    L "B-But you're a water spirit..."
 
     #"Minglou's eyes darkened."
     show Mingluo skeptical at right with dissolve
@@ -999,7 +999,7 @@ label MingOk:
 
     "Sensing in her instinct that Minglou was about to leave she tried to stop her by calling out to her."
     hide Mingluo annoyed at right with dissolve
-    L "And she's gone…"
+    L "And she's gone..."
     show Lila pout at left with dissolve
     "Looks like she didn't call out in time."
     "Minglou's essence was no longer in the cave."
@@ -1049,11 +1049,11 @@ label MissedY:
     show Emma sigh at emmaflip with dissolve
     fa "You sure like causing trouble you direction freak."
 
-    "Uh oh… Looks like she's been scolded."
+    "Uh oh... Looks like she's been scolded."
     "Wait... wasn't there something she wanted to show them?"
     "Oh right!"
     show Lila happy at left with dissolve
-    L "You guys appeared just in time. I have something to show you…"
+    L "You guys appeared just in time. I have something to show you..."
     show Liam surprised at right with dissolve
     show Emma concern at emmaflip with dissolve
     "Lila said getting excited as she showed them the paper Minglou found for her."
@@ -1068,7 +1068,7 @@ label MissedY:
 
     "He replied before the three of them took a closer look at the paper."
     show Liam surprised at right with dissolve
-    fb "That is so interesting…"
+    fb "That is so interesting..."
     show Emma pout at emmaflip with dissolve
     show Liam page at right with dissolve
     "Liam said as he held out a similar paper."
@@ -1076,7 +1076,7 @@ label MissedY:
     L "Huh?"
     L "Where did you find that?"
     show Liam surprised at right with dissolve
-    fb "By the Den…."
+    fb "By the Den...."
 
     L "What does yours say?"
     L "Can you read mine?"
@@ -1110,7 +1110,7 @@ label MissedY:
 
     "Emma was equally as confused."
 
-    fb "It talks about the existence of something called The Sun…"
+    fb "It talks about the existence of something called The Sun..."
     show Emma shocked at emmaflip with dissolve
     #"Emma's expression darkened."
 
@@ -1193,7 +1193,7 @@ label LiamLook:
      "Though Emma seems to be more upset than happy to see her."
 
      L "Oh."
-     L "That's because I have something to show him…"
+     L "That's because I have something to show him..."
 
      fa "I told you you worried over nothing."
      show Liam smile at right with dissolve
@@ -1204,7 +1204,7 @@ label LiamLook:
 
      "He replied before the three of them took a closer look at the paper."
      show Liam surprised at right with dissolve
-     fb "That is so interesting…"
+     fb "That is so interesting..."
      show Emma pout at emmaflip with dissolve
      show Liam page at right with dissolve
      "Liam said as he held out a similar paper."
@@ -1212,7 +1212,7 @@ label LiamLook:
      L "Huh?"
      L "Where did you find that?"
      show Liam surprised at right with dissolve
-     fb "By the Den…."
+     fb "By the Den...."
 
      L "What does yours say?"
      L "Can you read mine?"
@@ -1245,7 +1245,7 @@ label LiamLook:
 
      "Emma was equally as confused."
 
-     fb "It talks about the existence of something called The Sun…"
+     fb "It talks about the existence of something called The Sun..."
      show Emma shocked at emmaflip with dissolve
      #"Emma's expression darkened."
 
@@ -1333,7 +1333,7 @@ label MinglouHi:
      "The two of them got closer to Lila as they grasped for breath."
      show Lila happy at left with dissolve
      L "You guys appeared just in time."
-     L "I have something to show you…"
+     L "I have something to show you..."
 
      "Lila said getting excited as she showed them the paper Minglou found for her."
      "It seems that being with her friends made her forget that she was lost."
@@ -1347,7 +1347,7 @@ label MinglouHi:
 
      "He replied before the three of them took a closer look at the paper."
      show Liam surprised at right with dissolve
-     fb "That is so interesting…"
+     fb "That is so interesting..."
      show Emma pout at emmaflip with dissolve
      show Liam page at right with dissolve
      "Liam said as he held out a similar paper."
@@ -1355,7 +1355,7 @@ label MinglouHi:
      L "Huh?"
      L "Where did you find that?"
      show Liam surprised at right with dissolve
-     fb "By the Den…."
+     fb "By the Den...."
 
      L "What does yours say?"
      L "Can you read mine?"
@@ -1388,7 +1388,7 @@ label MinglouHi:
 
      "Emma was equally as confused."
 
-     fb "It talks about the existence of something called The Sun…"
+     fb "It talks about the existence of something called The Sun..."
      show Emma shocked at emmaflip with dissolve
 
      #"Emma's expression darkened."
@@ -1498,11 +1498,11 @@ label CallOut:
     show Emma sigh at emmaflip with dissolve
     fa "You sure like causing trouble you direction freak."
 
-    "Uh oh… Looks like she's been scolded."
+    "Uh oh... Looks like she's been scolded."
     "Wait... wasn't there something she wanted to show them?"
     "Oh right!"
     show Lila happy at left with dissolve
-    L "You guys appeared just in time. I have something to show you…"
+    L "You guys appeared just in time. I have something to show you..."
 
     "Lila said getting excited as she showed them the paper Minglou found for her."
     "It seems that being with her friends made her forget that she was lost. "
@@ -1516,7 +1516,7 @@ label CallOut:
 
     "He replied before the three of them took a closer look at the paper."
     show Liam surprised at right with dissolve
-    fb "That is so interesting…"
+    fb "That is so interesting..."
     show Emma pout at emmaflip with dissolve
     show Liam page at right with dissolve
     "Liam said as he held out a similar paper."
@@ -1525,7 +1525,7 @@ label CallOut:
     L "Huh?"
     L "Where did you find that?"
     show Liam surprised at right with dissolve
-    fb "By the Den…."
+    fb "By the Den...."
 
     L "What does yours say?"
     L "Can you read mine?"
@@ -1558,7 +1558,7 @@ label CallOut:
 
     "Emma was equally as confused."
 
-    fb "It talks about the existence of something called The Sun…"
+    fb "It talks about the existence of something called The Sun..."
     show Emma shocked at emmaflip with dissolve
     #"Emma's expression darkened."
 
@@ -1641,7 +1641,7 @@ return
 label MinglouCalled:
     #"Liam's expression darkened."
     show Liam smile at right with dissolve
-    fb "I see…."
+    fb "I see...."
     fb "The next time you see her..."
     fb "Please let  her know I greatly appreciate her kind hostility."
 
@@ -1701,11 +1701,11 @@ return
 
 label Den:
      show Lila default at lilaflip with dissolve
-     L "I don't like the idea of going to the cave…. "
+     L "I don't like the idea of going to the cave... "
 
      "Lila thought and was about to go down the path to the den but a sudden voice stopped her."
      show Mingluo no eyes at right with dissolve
-     Q "Don't go that way…"
+     Q "Don't go that way..."
 
      "Shocked, Lila turned to face the direction of the voice."
      show Lila shocked at yflip with dissolve
@@ -1717,7 +1717,7 @@ label Den:
      "Minglou just stood there staring at Lila."
      #"Though her expression was stoic but her voice was soft and low."
      show Mingluo default at right with dissolve
-     m "That's not the right way…."
+     m "That's not the right way..."
      show Lila surprised at yflip with dissolve
      L "Huh?"
      L "What do you mean?"
@@ -1729,7 +1729,7 @@ label Den:
 
      "The atmosphere suddenly felt heavy."
      show Lila pout at yflip with dissolve
-     L "But I don't like the cave…"
+     L "But I don't like the cave..."
 
      m "..."
 
@@ -1809,7 +1809,7 @@ menu:
     "Ok. I trust you.":
         jump ITrust
 
-    "Sorry. I can't seem to trust you…":
+    "Sorry. I can't seem to trust you...":
         jump SorryI
 return
 
@@ -1835,7 +1835,7 @@ label ITrust:
     show Lila shocked at left with dissolve
     "Lila was at a loss for words."
     show Lila pout at left with dissolve
-    L "I just thought it's nice that I'm not alone…."
+    L "I just thought it's nice that I'm not alone...."
 
     "Lila sulked."
 
@@ -1860,7 +1860,7 @@ label ITrust:
     "The cave which was pitch black before is now filled with the gentle glows from the warm enoki mushrooms."
     "Not only was she no longer cold she also felt a fluffy feeling well up in her."
     show Mingluo soft at right with dissolve
-    m "Regardless, I wouldn't let you catch it anyways…."
+    m "Regardless, I wouldn't let you catch it anyways...."
 
     #"Minglou mumbled as Lila turned to look at her."
     show Lila surprised at left with dissolve
@@ -2013,7 +2013,7 @@ label MinglouH:
      show Lila pout at left with dissolve
      L "Peepsqueak?"
      L "Are you talking about Liam?"
-     L "Why do I feel like you said something rude again…"
+     L "Why do I feel like you said something rude again..."
      show Mingluo smile at right with dissolve
      m "Ah yes."
      m "Him."
@@ -2071,7 +2071,7 @@ label MinglouH:
      "She nervously questioned expecting another angry response."
      "Yet to her surprise there was a soft reply."
      show Mingluo soft at right with dissolve
-     m "You'll see…"
+     m "You'll see..."
      show Lila default at left with dissolve
      "Lila glanced at Minglou and saw that the usual frown on Minglou has turned into a smile."
      "It was such a rare sight."
@@ -2126,10 +2126,10 @@ label HiGuys:
     show Emma sigh at emmaflip with dissolve
     fa "You sure like causing trouble you direction freak."
 
-    "Uh oh… Looks like she's been scolded."
+    "Uh oh... Looks like she's been scolded."
     "Wait... wasn't there something she wanted to show them?"
     "Oh right!"
-    L "You guys appeared just in time. I have something to show you…"
+    L "You guys appeared just in time. I have something to show you..."
     show Lila smile at left with dissolve
     "Lila said getting excited as she showed them the paper Minglou found for her."
     "It seems that being with her friends made her forget that she was lost. "
@@ -2143,14 +2143,14 @@ label HiGuys:
 
     "He replied before the three of them took a closer look at the paper."
     show Liam surprised at right with dissolve
-    fb "That is so interesting…"
+    fb "That is so interesting..."
     show Emma pout at emmaflip with dissolve
     show Liam page at right with dissolve
     "Liam said as he held out a similar paper."
     L "Huh?"
     L "Where did you find that?"
     show Liam surprised at right with dissolve
-    fb "By the Den…."
+    fb "By the Den...."
 
     "Lila thought back on Minglou's words..."
 
@@ -2187,7 +2187,7 @@ label HiGuys:
     "Lila questioned with Emma equally as confused."
     show Emma shocked at emmaflip with dissolve
 
-    fb "It talks about the existence of something called The Sun…"
+    fb "It talks about the existence of something called The Sun..."
 
     #"Emma's expression darkened."
 
@@ -2268,7 +2268,7 @@ label LookYouL:
      "Though Emma seems to be more upset than happy to see her."
 
      L "Oh."
-     L "That's because I have something to show him…"
+     L "That's because I have something to show him..."
      L "You see, me and Ming-"
 
      "Lila said getting excited as she showed them the paper Minglou found for her."
@@ -2284,7 +2284,7 @@ label LookYouL:
 
      "He replied before the three of them took a closer look at the paper."
      show Liam surprised at right with dissolve
-     fb "That is so interesting…"
+     fb "That is so interesting..."
      show Emma pout at emmaflip with dissolve
      show Liam page at right with dissolve
      "Liam said as he held out a similar paper."
@@ -2292,7 +2292,7 @@ label LookYouL:
      L "Huh?"
      L "Where did you find that?"
      show Liam surprised at right with dissolve
-     fb "By the Den…."
+     fb "By the Den...."
 
      "The den? The one that Minglou told her not to go too?"
 
@@ -2327,7 +2327,7 @@ label LookYouL:
 
      "Lila questioned with Emma equally as confused."
 
-     fb "It talks about the existence of something called The Sun…"
+     fb "It talks about the existence of something called The Sun..."
 
      "Emma's expression darkened."
 
@@ -2405,7 +2405,7 @@ label IsMingOk:
 
     "Minglou said with a hint of annoyance but her tone was gentle."
     show Lila pout at left with dissolve
-    L "B-But you're a water spirit…"
+    L "B-But you're a water spirit..."
     L "Doesn't water hurt you?"
     L "Did I remember wrong?"
     show Mingluo annoyed at right with dissolve
@@ -2473,7 +2473,7 @@ label IDontCave:
     show Mingluo disgust at right with dissolve
     "Although Minglou gave her a weird look she ended the unpleasant look with a sigh."
 
-    m "Come with me…"
+    m "Come with me..."
 
     "She said and Lila gladly followed."
     hide Mingluo disgust at right with dissolve
@@ -2504,7 +2504,7 @@ label IDontCave:
     "She nervously questioned expecting another angry response."
     "Yet to her surprise there was a soft reply."
     show Mingluo smile at right with dissolve
-    m "You'll see…"
+    m "You'll see..."
 
     "Lila glanced at Minglou and saw that the usual frown on Minglou has turned into a smile."
     "It was such a rare sight."
@@ -2541,7 +2541,7 @@ label NvmGood:
     "Lila looked shocked that Minglou figured out her troubles."
     #"Minglou sighed in disbelief. "
     show Mingluo annoyed at right with dissolve
-    m "You're so easy to read…."
+    m "You're so easy to read...."
     hide Mingluo annoyed at right with dissolve
     hide Lila smile at left with dissolve
     show Mingluo mushroom at right with dissolve
@@ -2576,7 +2576,7 @@ label NvmGood:
     "She nervously questioned expecting another angry response."
     "Yet to her surprise there was a soft reply."
     show Mingluo soft at right with dissolve
-    m "You'll see…"
+    m "You'll see..."
 
     "Lila glanced at Minglou and saw that the usual frown on Minglou has turned into a smile."
     "It was such a rare sight."
@@ -2632,7 +2632,7 @@ label SorryI:
 
     #"Lila questions while Emma continues to look at her with a frown."
     show Emma pout at emmaflip with dissolve
-    fa "Inside….He went in there thinking you crawled inlike the animal you are."
+    fa "Inside....He went in there thinking you crawled inlike the animal you are."
     show Lila angry at left with dissolve
     "Lila felt a throb in her heart. Why did Emma's words feel hurtful?"
 
@@ -2761,7 +2761,7 @@ label EmmaLook:
 
     "Emma asked but it doesn't look like she's questioning."
 
-    L "Oh…"
+    L "Oh..."
     show Lila smile at left with dissolve
     L "Does that mean you were worried for me?"
     show Emma shocked at emmaflip with dissolve
@@ -2781,7 +2781,7 @@ label EmmaLook:
     fa "S-stop laughing!"
     fa "There's nothing funny!"
     show Lila happy at left with dissolve
-    L "I see…"
+    L "I see..."
     L "Thank you for caring!"
 
     "Lila said, feeling fluffy inside as Liam laughed harder."
@@ -2800,7 +2800,7 @@ label EmmaLook:
 
     "Emma said in a desperate attempt to diverge the attention."
     show Liam nervous at right with dissolve
-    fb "Right…"
+    fb "Right..."
 
     "It seems her attempt worked as Liam slowly composed himself and started getting serious."
 
@@ -2856,7 +2856,7 @@ label WhySecretive:
     show Liam wink at right with dissolve
     #"Liam gave Emma a wink which made her loss all of her reasons."
 
-    fa "If you say so…"
+    fa "If you say so..."
 
     "Emma replied and she quieted down."
     show Liam default at right with dissolve
@@ -2955,12 +2955,12 @@ label WhatWritten:
     show Liam nervous at right with dissolve
     fb "Now. Now."
     fb "Let's just focus on what's at hand."
-    fb "So back to what I was saying…"
+    fb "So back to what I was saying..."
     show Emma sigh at emmaflip with dissolve
     "Suddenly Emma had a feeling she knows where Lila's As came from."
     "Even though she felt a boil in her heart she maintained her anger. "
 
-    fa "Unbelievable…"
+    fa "Unbelievable..."
 
     "She murmured underneath her breath."
 
@@ -3040,7 +3040,7 @@ label CheckLiam:
 
     fa "Where do you think you're going?"
     show Lila pout at left with dissolve
-    L "I wanted to see if Liam's ok…"
+    L "I wanted to see if Liam's ok..."
 
     #"Lila said, backing away from the den."
     show Emma angry at emmaflip with dissolve
@@ -3121,7 +3121,7 @@ label HUHYOU:
      #"Emma's face also darkened."
      show Lila stunned at left with dissolve
      L "Huh?"
-     L "What is it…"
+     L "What is it..."
 
      fb "It's best if you don't know."
      show Emma angry at emmaflip with dissolve
@@ -3132,7 +3132,7 @@ label HUHYOU:
 
      #"Although Emma also looked like she was in the state of shock her words were still headstrong."
 
-     fb "She wouldn't be able to handle this…."
+     fb "She wouldn't be able to handle this...."
 
      "Liam protested but Emma insisted that they should inform Lila about their situation."
 
@@ -3150,7 +3150,7 @@ label HUHYOU:
      "How should she calm down the situation?"
 
 menu:
-    "I think I should know…I can handle it!":
+    "I think I should know...I can handle it!":
         jump ICanHandle
 
     "It's ok if I don't know.":
@@ -3177,7 +3177,7 @@ label UsWorried:
     #"Emma's face also darkened."
     show Emma shocked at emmaflip with dissolve
     L "Huh?"
-    L "What is it…"
+    L "What is it..."
     show Lila surprised at left with dissolve
     fb "It's best if you don't know."
 
@@ -3188,7 +3188,7 @@ label UsWorried:
 
     "Although Emma also looked like she was in the state of shock her words were still headstrong."
 
-    fb "She wouldn't be able to handle this…."
+    fb "She wouldn't be able to handle this...."
     show Liam angry at right with dissolve
     "Liam protested but Emma insisted that they should inform Lila about their situation."
 
@@ -3206,7 +3206,7 @@ label UsWorried:
     "How should she calm down the situation?"
 
 menu:
-    "I think I should know…I can handle it!":
+    "I think I should know...I can handle it!":
         jump ICanHandle
 
     "It's ok if I don't know.":
@@ -3347,7 +3347,7 @@ label OkIDont:
     L "Why haven't we-"
     show Emma pout at emmaflip with dissolve
     fa "Relax for a bit."
-    fa "It's just a rumor… "
+    fa "It's just a rumor... "
     fa "But do you believe in it?"
 
     "Emma interrupted but Lila nodded."
@@ -3414,7 +3414,7 @@ label VeryUncomfy:
     fa "Yet you never showed up."
     show Lila surprised at left with dissolve
     L "Oh really?"
-    L "I didn't know I had walked that far…"
+    L "I didn't know I had walked that far..."
 
     fb "I don't blame you."
     fb "Who knows how long it's been since we last separated."
@@ -3423,7 +3423,7 @@ label VeryUncomfy:
     "Lila has no idea what Liam means."
     "But more than anything else she's more interested in what the Den has to offer."
     show Emma pout at emmaflip with dissolve
-    fa "“I'm feeling hungry."
+    fa "I'm feeling hungry."
     fa "Come let's just go back to the village."
     fa "All of this searching has tired me out."
     show Liam smile at right with dissolve
@@ -3446,7 +3446,7 @@ label GoHome:
     show Emma angry at emmaflip with dissolve
     fa "We could have played a bit more if a certain someone didn't go missing."
     show Lila surprised at left with dissolve
-    L "Hm? But I wasn't gone for long…"
+    L "Hm? But I wasn't gone for long..."
 
     fa "Then explain to me why is my energy drained?"
     fa "Who's fault is that?"
@@ -3467,11 +3467,11 @@ label GoHome:
     "Minglou bitterly stared at the three kids laughing innocently"
     show Mingluo no eyes at right with dissolve
     m "Ignorance is a blessing isn't it?"
-    m "What would you seedlings have done if you discovered you've been living in the darkness…"
+    m "What would you seedlings have done if you discovered you've been living in the darkness..."
     hide Mingluo no eyes at right with dissolve
     "Of course she didn't just mean that in a literal sense."
     "Who knows because they'll never know at this rate."
-    "The children just smiled and laughed not knowing what the future holds…."
+    "The children just smiled and laughed not knowing what the future holds...."
     scene image "BGStart.png" with fade
     "End"
     "No Pages found."
@@ -3519,7 +3519,7 @@ label IntoDen:
     fb "As the oldest one,  I should take a look first."
     fb "Wait for me out here."
 
-    L "Ok…"
+    L "Ok..."
 
     "Lila said quietly while Emma stayed quiet."
     show Liam smile at right with dissolve
@@ -3559,7 +3559,7 @@ label LetsCheckL:
     "Not to mention she replied a lot on Minglou's powers when she's in trouble."
     "But Minglou isn't here at the moment so it would make sense for Emma to go in instead of her."
 
-    L "Please be careful…"
+    L "Please be careful..."
 
     #"Lila whispered."
     show Emma concern at emmaflip with dissolve
@@ -3664,7 +3664,7 @@ label WelcomeGuys:
 
     "Liam looks the worst but because of Lila's worried expression he calmed down."
     show Liam nervous at right with dissolve
-    fb "Don't worry… "
+    fb "Don't worry... "
     fb "We just found something shocking."
     fb "That's all."
     fb "It just takes a moment to take in new information."
@@ -3678,7 +3678,7 @@ label WelcomeGuys:
 
     "Although Emma also looked like she was in the state of shock her words were still headstrong."
 
-    fb "She wouldn't be able to handle this…."
+    fb "She wouldn't be able to handle this...."
     show Liam sigh at right with dissolve
     "Liam protested but Emma insisted that they should inform Lila about their situation."
 
@@ -3696,7 +3696,7 @@ label WelcomeGuys:
     "How should she calm down the situation?"
 
 menu:
-    "I think I should know…I can handle it!":
+    "I think I should know...I can handle it!":
         jump ICanHandle
 
     "It's ok if I don't know.":
@@ -3727,7 +3727,7 @@ label DangerFind:
 
     "Although Emma also looked like she was in the state of shock her words were still headstrong."
 
-    fb "She wouldn't be able to handle this…."
+    fb "She wouldn't be able to handle this...."
 
     "Liam protested but Emma insisted that they should inform Lila about their situation."
     show Emma angry at emmaflip with dissolve
@@ -3745,7 +3745,7 @@ label DangerFind:
     "How should she calm down the situation?"
 
 menu:
-    "I think I should know…I can handle it!":
+    "I think I should know...I can handle it!":
         jump ICanHandle
 
     "It's ok if I don't know.":
