@@ -1,7 +1,7 @@
-﻿define L = Character(_("Lila"), color="#ced0ff")
-define m = Character(_("Mingluo"), color="#87ddfb")
-define fa = Character(_("Emma"), color="#73fff0")
-define fb = Character(_("Liam"), color="#a673ff")
+﻿define L = Character('Lila', color="#ced0ff", image = "Lila")
+define m = Character('Mingluo', color="#87ddfb", image = "Mingluo")
+define fa = Character('Emma', color="#73fff0", image = "Emma")
+define fb = Character('Liam', color="#a673ff", image = "Liam")
 define Q = Character ("?")
 
 #define persistent.Route1 = True
@@ -23,9 +23,12 @@ label start:
     #$persistent.Route2 = True
 
     default preferences.text_cps = 50
-    scene BGStart
+    scene Map
     "Within a planet shrouded in darkness..."
     "In a forest far away from the nearest village."
+    show Map:
+        ease 3.0 zoom 2.0
+
     "A group of friends gathers to play hide and seek."
     "Whispers can be heard as glimmers of radiance reveals three kids."
     #show Lila happy at flip for flipping the sprite
