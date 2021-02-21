@@ -1,46 +1,47 @@
-Sat Feb 20 16:05:24 2021
+Sun Feb 21 18:36:01 2021
 Windows-10-10.0.19041
-Ren'Py 7.4.0.1167
+Ren'Py 7.4.2.1292
  
 
-Bootstrap to the start of init.init took 0.06s
+Bootstrap to the start of init.init took 0.05s
 Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.02s
-Loading script took 0.16s
-Loading save slot metadata. took 0.03s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.11s
+Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.03s
+Running init code took 0.04s
+Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Dump and make backups. took 0.07s
+Dump and make backups. took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.03s
+Initial gc. took 0.02s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
-Load screen analysis took 0.02s
+Load screen analysis took 0.01s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.05s
+Prepare screens took 0.04s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.11s
+Interface start took 0.05s
 
+Initializing gl renderer:
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
 Using GL DLL.
 Windowed mode.
 Vendor: 'NVIDIA Corporation'
-Renderer: 'GeForce GTX 1060 3GB/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 456.71'
+Renderer: 'GeForce RTX 2080 Super/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 461.40'
 Display Info: None
 Extensions:
     
@@ -335,10 +336,13 @@ Extensions:
     GL_NV_clip_space_w_scaling
     GL_NV_command_list
     GL_NV_compute_program5
+    GL_NV_compute_shader_derivatives
     GL_NV_conditional_render
     GL_NV_conservative_raster
     GL_NV_conservative_raster_dilate
+    GL_NV_conservative_raster_pre_snap
     GL_NV_conservative_raster_pre_snap_triangles
+    GL_NV_conservative_raster_underestimation
     GL_NV_copy_depth_to_color
     GL_NV_copy_image
     GL_NV_depth_buffer_float
@@ -355,6 +359,7 @@ Extensions:
     GL_NV_fragment_program
     GL_NV_fragment_program2
     GL_NV_fragment_program_option
+    GL_NV_fragment_shader_barycentric
     GL_NV_fragment_shader_interlock
     GL_NV_framebuffer_mixed_samples
     GL_NV_framebuffer_multisample_coverage
@@ -371,6 +376,8 @@ Extensions:
     GL_NV_internalformat_sample_query
     GL_NV_light_max_exponent
     GL_NV_memory_attachment
+    GL_NV_memory_object_sparse
+    GL_NV_mesh_shader
     GL_NV_multisample_coverage
     GL_NV_multisample_filter_hint
     GL_NV_occlusion_query
@@ -386,8 +393,10 @@ Extensions:
     GL_NV_query_resource_tag
     GL_NV_register_combiners
     GL_NV_register_combiners2
+    GL_NV_representative_fragment_test
     GL_NV_sample_locations
     GL_NV_sample_mask_override_coverage
+    GL_NV_scissor_exclusive
     GL_NV_shader_atomic_counters
     GL_NV_shader_atomic_float
     GL_NV_shader_atomic_float64
@@ -396,8 +405,10 @@ Extensions:
     GL_NV_shader_buffer_load
     GL_NV_shader_storage_buffer_object
     GL_NV_shader_subgroup_partitioned
+    GL_NV_shader_texture_footprint
     GL_NV_shader_thread_group
     GL_NV_shader_thread_shuffle
+    GL_NV_shading_rate_image
     GL_NV_stereo_view_rendering
     GL_NV_texgen_reflection
     GL_NV_texture_barrier
@@ -409,6 +420,7 @@ Extensions:
     GL_NV_texture_shader
     GL_NV_texture_shader2
     GL_NV_texture_shader3
+    GL_NV_timeline_semaphore
     GL_NV_transform_feedback
     GL_NV_transform_feedback2
     GL_NV_uniform_buffer_unified_memory
@@ -450,4 +462,5 @@ Texture testing:
 Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 1.25719308853s
+Total time until interface ready: 0.689637899399s
+controller: '030000004c050000cc09000000000000' 'PS4 Controller' 1L
