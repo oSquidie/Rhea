@@ -299,56 +299,109 @@ screen navigation():
 
         spacing gui.navigation_spacing
 
-        if main_menu:
+        if renpy.current_screen().screen_name[0] == "main_menu":
 
             textbutton _("Start") action Start():
                 xoffset 175.0
                 yoffset 500
-
+            textbutton _("Help") action ShowMenu("help"):
+                xoffset 734
+                yoffset 500
+            textbutton _("Load") action ShowMenu("load"):
+                xoffset -48.0
+                yoffset 500
+            textbutton _("Preferences") action ShowMenu("preferences"):
+                xoffset 460.0
+                yoffset 500
+            textbutton _("Quit") action Quit(confirm=not main_menu):
+                xoffset 580.0
+                xalign 1.0
+                yoffset 500
+            textbutton _("About") action ShowMenu("about"):
+                xoffset -496.0
+                yoffset 500
         else:
+            if renpy.current_screen().screen_name[0] == "history":
+                #textbutton _("History") action ShowMenu("history")
+                xoffset 300.0
+                yalign 1.0
+                yoffset -100.0
+                textbutton _("Save") action ShowMenu("save"):
+                    yoffset -700.0
+                    xoffset -190
+                    #yoffset 100
+                    #xalign 1.0
 
-            textbutton _("History") action ShowMenu("history"):
-                xoffset 100.0
-                xalign 1.0
+                textbutton _("Load") action ShowMenu("load"):
+                    yoffset -590.0
+                    xoffset -429
 
-            textbutton _("Save") action ShowMenu("save"):
-                xoffset 100.0
-                xalign 1.0
+                textbutton _("Preferences") action ShowMenu("preferences"):
+                    yoffset -480.0
+                    xoffset -750
+            if renpy.current_screen().screen_name[0] == "preferences":
+                #xoffset 100.0
+                #yalign -9.0
+                #yoffset 100.0
+                textbutton _("About") action ShowMenu("about"):
+                    xoffset -1090
+                    yoffset -260.0
 
-        textbutton _("Load") action ShowMenu("load"):
-            xoffset 200.0
-            yoffset 500
+                textbutton _("Help") action ShowMenu("help"):
+                    xoffset -160.0
+                    yoffset -20
 
-        textbutton _("Preferences") action ShowMenu("preferences"):
-            xoffset 710.0
-            yoffset 500
+                textbutton _("Quit") action Quit(confirm=not main_menu):
+                    xoffset -350.0
+                    yoffset 100.0
 
+                textbutton _("Load") action ShowMenu("load"):
+                    yoffset -142.0
+                    xoffset -570
+
+                #textbutton _("Save") action ShowMenu("save"):
+                    #yoffset -300.0
+                    #xoffset -770
+
+                textbutton _("Main Menu") action MainMenu():
+                    yoffset 200.0
+                    xoffset -780
         if _in_replay:
 
             textbutton _("End Replay") action EndReplay(confirm=True)
 
-        elif not main_menu:
+        #elif not main_menu:
+            #if renpy.current_screen().screen_name[0] == "preferences":
+            #textbutton _("Main Menu") action MainMenu():
+                #yoffset 200.0
+                #xoffset -800
 
-            textbutton _("Main Menu") action MainMenu()
+            #textbutton _("About") action ShowMenu("about"):
+                #xoffset -1090
+                #yoffset -260.0
+            #textbutton _("Help") action ShowMenu("help"):
+                #xoffset -1300
+                #yoffset -150.0
 
-        textbutton _("About") action ShowMenu("about"):
-            yoffset 500
-
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+            #textbutton _("Quit") action Quit(confirm=not main_menu):
+                #xoffset -1510.0
+                #yoffset -30.0
+        #if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help"):
-                xoffset -10
-                yoffset 500
+            #textbutton _("Help") action ShowMenu("help"):
+                #xoffset 49
+                #yoffset 500
 
-        if renpy.variant("pc"):
+        #if renpy.variant("pc")#:
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu):
-                xoffset 330.0
-                xalign 1.0
-                yoffset 500
+            #textbutton _("Quit") action Quit(confirm=not main_menu):
+                #xoffset 400.0
+                #xalign 1.0
+                #yoffset 500
+
 
 
 style navigation_button is gui_button
