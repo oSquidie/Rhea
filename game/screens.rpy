@@ -260,8 +260,9 @@ screen quick_menu():
             textbutton _("Save") action ShowMenu('save')
             textbutton _("Q.Save") action QuickSave()
             textbutton _("Q.Load") action QuickLoad()
+            textbutton _("Load") action QuickLoad()#
             textbutton _("Prefs") action ShowMenu('preferences')
-
+            textbutton _("Quit") action Quit(confirm=not main_menu)
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.
@@ -339,33 +340,33 @@ screen navigation():
                 textbutton _("Preferences") action ShowMenu("preferences"):
                     yoffset -480.0
                     xoffset -750
-            if renpy.current_screen().screen_name[0] == "preferences":
+            #if renpy.current_screen().screen_name[0] == "preferences":
                 #xoffset 100.0
                 #yalign -9.0
                 #yoffset 100.0
-                textbutton _("About") action ShowMenu("about"):
-                    xoffset -1090
-                    yoffset -260.0
+                #textbutton _("About") action ShowMenu("about"):
+                    #xoffset -1090
+                    #yoffset -260.0
 
-                textbutton _("Help") action ShowMenu("help"):
-                    xoffset -160.0
-                    yoffset -20
+                #textbutton _("Help") action ShowMenu("help"):
+                    #xoffset -160.0
+                    #yoffset -20
 
-                textbutton _("Quit") action Quit(confirm=not main_menu):
-                    xoffset -350.0
-                    yoffset 100.0
+                #textbutton _("Quit") action Quit(confirm=not main_menu):
+                    #xoffset -350.0
+                    #yoffset 100.0
 
-                textbutton _("Load") action ShowMenu("load"):
-                    yoffset -142.0
-                    xoffset -570
+                #textbutton _("Load") action ShowMenu("load"):
+                    #yoffset -142.0
+                    #xoffset -570
 
                 #textbutton _("Save") action ShowMenu("save"):
                     #yoffset -300.0
                     #xoffset -770
 
-                textbutton _("Main Menu") action MainMenu():
-                    yoffset 200.0
-                    xoffset -780
+                #textbutton _("Main Menu") action MainMenu():
+                    #yoffset 200.0
+                    #xoffset -780
         if _in_replay:
 
             textbutton _("End Replay") action EndReplay(confirm=True)
