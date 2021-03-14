@@ -139,6 +139,8 @@ image side Liam = im.Scale("images/LiamSide.png", 490, 490, xoffset=20, yoffset=
 #CloseUp Images#
 image CloseupBerry = "CloseupBerry.png"
 image CloseupCrystal = "CloseupCrystal.png"
+image CloseupCrystalBlood = "CloseupCrystalBlood.png"
+image CloseupCrystalHandPrint = "CloseupCrystalHandPrint.png"
 image CloseupOpus = "CloseupOpus.png"
 image CloseupPageCave = "CloseupPageCave.png"
 image CloseupPageDen = "CloseupPageDen.png"
