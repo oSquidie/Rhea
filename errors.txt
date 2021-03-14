@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1704: end of line expected.
-    show Mingluo no eyes at right dissolve
-                                  ^
+File "game/images.rpy", line 42: invalid syntax
+    im.Scale("LilaPain.png" 800, 950)
+                               ^
 
 Ren'Py Version: Ren'Py 7.4.0.1167
-Mon Feb 15 14:36:28 2021
+Sun Mar 14 18:41:37 2021
