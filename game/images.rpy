@@ -14,6 +14,10 @@ transform lilaflip:
     xzoom -1
     xalign -5 yalign 1.0
 
+transform MingLouFlip:
+    xzoom -1
+    xalign -5 yalign 1.0
+    
 transform slide:
     linear 0.5 xpos 0.85
     
@@ -47,6 +51,7 @@ image Lila pain = im.Scale("LilaPain.png", 800, 950)
 image Lila swirly eyes = im.Scale("LilaSwirlyEyes.png", 800, 950)
 image Lila yell = im.Scale("LilaYell.png", 800, 950)
 image Lila skeptical = im.Scale("LilaSkeptical.png", 800, 950)
+image Lila Sweats =  im.Scale("LilaNervous.png", 800, 950)
 image side Lila = im.Scale("images/LilaSide.png", 400, 400, xoffset=20, yoffset=30)
 ############################################################################
 #BGs#
@@ -59,6 +64,8 @@ image FirstPage = "FirstPage.png"
 image TwoPaths = "TwoPaths.png"
 image SecondPage = "SecondPage.png"
 image Map = "Map.png"
+image TwoPaths = "Twopaths.png"
+image MingLouSmilesEvil = "MingluoBurnCG.png"
 ############################################################################
 #Mingluo Sprites#
 image Mingluo happy =  im.Scale("MingluoHappy.png", 960, 1000)
@@ -103,7 +110,7 @@ image Emma sigh = im.Scale("EmmaSigh.png", 760, 1000)
 image Emma smile = im.Scale("EmmaSmile.png", 760, 1000)
 image Emma smug  = im.Scale("EmmaSmug.png", 760, 1000)
 image Emma dissapointed  = im.Scale("EmmaDissapointed.png", 760, 1000)
-image Emma embarrassed  = im.Scale("EmmaEmbarassed.png", 760, 1000)
+image Emma embarrassed = im.Scale("EmmaEmbarassed.png", 760, 1000)
 image Emma envy = im.Scale("EmmaEnvy.png", 760, 1000)
 image Emma intimidating = im.Scale("EmmaIntimidating.png", 760, 1000)
 image Emma laugh = im.Scale("EmmaLaugh.png", 760, 1000)
@@ -140,6 +147,7 @@ image Liam smirk = im.Scale("LiamSmirk.png", 960, 1200)
 image Liam yell = im.Scale("LiamYell.png", 960, 1200)
 image Liam yell cry = im.Scale("LiamYellCry.png", 960, 1200)
 image Liam dark smile = im.Scale("LiamDarkSmile.png", 960, 1200)
+image Liam blush = im.Scale("LiamBlush.png", 960, 1200)
 image side Liam = im.Scale("images/LiamSide.png", 490, 490, xoffset=20, yoffset=30)
 ##################################################################################
 #CloseUp Images#

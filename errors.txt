@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/images.rpy", line 42: invalid syntax
-    im.Scale("LilaPain.png" 800, 950)
-                               ^
+File "game/script.rpy", line 3072: end of line expected.
+    show Emma with concern with dissolve
+                           ^
 
-Ren'Py Version: Ren'Py 7.4.0.1167
-Sun Mar 14 18:41:37 2021
+Ren'Py Version: Ren'Py 7.4.2.1281
+Mon Mar 15 11:11:20 2021

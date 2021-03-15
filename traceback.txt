@@ -1,68 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-Exception: DynamicImage [u'gui/button/navigation_[prefix_]background.png', u'gui/button/[prefix_]background.png']: could not find image. (u'gui/button/navigation_hover_background.png', u'gui/button/navigation_background.png', and 2 more.)
+  File "game/script.rpy", line 2198, in script
+    show Emma default at emmafilp with dissolve
+  File "game/script.rpy", line 2198, in <module>
+    show Emma default at emmafilp with dissolve
+NameError: name 'emmafilp' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
-    python hide:
-  File "renpy/ast.py", line 913, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "renpy/python.py", line 2111, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
-    python hide:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
-    ui.interact()
-  File "renpy/ui.py", line 298, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "renpy/display/core.py", line 2978, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "renpy/display/core.py", line 3477, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "renpy/display/core.py", line 2359, in draw_screen
-    renpy.config.screen_height,
-  File "render.pyx", line 492, in renpy.display.render.render_screen
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 751, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 751, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 751, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/screen.py", line 681, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 751, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 912, in render
-    surf = render(d, rw, height - y, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/behavior.py", line 781, in render
-    rv = super(Button, self).render(width, height, st, at)
-  File "renpy/display/layout.py", line 1184, in render
-    back = render(style.background, bw, bh, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/imagelike.py", line 273, in render
-    crend = render(image, width, height, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/image.py", line 730, in render
-    self.find_target()
-  File "renpy/display/image.py", line 652, in find_target
-    raise Exception(error)
-Exception: DynamicImage [u'gui/button/navigation_[prefix_]background.png', u'gui/button/[prefix_]background.png']: could not find image. (u'gui/button/navigation_hover_background.png', u'gui/button/navigation_background.png', and 2 more.)
+  File "game/script.rpy", line 2198, in script
+    show Emma default at emmafilp with dissolve
+  File "renpy/ast.py", line 1191, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "renpy/ast.py", line 1150, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "renpy/python.py", line 2249, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "renpy/python.py", line 2242, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 2198, in <module>
+    show Emma default at emmafilp with dissolve
+NameError: name 'emmafilp' is not defined
 
+Windows-10-10.0.19041
+Ren'Py 7.4.2.1281
+ 
+Mon Mar 15 08:09:57 2021
