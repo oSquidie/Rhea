@@ -2,13 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 4409: expected 'simple_expression' not found.
-    show Lila smile at with dissolve
-                       ^
+File "game/script.rpy", line 4243: reached end of line when expecting ':'.
+    if LiamLetLilaBleed.value += 1
+                                  ^
 
-File "game/script.rpy", line 4417: expected 'simple_expression' not found.
-    hide Lila smile at with dissolve
-                       ^
+File "game/script.rpy", line 4682: reached end of line when expecting ':'.
+    if LiamLetLilaBleed.value += 1
+                                  ^
 
 Ren'Py Version: Ren'Py 7.4.0.1167
-Mon Mar 15 16:18:57 2021
+Mon Mar 15 16:54:42 2021

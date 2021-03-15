@@ -469,7 +469,7 @@ label EPath1:
     show Liam embarrassed at right
     L "Are you sure?"
     show Emma surprised with dissolve
-    L "That sound like you were in pain."
+    L "That sounded like you were in pain."
     show Emma blush with dissolve
     show Emma embarrassed with dissolve
     fa "What pain?"
@@ -524,7 +524,7 @@ label EPath1:
     show Emma angry with dissolve
     fa "This isn't fair."
     show Liam skeptical with dissolve
-    fb "She needs to recount."
+    fa "She needs to recount."
     show Liam sigh with dissolve
     "I heard Liam sigh."
     show Lila swirly eyes with dissolve
@@ -841,7 +841,7 @@ label NPath1:
     fa "I just said that it was unfair for Liam."
     fa "Are you de-"
     show Lila nervous with dissolve
-    "For a second I thought that Emma is going to blow up."
+    "For a second I thought that Emma was going to blow up."
     "Yet Liam's calm voice settled my nerves."
     show Liam nervous with dissolve
     fb "It's ok Emma. "
@@ -1073,7 +1073,7 @@ label LPath3:
     show Liam nervous with dissolve
     fa "What?"
 
-    "I take them into the forrest with me."
+    "I take them into the forest with me."
     show Emma surprised with dissolve
     show Liam surprised with dissolve
     fa "But why?"
@@ -1319,7 +1319,7 @@ jump menu_OC1
 return
 
 label Feel1:
-    "Just thinking about the atmosphere within the cave sent a silver down Lila’s spin."
+    "Just thinking about the atmosphere within the cave sent a shiver down Lila's spin."
     "It just felt dark, gloomy, and a bit creepy."
 
     $C_Feel1 = False
@@ -1350,6 +1350,13 @@ label Cave1:
 
 label drag_glass:
     call screen slide_glass_screen
+    scene image "Cave.png"
+    hide image "CloseupOpus.png"
+    hide image "CloseupVine.png"
+    hide image "CloseupPageCave.png"
+    hide image "Opus1.png"
+    hide image "Opus2.png"
+    hide image "VinaPlant.png"
     "[glass] picked the [object]. Do you want to take a closer look at the object?"
     window hide
     menu:
@@ -1371,6 +1378,7 @@ window show
 ######Start of Crystal 1#########
 
 label Crystal1:
+    scene image "CloseupCrystal.png"
     $MPath1Points.value += 1
     "The crystal glows brightly within the dark cave."
     "It's edges glistens just like Liam's pocket knife."
@@ -1396,7 +1404,6 @@ label menu_Crystal1:
 return
 
 label TouchNormal:
-    scene image "CloseupCrystal.png" with fade
     "I reached out my hand and rubbed the edge of the crystal."
     "Like the it's cold touch I felt a sharp pain through the tips of my finger."
     "Looking at the cut on my finger I felt my entire body freeze."
@@ -3789,7 +3796,7 @@ label Cave3:
     fa "For once we agree on somthing."
     L "Huh?"
     show Emma dissapointed at middle with dissolve
-    show Liam smiles with dissolve
+    show Liam smile with dissolve
     fb "Don't worry too much and just explore."
     "Well with Liam and Emma here I'm sure nothing will go wrong."
     "Drag the magnifying glass to the objects you wish to interact with."
@@ -4237,6 +4244,7 @@ label Vine3:
         "Well..."
         "That was disgusting."
 label menu_Vine3:
+    $LiamLetLilaBleed.value += 1
     if LiamLetLilaBleed.value += 1:
         $Vine3_NormalTouch = False
         $Vine3_TouchBleed = True
@@ -4676,6 +4684,7 @@ label Opus3:
     "Since Emma don't want to explain I look at Liam for answers."
     "Yet Liam only smiles and says nothing..."
 label menu_Opus3:
+    $LiamLetLilaBleed.value += 1
     if LiamLetLilaBleed.value += 1:
         $Opus3_NormalTouch = False
         $Opus3_TouchBleed = True
@@ -4888,7 +4897,7 @@ label BiteOpusNormal3:
     scene image "Cave.png" with dissolve
     show Emma shocked at middle with dissolve
     show Lila Sweats at left with dissolve
-    show Liam smiles at right with dissolve
+    show Liam smile at right with dissolve
     L "Can I eat this?"
     fb "Hmmmm..."
     show Liam happy with dissolve
