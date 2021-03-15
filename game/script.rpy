@@ -65,6 +65,7 @@ define Vine_NormalBite = True
 define Vine_BiteBleed = False
 define Vine_BiteWithEyes = False
 define Vine_ListenVine = True
+define Vine_ListenAfterTouch = False
 
 #Explore Cave with Emma
 define Vine2_NormalTouch = True
@@ -250,7 +251,6 @@ label start:
         #transform my_dissolve(x):
                 # alpha 0.0
                 # linear x alpha 1.0
-        
      
        # label transform_test:
         #show image "Forest_Default.png" at truecenter, my_dissolve(.5)
