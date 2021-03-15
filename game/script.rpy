@@ -131,12 +131,12 @@ define Taste_Points.value = 0
 define Touch_Points.value = 0
 
 #Explore Cave by herself
-define VineTouchPoints.value = 0 
+define VineTouchPoints.value = 0
 define VineTastePoints.value = 0
 define VineSmell_Points.value = 0
 
 #Explore Cave by herself
-define OpusTouchPoints.value = 0 
+define OpusTouchPoints.value = 0
 
 #define persistent.value = 0
 label splashscreen:
@@ -144,16 +144,16 @@ label splashscreen:
 
     show text "Any similarities this game has with real life is purely coincidental." with dissolve
     with Pause(2)
-    
+
     hide text with dissolve
     with Pause(1)
-    
+
     show text "This all works of fiction." with dissolve
     with Pause(2)
-    
+
     hide text with dissolve
     with Pause(1)
-    
+
     call screen confirm(message="Rhea contains a lot of bright colors, this may affect individuals who are susceptible to photo sensitivities. Do you want to continue?", yes_action=Return(), no_action=Quit(confirm=False))
     return
 define audio.RheaSoundtrack ="audio/RheaSoundtrack.wav"
@@ -166,27 +166,27 @@ define Choice1 = True
 define Choice2 = True
 define Choice3 = True
 
-define Affection= False 
+define Affection= False
 define Affection_sys.value = 0
 
-#define Path1_Answers = False 
+#define Path1_Answers = False
 #define Qpoints1.value = 0
 
 if Page_TouchAlready = False:
             hide Page
-             
+
 init python:
-    
+
     def glass_dragged(drags, drop):
-        
+
         if not drop:
             return
-            
+
         store.glass = drags[0].drag_name
         store.object = drop.drag_name
-        
+
         return True
-              
+
 screen slide_glass_screen:
     add "CaveExplore3.png"
     draggroup:
@@ -196,17 +196,17 @@ screen slide_glass_screen:
             droppable False
             dragged glass_dragged
             xpos 100 ypos 100
-        
+
         drag:
             drag_name "Crystal"
             draggable False
             child "Crystal.png"
             xpos 900 ypos 100
-    
+
         drag:
             drag_name "Vine"
             draggable False
-            child "Vine.png" 
+            child "Vine.png"
             xpos 1500 ypos -90
 
         drag:
@@ -214,14 +214,14 @@ screen slide_glass_screen:
             draggable False
             child "Opus.png"
             xpos 20  ypos 450
-    
+
         drag:
             drag_name "Page?"
             draggable False
             child "PageItem.png"
             xpos 1670 ypos 850
 
-#######################START GAME INTRO####################            
+#######################START GAME INTRO####################
 label start:
     stop music fadeout 1.0
     play music "audio/RheaSoundtrack.wav" fadein 5.0 volume 0.3
@@ -230,9 +230,9 @@ label start:
     #$persistent.Route2 = True
 
     default preferences.text_cps = 50
-    scene Map with fade 
+    scene Map with fade
     window hide
-    pause 
+    pause
     window show
     "Within a place shrouded in darkness..."
     show Map:
@@ -243,15 +243,15 @@ label start:
     "Far away from Corpinus village"
     show Map at Position (xpos = 0.4,  xanchor=0.5, yanchor= 0.5, ypos= -.1) with pixellate:
         zoom 3.0
-    "A group of friends secretly plays hide and seek in Morel Forest."    
+    "A group of friends secretly plays hide and seek in Morel Forest."
     "Whispers can be heard as the glimmers of radiance reveals three kids."
-    
+
         #show Lila happy at flip for flipping the sprite
-    
+
         #transform my_dissolve(x):
                 # alpha 0.0
                 # linear x alpha 1.0
-     
+
        # label transform_test:
         #show image "Forest_Default.png" at truecenter, my_dissolve(.5)
 
@@ -272,48 +272,48 @@ label start:
     fb "We're already living in a world like that."
     show Liam nervous at right with dissolve
     fb "Aren't we?"
-    
+
     "They have only known the darkness since their existence on Rhea."
     "The only lights that they've seen are the dim glows of natural bioluminescence."
-    
+
     show Lila nervous at left with dissolve
     L "No!"
     show Lila pout at left with dissolve
     show Liam surprised with dissolve
-    
+
     L "I don't mean the kind of lights from this world.."
     L "Not just tiny glows here and there."
-    
+
     show Lila default at left with dissolve
     L "I meant a world where the entire land"
-    
+
     show Lila eyes closed at left with dissolve
     L "No..."
-    
+
     show Lila happy at left with dissolve
     L "The entirety of Rhea is filled by a very, very bright light!"
-    
+
     show Emma angry at flip with dissolve
     fa "What are you suddenly talking about?"
     show Liam nervous with dissolve
-    
+
     show Lila nervous at left with dissolve
     L "Ummmm...."
     show Lila eyes closed sad with dissolve
-    L "How do I explain this?" 
-    show Lila happy at left 
+    L "How do I explain this?"
+    show Lila happy at left
     L "Oh I know!"
     L "It's like something even more blinding than the Enoki mushrooms!"
-    
+
     show Emma concern with dissolve
     fa "You've lost your head again."
     show Lila surprised with dissolve
-    
+
     show Emma sigh with dissolve
     fa "Can we just focus the game?"
     show Lilasad at left with dissolve
     hide  Lila surprised
-    
+
     show Liam wink at right with dissolve
     fb "Patience Emma. We have plenty of time."
 
@@ -321,59 +321,59 @@ label start:
     fa "I'm just saying I'm not interested in her make believe fantasy."
 
     fb "It may be fantasy but it might not be make-believe."
-    hide Lilasad at left 
-    show Lila surprised at left 
-    
+    hide Lilasad at left
+    show Lila surprised at left
+
     show Emma concern at yflip with dissolve
     fa "Huh?"
     fa "What are you on about?"
- 
+
     show Emma sigh with dissolve
     fa "If you keep leading her on these crazy daydreams..."
     fa "She'll become even more stu-"
     show  Lila skeptical with dissolve
-    
+
     show Liam happy at right with dissolve
     fb "I also think we should start playing the game." with hpunch
-    
-    show Emma surprised with dissolve 
+
+    show Emma surprised with dissolve
     fb "It's been a while since we've gathered."
     fb "Let's enjoy this rare moment!"
     show Emma pout at emmaflip with dissolve
 
     "Liam raised his voice but his uplifting tone didn't change."
-    
+
     show Lila pout at left with dissolve
     L "Oh..."
     L "I guess you guys are getting bored."
     hide Lila pout at left
-    
+
     show Lilasad at left
     "Lila sounded disappointed at their reactions."
     "But she wasn't disappointed for long."
-    hide Lilasad at left 
+    hide Lilasad at left
     show Lila smile at left
     "She did miss her friends after all."
 
     show Emma angry at flip with dissolve
     fa "How are you so thick headed for you to realize that just now?"
-    
+
     show Lila angry at left with dissolve
     L "Huh? Thick headed?"
     show Lila pout at left with dissolve
-    
+
     show Liam nervous with dissolve
     fb "Ah!" with hpunch
     fb "Ignore her. Ignore her."
     show Liam wink at right with dissolve
     fb "Let's play!"
-    
+
     hide Emma angry at flip
-    hide Lila pout at left 
+    hide Lila pout at left
     hide Liam wink at right
     #"What do you want to be? The seeker or hidder?"
-    
- #######################Start Character Relationship Points####################        
+
+ #######################Start Character Relationship Points####################
     menu:
         "Start Game":
                 jump Seeker
@@ -391,19 +391,19 @@ label Seeker:
         #$persistent.Route1 = True
         #$persistent.Route2  = True
         #$persistent.value = 0
-        
+
     show bblack with dissolve
     show Lila eyes closed at lilaflip with dissolve
     "I stand there counting."
     "The only kind of warmth I feel is from the glowing fireflies"
-    hide bblack with dissolve 
+    hide bblack with dissolve
 
     L "55"
     L "54"
     L "53..."
-    
-    show bblack with dissolve 
-    show Lilasad at lilaflip 
+
+    show bblack with dissolve
+    show Lilasad at lilaflip
     "For some reason."
     "I felt more and more lonely as the numbers continue to count down."
     "Is it because of the darkness?"
@@ -412,8 +412,8 @@ label Seeker:
     "What could it be?"
     "Something didn't feel right."
     "Yet...."
-    hide bblack with dissolve 
-    hide Lilasad 
+    hide bblack with dissolve
+    hide Lilasad
     show Lila eyes closed sad at lilaflip
     L "52"
     L "51..."
@@ -431,17 +431,17 @@ label Seeker:
     show Lila skeptical at lilaflip with dissolve
     "That sounded like Emma."
     hide Lila skeptical at lilaflip with dissolve
-    show Lilasad at left 
+    show Lilasad at left
     "I should go check on her."
     "I know I'm in the middle of a game but I'm worried."
-    
+
     L "Emma?"
     L "Was that you?"
-    
+
     "At first there was no response."
     "But when I got a bit closer Emma popped out of her hiding spot along with Liam."
     hide Lilasad at left
-    show Lila surprised at left 
+    show Lila surprised at left
     show Emma angry at emmaflip with dissolve
     show Liam nervous at right with dissolve
     fa "Nope."
@@ -449,10 +449,10 @@ label Seeker:
     fa "Wasn't me."
     show Lila skeptical at left
     show Liam surprised at right with dissolve
-    L "If it wasn't Emma then who was it?" 
+    L "If it wasn't Emma then who was it?"
     show Liam embarrassed at right with dissolve
     L "Liam?"
-    hide Emma embarrassed at emmaflip 
+    hide Emma embarrassed at emmaflip
     hide Lila skeptical at left
     hide Liam embarrassed at right
     menu:
@@ -460,77 +460,77 @@ label Seeker:
             jump EPath1
         "Ask if Liam is ok.":
             jump LPath1
-return 
-#######################Liam VS EMMA Part 1####################     
+return
+#######################Liam VS EMMA Part 1####################
 label EPath1:
     "Emma's affection goes up."
     show Lila skeptical at left
-    show Emma embarrassed at emmaflip 
+    show Emma embarrassed at emmaflip
     show Liam embarrassed at right
     L "Are you sure?"
     show Emma surprised with dissolve
     L "That sound like you were in pain."
-    show Emma blush with dissolve  
+    show Emma blush with dissolve
     show Emma embarrassed with dissolve
     fa "What pain?"
     show Liam nervous with dissolve
-    show Lila surprised with dissolve 
-    show Lila skeptical with dissolve 
+    show Lila surprised with dissolve
+    show Lila skeptical with dissolve
     "I don't know why Emma is acting like this..."
-    hide Lilasurprised at left 
-    show Lilasad at left 
+    hide Lilasurprised at left
+    show Lilasad at left
     L "Well..."
     show Liam surprised with dissolve
-    hide Lilasad at left 
-    show Lila eyes closed sad at left 
+    hide Lilasad at left
+    show Lila eyes closed sad at left
     "Even so if she's hurt she should take care of herself."
     show Lila eyes closed at left with dissolve
-    show Lila default at left with dissolve 
-    show Liam default with dissolve 
+    show Lila default at left with dissolve
+    show Liam default with dissolve
     L "I have something here that might help y-"
-    show Emma sigh at middle with dissolve 
+    show Emma sigh at middle with dissolve
     fa "Look." with hpunch
     show Emma angry with dissolve
-    show Liam nervous with dissolve 
+    show Liam nervous with dissolve
     show Liam sigh with dissolve
-    show Lila surprised with dissolve 
+    show Lila surprised with dissolve
     fa "Thanks for worrying but can you stop being so annoy-"
-    show Lila skeptical with dissolve 
+    show Lila skeptical with dissolve
     show Liam happy with dissolve
     fb "Ahahahah!"
-    show Emma surprised with dissolve 
+    show Emma surprised with dissolve
     show Liam smile with dissolve
     fb "You found us!"
-    show Emma pout with dissolve 
+    show Emma pout with dissolve
     show Liam wink with dissolve
     fb "Looks like Emma is the seeker next!"
-    show Emma surprised with dissolve 
-    show Emma envy with dissolve 
+    show Emma surprised with dissolve
+    show Emma envy with dissolve
     L "I guess I did."
     show Emma angry with dissolve
     fa "HUh?"
-    show Lila surprised with dissolve 
+    show Lila surprised with dissolve
     show Liam surprised with dissolve
     show Emma sigh with dissolve
     fa "This round isn't fair for Liam."
-    show Liam sigh with dissolve 
+    show Liam sigh with dissolve
     show Emma envy with dissolve
     fa "Recount."
-    
+
     fb "No. No."
-    show Liam nervous with dissolve 
+    show Liam nervous with dissolve
     fb "It's fine if I am the seeker."
     fb "There's no need for her to reco-"
-    show Emma angry with dissolve 
+    show Emma angry with dissolve
     fa "This isn't fair."
-    show Liam skeptical with dissolve 
+    show Liam skeptical with dissolve
     fb "She needs to recount."
     show Liam sigh with dissolve
     "I heard Liam sigh."
-    show Lila swirly eyes with dissolve 
+    show Lila swirly eyes with dissolve
     "What should I do?"
-    hide Emma angry 
-    hide Liam sigh 
+    hide Emma angry
+    hide Liam sigh
     hide Lila swirly eyes
     menu:
         "Tell Emma she's being moronic.":
@@ -539,88 +539,88 @@ label EPath1:
                 jump LPath2
         "Say you want to be hider.":
                 jump NPath1
-return 
+return
 
-################# Liam VS EMMA Part 2 Or Go Your Own Way Part 1 ####################    
+################# Liam VS EMMA Part 2 Or Go Your Own Way Part 1 ####################
 
 label LPath1:
     "Liam's affection goes up."
-    show Emma embarrassed at emmaflip 
+    show Emma embarrassed at emmaflip
     show Lila skeptical at left
     show Liam embarrassed at right
     L "Was that you Liam?"
-    show Lilasad at left 
+    show Lilasad at left
     show Emma surprised with dissolve
     show Liam surprised with dissolve
     L "Are you ok?"
-    show Emma envy with dissolve 
+    show Emma envy with dissolve
     show Liam smile with dissolve
     fb "Hm?"
-    hide Lilasad at left 
-    show Lila skeptical at left with dissolve 
-    show Liam content with dissolve 
+    hide Lilasad at left
+    show Lila skeptical at left with dissolve
+    show Liam content with dissolve
     fb "How kind Lila."
     show Lila surprised with dissolve
-    show Liam smile with dissolve 
+    show Liam smile with dissolve
     fb "I'm perfectly fine."
-    show Lila happy with dissolve 
+    show Lila happy with dissolve
     "Liam showed me a bright smile. I smiled back with relief."
-    show Lila smile with dissolve 
-    show Emma angry with dissolve  
+    show Lila smile with dissolve
+    show Emma angry with dissolve
     fa "Of course he's fine!"
-    show Lila surprised with dissolve 
+    show Lila surprised with dissolve
     show Emma pout with dissolve
-    show Liam nervous with dissolve 
+    show Liam nervous with dissolve
     fa "I was the one hurt...."
-    show Liam embarrassed with dissolve 
-    show Lila stunned with dissolve 
+    show Liam embarrassed with dissolve
+    show Lila stunned with dissolve
     L "Huh?"
     L "I thought you said it wasn't you..."
-    show Emma surprised with dissolve 
-    show Emma embarrassed with dissolve 
+    show Emma surprised with dissolve
+    show Emma embarrassed with dissolve
     show Emma envy with dissolve
-    show Lila swirly eyes with dissolve 
-    show Liam nervous with dissolve 
+    show Lila swirly eyes with dissolve
+    show Liam nervous with dissolve
     "I'm so confused. Didn't she say she wasn't hurt but now she is?"
-    show Emma angry with dissolve 
+    show Emma angry with dissolve
     fa "That's it!"
-    show Liam surprised with dissolve 
-    show Lila surprised with dissolve 
+    show Liam surprised with dissolve
+    show Lila surprised with dissolve
     fa "You're recounting Lila!"
-    show Liam sigh with dissolve 
+    show Liam sigh with dissolve
     fa "This round isn't fair!"
-    show Liam nervous with dissolve 
-    show Lila stunned with dissolve 
+    show Liam nervous with dissolve
+    show Lila stunned with dissolve
     L "Huh?"
-    show Liam sigh with dissolve 
+    show Liam sigh with dissolve
     fb "There's no need for that."
-    show Emma pout with dissolve 
+    show Emma pout with dissolve
     show Liam nervous with dissolve
     fb "I can do the counting."
     show Emma envy with dissolve
     show Liam smile with dissolve
     fb "Let's just take turns."
-    show Emma yell with dissolve 
+    show Emma yell with dissolve
     fa "But that's not fair!"
     show Liam skeptical with dissolve
     show Emma angry with dissolve
     show Lila surprised with dissolve
-    fa "You were found because of me." 
+    fa "You were found because of me."
     show Lila nervous with dissolve
     fa "So she should just recount and start over."
     show Liam sigh with dissolve
     fb "Emma..."
-    show Liam angry with dissolve 
+    show Liam angry with dissolve
     fb "Don't be unreasonable."
-    show Emma surprised with dissolve 
+    show Emma surprised with dissolve
     show Emma envy with dissolve
     show Lila panic with dissolve
     "What's going on now?"
     show Lila swirly eyes with dissolve
     "Should I do something?"
-    hide Liam angry 
+    hide Liam angry
     hide Lila swirly eyes
-    hide Emma envy 
+    hide Emma envy
     menu:
         "Give Emma a hug.":
                 jump EPath3
@@ -630,58 +630,58 @@ label LPath1:
                 jump NPath2
 return
 
-################### Liam VS EMMA Part 3 Or Go you rown way part 2####################    
+################### Liam VS EMMA Part 3 Or Go you rown way part 2####################
 
 label EPath2:
     "Emma's affection goes down."
     show Emma angry at emmaflip
-    show Lila swirly eyes at left 
-    show Liam sigh at right 
-    show Lila Sweats at left with dissolve  
+    show Lila swirly eyes at left
+    show Liam sigh at right
+    show Lila Sweats at left with dissolve
     L "Emma your being....."
-    show Liam surprised with dissolve 
-    show Emma envy with dissolve 
-    show Lila eyes closed sad with dissolve 
+    show Liam surprised with dissolve
+    show Emma envy with dissolve
+    show Lila eyes closed sad with dissolve
     L "Um..."
-    show Lila nervous at left with dissolve 
+    show Lila nervous at left with dissolve
     L "Moronic."
-    show Emma shocked with dissolve 
+    show Emma shocked with dissolve
     show Liam shocked with dissolve
     fa "W-"
     fa "What did you just say?"
-    show Lila Sweats with dissolve  
-    show Emma embarrassed with dissolve 
-    show Emma angry with dissolve 
+    show Lila Sweats with dissolve
+    show Emma embarrassed with dissolve
+    show Emma angry with dissolve
     fa "Do you have any idea what that word means?"
-    show Lila skeptical with dissolve 
-    show Liam nervous with dissolve 
+    show Lila skeptical with dissolve
+    show Liam nervous with dissolve
     L "Not really but you call me that all the time."
     show Emma shocked with dissolve
-    show Emma embarrassed with dissolve 
-    show Emma angry with dissolve 
-    show Emma panic with dissolve 
-    show Emma nervous with dissolve 
+    show Emma embarrassed with dissolve
+    show Emma angry with dissolve
+    show Emma panic with dissolve
+    show Emma nervous with dissolve
     show Emma dissapointed with dissolve
-    show Lila Sweats with dissolve 
+    show Lila Sweats with dissolve
     fa "She's right."
     fa "You always somehow manage to bring out the ugly in me."
-    show Emma panic with dissolve 
+    show Emma panic with dissolve
     fa "I-"
-    show Emma nervous with dissolve 
-    show Emma panic with dissolve 
-    show Emma yell cry with dissolve 
+    show Emma nervous with dissolve
+    show Emma panic with dissolve
+    show Emma yell cry with dissolve
     fa "I don't want to play anymore."
-    hide Emma yell cry with fade 
-    show Liam panic with dissolve 
-    show Lila shocked with dissolve 
+    hide Emma yell cry with fade
+    show Liam panic with dissolve
+    show Lila shocked with dissolve
     "She runs off."
     "Liam calls out to her but she doesn't look back."
-    hide Liam panic with dissolve 
+    hide Liam panic with dissolve
     "So he runs after her."
-    show Lila Sweats with dissolve 
+    show Lila Sweats with dissolve
     "I feel a wave of worry and run after them."
-    hide Lila Sweats with fade 
-    scene image "Twopaths.png" with fade 
+    hide Lila Sweats with fade
+    scene image "Twopaths.png" with fade
     "But they are too fast and lost them."
     L "Oh no.."
     "I look around."
@@ -689,7 +689,7 @@ label EPath2:
     #"From what I can see there are only two paths from here."
     #"On the left is a cave and on the right is a den."
     "What should I do?"
-    menu: 
+    menu:
         "Observe the place?":
                 jump O1
         #"Go to Den.":
@@ -700,19 +700,19 @@ label EPath2:
                 jump SaW1
 return
 
-#######################Place Obseveration 1##########################   
+#######################Place Obseveration 1##########################
 
-label LPath2: 
+label LPath2:
     "Liam's affection goes down. Emma's affection goes down."
     show Emma angry at emmaflip
-    show Lila swirly eyes at left 
-    show Liam sigh at right 
-    show Lila Sweats at left with dissolve  
+    show Lila swirly eyes at left
+    show Liam sigh at right
+    show Lila Sweats at left with dissolve
     L "Liam you are irrational."
-    show Liam shocked with dissolve 
+    show Liam shocked with dissolve
     show Emma shocked with dissolve
     fb "Oh..."
-    show Liam embarrassed with dissolve 
+    show Liam embarrassed with dissolve
     show Liam nervous with dissolve
     show Emma envy with dissolve
     show Emma angry with dissolve
@@ -724,19 +724,19 @@ label LPath2:
     show Liam nervous with dissolve
     fb "That was very childish of me."
     show Emma envy with dissolve
-    show Emma pout with dissolve 
-    show Liam sad with dissolve 
+    show Emma pout with dissolve
+    show Liam sad with dissolve
     fa "Why do you still side with her..."
-    show Liam sigh with dissolve 
+    show Liam sigh with dissolve
     show Lila Sweats with dissolve
     "Liam lets out a sigh."
-    show Liam angry with dissolve 
+    show Liam angry with dissolve
     fb "That's not it."
     fb "I should have asked."
-    show Liam nervous with dissolve 
+    show Liam nervous with dissolve
     fb "What do you want to be Lila?"
-    hide Emma pout 
-    hide Lila Sweats 
+    hide Emma pout
+    hide Lila Sweats
     hide Liam nervous
     menu:
         "Seeker again.":
@@ -748,28 +748,28 @@ return
 #######################Liam And Emma Offended#####################
 
 label Hidder1:
-    show Lila Sweats at left 
-    show Emma pout at emmaflip 
-    show Liam nervous at right 
+    show Lila Sweats at left
+    show Emma pout at emmaflip
+    show Liam nervous at right
     L "I want to hide this time."
-    show Emma angry with dissolve 
+    show Emma angry with dissolve
     fa "Then say so in the first place."
-    hide Lila Sweats at left 
+    hide Lila Sweats at left
     show Lilasad at left
-    show Liam sad with dissolve 
+    show Liam sad with dissolve
     "Emma sounds bitter."
     "Liam doesn't say anything and just sliently counts"
     hide Liam sad with fade
     "Soon after Emma starts to run."
-    hide Emma angry with fade 
+    hide Emma angry with fade
     hide Lilasad at left
-    show Lila Sweats at left 
+    show Lila Sweats at left
     "I want to follow Emma but she runs too fast."
     "I couldn't keep up."
-    show Lila nervous with dissolve 
+    show Lila nervous with dissolve
     "I took a while to catch my breath."
-    hide Lila nervous with fade 
-    scene image "Twopaths.png" with fade 
+    hide Lila nervous with fade
+    scene image "Twopaths.png" with fade
     "When I look around I see that this isn't a place I have been to before."
     #"From what I can see to my left is a cave and my right is a den."
     "All I see is a cave."
@@ -783,33 +783,33 @@ label Hidder1:
                 jump Cave1
           "Sit and wait.":
                 jump SaW2
-return 
+return
 
-#######################Place Obseveration 2########################## 
+#######################Place Obseveration 2##########################
 label Seeker1:
-    show Lila Sweats at left 
-    show Emma pout at emmaflip 
-    show Liam nervous at right 
+    show Lila Sweats at left
+    show Emma pout at emmaflip
+    show Liam nervous at right
     L "I want to seek again."
-    show Emma angry with dissolve 
+    show Emma angry with dissolve
     fa "Then say so in the first place."
-    hide Lila Sweats at left 
+    hide Lila Sweats at left
     show Lilasad at left
-    show Liam sad with dissolve 
+    show Liam sad with dissolve
     "Emma sounds bitter."
     "Liam doesn't say anything and just quietly went to hide."
     hide Liam sad with fade
     "Soon after Emma followed behind."
-    hide Emma angry with fade 
+    hide Emma angry with fade
     "I look on as the backs of my friends dissappear into the woods."
     "My heart started to hurt."
     "Feeling awful I decided to follow them."
     hide Lilasad at left
-    show Lila Sweats at left 
+    show Lila Sweats at left
     "But I can't catch up."
-    show Lila nervous with dissolve 
+    show Lila nervous with dissolve
     "I took a while to catch my breath."
-    scene image "Twopaths.png" with fade 
+    scene image "Twopaths.png" with fade
     "When I look around I see that this isn't a place I have been to before."
     "All I see is a cave."
     #"From what I can see to my left is a cave and my right is a den."
@@ -823,18 +823,18 @@ label Seeker1:
                 jump Cave1
           "Sit and wait.":
                 jump SaW2
-return 
+return
 
-#######################Place Obseveration 2########################## 
+#######################Place Obseveration 2##########################
 label NPath1:
     "Liam's affection goes up. Emma's affection goes down."
     show Emma angry at emmaflip
-    show Lila swirly eyes at left 
-    show Liam sigh at right 
-    show Lila happy at left with dissolve  
-    
+    show Lila swirly eyes at left
+    show Liam sigh at right
+    show Lila happy at left with dissolve
+
     L "I also want Liam to be the seeker this time!"
-    show Liam surprised with dissolve 
+    show Liam surprised with dissolve
     show Liam smile with dissolve
     show Emma surprised with dissolve
     show Emma angry with dissolve
@@ -843,41 +843,41 @@ label NPath1:
     show Lila nervous with dissolve
     "For a second I thought that Emma is going to blow up."
     "Yet Liam's calm voice settled my nerves."
-    show Liam nervous with dissolve 
+    show Liam nervous with dissolve
     fb "It's ok Emma. "
-    show Lila Sweats with dissolve 
-    show Emma surprised with dissolve 
+    show Lila Sweats with dissolve
+    show Emma surprised with dissolve
     show Emma pout with dissolve
     show Liam happy with dissolve
     fb "It would be more fair if I play as the seeker next."
     show Emma embarrassed with dissolve
     show Emma pout with dissolve
-    show Emma sigh with dissolve 
+    show Emma sigh with dissolve
     fa "I guess it's only fair."
-    show Lila relieved with dissolve 
+    show Lila relieved with dissolve
     show Emma dissapointed with dissolve
     fa "You're so obvious..."
-    show Lila skeptical 
+    show Lila skeptical
     show Liam sad with dissolve
-    hide Emma dissapointed with fade 
+    hide Emma dissapointed with fade
     "I watch as Emma leaves."
     "I've known her for some time now."
     show Liam sigh with dissolve
-    show Lilasad at left 
+    show Lilasad at left
     "I have no clue when she became like this."
     "It almost feels bitter."
     show Liam surprised with dissolve
     "Did something happen to cause her to be like this?"
     show Liam smile with dissolve
     fb "Aren't you going to hide?"
-    hide Lilasad at left 
+    hide Lilasad at left
     show Lila surprised at left with dissolve
     "Liam asks me."
     "But I don't want to hide yet."
     show Lila Sweats with dissolve
     "I want to sort something out."
     "But should I wait till the game is over?"
-    hide Lila Sweats 
+    hide Lila Sweats
     hide Liam smile
     menu:
         "Go talk to Emma.":
@@ -886,50 +886,50 @@ label NPath1:
                 jump LPath4
         "Ignore. Just go hide.":
                 jump NPath3
-return 
+return
 
-################### Liam VS EMMA Part 4 Or Go you rown way part 3####################    
+################### Liam VS EMMA Part 4 Or Go you rown way part 3####################
 
 label EPath3:
       "Emma's affection goes up."
       show Emma envy at emmaflip
-      show Lila swirly eyes at left 
-      show Liam angry at right 
-      show Lila Sweats with dissolve 
-      show Lila pout with dissolve 
+      show Lila swirly eyes at left
+      show Liam angry at right
+      show Lila Sweats with dissolve
+      show Lila pout with dissolve
       "I didn't say anything."
       "I just walked up to Emma and gave her a tight hug."
-      show Emma shocked with dissolve 
+      show Emma shocked with dissolve
       show Liam shocked with dissolve
-      show Liam surprised with dissolve 
-      show Emma blush with dissolve 
-      show Emma embarrassed with dissolve 
-      show Lila embarrassed with dissolve 
+      show Liam surprised with dissolve
+      show Emma blush with dissolve
+      show Emma embarrassed with dissolve
+      show Lila embarrassed with dissolve
       fa "W-What?!"
-      
-      show Emma nervous with dissolve 
-      show Emma panic with dissolve 
-      
+
+      show Emma nervous with dissolve
+      show Emma panic with dissolve
+
       fa "What are you doing?"
-      show Lila laugh with dissolve 
+      show Lila laugh with dissolve
       show Liam nervous with dissolve
       L "I don't know."
-      show Lila embarrassed with dissolve 
-      show Emma surprised with dissolve 
+      show Lila embarrassed with dissolve
+      show Emma surprised with dissolve
       L "Just felt like you need a hug."
       show Liam content with dissolve
-      show Lila blush with dissolve 
-      show Emma nervous with dissolve 
-      show Emma panic with dissolve 
+      show Lila blush with dissolve
+      show Emma nervous with dissolve
+      show Emma panic with dissolve
       show Emma embarrassed with dissolve
-      show Emma yell with dissolve 
+      show Emma yell with dissolve
       fa "Get off me."
       show Liam nervous with dissolve
       show Emma nervous with dissolve
       show Emma embarrassed with dissolve
-      show Lila embarrassed with dissolve 
+      show Lila embarrassed with dissolve
       L "No."
-      show Lila nervous with dissolve 
+      show Lila nervous with dissolve
       show Liam surprised with dissolve
       L "I want to stick with you."
       show Emma panic with dissolve
@@ -940,19 +940,19 @@ label EPath3:
       show Liam laugh with dissolve
       show Emma blush with dissolve
       show Emma embarrassed with dissolve
-      
+
       fb "Look at you guys!"
-      show Liam happy with dissolve 
+      show Liam happy with dissolve
       show Lila surprised with dissolve
       show Emma surprised with dissolve
       fb "Being so cute."
       show Liam content with dissolve
       show Emma embarrassed with dissolve
-      show Lila Sweats with dissolve 
+      show Lila Sweats with dissolve
       show Lila blush with dissolve
-      
+
       fa "C-cut-cu."
-      show Emma nervous with dissolve 
+      show Emma nervous with dissolve
       show Emma panic with dissolve
       show Emma embarrassed with dissolve
       show Emma blush with dissolve
@@ -960,13 +960,13 @@ label EPath3:
       show Liam smug with dissolve
       show Liam smirk with dissolve
       "Emma doesn't seem to know what to say."
-      show Lila stunned with dissolve 
+      show Lila stunned with dissolve
       show Lila happy with dissolve
-      show Liam happy with dissolve 
+      show Liam happy with dissolve
       fb "Looks like it's decided!"
       show Lila surprised with dissolve
       show Emma surprised at yflip with dissolve
-      show Liam wink with dissolve 
+      show Liam wink with dissolve
       fb "You guys should go hide together."
       show Emma shocked with dissolve
       fa "What?!"
@@ -977,7 +977,7 @@ label EPath3:
       show Liam nervous with dissolve
       show Emma nervous at emmaflip with dissolve
       "Emma looks at me."
-      show Lila stunned with dissolve 
+      show Lila stunned with dissolve
       show Liam surprised with dissolve
       "I look back."
       show Emma panic with dissolve
@@ -987,30 +987,30 @@ label EPath3:
       show Liam smug with dissolve
       show Liam smirk with dissolve
       show Emma sigh with dissolve
-      show Emma concern with dissolve 
+      show Emma concern with dissolve
       show Liam happy with dissolve
       show Emma dissapointed with dissolve
       fa "Come on let's go."
-      show Emma envy with dissolve 
+      show Emma envy with dissolve
       show Lila surprised with dissolve
       "She said as she dragged me away from Liam."
-      show Liam content with dissolve 
+      show Liam content with dissolve
       fb "Have fun!"
       "Liam shouts."
-      show Emma blush with dissolve 
-      show Emma envy with dissolve 
+      show Emma blush with dissolve
+      show Emma envy with dissolve
       fa "Shut up and start counting!"
       "Emma shouts back."
-      
-      hide Liam content with fade 
-      hide Emma envy with dissolve 
-      hide Lila surprised with dissolve 
-      scene image "Twopaths.png" with fade 
+
+      hide Liam content with fade
+      hide Emma envy with dissolve
+      hide Lila surprised with dissolve
+      scene image "Twopaths.png" with fade
       #"Soon we came across two branching paths."
       "Soon we hit an dead end."
       "What's ahead of us is a cave."
       #"To the left is a cave and to the right is a Den."
-      
+
       fa "What should we do?"
       "Emma asks."
       menu:
@@ -1022,19 +1022,19 @@ label EPath3:
                 jump Cave2
           "Sit and wait.":
                 jump SaW3
-return 
+return
 
-#######################Place Obseveration 3########################## 
+#######################Place Obseveration 3##########################
 
 label LPath3:
     "Emma's affection goes up. Liam's affection goes up."
     show Emma envy at middle
-    show Lila swirly eyes at left 
-    show Liam angry at right 
-    show Lila pout with dissolve 
+    show Lila swirly eyes at left
+    show Liam angry at right
+    show Lila pout with dissolve
     "I puffed my chest and walked up to Liam."
-    show Emma surprised at emmaflip with dissolve 
-    show Liam surprised with dissolve 
+    show Emma surprised at emmaflip with dissolve
+    show Liam surprised with dissolve
     "I grabbed his hand as his eyes widened."
     show Emma shocked with dissolve
     show Emma envy with dissolve
@@ -1045,25 +1045,25 @@ label LPath3:
     fb "Lila? W-W-What a-are-"
     show Lila Sweats with dissolve
     "Liam's face is bright red but before he can finish his sentence Emma shouts."
-  
+
     fa "WHAT ARE YOU DOING?"
-    show Lila surprised with dissolve 
+    show Lila surprised with dissolve
     show Liam shocked with dissolve
     show Liam panic with dissolve
     show Liam nervous with dissolve
-    show Emma blush with dissolve 
+    show Emma blush with dissolve
     show Emma angry with dissolve
     "Her face is also bright red but she looks pissed."
     show Emma yell with dissolve
     fa "Take your han-"
-    show Lila pout with dissolve 
+    show Lila pout with dissolve
     show Lila blush with dissolve
     show Liam shocked with dissolve
     show Emma shocked with dissolve
     "I grab her hand next and put it on top of Liam's."
     "The red on their faces fade."
     show Emma surprised with dissolve
-    show Liam surprised with dissolve 
+    show Liam surprised with dissolve
     "They both look at me weridly."
     show Lila pout with dissolve
     L "Let's stop playing..."
@@ -1072,24 +1072,24 @@ label LPath3:
     show Emma nervous with dissolve
     show Liam nervous with dissolve
     fa "What?"
-    
+
     "I take them into the forrest with me."
     show Emma surprised with dissolve
     show Liam surprised with dissolve
     fa "But why?"
-    show Liam skeptical with dissolve 
+    show Liam skeptical with dissolve
     "Liam stays quiet."
-    show Lila embarrassed with dissolve 
+    show Lila embarrassed with dissolve
     L "I just felt like it."
     show Lila Sweats with dissolve
-    show Liam surprised with dissolve 
+    show Liam surprised with dissolve
     L "I didn't like how you guys were acting."
-    show Liam embarrassed with dissolve 
-    show Emma embarrassed with dissolve 
+    show Liam embarrassed with dissolve
+    show Emma embarrassed with dissolve
     "Emma and Liam looked at each other."
-    show Liam nervous with dissolve 
-    show Liam smile with dissolve 
-    show Liam happy with dissolve 
+    show Liam nervous with dissolve
+    show Liam smile with dissolve
+    show Liam happy with dissolve
     show Emma nervous with dissolve
     show Emma smile with dissolve
     show Emma happy with dissolve
@@ -1098,11 +1098,11 @@ label LPath3:
     L "What's so funny?"
     hide Liam happy with dissolve
     hide Emma happy with dissolve
-    hide Lila stunned with dissolve 
-    scene image "Twopaths.png" with fade 
+    hide Lila stunned with dissolve
+    scene image "Twopaths.png" with fade
     "The two don't say anything."
     "They laughed until we noticed we are lost."
-    
+
     #"They laugh until we reach two branching paths."
     #"At this point I've stopped questioning them."
     #"Instead I focus on the path before me."
@@ -1117,17 +1117,17 @@ label LPath3:
                 #jump Den3
           "Go to Cave.":
                 jump Cave3
-return 
+return
 
-#######################Place Obseveration 4########################## 
+#######################Place Obseveration 4##########################
 
-label NPath2: 
+label NPath2:
     "Emma's affection goes down. Liam's affection goes down."
     show Emma envy at middle
-    show Lila swirly eyes at left 
+    show Lila swirly eyes at left
     show Liam angry at right
-    hide Lila swirly eyes at left 
-    show Lilasad at left 
+    hide Lila swirly eyes at left
+    show Lilasad at left
     "I do not like how the two of them are acting."
     "So while they were busy doing that I decided to wonder on my own."
     hide Emma envy with dissolve
@@ -1137,12 +1137,12 @@ label NPath2:
     "I think it's best to give them so space."
     "I'll come back after they have cooled down."
     hide Lilasad at middle with fade
-    scene image "Twopaths.png" with fade 
+    scene image "Twopaths.png" with fade
     "Not paying attention to where I was going."
     "I got lost."
-    
+
     L "Uh oh..."
-    
+
     "I have no clue where to go from here."
     menu:
           "Observe the place?":
@@ -1153,17 +1153,17 @@ label NPath2:
                 jump Cave1
           "Sit and wait.":
                 jump SaW1
-return 
+return
 
 label EPath4:
     "Emma's affection goes up."
-    show Lila Sweats at left 
-    show Liam smile at right 
+    show Lila Sweats at left
+    show Liam smile at right
     show Lila nervous with dissolve
     L "I'm going!"
     hide Liam smile with dissolve
     hide Lila nervous with dissolve
-    scene image "Twopaths.png" with fade 
+    scene image "Twopaths.png" with fade
     "I shouted to Liam but my goal is actually to find Emma."
     "I couldn't wait around to see Liam's reaction and just ran for it."
     "After running for a while I noticed I was lost."
@@ -1175,33 +1175,33 @@ label EPath4:
                #jump Den1
           "Go to Cave.":
                 jump Cave1
-return 
+return
 
 label LPath4:
     "Liam's affection goes up. Emma's affection goes down."
-    show Lila Sweats at left 
-    show Liam smile at right 
+    show Lila Sweats at left
+    show Liam smile at right
     show Lilasad at left
     "I don't think Emma will answer me if I asked her."
     "I'll ask just ask Liam."
     L "I have a question Liam."
-    show Liam surprised with dissolve 
+    show Liam surprised with dissolve
     fb "Hm?"
     show Liam nervous with dissolve
     fb "About the game?"
     L "No..."
     L "It's about Emma."
-    show Liam surprised with dissolve 
+    show Liam surprised with dissolve
     show Liam nervous with dissolve
     fb "Emma?"
     L "Yeah."
     L "Why does she talk to me that way?"
     fb "What way?"
-    hide Lilasad at right 
-    show Lila nervous at left 
+    hide Lilasad at right
+    show Lila nervous at left
     L "I don't know."
-    hide Lila nervous at left 
-    show Lilasad at left 
+    hide Lila nervous at left
+    show Lilasad at left
     show Liam surprised with dissolve
     L "It's hard to explain it."
     show Liam nervous with dissolve
@@ -1210,7 +1210,7 @@ label LPath4:
     show Liam nervous with dissolve
     show Liam smile with dissolve
     fb "It's ok not to think about it.."
-    hide Lilasad at left 
+    hide Lilasad at left
     show Lila nervous at left with dissolve
     L "I guess so..."
     show Lila eyes closed sad with dissolve
@@ -1231,7 +1231,7 @@ label LPath4:
     L "Got it!"
     hide Liam nervous with dissolve
     hide Lila happy with dissolve
-    scene image "Twopaths.png" with fade 
+    scene image "Twopaths.png" with fade
     "He sounded a bit worried...."
     "But for a good reason."
     L "He just said not to..."
@@ -1244,17 +1244,17 @@ label LPath4:
                #jump Den2
           "Go to Cave.":
                 jump Cave1
-return 
+return
 
 label NPath3:
-    show Lila Sweats at left 
+    show Lila Sweats at left
     hide Liam smile with dissolve
     hide Lila Sweats at left with dissolve
     show Lilasad at middle with dissolve
     "I think I'm overthinking again."
     "As I heard Liam's coutdown I started to run."
     hide Lilasad at middle with dissolve
-    scene image "Twopaths.png" with fade 
+    scene image "Twopaths.png" with fade
     "Before I know it I hit a dead end."
     "Where is this?"
     "There seems to be this cave I've never seen before..."
@@ -1266,7 +1266,7 @@ label NPath3:
           "Go to Cave.":
                 jump Cave1
 
-#######################Place Obseveration 5########################## 
+#######################Place Obseveration 5##########################
 
 #Calling Emma Childish result:
 label O1:
@@ -1276,59 +1276,59 @@ label O1:
                 jump OC1
         #"Den.":
                 #jump OD1
-return   
+return
 
 label OC1:
     "What would you like to check out first?"
 label menu_OC1:
-    menu: 
+    menu:
         "Sight." if C_Sight1 == True:
                 jump Sight1
-                
+
         "Smell." if C_Smell1 == True:
                 jump Smell1
-                
+
         "Feel." if C_Feel1 == True:
-                jump Feel1 
-                
+                jump Feel1
+
         "Sound." if C_Sound1 == True:
-                jump Sound1 
-                
+                jump Sound1
+
         #"Observe the Den.":
                 #jump OD1
-                
+
         "Go to Cave.":
                 jump Cave1
-return 
+return
 
-#######################Place Sense Observation 1 ########################## 
+#######################Place Sense Observation 1 ##########################
 
 label Sight1:
     "The cave is a bit too far to see the details up close but from this distance you can definitely see how spacious it is."
     "Besides that only the crystals surrounding the cave stood out."
-    
+
     $C_Sight1 = False
 jump menu_OC1
-return 
+return
 
 label Smell1:
     "There's nothing but the scent of the fresh grass."
-    
+
     $C_Smell1 = False
 jump menu_OC1
-return 
+return
 
 label Feel1:
     "Just thinking about the atmosphere within the cave sent a silver down Lila’s spin."
     "It just felt dark, gloomy, and a bit creepy."
-    
+
     $C_Feel1 = False
 jump menu_OC1
-return 
+return
 
 label Sound1:
     "The only sounds heard are from the insects nearby."
-    
+
     $C_Sound1 = False
 jump menu_OC1
 
@@ -1340,18 +1340,18 @@ label Cave1:
     show Lila surprised at middle with dissolve
     L "Oh..."
     L "Looks like there's alot stuff in the cave that I've never seen before."
-    hide Lila surprised at middle 
-    show Lilasad at middle 
+    hide Lila surprised at middle
+    show Lilasad at middle
     L "I guess I can explore for a bit..."
     "I'm curious about finding new things."
     "But what happened to me and my friends still bothers me."
-    hide Lilasad at middle 
+    hide Lilasad at middle
     "Drag the magnifying glass to the objects you wish to interact with."
-    
+
 label drag_glass:
-    call screen slide_glass_screen   
+    call screen slide_glass_screen
     "[glass] picked the [object]. Do you want to take a closer look at the object?"
-    window hide 
+    window hide
     menu:
         "Observe the crystal?" if store.object == "Crystal":
             jump Crystal1
@@ -1376,7 +1376,7 @@ label Crystal1:
     "It's edges glistens just like Liam's pocket knife."
     "Even so there seems to be more to the crystal."
 label menu_Crystal1:
-    menu: 
+    menu:
         "Touch it." if Crystal_TouchNormal == True:
                 jump TouchNormal
         "Touch it." if Crystal_TouchAfterTaste == True:
@@ -1390,31 +1390,31 @@ label menu_Crystal1:
         "Smell it." if Crystal_SmellNormal == True:
                 jump SmellNormal
         "Smell it." if Crystal_SmellAfterTaste  == True:
-                jump SmellAfterTaste 
+                jump SmellAfterTaste
         "Don't do anything.":
                 jump drag_glass
 return
 
 label TouchNormal:
-    scene image "CloseupCrystal.png" with fade 
+    scene image "CloseupCrystal.png" with fade
     "I reached out my hand and rubbed the edge of the crystal."
     "Like the it's cold touch I felt a sharp pain through the tips of my finger."
     "Looking at the cut on my finger I felt my entire body freeze."
     "That was a very bad idea..."
-    scene image "CloseupCrystalBlood.png" with fade 
+    scene image "CloseupCrystalBlood.png" with fade
     $Crystal_TouchNormal = False
     $TouchBleed.value += 1
     $Touch_Points.value += 1
-    
+
     if Touch_Points.value >= 1:
         $Crystal_TasteAfterTouch = True
         $Crystal_TasteNormal = False
         $Crystal_TouchNormal = False
     jump menu_Crystal1
-return 
+return
 
 label TouchAfterTaste:
-    scene image "CloseupCrystalBlood.png" with fade 
+    scene image "CloseupCrystalBlood.png" with fade
     "As my hands reached out to the crystal I felt a sharp pain in my mouth."
     "There is an awful feeling in my stomach."
     "I don't feel like touching the crystal."
@@ -1427,30 +1427,30 @@ label TouchAfterTaste:
 return
 
 label yes1:
-    scene image "CloseupCrystalBlood.png" with fade 
+    scene image "CloseupCrystalBlood.png" with fade
     "I reached out to touch the edge of the crystal."
     "Like the it's cold touch I felt a sharp pain through the tips of my finger."
     "This is the worst."
     "I can't talk and now my finger hurts."
     $TouchBleed.value += 1
     jump menu_Crystal1
-    
+
 label no1:
     "I pulled my hand back with relief."
     jump menu_Crystal1
 
 label Listen1:
-    "I put my ears near the crystal." 
+    "I put my ears near the crystal."
     "It didn't make any sounds."
     $Crystal_Listen1 = False
 jump menu_Crystal1
-return 
+return
 
 label TasteNormal:
     "I tried to bite the crystal but the minute my tongue touched it I felt a sharp pain."
     "There was a taste of iron in my mouth."
     "It seems like there's a warm liquid dripping."
-    scene image "CloseupCrystalBlood.png" with fade 
+    scene image "CloseupCrystalBlood.png" with fade
     $Crystal_TasteNormal = False
     $TasteBleed.value += 1
     $Taste_Points.value += 1
@@ -1468,7 +1468,7 @@ label TasteAfterTouch:
     "I thought to myself of a moment."
     "Is this really a good idea?"
     $Crystal_TasteAfterTouch = False
-    
+
     menu:
         "Bite it anyways.":
                 jump yes2
@@ -1480,9 +1480,9 @@ label yes2:
      "I bite into the crystal."
      "I felt it slice my tongue."
      "I quickly pulled back."
-     
+
      L "Ow-"
-     
+
      "When I open my mouth I felt the pain again."
      "I think it's best to not talk for now."
      scene image "CloseupCrystalBlood.png" with fade
@@ -1522,7 +1522,7 @@ label Vine1:
     "This is werid."
     "Do plants grow in caves?"
     "It also glowing a healthy color."
-    $MPath1Points.value += 1 
+    $MPath1Points.value += 1
 label menu_Vine1:
     if TouchBleed.value >= 1:
         $Vine_TouchBleed = True
@@ -1548,13 +1548,13 @@ label menu_Vine1:
         "Bite it." if Vine_BiteBleed == True:
                 jump BiteVineWithBlood
         "Listen to it." if Vine_ListenVine == True:
-                jump ListenVine     
+                jump ListenVine
         "Listen to it." if Vine_ListenAfterTouch == True:
                 jump ListenOpusAfterTouch
         "Don't do anything.":
                 jump drag_glass
 return
-  
+
 label TouchVineNormal:
     scene image "CloseupVine.png" with fade
     "I poked the Vine."
@@ -1573,8 +1573,8 @@ label TouchVineNormal:
         $Vine_SmellNormal = False
         $Vine_BiteWithEyes = True
         $Vine_NormalBite = False
-    jump menu_Vine1     
-    
+    jump menu_Vine1
+
 label TouchVineBleed:
      scene image "CloseupVine.png" with fade
      "I poked the Vine."
@@ -1591,12 +1591,12 @@ label TouchVineBleed:
      scene image "VinaPlantDeath.png" with fade
      "Vines with eyes have wrapped around on my leg."
      "The only thing I remember seeing was the large mouth that has appeared."
-     scene image "black.png" with fade 
+     scene image "black.png" with fade
      "{cps=2}...{/cps}"
      "{cps=2}...{/cps}"
      "Lila's route ends"
      "No pages found."
-return 
+return
 
 label TouchVineWithEyes:
     $Vine_TouchWithEyes = False
@@ -1617,7 +1617,7 @@ label VineYes1:
     scene image "VinaPlant.png" with fade
     "It started to shake again even harder this time."
     "I close my eyes and felt myself shake."
-    scene image "black.png" with fade 
+    scene image "black.png" with fade
     "{cps=2}...{/cps}"
     "{cps=2}...{/cps}"
     "Nothing happened."
@@ -1630,22 +1630,22 @@ label VineYes1:
         $Vine_SmellNormal = False
         $Vine_BiteWithEye = True
         $Vine_NormalBite = False
-    jump menu_Vine1  
-return 
+    jump menu_Vine1
+return
 
 label VineNo1:
     $Vine_TouchWithEyes = False
     scene image "CloseupVine.png" with fade
     "I let out a breath of relief."
-    jump menu_Vine1  
+    jump menu_Vine1
 
 label SmellVineNormal:
     $Vine_SmellNormal = False
     scene image "CloseupVine.png" with fade
     "I leaned in to smell the vine."
     "It smelled like fresh grass."
-    jump menu_Vine1 
- 
+    jump menu_Vine1
+
 label SmellVineWithEyes:
     $Vine_SmellWithEyes = False
     scene image "CloseupVine.png" with fade
@@ -1654,12 +1654,12 @@ label SmellVineWithEyes:
     "But I stopped when I noticed eyes looking at me."
     "I felt a bit werid."
     "Do I still smell the vine?"
-    menu: 
+    menu:
         "Yes.":
                 jump VineYes2
         "No.":
                 jump VineNo2
-return 
+return
 
 label VineYes2:
     scene image "VinaPlant.png" with fade
@@ -1668,20 +1668,20 @@ label VineYes2:
     "It made me feel hungry..."
     "Very hungry."
     scene image "CloseupVine.png" with fade
-    jump menu_Vine1 
-return 
+    jump menu_Vine1
+return
 
 label VineNo2:
     scene image "VinaPlant.png" with fade
     "I felt a sense of relief."
     scene image "CloseupVine.png" with fade
-    jump menu_Vine1 
-return 
+    jump menu_Vine1
+return
 
 label BiteVineNormal:
-    $Vine_NormalBite = False 
+    $Vine_NormalBite = False
     $VineTastePoints.value += 1
-    
+
     if VineTastePoints.value >= 1:
         $Vine_NormalTouch = False
         $Vine_TouchWithEyes = True
@@ -1698,11 +1698,11 @@ label BiteVineNormal:
     "Even after they closed back up I felt a chill down my spin."
     scene image "CloseupVine.png" with fade
     jump menu_Vine1
-    
+
 label BiteVineWithEyes:
     $Vine_BiteWithEyes = False
     $VineTastePoints.value += 1
-    
+
     if VineTastePoints.value >= 1:
         $Vine_NormalTouch = False
         $Vine_SmellNormal = False
@@ -1715,7 +1715,7 @@ label BiteVineWithEyes:
                 jump Vine_Yes3
         "The smarter move is not to.":
                 jump Vine_No3
-return 
+return
 
 label Vine_Yes3:
     scene image "VinaPlant.png" with fade
@@ -1725,7 +1725,7 @@ label Vine_Yes3:
     "Besides feeling pretty grossed out nothing major happened..."
     scene image "CloseupVine.png" with fade
     jump menu_Vine1
-    
+
 label Vine_No3:
     scene image "VinaPlant.png" with fade
     "I felt a sense of relief."
@@ -1747,10 +1747,10 @@ label BiteVineWithBlood:
     scene image "VinaPlantDeath.png" with fade
     "More like I didn't want too."
     "I felt unwanted tears flow down my eyes."
-    scene image "black.png" with fade 
+    scene image "black.png" with fade
     "The last thing I saw was a bunch of eyes staring down at me."
     "A gaint mouth opening before the tears over took my sight."
-return 
+return
 
 label ListenVine:
     $Vine_ListenVine = False
@@ -1762,7 +1762,7 @@ label ListenVine:
     "I think I might just faint if I stay here any longer then I should."
     scene image "CloseupVine.png" with fade
     jump menu_Vine1
-return 
+return
 
 ########Start of Opus 1###########
 label Opus1:
@@ -1790,16 +1790,16 @@ label menu_Opus1:
         "Smell it." if Opus_SmellBleed == True:
             jump SmellOpusBlood
         "Bite it." if Opus_NormalBite == True:
-            jump BiteOpusNormal 
+            jump BiteOpusNormal
         "Bite it." if Opus_BiteBleed == True:
             jump BiteOpusBleed
         "Listen to it." if Opus_Listen == True:
-            jump ListenOpusNormal 
+            jump ListenOpusNormal
         "Listen to it." if Opus_ListenAfterTouch == True:
             jump ListenOpusAfterTouch
         "Don't do anything":
             jump drag_glass
-return 
+return
 
 label TouchOpusNormal:
     scene image "CloseupOpus.png" with fade
@@ -1813,8 +1813,8 @@ label TouchOpusNormal:
         $Opus_Listen = False
         $Opus_ListenAfterTouch = True
     jump menu_Opus1
-return 
-    
+return
+
 label TouchOpusBlood:
     scene image "CloseupOpus.png" with fade
     "I wanted to poke the blob."
@@ -1822,23 +1822,23 @@ label TouchOpusBlood:
     "But I just notice... another eye has appeared on the blob."
     "It was just staring at the cut on my finger."
     "I felt a bit scared."
-    menu: 
+    menu:
         "Touch it anways.":
             jump OpusYes1
         "Don't touch it.":
             jump OpusNo1
-return 
-    
+return
+
 label OpusYes1:
-    scene image "Opus2.png" with fade 
+    scene image "Opus2.png" with fade
     "I felt a wave of nerves as my hand touched the blob."
-    scene image "black.png" with fade 
+    scene image "black.png" with fade
     "Before I know it my hand was no longer in sight."
     "The last thing I saw before everything faded to black..."
     "Was a gaint mouth soaked in the color red."
     "Lila route end."
     "No pages found."
-return    
+return
 
 label OpusNo1:
     scene image "Opus2.png" with fade
@@ -1847,8 +1847,8 @@ label OpusNo1:
     "The eyeball on the blob that was staring at me was no longer there."
     L "Ew."
     "I shiver at how gross it was."
-    jump menu_Opus1   
-return 
+    jump menu_Opus1
+return
 
 label SmellOpusNormal:
     $Opus_NormalSmell = False
@@ -1856,8 +1856,8 @@ label SmellOpusNormal:
     "I leaned in close to smell the blob."
     "It kind of reminds me of the sea."
     "Fresh and salty."
-    jump menu_Opus1  
-return 
+    jump menu_Opus1
+return
 
 label SmellOpusBlood:
     $Opus_SmellBleed = False
@@ -1868,11 +1868,11 @@ label SmellOpusBlood:
     "I don't care about how it smells like."
     scene image "Opus2.png" with fade
     "I stared at it's third eye and gaint mouth."
-    scene image "black.png" with fade 
+    scene image "black.png" with fade
     "I wanted to scream but the pain in my mouth stop me from doing so."
     "Pain was all I remember when it dragged me into the water."
-    jump menu_Opus1  
-return 
+    jump menu_Opus1
+return
 
 label BiteOpusNormal:
     $Opus_Normalbite = False
@@ -1881,12 +1881,12 @@ label BiteOpusNormal:
     "I stared at the Blob that seemed harmless."
     "Won't hurt if I took a bit right?"
     "I leaned in to take a bite."
-    scene image "black.png" with fade 
+    scene image "black.png" with fade
     "Before my mouth can touch the blob I lost all of my senses."
     "The only thing I felt was pain."
     "Lila route end."
     "No pages found."
-return 
+return
 
 label BiteOpusBleed:
     $Opus_BiteBleed = False
@@ -1903,24 +1903,24 @@ label BiteOpusBleed:
                 jump OpusYes2
         "This is a bad idea.":
                 jump OpusNo2
-    jump menu_Opus1  
-return 
+    jump menu_Opus1
+return
 
 label OpusYes2:
-    scene image "black.png" with fade 
+    scene image "black.png" with fade
     "I leaned in to bite the blob even with the pain in my mouth."
     "Before my mouth can touch the blob I lost all of my sense."
     "The only thing I felt was pain."
     "Lila route end."
     "No pages found."
-return    
+return
 
 label OpusNo2:
     scene image "CloseupOpus.png" with fade
     "I quickly leaned back from the blob."
     "I felt a wave of relief."
-    jump menu_Opus1  
-return     
+    jump menu_Opus1
+return
 
 label ListenOpusNormal:
     $Opus_Listen = False
@@ -1928,17 +1928,17 @@ label ListenOpusNormal:
     "I listened to the blob."
     "I think I'm hearing some kind of bubble?"
     "Maybe soft popping sounds?"
-    jump menu_Opus1  
-return     
- 
+    jump menu_Opus1
+return
+
 label ListenOpusAfterTouch:
     $Opus_ListenAfterTouch = False
     scene image "CloseupOpus.png" with fade
     "I listened to the blob."
     "There was a gruggling sounds."
     "I sounds just like me...hungry."
-    jump menu_Opus1  
-return  
+    jump menu_Opus1
+return
 
 ##########START OF PAGE 1#########
 label Page1:
@@ -1953,15 +1953,15 @@ label menu_Page1:
     if TasteBleed.value >= 1:
         $Page_NormalBite = False
         $Page_BiteBleed = True
-    menu: 
+    menu:
         "Pick up Page" if Page_TouchNormal == True:
             jump PageFound1
         "Pick up Page" if Page_TouchBleed == True:
             jump TouchPageBleed
         #"Pick up paper" Make Minglou appear
         "Explore some more.":
-            jump drag_glass 
-return 
+            jump drag_glass
+return
 
 label PageFound1:
     $Page_TouchNormal = False
@@ -1974,14 +1974,14 @@ label PageFound1:
     Q "It's more significant then you."
     show Lila shocked with dissolve
     Q "That's for sure."
-    show Lila swirly eyes with dissolve 
+    show Lila swirly eyes with dissolve
     "HUH?"
     "I jumped when I heard a voice."
     "I when I turned around I found out it was from my spirit."
     show Lila surprised at flip with dissolve
     show Lila yell with dissolve
     L "MINGLOU!"
-    show Lila swirly eyes with dissolve 
+    show Lila swirly eyes with dissolve
     show Mingluo smirk at MingLouFlip with dissolve
     L "You came out again without my spiritual energy."
     show Mingluo default at MingLouFlip with dissolve
@@ -1990,7 +1990,7 @@ label PageFound1:
     L "I'm not that dumb."
     show Mingluo annoyed with dissolve
     m "At least you are aware of that."
-    show Lila swirly eyes with dissolve 
+    show Lila swirly eyes with dissolve
     show Lila Sweats with dissolve
     "I was speachless."
     show Mingluo sigh with dissolve
@@ -2003,24 +2003,24 @@ label PageFound1:
     m "You usually stick to those two unbearably suffocating brats."
     L "I-"
     show Lila swirly eyes with dissolve
-    show Lila embarrassed with dissolve 
-    show Lila Sweats with dissolve 
-    show Lila eyes closed sad with dissolve 
+    show Lila embarrassed with dissolve
+    show Lila Sweats with dissolve
+    show Lila eyes closed sad with dissolve
     "I didn't want to tell her about my fight with my friends."
     m "I guess you don't want to tell me."
     show Mingluo annoyed with dissolve
     show Lila Sweats with dissolve
     L "It's not like that."
     L "I-"
-    show Lila eyes closed sad with dissolve 
+    show Lila eyes closed sad with dissolve
     show Mingluo sigh with dissolve
     m "Well it's not my concern."
-    show Lila surprised with dissolve 
+    show Lila surprised with dissolve
     show Lila pout with dissolve
     "Then why did she ask?"
-    show Mingluo smirk with dissolve 
+    show Mingluo smirk with dissolve
     m "I'm more interested in that treasure you're holding."
-    show Lila surprised with dissolve 
+    show Lila surprised with dissolve
     show Mingluo annoyed with dissolve
     L "What?"
     show Mingluo sigh with dissolve
@@ -2031,14 +2031,14 @@ label PageFound1:
     m "That's right."
     show Mingluo evil with dissolve
     m "'This'."
-    show Lila Sweats with dissolve 
+    show Lila Sweats with dissolve
     "She said as she takes the paper from my hands."
     hide Lila Sweats with dissolve
-    hide Mingluoevil with dissolve 
+    hide Mingluoevil with dissolve
     #####NOTE TO AMBER THIS IMAGE IS TOO BIG##############
-    scene image "MingluoBurnCG.png" with fade 
+    scene image "MingluoBurnCG.png" with fade
     window hide
-    pause 
+    pause
     window show
     L "What can be interesting about this?"
     m "Hmmmm I do wonder..."
@@ -2047,16 +2047,16 @@ label PageFound1:
     L "Then what should I do with it?"
     m "Think about it yourself."
     "She said as she gave the paper back to me."
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Lila Sweats at middle with dissolve
     L "Huh?"
-    show Lila surprised with dissolve 
+    show Lila surprised with dissolve
     L "But how-"
     show Lila pout with dissolve
     "Before I can even question she was gone again."
     L "I hate it when she leaves me off like this."
-    hide Lila pout with dissolve 
-    scene image "black.png" with fade 
+    hide Lila pout with dissolve
+    scene image "black.png" with fade
     "I guess I'll just ask Liam..."
     "Will he even want to tell me?"
     "Either way it's better then staying here wondering all day..."
@@ -2065,7 +2065,7 @@ label PageFound1:
     "I sighed at the thought of it being useless."
     "Lila's route end."
     "Page 1 found"
-return 
+return
 
 label TouchPageBleed:
     $Page_TouchBleed = False
@@ -2125,11 +2125,11 @@ label TouchPageBleed:
     "Despite being with me since I was a kid"
     "She's never been worried about me before."
     "This is a first."
-    show Mingluo skeptical with dissolve 
+    show Mingluo skeptical with dissolve
     show Mingluo nervous with dissolve
     show Mingluo laugh with dissolve
     m "Uh- Y-Yeah I'm worried."
-    show Mingluo skeptical with dissolve 
+    show Mingluo skeptical with dissolve
     m "So get cleaned up and come find me ok?"
     L "Ok!"
     show Lila smile with dissolve
@@ -2138,7 +2138,7 @@ label TouchPageBleed:
     "I shouted and headed back to the village."
     hide Mingluo nervous with dissolve
     hide Lila smile with dissolve
-    scene image "black.png" with fade 
+    scene image "black.png" with fade
     "Wait..."
     "She wanted to me to find her afterwards but why?"
     "Oh well."
@@ -2147,12 +2147,12 @@ label TouchPageBleed:
     "Lila's route end."
     "Page 1 found."
     "Meanwhile..."
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Mingluo nervous at middle with dissolve
     show Mingluo sigh with  dissolve
     show Mingluo evil with dissolve
     m "Dumb kid."
-return     
+return
 
 ##########End Cave Explore Herself############
 ##########Start MingLou's Apparence 1##########
@@ -2166,32 +2166,32 @@ label O2:
                 jump OC2
         #"Den.":
                 #jump OD2
-return   
+return
 
 label OC2:
     "What would you like to check out first?"
 label menu_OC2:
-    menu: 
+    menu:
         "Sight." if C_Sight1 == True:
                 jump Sight2
-                
+
         "Smell." if C_Smell1 == True:
                 jump Smell2
-                
+
         "Feel." if C_Feel1 == True:
                 jump Feel2
-                
+
         "Sound." if C_Sound1 == True:
                 jump Sound2
-                
+
         #"Observe the Den.":
                 #jump OD2
-                
+
         "Go to Cave.":
                 jump Cave2
-return 
+return
 
-#######################Place Sense Observation 2########################## 
+#######################Place Sense Observation 2##########################
 
 label Sight2:
     show Lila stunned at left with dissolve
@@ -2209,7 +2209,7 @@ label Sight2:
     hide Lila stunned at left with dissolve
     $C_Sight1 = False
 jump menu_OC2
-return 
+return
 
 label Smell2:
     show Lila stunned at left with dissolve
@@ -2222,7 +2222,7 @@ label Smell2:
     hide Emma sigh with dissolve
     $C_Smell1 = False
 jump menu_OC2
-return 
+return
 
 label Feel2:
     show Lila stunned at left with dissolve
@@ -2243,11 +2243,11 @@ label Feel2:
     hide Emma pout with dissolve
     $C_Feel1 = False
 jump menu_OC2
-return 
+return
 
 label Sound2:
     "I don't hear anything but insects."
-    
+
     $C_Sound1 = False
 jump menu_OC2
 
@@ -2261,7 +2261,7 @@ label Cave2:
     L "Oh wow!"
     L "There's a ton of stuff in here I've never seen before."
     L "Let's explore of a bit."
-    show Emma concern at emmaflip with dissolve 
+    show Emma concern at emmaflip with dissolve
     fa "There's no way I'm letting you get touchy in this cave."
     fa "Thank god I came here with you."
     show Lila surprised with dissolve
@@ -2276,11 +2276,11 @@ label Cave2:
     hide Emma dissapointed with dissolve
     hide Lila stunned with dissolve
     "Drag the magnifying glass to the objects you wish to interact with."
-    
+
 label drag_glass2:
-    call screen slide_glass_screen   
+    call screen slide_glass_screen
     "[glass] picked the [object]. Do you want to take a closer look at the object?"
-    
+
     menu:
         "Observe the crystal?" if store.object == "Crystal":
             jump Crystal2
@@ -2299,7 +2299,7 @@ return
 #######Start of Crystal 2###########
 
 label Crystal2:
-    scene image "CloseupCrystal.png" with fade 
+    scene image "CloseupCrystal.png" with fade
     L "Oh my god Emma!"
     fa "What?"
     L "Look at how pretty this crystal is."
@@ -2309,9 +2309,9 @@ label Crystal2:
     "I looked closer at the crystal."
     "It does remind me of Liam's pocket knife."
     $EaMpath1Points.value += 1
-    
+
 label menu_Crystal2:
-    menu: 
+    menu:
         "Touch it." if Crystal_TouchNormal == True:
                 jump TouchNormal2
         "Touch it." if Crystal2_TasteStopped == True:
@@ -2327,14 +2327,14 @@ label menu_Crystal2:
         "Smell it." if Crystal_SmellNormal == True:
                 jump SmellNormal2
         "Smell it." if Crystal2_SmellAfterTouch  == True:
-                jump SmellAfterTouch2 
+                jump SmellAfterTouch2
         "Don't do anything.":
                 jump drag_glass2
 return
-   
+
 label TouchNormal2:
     $Crystal_TouchNormal = False
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma shocked at emmaflip with dissolve
     show Lila happy at left with dissolve
     "I reached out my hand to touch the crystall."
@@ -2359,19 +2359,19 @@ label TouchNormal2:
                 jump TouchCrystalAnyways
         "Say you are sorry.":
                 jump SaidSorry
-return 
+return
 
 label TouchCrystalAnyways:
     $TouchBleed.value += 1
     $LilaBleed.value += 1
-    
+
     if TouchBleed.value >= 1:
         $Crystal2_TouchBleed = True
         $Crystal_TasteNormal = False
         $Crystal_TouchNormal = False
         $Crystal_SmellNormal = False
         $Crystal2_SmellAfterTouch = True
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma shocked at emmaflip with dissolve
     show Lila pout at left with dissolve
     "I slapped away Emma's hand and grabbed the crystal."
@@ -2388,22 +2388,22 @@ label TouchCrystalAnyways:
     "I felt tears at the edge of my eyes as I start to sob."
     show Lila tears with dissolve
     show Lila angry cry with dissolve
-    show Emma dissapointed with dissolve 
+    show Emma dissapointed with dissolve
     fa "Forget it."
     fa "I also carry some first aid on me."
     show Emma sigh with dissolve
     "Emma said as she whipe something cold on my cuts and wraps a white rope around me."
     show Lila tears with dissolve
-    show Emma nervous with dissolve 
+    show Emma nervous with dissolve
     fa "This should do for now."
     show Emma angry with dissolve
     fa "Why don't you ever listen."
     fa "Geez."
     show Emma sigh with dissolve
     show Emma dissapointed with dissolve
-    show Lila relieved with dissolve 
+    show Lila relieved with dissolve
     L "Thank you."
-    show Emma embarrassed with dissolve 
+    show Emma embarrassed with dissolve
     fa "Instead of saying thank you and sorry learn not to be so stupid."
     show Emma angry with dissolve
     "She said as she knocked me on the head."
@@ -2416,28 +2416,28 @@ label TouchCrystalAnyways:
     "This kind of feels familiar."
     hide Emma sigh with dissolve
     hide Lila surprised with dissolve
-    scene image "CloseupCrystalHandPrint.png" with fade 
-    jump menu_Crystal2  
-return 
+    scene image "CloseupCrystalHandPrint.png" with fade
+    jump menu_Crystal2
+return
 
 label SaidSorry:
     $Crystal_TouchNormal = False
     $Touch_Points.value += 1
-    
+
     if Touch_Points.value >= 1:
         $Crystal2_TouchStopped = True
         $Crystal_TasteNormal = False
         $Crystal_TouchNormal = False
     "Emma's affection goes up."
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma shocked at emmaflip with dissolve
     show Lila eyes closed sad at left with dissolve
     L "I'm sorry."
     "I said as she let's go of my hand."
-    show Emma sigh with dissolve 
+    show Emma sigh with dissolve
     fa "I wish you stopped this foolish act instead of always saying sorry this and sorry that."
     show Lila yell with dissolve
-    L "So-" 
+    L "So-"
     show Lila surprised with dissolve
     show Emma embarrassed with dissolve
     fa "Ok stop."
@@ -2445,19 +2445,19 @@ label SaidSorry:
     show Lila eyes closed sad with dissolve
     show Emma dissapointed with dissolve
     fa "Who knows how long we have until we have to leave."
-    hide Lila eyes closed sad 
-    show Lilasad at left 
+    hide Lila eyes closed sad
+    show Lilasad at left
     L "Ok."
     "At least she's not as harsh before."
-    hide Lilasad at left 
+    hide Lilasad at left
     hide Emma dissapointed with dissolve
-    scene image "CloseupCrystal.png" with fade 
-    jump menu_Crystal2 
-return 
+    scene image "CloseupCrystal.png" with fade
+    jump menu_Crystal2
+return
 
 label CrystalTasteStopped:
     $Crystal2_TasteStopped = False
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma concern at emmaflip with dissolve
     show Lila eyes closed sad at left with dissolve
     "Feeling guilty I wanted to slice my finger too."
@@ -2472,33 +2472,33 @@ label CrystalTasteStopped:
     show Emma angry with dissolve
     fa "I just showed you what happens if you touch this."
     fa "Want me to show you again?"
-    hide Lila surprised with dissolve 
+    hide Lila surprised with dissolve
     show Lilasad at left with dissolve
     "Emma showed me her wrapped bloody finger."
     hide Lilsad at left with dissolve
-    show Lila eyes closed sad at left 
+    show Lila eyes closed sad at left
     L "No..."
     L "Sorry.."
     "I truely felt bad."
-    show Emma sigh with dissolve 
+    show Emma sigh with dissolve
     fa "For god's sake."
     "She sighed again."
-    hide Lila eyes closed sad at left 
+    hide Lila eyes closed sad at left
     hide Emma sigh with dissolve
-    scene image "CloseupCrystalBlood.png" with fade 
-    jump menu_Crystal2 
-return     
-    
+    scene image "CloseupCrystalBlood.png" with fade
+    jump menu_Crystal2
+return
+
 label Listen2:
     $Crystal_Listen1 = False
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma concern at emmaflip with dissolve
     show Lila skeptical at left with dissolve
     "I leaned in to listen to the crystal."
     fa "{cps=2}...{/cps}"
     fa "What are you doing?"
-    show Lila pout with dissolve 
-    show Emma surprised with dissolve 
+    show Lila pout with dissolve
+    show Emma surprised with dissolve
     L "Shhhhh. "
     L "I listening to the crystal."
     L "If you talk I can't hear."
@@ -2511,23 +2511,23 @@ label Listen2:
     L "You said something."
     show Emma embarrassed with dissolve
     fa "Nothing."
-    hide Lila skeptical at left 
+    hide Lila skeptical at left
     hide Emma embarrassed with dissolve
-    jump menu_Crystal2  
-return 
+    jump menu_Crystal2
+return
 
 label TasteNormal2:
     $Crystal_TasteNormal = False
     $TouchBleed.value += 1
     $EmmaBleed.value += 1
-    
+
     if TouchBleed.value >= 1:
         $Crystal_TouchNormal = False
         $Crystal2_TasteStopped = True
         $Crystal_SmellNormal = False
         $Crystal2_SmellAfterTouch = True
-        
-    scene image "Cave.png" with fade 
+
+    scene image "Cave.png" with fade
     show Emma concern at emmaflip with dissolve
     show Lila skeptical at left with dissolve
     "I wanted to lean in to bite the crystal but Emma pulled me back by my hair."
@@ -2583,8 +2583,8 @@ label TasteNormal2:
     "She only let out a sigh."
     hide Lila eyes closed sad with dissolve
     hide Emma sigh with dissolve
-    scene image "CloseupCrystalBlood.png" with fade 
-    jump menu_Crystal2  
+    scene image "CloseupCrystalBlood.png" with fade
+    jump menu_Crystal2
 return
 
 label TasteAfterTouchBleed:
@@ -2599,14 +2599,14 @@ label TasteAfterTouchBleed:
     "So I am not going to bite that."
     hide Lila panic with dissolve
     hide Emma angry with dissolve
-    scene image "CloseupCrystalHandPrint.png" with fade 
-    jump menu_Crystal2  
-return    
+    scene image "CloseupCrystalHandPrint.png" with fade
+    jump menu_Crystal2
+return
 
 label CrystalTouchStopped:
     $Crystal2_TouchStopped = False
     "Emma's affection goes down."
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma angry at emmaflip with dissolve
     show Lila Sweats at left with dissolve
     fa "What were just sorry for..."
@@ -2624,12 +2624,12 @@ label CrystalTouchStopped:
     "Emma looks didn't look happy."
     hide Emma envy with dissolve
     hide Lila eyes closed sad with dissolve
-    jump menu_Crystal2 
-return     
+    jump menu_Crystal2
+return
 
 label SmellNormal2:
     $Crystal_SmellNormal = False
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma concern at emmaflip with dissolve
     show Lila skeptical at left with dissolve
     "I leaned in to sniff the crystal."
@@ -2660,12 +2660,12 @@ label SmellNormal2:
     fa"..."
     hide Emma concern with dissolve
     hide Lila stunned with dissolve
-    jump menu_Crystal2 
-return      
+    jump menu_Crystal2
+return
 
 label SmellAfterTouch2:
     $Crystal2_SmellAfterTouch = False
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma concern at emmaflip with dissolve
     show Lila skeptical at left with dissolve
     "I leaned in to sniff the crystal."
@@ -2700,18 +2700,18 @@ label SmellAfterTouch2:
     show Emma embarrassed with dissolve
     show Emma sigh with dissolve
     fa"..."
-    hide Lila panic 
-    show Lilasad at left 
+    hide Lila panic
+    show Lilasad at left
     "Well that felt...Not good."
     hide Emma sigh with dissolve
-    hide Lilasad at left 
-    jump menu_Crystal2 
+    hide Lilasad at left
+    jump menu_Crystal2
 return
 
 #######Start of Vine 2###########
 
 label Vine2:
-    scene image "CloseupVine.png" with fade 
+    scene image "CloseupVine.png" with fade
     L "Oh wow!"
     L "Emma come take a look at this."
     L "There's some kind of vine growing here."
@@ -2720,13 +2720,13 @@ label Vine2:
     L "Why?"
     fa "Think about it yourself thickhead."
     $EaMpath1Points.value += 1
-label menu_Vine2:           
+label menu_Vine2:
     if LilaBleed.value >= 1:
         $Vine2_NormalTouch = False
         $Vine2_TouchVineBleed = True
     if EmmaBleed.value >= 1:
         $Vine2_NormalTouch = False
-        $Vine2_TouchVineBleed2 =True  
+        $Vine2_TouchVineBleed2 =True
     menu:
         "Touch it." if Vine2_NormalTouch == True:
                 jump TouchVineNormal2
@@ -2748,7 +2748,7 @@ label menu_Vine2:
                 jump ListenVine2
         "Don't do anything.":
                 jump drag_glass2
-return 
+return
 
 label TouchVineNormal2:
     $Vine2_NormalTouch = False
@@ -2757,7 +2757,7 @@ label TouchVineNormal2:
     $Vine2_BiteVineNormal = False
     $Vine2_BiteVineWithEyes = True
     $VineTouchPoints.value += 1
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma concern at emmaflip with dissolve
     show Lila skeptical at left with dissolve
     fa "Don't touch that."
@@ -2766,48 +2766,48 @@ label TouchVineNormal2:
     "She picked up a pebbled and tosses it at the vine."
     hide Emma sigh with dissolve
     hide Lila skeptical at left with dissolve
-    scene image "CloseupVine.png" with fade 
-    scene image "VinaPlant.png" with fade 
+    scene image "CloseupVine.png" with fade
+    scene image "VinaPlant.png" with fade
     "The vine started to shake and many eyes appeared on it."
     "I felt a shiver go down my spin when the eyes started to move around."
     "After a while the eyes shut back down."
-    scene image "CloseupVine.png" with fade 
+    scene image "CloseupVine.png" with fade
     show Emma sigh at emmaflip with dissolve
-    show Lila panic at left with dissolve 
+    show Lila panic at left with dissolve
     L "What was that?!"
     show Emma dissapointed with dissolve
     "I asked and Emma shooked her head."
     show Emma intimidating with dissolve
     fa "Didn't you learn about this in Bio?"
-    show Lila Sweats with dissolve 
+    show Lila Sweats with dissolve
     L "What?"
     show Emma sigh with dissolve
     fa "Forget it."
-    hide Lila Sweats with dissolve 
+    hide Lila Sweats with dissolve
     hide Emma sigh with dissolve
     menu:
         "Touch it anyways.":
                 jump TouchVineAnyways
         "Leave it alone.":
                 jump LeftVineAlone
-                
+
 jump menu_Vine2
-return 
+return
 
 label TouchVineAnyways:
     "Emma's affection goes down."
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma shocked at emmaflip with dissolve
     show Lila surprised at left with dissolve
     "I poked the vine when Emma wasn't looking."
     hide Emma shocked at emmaflip with dissolve
     hide Lila surprised at left with dissolve
-    scene image "CloseupVine.png" with fade 
-    scene image "VinaPlant.png" with fade 
+    scene image "CloseupVine.png" with fade
+    scene image "VinaPlant.png" with fade
     "It started to shake just like before."
     "This time the eyes stared at me and me only."
     "It's like it was making sure I was there before closing again."
-    scene image "CloseupVine.png" with fade 
+    scene image "CloseupVine.png" with fade
     "There wasn't even time to think about what I saw before I felt a hard thob on my head."
     show Emma intimidating at emmaflip with dissolve
     show Lila pain at left with dissolve
@@ -2824,14 +2824,14 @@ label TouchVineAnyways:
     hide Lila Sweats with dissolve
     hide Emma sigh with dissolve
 jump menu_Vine2
-return 
+return
 
 label LeftVineAlone:
     "I didn't like the way it looked at us."
     "Best to leave it alone."
 jump menu_Vine2
-return     
-    
+return
+
 label TouchVineBleed2:
     $Vine2_NormalTouch = False
     $Vine2_TouchVineBleed = False
@@ -2841,9 +2841,9 @@ label TouchVineBleed2:
     $Vine2_BiteVineWithEyes = True
     $Vine2_ListenVine = False
     $Vine2_ListenAfterTouch = True
-    
+
     $VineTouchPoints.value += 1
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma intimidating at emmaflip with dissolve
     show Lila Sweats at left with dissolve
     "I didn't bother reaching out to the vine."
@@ -2852,14 +2852,14 @@ label TouchVineBleed2:
     fa "Don't touch that."
     hide Lila Sweats at left with dissolve
     hide Emma envy with dissolve
-    scene image "CloseupVine.png" with fade 
-    scene image "VinaPlant.png" with fade 
+    scene image "CloseupVine.png" with fade
+    scene image "VinaPlant.png" with fade
     "The vine started to shake and many eyes appeared on it."
     "I felt a shiver go down my spin when the eyes started to move around."
     "The eyes just stared at us..."
     "Wait no."
     "It was staring mainly at me."
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma intimidating at emmaflip with dissolve
     show Lila Sweats at left with dissolve
     fa "I'll say it one more time."
@@ -2869,15 +2869,15 @@ label TouchVineBleed2:
                 jump TouchVineAnyways2
         "Leave it alone.":
                 jump LeftVineAlone2
-return 
+return
 
 label TouchVineAnyways2:
-    scene image "VinaPlant.png" with fade 
-    scene image "VinaPlantDeath.png" with fade 
+    scene image "VinaPlant.png" with fade
+    scene image "VinaPlantDeath.png" with fade
     "I ignored Emma and touched it."
     "As soon as my finger touched the vine it wrapped itself around me."
     "I couldn't even scream through it."
-    scene image "black.png" with fade 
+    scene image "black.png" with fade
     "As it keeps twisting and wrapping I saw Emma trying to pull it apart from me."
     "Muffled screams came from Emma as my body pulls towards it."
     "Then all that was left was complete darkness."
@@ -2896,12 +2896,12 @@ label TouchVineAnyways2:
 return
 
 label LeftVineAlone2:
-    scene image "VinaPlant.png" with fade 
+    scene image "VinaPlant.png" with fade
     "I didn't like the way it looked at us."
     "Best to leave it alone."
     "As I backed away from it the eyes on the vines slowly shuts off."
-    scene image "CloseupVine.png" with fade 
-    scene image "Cave.png" with fade 
+    scene image "CloseupVine.png" with fade
+    scene image "Cave.png" with fade
     show Emma intimidating at emmaflip with dissolve
     show Lila panic at left with dissolve
     fa "Look at it feeling dissappointed."
@@ -2912,7 +2912,7 @@ label LeftVineAlone2:
     hide Emma laugh with dissolve
     hide Lila Sweats with dissolve
 jump menu_Vine2
-return    
+return
 
 label EmmaBleedTouchVine:
     $Vine2_NormalTouch = False
@@ -2927,7 +2927,7 @@ label EmmaBleedTouchVine:
     $Vine2_ListenVine = False
     $Vine2_ListenAfterTouch = False
     $VineTouchPoints.value += 1
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma intimidating at emmaflip with dissolve
     show Lila Sweats at left with dissolve
     "I didn't bother reaching out to the vine."
@@ -2945,27 +2945,27 @@ label EmmaBleedTouchVine:
     "Making a painful face she tosses it at the vine."
     hide Emma nervous with dissolve
     hide Lila pout with dissolve
-    scene image "CloseupVine.png" with fade 
-    scene image "VinaPlant.png" with fade 
+    scene image "CloseupVine.png" with fade
+    scene image "VinaPlant.png" with fade
     "The vine started to shake and many eyes appeared on it."
     "A giant mouth appeared and shollowed the pebble."
-    scene image "VinaPlantDeath.png" with fade 
+    scene image "VinaPlantDeath.png" with fade
     "After a while it spit out the pebble."
     "It's eyes and mouth was no longer there."
-    show Lila panic at left with dissolve 
+    show Lila panic at left with dissolve
     L "What was that?!"
     show Emma dissapointed at emmaflip with dissolve
     "I asked and but she only looked dissappointed."
-    hide Lila panic at left with dissolve 
+    hide Lila panic at left with dissolve
     hide Emma dissapointed at emmaflip with dissolve
 jump menu_Vine2
-return 
+return
 
 label TouchVineWithEyes2:
-   $Vine2_TouchWithEyes = False   
+   $Vine2_TouchWithEyes = False
    "I would but I don't think Emma wants me too."
    "I think I pissed her off enough today."
-   scene image "Cave.png" with fade 
+   scene image "Cave.png" with fade
    show Emma intimidating at emmaflip with dissolve
    show Lila Sweats at left with dissolve
    fa "..."
@@ -2973,11 +2973,11 @@ label TouchVineWithEyes2:
    hide Emma intimidating at emmaflip with dissolve
    hide Lila Sweats at left with dissolve
 jump menu_Vine2
-return    
+return
 
 label SmellVineNormal2:
-    $Vine2_SmellVineNormal = False 
-    scene image "Cave.png" with fade 
+    $Vine2_SmellVineNormal = False
+    scene image "Cave.png" with fade
     show Emma concern at emmaflip with dissolve
     show Lila Sweats at left with dissolve
     L "I kind of want to smell this."
@@ -2990,7 +2990,7 @@ label SmellVineNormal2:
     show Lila stunned with dissolve
     "Getting a yes from Emma I leaned in to smell it."
     show Lila eyes closed with dissolve
-    show Emma concern with dissolve 
+    show Emma concern with dissolve
     fa "..."
     fa "What does it smell like?"
     show Lila skeptical with dissolve
@@ -3006,15 +3006,15 @@ label SmellVineNormal2:
     hide Lila happy with dissolve
     hide Emma embarrassed with dissolve
 jump menu_Vine2
-return 
+return
 
 label SmellVineWithEyes2:
     $Vine2_SmellVineEyes = False
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma concern at emmaflip with dissolve
     show Lila Sweats at left with dissolve
     "After seeing that I don't think that's a good idea."
-    show Lila surprised with dissolve 
+    show Lila surprised with dissolve
     "I wasn't going to do it but I noticed I have Emma with me."
     show Lila skeptical with dissolve
     L "Can I smell it?"
@@ -3050,10 +3050,10 @@ label SmellVineWithEyes2:
         "Don't do it.":
                 jump DidntSmell
 jump menu_Vine2
-return    
+return
 
 label YesSmellWithEyes:
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma shocked at emmaflip with dissolve
     show Lila skeptical at left with dissolve
     "I leaned it to sniff the Vine."
@@ -3081,14 +3081,14 @@ label YesSmellWithEyes:
     hide Emma concern with dissolve
     hide Lila eyes closed sad with dissolve
 jump menu_Vine2
-return     
+return
 
 label DidntSmell:
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma shocked at emmaflip with dissolve
     show Lila skeptical at left with dissolve
     "I decided to pull back."
-    show Emma sly with dissolve 
+    show Emma sly with dissolve
     fa "Smart move."
     show Lila pout with dissolve
     L "I don't think hurt me though."
@@ -3109,16 +3109,16 @@ label DidntSmell:
     hide Lila swirly eyes with dissolve
     hide Emma sigh with dissolve
 jump menu_Vine2
-return 
+return
 
-label BiteVineNormal2: 
-    scene image "Cave.png" with fade 
+label BiteVineNormal2:
+    scene image "Cave.png" with fade
     show Emma concern at emmaflip with dissolve
     show Lila skeptical at left with dissolve
     L "Should I eat it?"
     show Emma shocked with dissolve
     L "I am a bit hungry."
-    show Lila eyes closed sad with dissolve 
+    show Lila eyes closed sad with dissolve
     show  Emma concern with dissolve
     fa "If I were you I wouldn't."
     show Lila pout with dissolve
@@ -3148,7 +3148,7 @@ label BiteVineNormal2:
                 jump BiteItAnyways
         "Don't bite it.":
                 jump DidntBite2
-return 
+return
 
 label BiteItAnyways:
     $Vine2_NormalTouch = False
@@ -3158,7 +3158,7 @@ label BiteItAnyways:
     $Vine2_BiteVineWithEyes = False
     $Vine2_ListenVine = False
     $Vine2_ListenAfterTouch = True
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma panic at emmaflip with dissolve
     show Lila skeptical at left with dissolve
     "I took a chunck out of the vine."
@@ -3179,10 +3179,10 @@ label BiteItAnyways:
     hide Lila panic at left with dissolve
     hide Emma nervous with dissolve
     "I stopped questioning her scared face staring at the vine."
-    scene image "VinaPlant.png" with fade 
+    scene image "VinaPlant.png" with fade
     "When I looked over I noticed that the vine had eyes."
     "The eyes rolled and rolled checking the area until it shut back down."
-    scene image "CloseupVine.png" with fade 
+    scene image "CloseupVine.png" with fade
     show Emma panic at emmaflip with dissolve
     show Lila panic at left with dissolve
     L "What was that?"
@@ -3203,20 +3203,20 @@ label BiteItAnyways:
     hide Lila eyes closed sad with dissolve
     hide Emma sigh with dissolve
 jump menu_Vine2
-return     
+return
 
 label DidntBite2:
     $Vine2_BiteVineNormal = False
-    $Vine2_BiteVineWithEyes = False 
+    $Vine2_BiteVineWithEyes = False
     "I guess it's safer not to eat it."
     "I think Emma let out a breath of relief."
 jump menu_Vine2
-return      
+return
 
 label BiteVineWithEyes2:
     $Vine2_BiteVineNormal = False
-    $Vine2_BiteVineWithEyes = False 
-    scene image "Cave.png" with fade 
+    $Vine2_BiteVineWithEyes = False
+    scene image "Cave.png" with fade
     show Emma concern at emmaflip with dissolve
     show Lila skeptical at left with dissolve
     L "Is this safe to eat?"
@@ -3258,11 +3258,11 @@ label BiteVineWithEyes2:
     hide Emma laugh with dissolve
     hide Lila happy with dissolve
 jump menu_Vine2
-return    
+return
 
 label ListenVine2:
     $Vine2_ListenVine = False
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma concern at emmaflip with dissolve
     show Lila skeptical at left with dissolve
     fa "What are you doing?"
@@ -3306,11 +3306,11 @@ label ListenVine2:
     hide Emma sigh with dissolve
     hide Lila eyes closed sad with dissolve
 jump menu_Vine2
-return    
+return
 
 #######Start of Opus  2###########
 label Opus2:
-    scene image "CloseupOpus.png" with fade 
+    scene image "CloseupOpus.png" with fade
     L "Look at this guy here Emma!"
     L "It's so cute!"
     fa "Ok."
@@ -3337,16 +3337,16 @@ label menu_Opus2:
         "Smell it." if Opus2_NormalSmell == True:
             jump SmellOpusNormal2
         "Bite it." if Opus2_NormalBite == True:
-            jump BiteOpusNormal2 
+            jump BiteOpusNormal2
         "Listen to it." if Opus2_Listen == True:
-            jump ListenOpusNormal2 
+            jump ListenOpusNormal2
         "Don't do anything":
             jump drag_glass2
-return 
+return
 
 label TouchOpusNomral2:
     $Opus2_NormalTouch = False
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma concern at emmaflip with dissolve
     show Lila smile at left with dissolve
     "I wanted to poke the Opus but Emma grabbed my reaching hand."
@@ -3369,7 +3369,7 @@ return
 label IgnoredEmma:
     $Opus2_ListenAfterTouch = True
     "Emma's affection goes down."
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma nervous at emmaflip with dissolve
     show Lila smile at left with dissolve
     L "I'm sure you're overthinking again."
@@ -3402,11 +3402,11 @@ label IgnoredEmma:
     hide Lila angry with dissolve
     hide Emma envy with dissolve
 jump menu_Opus2
-return        
+return
 
 label ListenToEmma:
-   "Emma's affection goes up." 
-   scene image "Cave.png" with fade 
+   "Emma's affection goes up."
+   scene image "Cave.png" with fade
    show Emma nervous at emmaflip with dissolve
    show Lila smile at left with dissolve
    L "Ok."
@@ -3429,12 +3429,12 @@ label ListenToEmma:
    hide Lila surprised with dissolve
    hide Emma dissapointed with dissolve
 jump menu_Opus2
-return       
+return
 
 label TouchOpusBlood2:
     $Opus2_NormalTouch = False
     $Opus2_TouchOpusBlood2 = False
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma nervous at emmaflip with dissolve
     show Lila skeptical at left with dissolve
     "I wanted to poke the Opus but Emma grabbed my reaching hand."
@@ -3449,11 +3449,11 @@ label TouchOpusBlood2:
             jump IgnoredEmma2
         "Listen to Emma.":
             jump ListenToEmma2
-return 
+return
 
 label IgnoredEmma2:
     "Emma's affection goes down."
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma nervous at emmaflip with dissolve
     show Lila happy at left with dissolve
     L "I'm sure you're overthinking again."
@@ -3485,8 +3485,8 @@ label IgnoredEmma2:
 return
 
 label ListenToEmma2:
-   "Emma's affection goes up." 
-   scene image "Cave.png" with fade 
+   "Emma's affection goes up."
+   scene image "Cave.png" with fade
    show Emma nervous at emmaflip with dissolve
    show Lila smile at left with dissolve
    L "Ok."
@@ -3509,11 +3509,11 @@ label ListenToEmma2:
    hide Lila happy with dissolve
    hide Emma blush with dissolve
 jump menu_Opus2
-return       
+return
 
 label SmellOpusNormal2:
     $Opus2_NormalSmell = False
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma nervous at emmaflip with dissolve
     show Lila skeptical at left with dissolve
     L "I wonder if it'll smell like salt."
@@ -3535,7 +3535,7 @@ label SmellOpusNormal2:
     hide Emma sigh with dissolve
     hide Lila eyes closed sad with dissolve
 jump menu_Opus2
-return      
+return
 
 label ListenOpusNormal2:
     $Opus2_Listen = False
@@ -3553,12 +3553,12 @@ label ListenOpusNormal2:
     hide Emma angry with dissolve
     hide Lila eyes closed sad with dissolve
 jump menu_Opus2
-return       
+return
 
 #########START OF PAGE 2########################
 label Page2:
     $EaMpath1Points.value += 1
-    scene image "CloseupPageCave.png" with fade 
+    scene image "CloseupPageCave.png" with fade
     L "Oh my."
     L "Emma look."
     L "What is a paper doing in here?"
@@ -3578,10 +3578,10 @@ label Page2:
                 jump PageFound2
             "Not right now.":
                 jump ExploreMore
-return 
+return
 
 label PageFound2:
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma concern at emmaflip with dissolve
     show Lila happy at left with dissolve
     L "Yeah."
@@ -3615,23 +3615,23 @@ label PageFound2:
     fa "Let's go."
     hide Lila happy with dissolve
     hide Emma dissapointed with dissolve
-    scene image "black.png" with fade 
+    scene image "black.png" with fade
     "Lila's route end."
     "First page found."
-return 
+return
 
 label ExploreMore:
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma concern at emmaflip with dissolve
     show Lila nervous at left with dissolve
     L "Wait no."
     L "I want to see the other things first."
-    hide Emma sigh with dissolve 
+    hide Emma sigh with dissolve
     fa "Suit yourself."
     hide Emma concern at emmaflip with dissolve
-    hide Emma sigh with dissolve 
+    hide Emma sigh with dissolve
 jump drag_glass2
-return     
+return
 
 ###############END OF EXPLORING CAVE WITH EMMA#############
 ###############START APPEARANCE OF MINGLOU 2################
@@ -3645,32 +3645,32 @@ label O3:
                 jump OC3
         #"Den.":
                 #jump OD3
-return   
+return
 
 label OC3:
     "What would you like to check out first?"
 label menu_OC3:
-    menu: 
+    menu:
         "Sight." if C_Sight1 == True:
                 jump Sight3
-                
+
         "Smell." if C_Smell1 == True:
                 jump Smell3
-                
+
         "Feel." if C_Feel1 == True:
                 jump Feel3
-                
+
         "Sound." if C_Sound1 == True:
                 jump Sound3
-                
+
         #"Observe the Den.":
                 #jump OD3
-                
+
         "Go to Cave.":
                 jump Cave3
-return 
+return
 
-#######################Place Sense Observation 3########################## 
+#######################Place Sense Observation 3##########################
 
 label Sight3:
     show Lila stunned at left with dissolve
@@ -3695,13 +3695,13 @@ label Sight3:
     show Emma sly with dissolve
     show Liam blush with dissolve
     show Liam embarrassed with dissolve
-    
+
     hide Emma sly with dissolve
     hide Lila smile at left with dissolve
     hide Liam embarrassed at left with dissolve
     $C_Sight1 = False
 jump menu_OC3
-return 
+return
 
 label Smell3:
     show Lila skeptical at left with dissolve
@@ -3727,7 +3727,7 @@ label Smell3:
     hide Lila smile with dissolve
     $C_Smell1 = False
 jump menu_OC3
-return 
+return
 
 label Feel3:
     show Lila skeptical at left with dissolve
@@ -3754,7 +3754,7 @@ label Feel3:
     hide Lila swirly eyes with dissolve
     $C_Feel1 = False
 jump menu_OC3
-return 
+return
 
 label Sound3:
     show Lila skeptical at left with dissolve
@@ -3779,25 +3779,25 @@ label Cave3:
     hide Liam nervous
     show Liam shocked at right with dissolve
     show Emma surprised at middle with dissolve
-    show Lila happy at left with dissolve 
+    show Lila happy at left with dissolve
     L "Oh wow!"
     L "There's a ton of stuff in here I've never seen before."
     L "Let's explore of a bit."
-    show Emma concern at middle with dissolve 
-    show Liam nervous with dissolve 
+    show Emma concern at middle with dissolve
+    show Liam nervous with dissolve
     fb "I'm so glad I came with you today."
     fa "For once we agree on somthing."
     L "Huh?"
-    show Emma dissapointed at middle with dissolve 
-    show Liam smiles with dissolve 
+    show Emma dissapointed at middle with dissolve
+    show Liam smiles with dissolve
     fb "Don't worry too much and just explore."
     "Well with Liam and Emma here I'm sure nothing will go wrong."
     "Drag the magnifying glass to the objects you wish to interact with."
-    
+
 label drag_glass3:
-    call screen slide_glass_screen   
+    call screen slide_glass_screen
     "[glass] picked the [object]. Do you want to take a closer look at the object?"
-    
+
     menu:
         "Observe the crystal?" if store.object == "Crystal":
             jump Crystal3
@@ -3825,9 +3825,9 @@ label Crystal3:
     fb "It'll slice right through skin."
     L "Oh god."
     $LilaFriendsPlusMPathPoints.value += 1
-    
+
 label menu_Crystal3:
-    menu: 
+    menu:
         "Touch it." if Crystal3_TouchNormal == True:
                 jump TouchNormal3
         "Touch it." if Crystal3_TouchAfterTaste == True:
@@ -3848,7 +3848,7 @@ return
 
 label TouchNormal3:
     $Crystal3_TouchNormal = False
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma concern at emmaflip with dissolve
     show Lila skeptical at left with dissolve
     show Liam smile at right with dissolve
@@ -3869,7 +3869,7 @@ label TouchNormal3:
                 jump LilaHandCut
         "Oh right. I forgot.":
                 jump LilaDidntGetCut
-return 
+return
 
 label LilaHandCut:
      $LiamLetLilaBleed.value += 1
@@ -3878,8 +3878,8 @@ label LilaHandCut:
          $Crystal3_SmellAfterTouch = True
          $Crystal3_TasteNormal = False
          $Crystal3_TasteAfterTouch = True
-     "Emma's affection for Liam goes down. Liam's affection goes down." 
-     scene image "Cave.png" with fade 
+     "Emma's affection for Liam goes down. Liam's affection goes down."
+     scene image "Cave.png" with fade
      show Emma angry at emmaflip with dissolve
      show Liam default at right with dissolve
      show Lila Sweats at left with dissolve
@@ -3927,13 +3927,13 @@ label LilaHandCut:
      hide Emma envy with dissolve
      hide Liam intimidating with dissolve
      hide Lila Sweats with dissolve
-     scene image "CloseupCrystalHandPrint.png" with fade 
+     scene image "CloseupCrystalHandPrint.png" with fade
 jump menu_Crystal3
-return       
+return
 
 label LilaDidntGetCut:
-    "Liam's affection goes up." 
-    scene image "Cave.png" with fade 
+    "Liam's affection goes up."
+    scene image "Cave.png" with fade
     show Emma angry at emmaflip with dissolve
     show Lila Sweats at left with dissolve
     show Liam default at right with dissolve
@@ -3948,7 +3948,7 @@ label LilaDidntGetCut:
     hide Emma sigh with dissolve
     hide Lila Sweats at left with dissolve
 jump menu_Crystal3
-return   
+return
 
 label TouchCrystalEvenAfterBite:
     $Crystal3_TouchAfterTaste = False
@@ -3966,7 +3966,7 @@ label TouchCrystalEvenAfterBite:
     hide Liam default with dissolve
     hide Emma concern at emmaflip with dissolve
 jump menu_Crystal3
-return     
+return
 
 label Listen3:
     $Crystal3_Listen1 = False
@@ -4004,7 +4004,7 @@ label Listen3:
     hide Liam laugh with dissolve
     hide Lila swirly eyes with dissolve
 jump menu_Crystal3
-return   
+return
 
 label TasteNormal3:
     $Crystal3_TasteNormal = False
@@ -4030,23 +4030,23 @@ label TasteNormal3:
     hide Lila Sweats with dissolve
     hide Emma envy with dissolve
     hide Liam smile with dissolve
-    menu: 
+    menu:
         "Don't listen to Emma.":
                 jump LiamIsMad
         "Listen to Emma":
                 jump LilaDidntBiteIt
-return 
+return
 
 label LiamIsMad:
     $Crystal3_TouchAfterTaste = True
-    $Crystal3_TouchNormal = False 
-    "Emma's affection goes down. Liam's affection goes down." 
-    scene image "Cave.png" with fade 
+    $Crystal3_TouchNormal = False
+    "Emma's affection goes down. Liam's affection goes down."
+    scene image "Cave.png" with fade
     show Emma angry at emmaflip with dissolve
     show Liam default at right with dissolve
     show Lila Sweats at left with dissolve
     L "Ok..."
-    show Lila smile with dissolve 
+    show Lila smile with dissolve
     L "You can please let go I promise I won't do it."
     show Lila Sweats with dissolve
     show Emma nervous with dissolve
@@ -4089,11 +4089,11 @@ label LiamIsMad:
     hide Lila nervous with dissolve
     hide Liam smile with dissolve
 jump menu_Crystal3
-return      
+return
 
 label LilaDidntBiteIt:
-    "Emma's affection goes up. Liam's affection goes up." 
-    scene image "Cave.png" with fade 
+    "Emma's affection goes up. Liam's affection goes up."
+    scene image "Cave.png" with fade
     show Emma angry at emmaflip with dissolve
     show Liam default at right with dissolve
     show Lila Sweats at left with dissolve
@@ -4118,7 +4118,7 @@ label LilaDidntBiteIt:
     hide Lila happy with dissolve
     hide Liam smile with dissolve
 jump menu_Crystal3
-return  
+return
 
 label BiteCrystalEvenAfterTouch:
     $Crystal3_TasteAfterTouch = False
@@ -4136,7 +4136,7 @@ label BiteCrystalEvenAfterTouch:
     hide Liam default with dissolve
     hide Emma concern at emmaflip with dissolve
 jump menu_Crystal3
-return 
+return
 
 label SmellNormal3:
     $Crystal3_SmellNormal = False
@@ -4175,7 +4175,7 @@ label SmellNormal3:
     hide Emma nervous with dissolve
     hide Lila pout with dissolve
 jump menu_Crystal3
-return  
+return
 
 label SmellAfterTouch3:
     $Crystal3_SmellAfterTouch = False
@@ -4196,7 +4196,7 @@ label SmellAfterTouch3:
     L "Should I still smell it?"
     show Liam dark smile with dissolve
     show Liam intimidating with dissolve
-    show Liam smile with dissolve 
+    show Liam smile with dissolve
     fb "I don't know..."
     fb "Why don't you try it?"
     show Emma angry with dissolve
@@ -4204,25 +4204,25 @@ label SmellAfterTouch3:
     show Emma nervous with dissolve
     fa "You're overbearing at the moment."
     hide Emma nervous with dissolve
-    hide Liam smile with dissolve 
+    hide Liam smile with dissolve
     hide Lila nervous with dissolve
     menu:
         "Smell it anyways.":
                 jump SmelledBlood
         "I don't want to piss off Liam more.":
                 jump LiamNotPissed
-return 
+return
 
 label SmelledBlood:
     "I sniffed the Crystal."
     "It smells just like rotten iron."
 jump menu_Crystal3
-return  
+return
 
 label LiamNotPissed:
     "I think it's best if I back off for today."
 jump menu_Crystal3
-return  
+return
 
 #####################Start of Vine 3#########################
 
@@ -4250,7 +4250,7 @@ label menu_Vine3:
         "Bite it." if Vine3_NormalBite == True:
                 jump BiteVineNormal3
         "Listen to it." if Vine3_ListenVine == True:
-                jump ListenVine3     
+                jump ListenVine3
         "Don't do anything.":
                 jump drag_glass3
 return
@@ -4259,7 +4259,7 @@ label TouchVineNormal3:
     $Vine3_NormalTouch = False
     scene image "Cave.png" with dissolve
     show Emma surprised at middle with dissolve
-    show Lila skeptical at left with dissolve 
+    show Lila skeptical at left with dissolve
     show Liam shocked at right with dissolve
     show Liam nervous with dissolve
     show Liam smile with dissolve
@@ -4289,11 +4289,11 @@ label TouchVineNormal3:
                 jump TouchTheGrossVine
         "Grab Emma's hand.":
                 jump EmmaProtects
-return 
+return
 
 label TouchTheGrossVine:
-    "Emma's affection goes down."  
-    scene image "Cave.png" with fade 
+    "Emma's affection goes down."
+    scene image "Cave.png" with fade
     show Emma panic at emmaflip with dissolve
     show Liam default at right with dissolve
     show Lila Sweats at left with dissolve
@@ -4322,7 +4322,7 @@ label TouchTheGrossVine:
     show Lila swirly eyes with dissolve
     L "Ouch!"
     L "I'm sorry!"
-    show Lila eyes closed sad with dissolve 
+    show Lila eyes closed sad with dissolve
     "I shouted back feeling the sting on the top of my head."
     show Emma envy with dissolve
     fa "You better be."
@@ -4330,12 +4330,12 @@ label TouchTheGrossVine:
     "Liam laughed."
     hide Liam laugh with dissolve
     hide Emma envy with dissolve
-    hide Lila eyes closed sad with dissolve 
+    hide Lila eyes closed sad with dissolve
 jump menu_Vine3
-return      
-   
+return
+
 label EmmaProtects:
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma concern at emmaflip with dissolve
     show Liam default at right with dissolve
     show Lila Sweats at left with dissolve
@@ -4344,13 +4344,13 @@ label EmmaProtects:
     "But then she shocked me by giving me a hug."
     show Emma shocked with dissolve
     show Emma embarrassed with dissolve
-    show Lila shocked with dissolve 
+    show Lila shocked with dissolve
     show Lila embarrassed with dissolve
     show Emma nervous with dissolve
     fa "I don't know what is up with you today but stop that."
     show Emma angry with dissolve
     fa "You should know this is how she is."
-    show Liam blush with dissolve 
+    show Liam blush with dissolve
     show Liam embarrassed with dissolve
     show Liam nervous with dissolve
     fb "I guess I teased a bit too much."
@@ -4369,11 +4369,11 @@ label EmmaProtects:
     hide Liam smile with dissolve
     hide Emma angry with dissolve
 jump menu_Vine3
-return         
+return
 
 label TouchVineBleed3:
     $Vine3_TouchBleed = False
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma concern at emmaflip with dissolve
     show Liam default at right with dissolve
     show Lila Sweats at left with dissolve
@@ -4387,10 +4387,10 @@ label TouchVineBleed3:
     "Liam sounded scary."
     "I think Emma was just as scared because she became very quiet."
     show Liam dark smile with dissolve
-    show Liam smile with dissolve 
+    show Liam smile with dissolve
     fb "Is what I want to say but you're going to do it anways... aren't you?"
     "Yet all of a sudden he sounded normal again."
-    hide Liam smile with dissolve 
+    hide Liam smile with dissolve
     hide Emma nervous with dissolve
     hide Lila Sweats at left with dissolves
     menu:
@@ -4398,15 +4398,15 @@ label TouchVineBleed3:
                 jump ListenToLiam
         "Yep! I'm going to touch it.":
                 jump DidntListenToLiam
-return 
-    
+return
+
 label ListenToLiam:
-    scene image "Cave.png" with fade 
+    scene image "Cave.png" with fade
     show Emma concern at emmaflip with dissolve
     show Liam default at right with dissolve
     show Lila Sweats at left with dissolve
     L "Nope!"
-    show Lila smile at with dissolve
+    show Lila smile with dissolve
     show Emma sigh with dissolve
     L "If you say no touching then I won't touch."
     show Liam happy with dissolve
@@ -4414,20 +4414,20 @@ label ListenToLiam:
     "Liam said as he smiles."
     hide Liam happy with dissolve
     hide Emma sigh with dissolve
-    hide Lila smile at with dissolve
+    hide Lila smile with dissolve
 jump menu_Vine3
 return
 
 label DidtListenToLiam:
-    "Emma's affection for Liam goes down. Liam's affection goes down." 
+    "Emma's affection for Liam goes down. Liam's affection goes down."
     scene image "Cave.png" with dissolve
     show Emma panic at middle with dissolve
-    show Lila Sweats at left with dissolve 
+    show Lila Sweats at left with dissolve
     show Liam dark smile at right with dissolve
     "It was like he read my mind."
     "I reached for the vine."
     hide Liam dark smile at right with dissolve
-    hide Lila Sweats at left with dissolve 
+    hide Lila Sweats at left with dissolve
     hide Emma panic at middle with dissolve
     scene image "CloseupVine.png" with dissolve
     "My blood wrapped hands touched the vine."
@@ -4453,13 +4453,13 @@ label DidtListenToLiam:
     "Lila's route end."
     "Lila fainted."
     "No pages found."
-return 
+return
 
 label SmellVineNormal3:
     $Vine3_SmellNormal = False
     scene image "Cave.png" with dissolve
     show Emma angry at middle with dissolve
-    show Lila skeptical at left with dissolve 
+    show Lila skeptical at left with dissolve
     show Liam smile at right with dissolve
     L "Can I smell the vine?"
     show Emma surprised with dissolve
@@ -4471,7 +4471,7 @@ label SmellVineNormal3:
     show Emma shocked with dissolve
     hide Emma shocked with dissolve
     hide Liam smile with dissolve
-    hide Lila skeptical at left with dissolve 
+    hide Lila skeptical at left with dissolve
     "Liam looks like he's having fun but Emma looks...I don't know to discribe it."
     "I guess since Liam says it's ok...it should be fine to smell it right?"
     menu:
@@ -4479,12 +4479,12 @@ label SmellVineNormal3:
                 jump VineSmelled
         "Don't smell it.":
                 jump VineNotSmelled
-return 
+return
 
 label VineSmelled:
     scene image "Cave.png" with dissolve
     show Emma shocked at middle with dissolve
-    show Lila skeptical at left with dissolve 
+    show Lila skeptical at left with dissolve
     show Liam smile at right with dissolve
     "I sniffed the vine."
     show Lila surprised with dissolve
@@ -4504,12 +4504,12 @@ label VineSmelled:
     hide Emma angry with dissolve
     hide Liam smile at right with dissolve
 jump menu_Vine3
-return   
+return
 
 label VineNotSmelled:
     scene image "Cave.png" with dissolve
     show Emma sigh at middle with dissolve
-    show Lila Sweats at left with dissolve 
+    show Lila Sweats at left with dissolve
     show Liam smile at right with dissolve
     "I backed away from the vine."
     show Liam surprised with dissolve
@@ -4532,13 +4532,13 @@ label VineNotSmelled:
     hide Emma angry with dissolve
     hide Lila surprised with dissolve
 jump menu_Vine3
-return   
+return
 
 label BiteVineNormal3:
     $Vine3_NormalBite = False
     scene image "Cave.png" with dissolve
     show Emma shocked at middle with dissolve
-    show Lila Sweats at left with dissolve 
+    show Lila Sweats at left with dissolve
     show Liam shocked at right with dissolve
     L "Is this something I can eat?"
     "Both of them looks as me weridly."
@@ -4560,18 +4560,18 @@ label BiteVineNormal3:
     "It one or the other again..."
     hide Emma nervous with dissolve
     hide Liam smile with dissolve
-    hide Lila Sweats at left with dissolve 
+    hide Lila Sweats at left with dissolve
     menu:
         "Eat it.":
                 jump AteThePlant
         "Don't eat it.":
                 jump DontEatPlant
-return 
+return
 
 label AteThePlant:
     scene image "Cave.png" with dissolve
     show Emma shocked at middle with dissolve
-    show Lila skeptical at left with dissolve 
+    show Lila skeptical at left with dissolve
     show Liam smiled  at right with dissolve
     "I took a bit of the plant."
     show Emma panic with dissolve
@@ -4587,11 +4587,11 @@ label AteThePlant:
     "The part I took a bit off grew back too."
     scene image "CloseupVine.png" with dissolve
     show Emma nervous at middle with dissolve
-    show Lila nervous at left with dissolve 
+    show Lila nervous at left with dissolve
     show Liam smile at right with dissolve
     "The two of us waited for something to happen."
     "But the only thing that happened with Liam's laugher."
-    show Liam laugh with dissolve 
+    show Liam laugh with dissolve
     show Emma angry with dissolve
     show Lila happy with dissolve
     L "It actually taste pretty good."
@@ -4599,31 +4599,31 @@ label AteThePlant:
     "While Liam laughed harder Emma looked pissed."
     "Emma shouted at Liam while I enjoyed the taste of this treat."
     hide Lila happy with dissolve
-    hide Liam laugh with dissolve 
+    hide Liam laugh with dissolve
     hide Emma angry with dissolve
 jump menu_Vine3
-return   
+return
 
 label DontEatPlant:
     scene image "Cave.png" with dissolve
     show Emma angry at middle with dissolve
-    show Lila skeptical at left with dissolve 
+    show Lila skeptical at left with dissolve
     show Liam nervous at right with dissolve
     L "I think I rather not."
     fb "Well that's disappointing."
     show Liam smile with dissolve
     "Emma looks super upset."
     hide Emma angry at middle with dissolve
-    hide Lila skeptical at left with dissolve 
+    hide Lila skeptical at left with dissolve
     hide Liam smile with dissolve
 jump menu_Vine3
-return 
+return
 
 label ListenVine3:
     $Vine3_ListenVine = False
     scene image "Cave.png" with dissolve
     show Emma concern at middle with dissolve
-    show Lila skeptical at left with dissolve 
+    show Lila skeptical at left with dissolve
     show Liam smile at right with dissolve
     L "Can I listen to the vine?"
     fb "Go ahead."
@@ -4661,14 +4661,14 @@ label ListenVine3:
     hide Lila nervous with dissolve
     hide Liam smile with dissolve
 jump menu_Vine3
-return 
+return
 
 #####################Start Opus 3#####################
 label Opus3:
     scene image "Opus.png" with dissolve
     L "Awwww!"
     L "Look at this guy here!"
-    L "He's so cute!" 
+    L "He's so cute!"
     fa "Yeah there's no way you are going anywhere near it."
     L "But why?"
     L "He's so cute!"
@@ -4692,16 +4692,16 @@ label menu_Opus3:
             jump ListenOpusNormal3
         "Don't do anything":
             jump drag_glass3
-return 
+return
 
 label TouchOpusNormal3:
     $Opus3_NormalTouch = False
     scene image "Cave.png" with dissolve
     show Emma panic at middle with dissolve
-    show Lila Sweats at left with dissolve 
+    show Lila Sweats at left with dissolve
     show Liam smile at right with dissolve
     "I wanted to poke it but Emma grabbed by the hand."
-    show Emma angry with dissolve 
+    show Emma angry with dissolve
     fa "Don't touch that!"
     show Lila pout with dissolve
     L "But why?"
@@ -4744,7 +4744,7 @@ label TouchOpusNormal3:
                 jump TouchOpusSafe
         "Don't touch it.":
                 jump DidtTouchOpus
-return 
+return
 
 label TouchOpusSafe:
     scene image "Opus.png" with dissolve
@@ -4757,8 +4757,8 @@ label TouchOpusSafe:
     L "It at least it's harmless."
     scene image "Cave.png" with dissolve
     show Emma concern at middle with dissolve
-    show Lila Smiles at left with dissolve 
-    show Liam dark smile at right with dissolve 
+    show Lila Smiles at left with dissolve
+    show Liam dark smile at right with dissolve
     fb "I never said it's wasn't dangerous."
     show Liam smile with dissolve
     show Emma shocked with dissolve
@@ -4794,28 +4794,28 @@ label TouchOpusSafe:
     hide Emma yell with dissolve
     hide Liam happy with dissolve
 jump menu_Opus3
-return 
+return
 
 label DidtTouchOpus:
     scene image "Cave.png" with dissolve
     show Emma smiles at middle with dissolve
-    show Lila Sweats at left with dissolve 
-    show Liam sad at right with dissolve 
+    show Lila Sweats at left with dissolve
+    show Liam sad at right with dissolve
     "I guess it's safer not too."
     "Emma looks relieved."
     "But Liam...looks displeased?"
-    hide Liam sad at right with dissolve 
-    hide Lila Sweats at left with dissolve 
+    hide Liam sad at right with dissolve
+    hide Lila Sweats at left with dissolve
     hide Emma smiles at middle with dissolve
 jump menu_Opus3
-return    
+return
 
 label TouchOpusBlood3:
     $Opus3_TouchBleed = False
     scene image "Cave.png" with dissolve
     show Emma panic at middle with dissolve
-    show Lila Sweats at left with dissolve 
-    show Liam intimidating at right with dissolve 
+    show Lila Sweats at left with dissolve
+    show Liam intimidating at right with dissolve
     "I wanted to poke the Opus but both Liam and Emma grabbed me."
     show Emma shocked with dissolve
     "At first Emma was shocked but she was back to normal soon after."
@@ -4824,11 +4824,11 @@ label TouchOpusBlood3:
     fb "If you go any further I'll drag you out of the cave."
     show Lila panic with dissolve
     fb "And I'm not joking..."
-    show Emma panic with dissolve 
+    show Emma panic with dissolve
     show Emma nervous with dissolve
     "He's scaring me."
     L "I-I won't touch it."
-    show Liam dark smile with dissolve 
+    show Liam dark smile with dissolve
     fb "Good."
     "He said with a scary smile."
     show Liam smile with dissolve
@@ -4840,29 +4840,29 @@ label TouchOpusBlood3:
     hide Lila Sweats with dissolve
     hide Emma nervous with dissolve
     jump menu_Opus3
-return    
+return
 
 label SmellOpusNormal3:
     $Opus3_NormalSmell = False
     scene image "Cave.png" with dissolve
     show Emma shocked at middle with dissolve
-    show Lila Sweats at left with dissolve 
-    show Liam surprised at right with dissolve 
+    show Lila Sweats at left with dissolve
+    show Liam surprised at right with dissolve
     L "Can I smell it?"
     show Liam smile with dissolve
-    show Emma concern with dissolve 
+    show Emma concern with dissolve
     fa "What?"
     fa "Why?"
-    show Lila laugh with dissolve 
+    show Lila laugh with dissolve
     L "Just wondering how it smells like."
-    show Emma surprised with dissolve 
+    show Emma surprised with dissolve
     fa "I guess it should be fine..."
     show Emma dissapointed with dissolve
     fa "You really like to be nosy with these things don't you?"
     show Emma panic with dissolve
     show Lila pout with dissolve
     fa "I can't imagine what would happen if you were in here alone."
-    show Emma concern with dissolve 
+    show Emma concern with dissolve
     show Lila smile with dissolve
     "With Emma and Liam watching I don't think this can go wrong."
     show Lila eyes closed with dissolve
@@ -4881,39 +4881,39 @@ label SmellOpusNormal3:
     hide Emma nervous with dissolve
     hide Lila skeptical with dissolve
     jump menu_Opus3
-return    
+return
 
 label BiteOpusNormal3:
     $Opus3_NormalBite = False
     scene image "Cave.png" with dissolve
     show Emma shocked at middle with dissolve
-    show Lila Sweats at left with dissolve 
-    show Liam smiles at right with dissolve 
+    show Lila Sweats at left with dissolve
+    show Liam smiles at right with dissolve
     L "Can I eat this?"
     fb "Hmmmm..."
     show Liam happy with dissolve
     fb "If you want to drown yeah sure."
     show Lila panic with dissolve
-    show Emma angry with dissolve 
+    show Emma angry with dissolve
     L "I think I wouldn't want that."
-    show Liam smile with dissolve 
+    show Liam smile with dissolve
     fb "Hmmmmm..."
     show Liam happy with dissolve
-    show Emma sigh with dissolve 
+    show Emma sigh with dissolve
     fb "Then yeah don't eat it."
     "Sometimes I feel like Liam can be very scary if he wants too."
-    hide Emma sigh with dissolve 
+    hide Emma sigh with dissolve
     hide Lila panic with dissolve
     hide Liam happy with dissolve
     jump menu_Opus3
-return 
+return
 
-label ListenOpusNormal3: 
+label ListenOpusNormal3:
     $Opus3_Listen = False
     scene image "Cave.png" with dissolve
     show Emma surprised at middle with dissolve
-    show Liam smile at left with dissolve 
-    show Lila skeptical at right with dissolve 
+    show Liam smile at left with dissolve
+    show Lila skeptical at right with dissolve
     L "How does this guy sound like?"
     show Liam happy with dissolve
     fb "Want to give it a listen?"
@@ -4929,7 +4929,7 @@ label ListenOpusNormal3:
     "Emma said as she pulled me away from leaning into listen to the Opus."
     show Liam smirk with dissolve
     fb "It'll be fine~"
-    show Emma panic with dissolve 
+    show Emma panic with dissolve
     show Emma nervous with dissolve
     fa "Will it?"
     show Liam wink with dissolve
@@ -4938,9 +4938,9 @@ label ListenOpusNormal3:
     L "If Liam says so it should be fine!"
     show Liam surprised with dissolve
     show Liam smile with dissolve
-    show Emma dissapointed with dissolve  
+    show Emma dissapointed with dissolve
     fa "Liam can be mischievous at times though."
-    show Lila Sweats with dissolve  
+    show Lila Sweats with dissolve
     L "huh?"
     show Emma sigh with dissolve
     fa "Nevermind if you want to go for it then go for it."
@@ -4956,7 +4956,7 @@ label ListenOpusNormal3:
     hide Emma sigh with dissolve
     hide Liam smile with dissolve
     jump menu_Opus3
-return 
+return
 
 ######################START OF PAGE 3##########################
 
@@ -4973,7 +4973,7 @@ label Page3:
                 jump PageFound3
         "Explore more first.":
                 jump drag_glass3
-return 
+return
 
 label PageFound3:
     scene image "CloseupPageCave.png" with fade
@@ -4992,19 +4992,19 @@ label PageFound3:
     fb "Interesting..."
     fb "It's written in ancient language."
     fb "And it seems to be in code too."
-    show Emma envy with dissolve 
-    show Lila surprised with dissolve 
+    show Emma envy with dissolve
+    show Lila surprised with dissolve
     fa "Oh dang."
     fa "It's already werid for this to appear in a cave."
-    show Emma concern with dissolve 
+    show Emma concern with dissolve
     fa "I wonder what it says."
     fb "Hmmmm..."
     fb "Let's head back to the village and hit the library."
     fb "Maybe I'll be able to decode something out of it."
-    show Emma dissapointed with dissolve 
+    show Emma dissapointed with dissolve
     fa "I guess that's enough fun today then."
-    hide Emma dissapointed with dissolve 
-    hide Lila surprised with dissolve 
+    hide Emma dissapointed with dissolve
+    hide Lila surprised with dissolve
     hide Liam smile with dissolve
     show image "Black.png" with dissolve
     "Being drawn to this strange paper we went back to the village."
@@ -5029,23 +5029,23 @@ return
 #label OD1:
     #"Incomplete."
 #jump menu_OC1
-#return 
+#return
 
-#label Den1: 
+#label Den1:
       #"Incomplete."
-#return   
+#return
 
 label  SaW1:
     show image "Twopaths.png" with dissolve
     show Lila eyes closed sad at middle with dissolve
     "I stand there waiting."
     "I have no clue how long I waited."
-    hide Lila eyes closed sad at middle 
+    hide Lila eyes closed sad at middle
     show Lilasad at middle
     "I just know my legs did become tired."
     "My feet was also hurting."
-    hide Lilasad at middle 
-    show Lila eyes closed sad at middle 
+    hide Lilasad at middle
+    show Lila eyes closed sad at middle
     "Yet I still waited..."
     "{cps=2}...{/cps}"
     "{cps=2}...{/cps}"
@@ -5053,12 +5053,12 @@ label  SaW1:
     show Lila tears with dissolve
     "Just when I thought the darkness will shallow me..."
     "From the distance I heard Liam's voice calling out to me."
-    show Lila surprised with dissolve 
+    show Lila surprised with dissolve
     show Lila relieved with dissolve
     show image "Black.png" with dissolve
     "Lila's route end."
     "No pages found."
-return    
+return
 
 label  SaW2:
     show image "Twopaths.png" with dissolve
@@ -5066,12 +5066,12 @@ label  SaW2:
     "I stand there waiting."
     "I have no clue how long I waited."
     "I just know my legs did become tired."
-    hide Lila eyes closed sad at middle 
+    hide Lila eyes closed sad at middle
     show Lilasad at middle
     "My feet was also hurting."
     "Yet I still waited..."
-    hide Lilasad at middle 
-    show Lila eyes closed sad at middle 
+    hide Lilasad at middle
+    show Lila eyes closed sad at middle
     "{cps=2}...{/cps}"
     "{cps=2}...{/cps}"
     "Listening to only the sound of bugs I feel the need to sob."
@@ -5080,7 +5080,7 @@ label  SaW2:
     show image "Black.png" with dissolve
     "Lila's route end."
     "No pages found."
-return 
+return
 
 label SaW3:
     show image "Twopaths.png" with dissolve
@@ -5118,8 +5118,8 @@ label SaW3:
     "Lila's route end."
     "No Pages found."
 return
-    
-    
+
+
 #label Concealer:
     #"To be contuined"
     #$persistent.Route2 = False

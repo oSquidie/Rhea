@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 3072: end of line expected.
-    show Emma with concern with dissolve
-                           ^
+File "game/script.rpy", line 4409: expected 'simple_expression' not found.
+    show Lila smile at with dissolve
+                       ^
 
-Ren'Py Version: Ren'Py 7.4.2.1281
-Mon Mar 15 11:11:20 2021
+File "game/script.rpy", line 4417: expected 'simple_expression' not found.
+    hide Lila smile at with dissolve
+                       ^
+
+Ren'Py Version: Ren'Py 7.4.0.1167
+Mon Mar 15 16:18:57 2021
