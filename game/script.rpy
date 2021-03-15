@@ -212,7 +212,7 @@ screen slide_glass_screen:
         drag:
             drag_name "Opus"
             draggable False
-            child "Opus3.png"
+            child "Opus.png"
             xpos 20  ypos 450
     
         drag:

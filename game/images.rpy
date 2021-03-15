@@ -16,6 +16,10 @@ transform lilaflip:
 
 transform slide:
     linear 0.5 xpos 0.85
+    
+image bblack:
+    "black.png"
+    alpha .6 
 
 
 define fade = Fade(0.5, 0.0, 0.5) #scene transistions
@@ -94,6 +98,7 @@ image Emma cry = im.Scale("EmmaCry.png", 760, 1000)
 image Emma default = im.Scale("EmmaDefault.png", 760, 1000)
 image Emma pout = im.Scale("EmmaPout.png", 760, 1000)
 image Emma shocked = im.Scale("EmmaShocked.png", 760, 1000)
+image Emma surprised  im.Scale("EmmaSurprised.png", 760, 1000)
 image Emma sigh = im.Scale("EmmaSigh.png", 760, 1000)
 image Emma smile = im.Scale("EmmaSmile.png", 760, 1000)
 image Emma smug  = im.Scale("EmmaSmug.png", 760, 1000)
