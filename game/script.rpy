@@ -1537,6 +1537,7 @@ label menu_Vine1:
     if TasteBleed.value >= 1:
         $Vine_NormalBite = False
         $Vine_BiteBleed = True
+        $Vine_BiteWithEyes = False
     menu:
         "Touch it." if Vine_NormalTouch == True:
                 jump TouchVineNormal
@@ -1573,13 +1574,14 @@ label TouchVineNormal:
     "I felt scared even after the eyes all closed again."
     scene image "CloseupVine.png" with fade
     $Vine_NormalTouch = False
+    $Vine_NormalBite = False
     $VineTouchPoints.value += 1
     if VineTouchPoints.value >= 1:
         $Vine_TouchWithEyes = False
         $Vine_SmellWithEyes = True
         $Vine_SmellNormal = False
         $Vine_BiteWithEyes = True
-        $Vine_NormalBite = False
+        #$Vine_NormalBite = False
     jump menu_Vine1
 
 label TouchVineBleed:
@@ -1694,6 +1696,7 @@ label BiteVineNormal:
         $Vine_TouchWithEyes = True
         $Vine_SmellNormal = False
         $Vine_SmellWithEyes = True
+        $Vine_BiteBlood = False
     scene image "CloseupVine.png" with fade
     "I took a bite of the vine."
     "There was a fresh feeling in my mouth."
@@ -1705,7 +1708,7 @@ label BiteVineNormal:
     "Even after they closed back up I felt a chill down my spin."
     scene image "CloseupVine.png" with fade
     jump menu_Vine1
-
+##Thisbroke##
 label BiteVineWithEyes:
     $Vine_BiteWithEyes = False
     $VineTastePoints.value += 1
@@ -1742,7 +1745,7 @@ label Vine_No3:
     "Disappointed?"
     scene image "CloseupVine.png" with fade
     jump menu_Vine1
-
+##break##
 label BiteVineWithBlood:
     $Vine_BiteBleed = False
     scene image "CloseupVine.png" with fade
@@ -2286,6 +2289,13 @@ label Cave2:
 
 label drag_glass2:
     call screen slide_glass_screen
+    scene image "Cave.png"
+    hide image "CloseupOpus.png"
+    hide image "CloseupVine.png"
+    hide image "CloseupPageCave.png"
+    hide image "Opus1.png"
+    hide image "Opus2.png"
+    hide image "VinaPlant.png"
     "[glass] picked the [object]. Do you want to take a closer look at the object?"
 
     menu:
@@ -3793,7 +3803,7 @@ label Cave3:
     show Emma concern at middle with dissolve
     show Liam nervous with dissolve
     fb "I'm so glad I came with you today."
-    fa "For once we agree on somthing."
+    fa "For once we agree on something."
     L "Huh?"
     show Emma dissapointed at middle with dissolve
     show Liam smile with dissolve
@@ -3803,6 +3813,13 @@ label Cave3:
 
 label drag_glass3:
     call screen slide_glass_screen
+    scene image "Cave.png"
+    hide image "CloseupOpus.png"
+    hide image "CloseupVine.png"
+    hide image "CloseupPageCave.png"
+    hide image "Opus1.png"
+    hide image "Opus2.png"
+    hide image "VinaPlant.png"
     "[glass] picked the [object]. Do you want to take a closer look at the object?"
 
     menu:
@@ -4244,8 +4261,9 @@ label Vine3:
         "Well..."
         "That was disgusting."
 label menu_Vine3:
+    scene image "CloseupVine.png" with fade
     $LiamLetLilaBleed.value += 1
-    if LiamLetLilaBleed.value += 1:
+    if LiamLetLilaBleed.value >= 1:
         $Vine3_NormalTouch = False
         $Vine3_TouchBleed = True
     menu:
@@ -4253,9 +4271,9 @@ label menu_Vine3:
                 jump TouchVineNormal3
         "Touch it." if Vine3_TouchBleed == True:
                 jump TouchVineBleed3
-        "Smell it." if Vine3_SmellNormal == True:
+        "Smell it." if Vine3_SmellVineNormal == True:
                 jump SmellVineNormal3
-        "Bite it." if Vine3_NormalBite == True:
+        "Bite it." if Vine3_BiteVineNormal == True:
                 jump BiteVineNormal3
         "Listen to it." if Vine3_ListenVine == True:
                 jump ListenVine3
@@ -4464,7 +4482,7 @@ label DidtListenToLiam:
 return
 
 label SmellVineNormal3:
-    $Vine3_SmellNormal = False
+    $Vine3_SmellVineNormal = False
     scene image "Cave.png" with dissolve
     show Emma angry at middle with dissolve
     show Lila skeptical at left with dissolve
@@ -4580,7 +4598,7 @@ label AteThePlant:
     scene image "Cave.png" with dissolve
     show Emma shocked at middle with dissolve
     show Lila skeptical at left with dissolve
-    show Liam smiled  at right with dissolve
+    show Liam smile  at right with dissolve
     "I took a bit of the plant."
     show Emma panic with dissolve
     show Lila panic with dissolve
@@ -4594,6 +4612,7 @@ label AteThePlant:
     "The plant shook like crazy but after a while it went back to normal."
     "The part I took a bit off grew back too."
     scene image "CloseupVine.png" with dissolve
+    scene image "Cave.png" with dissolve
     show Emma nervous at middle with dissolve
     show Lila nervous at left with dissolve
     show Liam smile at right with dissolve
@@ -4673,7 +4692,7 @@ return
 
 #####################Start Opus 3#####################
 label Opus3:
-    scene image "Opus.png" with dissolve
+    scene image "CloseupOpus.png" with dissolve
     L "Awwww!"
     L "Look at this guy here!"
     L "He's so cute!"
@@ -4685,7 +4704,7 @@ label Opus3:
     "Yet Liam only smiles and says nothing..."
 label menu_Opus3:
     $LiamLetLilaBleed.value += 1
-    if LiamLetLilaBleed.value += 1:
+    if LiamLetLilaBleed.value >= 1:
         $Opus3_NormalTouch = False
         $Opus3_TouchBleed = True
     menu:
@@ -4973,7 +4992,7 @@ label Page3:
     $LilaFriendsPlusMPathPoints.value += 1
     scene image "CloseupPageCave.png" with fade
     L "Eh?"
-    L "Guys there's somthing on the floor here."
+    L "Guys there's something on the floor here."
     fa "Huh?"
     "Even Liam looks interested."
     L "A paper?"
@@ -4994,7 +5013,7 @@ label PageFound3:
     scene image "Cave.png" with fade
     show Lila skeptical at left with dissolve
     show Emma surprised at emmaflip with dissolve
-    show Liam surprised right with dissolve
+    show Liam surprised at right with dissolve
     fb "Let me take a look at it."
     "I handed the paper to Liam."
     show Liam smile with dissolve

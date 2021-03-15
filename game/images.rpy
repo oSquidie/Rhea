@@ -17,13 +17,13 @@ transform lilaflip:
 transform MingLouFlip:
     xzoom -1
     xalign -5 yalign 1.0
-    
+
 transform slide:
     linear 0.5 xpos 0.85
-    
+
 image bblack:
     "black.png"
-    alpha .6 
+    alpha .6
 
 
 define fade = Fade(0.5, 0.0, 0.5) #scene transistions
@@ -65,7 +65,7 @@ image TwoPaths = "TwoPaths.png"
 image SecondPage = "SecondPage.png"
 image Map = "Map.png"
 image TwoPaths = "Twopaths.png"
-image MingLouSmilesEvil = "MingluoBurnCG.png"
+image MingLouSmilesEvil = im.Scale("MingluoBurnCG.png", 1920, 1080)
 ############################################################################
 #Mingluo Sprites#
 image Mingluo happy =  im.Scale("MingluoHappy.png", 960, 1000)
