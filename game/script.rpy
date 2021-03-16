@@ -1703,7 +1703,7 @@ label BiteVineNormal:
         $Vine_SmellWithEyes = True
         $Vine_BiteBlood = False
     scene image "CloseupVine.png" with fade
-    play sound ChewVine volume 0.5
+    play sound ChewVine volume 1.5
     "I took a bite of the vine."
     "There was a fresh feeling in my mouth."
     "It didn't taste bad."
@@ -1735,7 +1735,7 @@ return
 
 label Vine_Yes3:
     scene image "VinaPlant.png" with fade
-    play sound ChewVine volume 0.5
+    play sound ChewVine volume 1.5
     "I gluped and took a bite of the vine."
     "Even though it tasted pretty good it was hard to shallow."
     "I felt it wiggle as it enters my mouth."
@@ -1757,7 +1757,7 @@ label BiteVineWithBlood:
     $Vine_BiteBleed = False
     scene image "CloseupVine.png" with fade
     "This gives me a unsettling feeling."
-    play sound ChewVine volume 0.5
+    play sound ChewVine volume 1.5
     "But I still bit into the vine."
     scene image "VinaPlant.png" with fade
     "The moment my mouth touched the vine a very sweet scent knocked my senses numb."
@@ -3186,7 +3186,7 @@ label BiteItAnyways:
     scene image "Cave.png" with fade
     show Emma panic at emmaflip with dissolve
     show Lila skeptical at left with dissolve
-    play sound ChewVine volume 0.5
+    play sound ChewVine volume 1.5
     "I took a chunck out of the vine."
     show Lila smile at left with dissolve
     "It tasted pretty good..."
@@ -4298,7 +4298,7 @@ return
 label Vine3:
         $LilaFriendsPlusMPathPoints.value += 1
         scene image "CloseupVine.png" with fade
-        "Before I could say anything Laim threw a pebble at the vine."
+        "Before I could say anything Liam threw a pebble at the vine."
         "The vine started to shake and a lot eyes appeared on it."
         scene image "VinaPlant.png" with fade
         "After the eyes rolled and twisted for a bit it went back to normal."
@@ -4449,10 +4449,10 @@ label TouchVineBleed3:
     show Liam default at right with dissolve
     show Lila Sweats at left with dissolve
     L "Can I touch this?"
-    show Liam intimidating with dissolves
+    show Liam intimidating with dissolve
     fb "No."
-    show Lila panic with dissolves
-    show Lila Sweats at left with dissolves
+    show Lila panic with dissolve
+    show Lila Sweats at left with dissolve
     show Emma shocked with dissolve
     show Emma nervous with dissolve
     "Liam sounded scary."
@@ -4463,7 +4463,7 @@ label TouchVineBleed3:
     "Yet all of a sudden he sounded normal again."
     hide Liam smile with dissolve
     hide Emma nervous with dissolve
-    hide Lila Sweats at left with dissolves
+    hide Lila Sweats at left with dissolve
     menu:
         "No. I'll listen to you.":
                 jump ListenToLiam
@@ -4644,7 +4644,7 @@ label AteThePlant:
     show Emma shocked at middle with dissolve
     show Lila skeptical at left with dissolve
     show Liam smile  at right with dissolve
-    play sound ChewVine volume 0.5
+    play sound ChewVine volume 1.5
     "I took a bite of the plant."
     show Emma panic with dissolve
     show Lila panic with dissolve
@@ -4987,8 +4987,8 @@ label ListenOpusNormal3:
     $Opus3_Listen = False
     scene image "Cave.png" with dissolve
     show Emma surprised at middle with dissolve
-    show Liam smile at left with dissolve
-    show Lila skeptical at right with dissolve
+    show Liam smile at right with dissolve
+    show Lila skeptical at left with dissolve
     L "How does this guy sound like?"
     show Liam happy with dissolve
     fb "Want to give it a listen?"
@@ -5020,7 +5020,7 @@ label ListenOpusNormal3:
     show Emma sigh with dissolve
     fa "Nevermind if you want to go for it then go for it."
     show Lila surprised with dissolve
-    show Lila skepticalwith dissolve
+    show Lila skeptical with dissolve
     L "Oh ok."
     "I don't know why Emma is so worried but I leaned in to listen anyways."
     L "?"
