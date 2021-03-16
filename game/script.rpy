@@ -161,6 +161,7 @@ define audio.RheaSoundtrack ="audio/RheaSoundtrack.wav"
 define audio.RheaMain = "audio/RheaMainMenuMusic.wav"
 define audio.CrunchCrys = "audio/Crunch.wav"
 define audio.VineEyes = "audio/VineEYES.wav"
+define audio.ChewVine = "audio/Chewing.wav"
 ############################################################################
 
 define Choice1 = True
@@ -1702,6 +1703,7 @@ label BiteVineNormal:
         $Vine_SmellWithEyes = True
         $Vine_BiteBlood = False
     scene image "CloseupVine.png" with fade
+    play sound ChewVine volume 0.5
     "I took a bite of the vine."
     "There was a fresh feeling in my mouth."
     "It didn't taste bad."
@@ -1733,6 +1735,7 @@ return
 
 label Vine_Yes3:
     scene image "VinaPlant.png" with fade
+    play sound ChewVine volume 0.5
     "I gluped and took a bite of the vine."
     "Even though it tasted pretty good it was hard to shallow."
     "I felt it wiggle as it enters my mouth."
@@ -1754,6 +1757,7 @@ label BiteVineWithBlood:
     $Vine_BiteBleed = False
     scene image "CloseupVine.png" with fade
     "This gives me a unsettling feeling."
+    play sound ChewVine volume 0.5
     "But I still bit into the vine."
     scene image "VinaPlant.png" with fade
     "The moment my mouth touched the vine a very sweet scent knocked my senses numb."
@@ -3182,6 +3186,7 @@ label BiteItAnyways:
     scene image "Cave.png" with fade
     show Emma panic at emmaflip with dissolve
     show Lila skeptical at left with dissolve
+    play sound ChewVine volume 0.5
     "I took a chunck out of the vine."
     show Lila smile at left with dissolve
     "It tasted pretty good..."
@@ -3299,6 +3304,7 @@ label ListenVine2:
     fa "There's no way a vine will make any kind of sounds."
     show Lila skeptical with dissolve
     L "Actually it kind of sounds like us when we are hungry."
+    play sound VineEyes volume 1.0
     show Emma shocked with dissolve
     show Emma panic with dissolve
     fa "Wha-"
@@ -3367,7 +3373,7 @@ label menu_Opus2:
             jump drag_glass2
 return
 
-label TouchOpusNomral2:
+label TouchOpusNormal2:
     $Opus2_NormalTouch = False
     scene image "Cave.png" with fade
     show Emma concern at emmaflip with dissolve
@@ -3558,6 +3564,39 @@ label SmellOpusNormal2:
     hide Emma sigh with dissolve
     hide Lila eyes closed sad with dissolve
 jump menu_Opus2
+return
+
+label BiteOpusNormal2:
+    "Emma's affection goes down."
+    scene image "Cave.png" with fade
+    show Emma nervous at emmaflip with dissolve
+    show Lila happy at left with dissolve
+    "I leaned in to bite the Opus."
+    "But before my mouth can touch it....."
+    show Emma panic with dissolve
+    fa "Idiot!"
+    hide Emma panic with dissolve
+    hide Lila happy at left with dissolve
+    scene image "Opus2.png" with fade
+    scene image "black.png" with fade
+    "Emma shouted before pushing me out of the way."
+    L "Huh?"
+    "When I came back to my senses Emma was no longer in sight."
+    L "Emma?"
+    "I called out to her but there was no response."
+    "I look back at where the blob was floating."
+    "It was no longer there..."
+    "All that was left was a puddle of red water."
+    "I...."
+    L "Emma!"
+    "I shouted helplessly but there was no response."
+    "The lonely darkness enters my sight as I felt myself lossing balance."
+    "The cold floor of the cave overtook my body."
+    "This must be a dream."
+    "I hope I wake up soon."
+    "Lila's route end."
+    "Emma lost."
+    "No pages found."
 return
 
 label ListenOpusNormal2:
@@ -4605,7 +4644,8 @@ label AteThePlant:
     show Emma shocked at middle with dissolve
     show Lila skeptical at left with dissolve
     show Liam smile  at right with dissolve
-    "I took a bit of the plant."
+    play sound ChewVine volume 0.5
+    "I took a bite of the plant."
     show Emma panic with dissolve
     show Lila panic with dissolve
     "Right when I did Emma pulled me back."
@@ -4676,6 +4716,7 @@ label ListenVine3:
     show Emma sigh with dissolve
     fa "Why do I doubt that..."
     show Lila nervous with dissolve
+    play sound VineEyes volume 1.0
     L "?"
     L "E-Emma..."
     fa "What?"
@@ -4684,7 +4725,7 @@ label ListenVine3:
     show Emma concern with dissolve
     fa "Scary?"
     show Lila nervous with dissolve
-    L "Yeah like it's hungry..."
+    L "Yeah and it's so gross..."
     show Emma panic with dissolve
     fa "That's it."
     show Emma angry with dissolve

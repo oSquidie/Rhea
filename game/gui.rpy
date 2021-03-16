@@ -215,7 +215,7 @@ define gui.choice_button_text_insensitive_color = "#444444"
 
 style button:
     properties gui.button_properties("button")
-    activate_sound "audio/MainMenuButton.mp3"
+    activate_sound "audio/MainMenuButton.wav"
     #hover_sound "audio/MainMenuButton.mp3"
 
 ## File Slot Buttons ###########################################################
