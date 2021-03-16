@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 4243: reached end of line when expecting ':'.
-    if LiamLetLilaBleed.value += 1
-                                  ^
+File "game/script.rpy", line 163: expected 'word' not found.
+    define
+          ^
 
-File "game/script.rpy", line 4682: reached end of line when expecting ':'.
-    if LiamLetLilaBleed.value += 1
-                                  ^
-
-Ren'Py Version: Ren'Py 7.4.0.1167
-Mon Mar 15 16:54:42 2021
+Ren'Py Version: Ren'Py 7.4.3.1414
+Tue Mar 16 10:16:24 2021

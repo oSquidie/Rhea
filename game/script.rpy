@@ -160,9 +160,8 @@ label splashscreen:
 define audio.RheaSoundtrack ="audio/RheaSoundtrack.wav"
 define audio.RheaMain = "audio/RheaMainMenuMusic.wav"
 define audio.CrunchCrys = "audio/Crunch.wav"
-
-play music RheaMain
-
+define audio.VineEyes = "audio/VineEYES.wav"
+############################################################################
 
 define Choice1 = True
 define Choice2 = True
@@ -224,6 +223,7 @@ screen slide_glass_screen:
             xpos 1670 ypos 850
 
 #######################START GAME INTRO####################
+play music RheaMain
 label start:
     stop music fadeout 1.0
     play music "audio/RheaSoundtrack.wav" fadein 5.0 volume 0.3
@@ -1770,7 +1770,7 @@ label ListenVine:
     $Vine_ListenVine = False
     scene image "CloseupVine.png" with fade
     "I leaned in close to listen."
-    scene image "VinaPlant.png" with fade
+    play sound VineEyes volume 1.0
     "There was this knot in my stomach when I heard werid noise coming from the vine."
     "It sounded like something wet was moving around."
     "I think I might just faint if I stay here any longer then I should."
@@ -3307,6 +3307,8 @@ label ListenVine2:
     L "You know..."
     show Lila skeptical with dissolve
     L "Like a grumble?"
+    show Lila panic with dissolve
+    L "It also sounds kind of gross..."
     show Emma panic with dissolve
     show Emma nervous with dissolve
     show Emma concern with dissolve
