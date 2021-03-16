@@ -148,7 +148,7 @@ label splashscreen:
     hide text with dissolve
     with Pause(1)
 
-    show text "This all works of fiction." with dissolve
+    show text "This is a work of fiction." with dissolve
     with Pause(2)
 
     hide text with dissolve
@@ -156,8 +156,10 @@ label splashscreen:
 
     call screen confirm(message="Rhea contains a lot of bright colors, this may affect individuals who are susceptible to photo sensitivities. Do you want to continue?", yes_action=Return(), no_action=Quit(confirm=False))
     return
+######################## Define Audio Files ################################
 define audio.RheaSoundtrack ="audio/RheaSoundtrack.wav"
 define audio.RheaMain = "audio/RheaMainMenuMusic.wav"
+define audio.CrunchCrys = "audio/Crunch.wav"
 
 play music RheaMain
 
@@ -1454,6 +1456,7 @@ jump menu_Crystal1
 return
 
 label TasteNormal:
+    play sound CrunchCrys volume 0.5
     "I tried to bite the crystal but the minute my tongue touched it I felt a sharp pain."
     "There was a taste of iron in my mouth."
     "It seems like there's a warm liquid dripping."
@@ -1484,6 +1487,7 @@ label TasteAfterTouch:
 return
 
 label yes2:
+     play sound CrunchCrys volume 0.5
      "I bite into the crystal."
      "I felt it slice my tongue."
      "I quickly pulled back."
