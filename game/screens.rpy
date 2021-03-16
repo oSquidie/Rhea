@@ -260,7 +260,7 @@ screen quick_menu():
             textbutton _("Save") action ShowMenu('save')
             textbutton _("Q.Save") action QuickSave()
             textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Load") action QuickLoad()#
+            textbutton _("Load") action ShowMenu("load")
             textbutton _("Prefs") action ShowMenu('preferences')
             textbutton _("Quit") action Quit(confirm=not main_menu)
 
