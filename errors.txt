@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/gui.rpy", line 219: style property volume is not known.
-    volume 0.3
-          ^
+File "game/script.rpy", line 194: u'os' is not a keyword argument or valid child for the screen statement.
+    os.remove("gui/textbox.png")
+      ^
 
 Ren'Py Version: Ren'Py 7.4.3.1414
-Tue Mar 16 10:42:24 2021
+Tue Mar 16 13:38:26 2021

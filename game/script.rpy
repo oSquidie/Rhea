@@ -178,7 +178,6 @@ if Page_TouchAlready = False:
             hide Page
 
 init python:
-
     def glass_dragged(drags, drop):
 
         if not drop:
@@ -190,6 +189,7 @@ init python:
         return True
 
 screen slide_glass_screen:
+    ##Need to hide textbox##
     add "CaveExplore3.png"
     draggroup:
         drag:
