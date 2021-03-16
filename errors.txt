@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 163: expected 'word' not found.
-    define
+File "game/gui.rpy", line 219: style property volume is not known.
+    volume 0.3
           ^
 
 Ren'Py Version: Ren'Py 7.4.3.1414
-Tue Mar 16 10:16:24 2021
+Tue Mar 16 10:42:24 2021
