@@ -318,7 +318,7 @@ screen navigation():
                 xoffset 580.0
                 xalign 1.0
                 yoffset 500
-            textbutton _("About") action ShowMenu("about"):
+            textbutton _("Credits") action ShowMenu("about"):
                 xoffset -496.0
                 yoffset 500
         else:
@@ -620,14 +620,14 @@ screen about():
     ## This use statement includes the game_menu screen inside this one. The
     ## vbox child is then included inside the viewport inside the game_menu
     ## screen.
-    use game_menu(_("About"), scroll="viewport"):
+    use game_menu(_("Credits"), scroll="viewport"):
 
         style_prefix "about"
 
         vbox:
 
             label "[config.name!t]"
-            text _("Version [config.version!t]\n")
+            #text _("[config.version!t]\n")
 
             ## gui.about is usually set in options.rpy.
             if gui.about:

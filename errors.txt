@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 194: u'os' is not a keyword argument or valid child for the screen statement.
-    os.remove("gui/textbox.png")
-      ^
+File "game/affection.rpy", line 27: Line is indented, but the preceding textbutton statement does not expect a block. Please check this line's indentation.
+    imagebutton:
+    ^
 
 Ren'Py Version: Ren'Py 7.4.3.1414
-Tue Mar 16 13:38:26 2021
+Sat Mar 20 13:41:39 2021

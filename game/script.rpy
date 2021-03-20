@@ -1,7 +1,7 @@
 ﻿define L = Character('Lila', color="#ced0ff", image = "Lila")
 define m = Character('Mingluo', color="#87ddfb", image = "Mingluo")
 define fa = Character('Emma', color="#73fff0", image = "Emma")
-define fb = Character('Liam', color="#a673ff", image = "Liam")
+define fb = Character('Liam', color= "#04136f", image = "Liam")
 define Q = Character ("?")
 
 image Page = "PageItem.png"
@@ -226,6 +226,29 @@ screen slide_glass_screen:
 #######################START GAME INTRO####################
 play music RheaMain
 label start:
+    python:
+        #player = Player("Derp", 100, 50)
+        #player.hp = 50
+        #player.mp = 10
+        chocolate = Item("Chocolate", hp=40, image="gui/inv_chocolate.png")
+        banana = Item("Banana", mp=20, image="gui/inv_banana.png")
+        gun = Item("Gun", element="bullets", image="gui/inv_gun.png", cost=7)
+        laser = Item("Laser Gun", element="laser", image="gui/inv_laser.png")
+        #itemname = Item("Itemname", element = "itemname", image="gui/imagename.png")
+        inventory = Inventory()
+        #add items to the initial inventory:
+        #inventory.add(chocolate) #What shows in the inventory from the start
+        #inventory.add(chocolate)
+        #inventory.add(banana)
+        #inventory.add(item name)
+    #$ inventory.drop(banana) Dropping an item
+    #$ inventory.add(banana) adding an item
+    #menu:
+        #"Go deeper into the forest" if chocolate in inventory.items: #Giving items away through choices
+            #"you gave chocolate away"
+            #$inventory.drop(chocolate)
+            #jump ending1
+
     stop music fadeout 1.0
     play music "audio/RheaSoundtrack.wav" fadein 5.0 volume 0.3
 
@@ -234,6 +257,9 @@ label start:
 
     default preferences.text_cps = 50
     scene Map with fade
+    show screen button #Making affection bar appear
+    $ affbar = True #Making affection bar appear
+    show screen inventory_button #Inventory icon appear
     window hide
     pause
     window show

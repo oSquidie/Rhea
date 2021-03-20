@@ -179,4 +179,7 @@ image Wyrm death = "Wyrm2.png"
 image Vina neutral = "VinaPlant.png"
 image Vina neutral = "VinaPlantDeath.png"
 image MingluoBurnPage = "MingluoBurnCG.png"
+image LilaIntro1 = "LilaIntro1.png"
+image LilaIntro2 = "LilaIntro2.png"
+image LilaIntro3 = "LilaIntro3.png"
 ##############################################################
