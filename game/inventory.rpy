@@ -89,10 +89,10 @@ init -1 python:
 
 
 screen inventory_button:
-    textbutton "Show Inventory" action [ Show("inventory_screen"), Hide("inventory_button")] align (.95,.04)
+    textbutton "Show Inventory" action [ Show("inventory_screen"), Hide("inventory_button")] align (.99,-5)
     imagebutton:
-        idle  "bag.jpg" action [ Show("inventory_screen"), Hide("inventory_button")] align (.95,.04)
-        #hover "button_hover.png"
+        idle  "bag.png" action [ Show("inventory_screen"), Hide("inventory_button")] align (.98,.04)
+        hover "baghover.png"
 
 
 screen inventory_screen:

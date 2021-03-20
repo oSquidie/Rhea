@@ -1,84 +1,44 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While processing text tag {color= #000000} in u'{color= #000000}Rhea contains a lot of bright colors, this may affect individuals who are susceptible to photo sensitivities. Do you want to continue?{/color}'.:
-  File "renpy/common/00start.rpy", line 234, in script call
-    call _splashscreen from _call_splashscreen_1
-  File "game/script.rpy", line 157, in script
-    call screen confirm(message="{color= #000000}Rhea contains a lot of bright colors, this may affect individuals who are susceptible to photo sensitivities. Do you want to continue?{/color}", yes_action=Return(), no_action=Quit(confirm=False))
-  File "renpy/common/000statements.rpy", line 570, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-ValueError: invalid literal for int() with base 16: '#'
+After initialization, but before game start.
+  File "game/inventory.rpy", line 91, in prepare_screen
+    screen inventory_button:
+  File "game/inventory.rpy", line 91, in prepare
+    screen inventory_button:
+  File "game/inventory.rpy", line 92, in prepare
+    textbutton "Show Inventory" action [ Show("inventory_screen"), Hide("inventory_button")] align (.99,.-4)
+  File "game/inventory.rpy", line 92, in prepare
+    textbutton "Show Inventory" action [ Show("inventory_screen"), Hide("inventory_button")] align (.99,.-4)
+SyntaxError: invalid syntax (inventory.rpy, line 92)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00start.rpy", line 234, in script call
-    call _splashscreen from _call_splashscreen_1
-  File "game/script.rpy", line 157, in script
-    call screen confirm(message="{color= #000000}Rhea contains a lot of bright colors, this may affect individuals who are susceptible to photo sensitivities. Do you want to continue?{/color}", yes_action=Return(), no_action=Quit(confirm=False))
-  File "renpy/ast.py", line 1969, in execute
-    self.call("execute")
-  File "renpy/ast.py", line 1957, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "renpy/statements.py", line 278, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 570, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "renpy/exports.py", line 2983, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "renpy/ui.py", line 298, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "renpy/display/core.py", line 3101, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "renpy/display/core.py", line 3611, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "renpy/display/core.py", line 2441, in draw_screen
-    renpy.config.screen_height,
-  File "render.pyx", line 492, in renpy.display.render.render_screen
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 777, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 777, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 777, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/screen.py", line 681, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 777, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 1184, in render
-    st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 980, in render
-    surf = render(d, width - x, rh, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 1184, in render
-    st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/text/text.py", line 2034, in render
-    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
-  File "renpy/text/text.py", line 607, in __init__
-    self.paragraphs = self.segment(text.tokens, style, renders, text)
-  File "renpy/text/text.py", line 1135, in segment
-    push().color = renpy.easy.color(value)
-  File "renpy/color.py", line 150, in __new__
-    r = int(c[0]+c[1], 16)
-ValueError: invalid literal for int() with base 16: '#'
+  File "renpy/bootstrap.py", line 326, in bootstrap
+    renpy.main.main()
+  File "renpy/main.py", line 617, in main
+    run(restart)
+  File "renpy/main.py", line 97, in run
+    renpy.display.screen.prepare_screens()
+  File "renpy/display/screen.py", line 938, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/inventory.rpy", line 91, in prepare_screen
+    screen inventory_button:
+  File "game/inventory.rpy", line 91, in prepare
+    screen inventory_button:
+  File "game/inventory.rpy", line 92, in prepare
+    textbutton "Show Inventory" action [ Show("inventory_screen"), Hide("inventory_button")] align (.99,.-4)
+  File "game/inventory.rpy", line 92, in prepare
+    textbutton "Show Inventory" action [ Show("inventory_screen"), Hide("inventory_button")] align (.99,.-4)
+  File "renpy/pyanalysis.py", line 712, in ast_eval
+    return self.ast_eval_literal(expr)[0]
+  File "renpy/pyanalysis.py", line 696, in ast_eval_literal
+    expr = py_compile(expr, 'eval', ast_node=True)
+  File "renpy/python.py", line 835, in py_compile
+    raise e
+SyntaxError: invalid syntax (inventory.rpy, line 92)
 
 Windows-10-10.0.19041
 Ren'Py 7.4.3.1414
  
-Sat Mar 20 13:03:18 2021
+Sat Mar 20 19:50:01 2021
