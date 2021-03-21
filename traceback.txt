@@ -1,44 +1,20 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 After initialization, but before game start.
-  File "game/inventory.rpy", line 91, in prepare_screen
-    screen inventory_button:
-  File "game/inventory.rpy", line 91, in prepare
-    screen inventory_button:
-  File "game/inventory.rpy", line 92, in prepare
-    textbutton "Show Inventory" action [ Show("inventory_screen"), Hide("inventory_button")] align (.99,.-4)
-  File "game/inventory.rpy", line 92, in prepare
-    textbutton "Show Inventory" action [ Show("inventory_screen"), Hide("inventory_button")] align (.99,.-4)
-SyntaxError: invalid syntax (inventory.rpy, line 92)
+WindowsError: [Error 32] The process cannot access the file because it is being used by another process
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "renpy/bootstrap.py", line 326, in bootstrap
     renpy.main.main()
-  File "renpy/main.py", line 617, in main
-    run(restart)
-  File "renpy/main.py", line 97, in run
-    renpy.display.screen.prepare_screens()
-  File "renpy/display/screen.py", line 938, in prepare_screens
-    s.ast.prepare_screen()
-  File "game/inventory.rpy", line 91, in prepare_screen
-    screen inventory_button:
-  File "game/inventory.rpy", line 91, in prepare
-    screen inventory_button:
-  File "game/inventory.rpy", line 92, in prepare
-    textbutton "Show Inventory" action [ Show("inventory_screen"), Hide("inventory_button")] align (.99,.-4)
-  File "game/inventory.rpy", line 92, in prepare
-    textbutton "Show Inventory" action [ Show("inventory_screen"), Hide("inventory_button")] align (.99,.-4)
-  File "renpy/pyanalysis.py", line 712, in ast_eval
-    return self.ast_eval_literal(expr)[0]
-  File "renpy/pyanalysis.py", line 696, in ast_eval_literal
-    expr = py_compile(expr, 'eval', ast_node=True)
-  File "renpy/python.py", line 835, in py_compile
-    raise e
-SyntaxError: invalid syntax (inventory.rpy, line 92)
+  File "renpy/main.py", line 567, in main
+    renpy.dump.dump(False)
+  File "renpy/dump.py", line 260, in dump
+    os.rename(new, filename)
+WindowsError: [Error 32] The process cannot access the file because it is being used by another process
 
 Windows-10-10.0.19041
 Ren'Py 7.4.3.1414
  
-Sat Mar 20 19:50:01 2021
+Sun Mar 21 16:11:20 2021

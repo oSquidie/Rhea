@@ -257,8 +257,7 @@ label start:
 
     default preferences.text_cps = 50
     scene Map with fade
-    show screen button #Making affection bar appear
-    $ affbar = True #Making affection bar appear
+    #show screen positive_affection #Making affection bar appear
     show screen inventory_button #Inventory icon appear
     window hide
     pause
