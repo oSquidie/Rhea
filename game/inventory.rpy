@@ -137,7 +137,7 @@ init -1:
 
     image information = Text("INFORMATION", style="tips_top")
     #Tooltips-inventory:
-    image tooltip_inventory_chocolate=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("Generic chocolate to heal", style="tips_bottom"))
-    image tooltip_inventory_banana=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("A healthy banana full of potassium! You can also use it as ammo for your guns! O.O Recharges 20 bullets.", style="tips_bottom")) #describe item
+    image tooltip_inventory_rock=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("A dull rock", style="tips_bottom"))
+    image tooltip_inventory_sharprock=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("A sharp rock.", style="tips_bottom")) #describe item
     image tooltip_inventory_gun=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("An gun that looks like something a cop would\ncarry around. Most effective on humans.", style="tips_bottom"))
     image tooltip_inventory_laser=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("An energy gun that shoots photon beams.\nMost effective on aliens.", style="tips_bottom"))

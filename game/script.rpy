@@ -230,8 +230,8 @@ label start:
         #player = Player("Derp", 100, 50)
         #player.hp = 50
         #player.mp = 10
-        chocolate = Item("Chocolate", hp=40, image="gui/inv_chocolate.png")
-        banana = Item("Banana", mp=20, image="gui/inv_banana.png")
+        rock = Item("Dull Rock", image="gui/inv_rock.png")
+        sharprock = Item("Sharp Rock", image="gui/inv_sharprock.png")
         gun = Item("Gun", element="bullets", image="gui/inv_gun.png", cost=7)
         laser = Item("Laser Gun", element="laser", image="gui/inv_laser.png")
         #itemname = Item("Itemname", element = "itemname", image="gui/imagename.png")
@@ -242,7 +242,7 @@ label start:
         #inventory.add(banana)
         #inventory.add(item name)
     #$ inventory.drop(banana) Dropping an item
-    #$ inventory.add(banana) adding an item
+    #$inventory.add(rock) Adding item to inventory
     #menu:
         #"Go deeper into the forest" if chocolate in inventory.items: #Giving items away through choices
             #"you gave chocolate away"

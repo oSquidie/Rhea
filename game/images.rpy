@@ -66,6 +66,10 @@ image SecondPage = "SecondPage.png"
 image Map = "Map.png"
 image TwoPaths = "Twopaths.png"
 image MingLouSmilesEvil = im.Scale("MingluoBurnCG.png", 1920, 1080)
+image CaveExploreMain = "CaveExploreMain.png" #This is the cave explore with the items inside the picture
+image CaveExploreMainEmpty = "CaveExploreMainEmpty.png" #Without the items(sprites) on the picture
+image CaveEntrance = "CaveEntrance.png"
+image VineWall = "VineWall.png"
 ############################################################################
 #Mingluo Sprites#
 image Mingluo happy =  im.Scale("MingluoHappy.png", 960, 1000)
@@ -170,6 +174,12 @@ image Opus = "Opus.png"
 image MagnifyingGlass = "MagnifyingGlass.png"
 image Berry = "Berry.png"
 image WyrmItem = "WyrmSelectable.png"
+image HiddenRock = "HiddenRock.png"
+###DOORS####
+image OpusDoor = "OpusDoor.png"
+image CrystalDoor = "CrystalDoor.png"
+image VineDoor = "VineDoor.png"
+image TreasureDoor = "TreasureDoor.png"
 #####################################################
 ##Cutscenes##
 image Opus neutral = "Opus1.png"

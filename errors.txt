@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/affection.rpy", line 27: Line is indented, but the preceding textbutton statement does not expect a block. Please check this line's indentation.
-    imagebutton:
-    ^
+File "game/script.rpy", line 234: invalid syntax
+    sharp rock = Item("Sharp Rock", image="gui/inv_sharprock.png")
+              ^
+    
 
 Ren'Py Version: Ren'Py 7.4.3.1414
-Sat Mar 20 13:41:39 2021
+Mon Mar 29 11:53:12 2021
