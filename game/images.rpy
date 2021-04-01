@@ -196,4 +196,5 @@ image MingluoBurnPage = "MingluoBurnCG.png"
 image LilaIntro1 = "LilaIntro1.png"
 image LilaIntro2 = "LilaIntro2.png"
 image LilaIntro3 = "LilaIntro3.png"
+image Emmavsbird = "Emmavsbird.png"
 ##############################################################
