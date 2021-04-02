@@ -197,4 +197,6 @@ image LilaIntro1 = "LilaIntro1.png"
 image LilaIntro2 = "LilaIntro2.png"
 image LilaIntro3 = "LilaIntro3.png"
 image Emmavsbird = "Emmavsbird.png"
+image EmmaLiamProtect = "EmmaLiamProtect.png"
+image EmmaLiamProtect2 = "EmmaLiamProtect2.png"
 ##############################################################
