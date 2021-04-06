@@ -351,6 +351,7 @@ label BadEnd1:
     hide Lila shocked with fade
     window show
     hide Cave with fade
+    window hide
     show image "black.png" with fade
     show static
     show text '{color=#00ffcd}{size=100}"She left..."{/size}{/color}' at text_effect
@@ -371,6 +372,7 @@ label BadEnd1:
     hide text '{color=#00ffcd}{size=100}"How could she..."{/size}{/color}' at text_effect
     hide static
     show Lila panic at middle with moveinleft
+    window show
     L "..."
     show Lila eyes closed sad with dissolve
     L "I-"

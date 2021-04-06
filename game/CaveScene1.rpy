@@ -1638,8 +1638,8 @@ label CutVine2:
     hide VineWall with fade
     show image "black.png" with fade
     E "1!" with vpunch
-    E "2!" with vpucnh
-    E "3!" with vpuch
+    E "2!" with vpunch
+    E "3!" with vpunch
     hide Emma yell with moveoutleft
     show Lila panic at left with moveinleft
     L "!" with vpunch
