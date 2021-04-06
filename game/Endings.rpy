@@ -1,23 +1,62 @@
 label NearbyVillage:
+    hide image "black.png" with fade
+    show Cave with fade
+    show Lila angry cry at MoveUp
+    show Emma dissapointed at emmaMoveUp
+    show Emma dissapointed at emmaflip
+    show Emma dissapointed at emmaRight
+    show Emma sigh at PopUp with dissolve
     E "You stay here."
+    show Emma envy with dissolve
     E "You might just cause more trouble if you tagged along."
+    show Emma sigh at emmaMoveUp with dissolve
+    show Lila panic at PopUp with dissolve
     L "But I'm worried."
+    show Lila panic at MoveUp with dissolve
+    show Emma angry at PopUp with dissolve
     E "Too late to be saying that now."
+    show Emma sigh with dissolve
+    show Lila shocked with dissolve
+    show Lila sad with dissolve
     E "I can't trust you to watch him."
+    show Emma dissapointed with dissolve
     E "And can't trust you to find a village either..."
+    show Lila Sweats with dissolve
+    show Emma envy with dissolve
     E "What good are you for?"
+    show Emma envy at emmaMoveUp with dissolve
+    show Lila eyes closed sad at PopUp with dissolve
     L "I'm sorry..."
+    show Emma sigh at PopUp with dissolve
     E "Forget it."
-    E "I'll carry him on my shoulder."
+    show Emma dissapointed with dissolve
+    E "I'll carry him on my shoulder and look for a nearby villiage."
+    show Emma concern with dissolve
     E "While I'm gone..."
+    show Emma envy with dissolve
     E "Don't you dare touch anything."
+    E "Or go anywhere."
+    show Emma envy at emmaMoveUp with dissolve
+    show Lila sad at PopUp with dissolve
     L "Ok..."
+    show Lila sad at MoveUp with dissolve
+    show Emma sigh at PopUp with dissolve
     E "Wait for us to come back."
+    show Emma intimidating with dissolve
     E "When I'm back and I found out your gone..."
     E "I won't think twice and ditch you."
-    L "Looks like she's gone."
-    L "Being alone in this cave feels lonely and dark."
+    hide Emma intimidating with fade
+    $renpy.notify("Emma left to find a village.")
+    show Lila sad at middle with dissolve
+    L "You always leave me behind..."
+    show Lila eyes closed sad with dissolve
+    L "Why?"
+    L "Being alone in this cave feels so lonely and dark."
+    show Lila tears with dissolve
     L "Very Dark."
+    hide Lila tears with fade
+    hide Cave with fade
+    show image "black.png" with fade
     "Mission failed."
     "Hurt status: Liam was hurt."
     "Ending Achieved: Waiting."
@@ -25,24 +64,62 @@ label NearbyVillage:
 return
 
 label EmmaGoGetHelp:
+    hide image "black.png" with fade
+    show Cave with fade
+    show Lila angry cry at MoveUp
+    show Emma dissapointed at emmaMoveUp
+    show Emma dissapointed at emmaflip
+    show Emma dissapointed at emmaRight
+    show Emma concern at PopUp with dissolve
     E "I can turst you to keep him safe?"
+    show Lila shocked with dissolve
+    show Emma dissapointed with dissolve
     E "He's defenseless right now."
+    show Emma dissapointed at emmaMoveUp with dissolve
+    show Lila yell at PopUp with dissolve
     L "I promise I won't leave his side."
+    show Lila yell at MoveUp with dissolve
+    show Emma sigh at PopUp with dissolve
     E "Fine."
+    show Lila relieved with dissolve
+    show Emma soft with dissolve
     E "I'll turst you one last time."
+    show Lila smile with dissolve
+    show Emma intimidating with dissolve
     E "Don't make me regret this choice."
+    show Emma intimidating at emmaMoveUp with dissolve
+    show Lila Sweats at PopUp with dissolve
+    show Lila Sweats at MoveUp with dissolve
+    show Emma surprised at PopUp with dissolve
+    E "Also."
+    show Emma concern with dissolve
     E "Take this."
     show screen inventory_button
     $renpy.notify("You now have Emma's dagger.")
     $inventory.add(Dagger)
+    show Emma angry with dissolve
     E "Don't hesitate to kill."
+    show Lila panic with dissolve
     hide screen inventory_button
+    show Emma sigh with dissolve
     E "The things in this world aren't forgiving."
+    show Emma sigh at emmaMoveUp with dissolve
+    show Lila Sweats at PopUp with dissolve
     L "?"
+    show Lila Sweats at MoveUp with dissolve
+    show Emma dissapointed at PopUp with dissolve
     E "Forget it."
-    E "Just don't move."
+    show Emma sigh with dissolve
+    E "Just don't go anywhere."
+    show Emma soft with dissolve
     E "Wait for me to come back."
+    show Emma soft at emmaMoveUp with dissolve
+    show Lila sad at PopUp with dissolve
     L "Ok..."
+    hide Emma soft with fade
+    hide Lila sad with dissolve
+    hide Cave with fade
+    show image "black.png" with fade
     "Mission failed."
     "Hurt status: Liam was hurt."
     "Ending Achieved: Waiting Together."
@@ -50,22 +127,56 @@ label EmmaGoGetHelp:
 return
 
 label EmmaGoGetHelp2:
+    hide image "black.png" with fade
+    show Cave with fade
+    show Lila angry cry at MoveUp
+    show Emma envy at emmaMoveUp
+    show Emma envy at emmaflip
+    show Emma envy at emmaRight
+    show Emma envy at PopUp with dissolve
     E "As if I can turst you again."
+    show Emma concern with dissolve
+    show Lila shocked with dissolve
+    show Lila sad with dissolve
     E "I can't trust you to watch him."
+    show Emma angry with dissolve
     E "And can't trust you to find a village either..."
+    show Lila Sweats with dissolve
+    show Emma envy with dissolve
     E "What good are you for?"
+    show Emma envy at emmaMoveUp with dissolve
+    show Lila eyes closed sad at PopUp with dissolve
     L "I'm sorry..."
+    show Emma angry at PopUp with dissolve
     E "Forget it."
-    E "I'll carry him on my shoulder."
+    show Emma envy with dissolve
+    E "I'll carry him on my shoulder and look for a nearby villiage."
+    show Emma concern with dissolve
     E "While I'm gone..."
+    show Emma envy with dissolve
     E "Don't you dare touch anything."
+    E "Or go anywhere."
+    show Emma envy at emmaMoveUp with dissolve
+    show Lila sad at PopUp with dissolve
     L "Ok..."
+    show Lila sad at MoveUp with dissolve
+    show Emma sigh at PopUp with dissolve
     E "Wait for us to come back."
+    show Emma angry with dissolve
     E "When I'm back and I found out your gone..."
     E "I won't think twice and ditch you."
-    L "Looks like she's gone."
-    L "Being alone in this cave feels lonely and dark."
+    hide Emma angry with fade
+    $renpy.notify("Emma left to find a village.")
+    show Lila sad at middle with dissolve
+    L "You always leave me behind..."
+    show Lila eyes closed sad with dissolve
+    L "Why?"
+    L "Being alone in this cave feels so lonely and dark."
+    show Lila tears with dissolve
     L "Very Dark."
+    hide Lila tears with fade
+    hide Cave with fade
+    show image "black.png" with fade
     "Mission failed."
     "Hurt status: Liam was hurt."
     "Ending Achieved: Waiting."
@@ -73,23 +184,53 @@ label EmmaGoGetHelp2:
 return
 
 label BadEnd1:
-    show image "black.png"
+    hide image "black.png" with fade
+    show Cave with fade
+    show Lila panic at MoveUp
+    show Emma shocked at emmaMoveUp
+    show Emma shocked at emmaflip
+    show Emma shocked at emmaRight
+    show Emma angry at PopUp with dissolve
     E "Are you serious?"
+    show Emma envy with dissolve
     E "Feel your chest."
+    show Emma concern with dissolve
     E "Is there still a heart inside of there?"
+    show Emma dissapointed at emmaMoveUp with dissolve
+    show Lila Sweats at PopUp with dissolve
     L "Wait-I.."
+    show Lila panic with dissolve
+    show Lila pain with dissolve
+    show Lila Sweats with dissolve
     L "I said that without thinking-"
+    show Lila panic at MoveUp with dissolve
+    show Emma angry at PopUp with dissolve
     E "Enough." with vpunch
+    show Emma sigh with dissolve
     E "Don't know when I started to dislike you."
+    show Emma dissapointed with dissolve
     E "But I was right."
+    show Emma concern with dissolve
     E "I told him so many times you aren't worth our time."
+    show Emma angry with dissolve
     E "I'm taking Liam."
     E "As for you..."
+    show Emma cry with dissolve
+    show Emma dissapointed with dissolve
     E "Your safety no long concerns me."
+    show Emma dissapointed at emmaMoveUp with dissolve
+    hide Emma dissapointed with fade
+    show Lila panic at middle with dissolve
     L "Emma!"
+    show Lila yell with dissolve
     L "Don't Leave!"
+    show Lila angry cry with dissolve
     L "Listen to me!"
     L "Emma!"
+    show Lila shocked with dissolve
+    hide Lila shocked with fade
+    hide Cave with fade
+    show image "black.png" with fade
     show text '{color=#00ffcd}{size=100}"She left..."{/size}{/color}' at text_effect
     $ renpy.pause()
     hide text '{color=#00ffcd}{size=100}"She left..."{/size}{/color}' at text_effect
@@ -104,11 +245,15 @@ label BadEnd1:
     $ renpy.pause()
     hide text '{color=#00ffcd}{size=100}"How could she..."{/size}{/color}' at text_effect
 
+    show Lila panic at middle with moveinleft
     L "..."
+    show Lila eyes closed sad with dissolve
     L "I-"
+    hide Lila eyes closed sad fade
     show White with fade
     RV "How absurd..."
     hide White with fade
+    show "black.png" with fade
     RV2 "More like pitful."
     RV "To think a lunic like her was living with us."
     L "I'm not crazy!"
@@ -119,7 +264,8 @@ label BadEnd1:
     L "Don't touch me!"
     L "I'm not crazy!"
     L "Stop-"
-    show FriendBack
+    hide "black.png" with fade
+    show EmmaLiamProtect with fade
     E "Do you adults have no shame?!"
     E "She still just a kid!"
     RV3 "It because she's a kid she needs treatment right now!"
@@ -134,13 +280,15 @@ label BadEnd1:
     RV2 "Don't you dare come back!"
     L2 "Trust me."
     L2 "I won't."
-    hide FriendBack
-    show FriendBackTears
-    show bblack
+    hide EmmaLiamProtect
+    show TearsEmmaLiamProtect
     L "They were all I need..."
+    L "They were all I had."
+    show bblack
+    L "What have I done?"
     hide FriendBackTears with fade
     hide bblack with fade
-    show image "black.png"
+    show image "black.png" with fade
     "Mission failed."
     "Hurt status: Liam is hurt."
     "Ending Achieved: Bad end 1(Overloaded)."
@@ -148,24 +296,71 @@ label BadEnd1:
 return
 
 label MysteriesAwait:
+    window show
+    scene image "CaveEntrance.png" with dissolve
+    show Lila happy at MoveUp
+    show Lila happy at middle
+    show Liam happy at LiamRight
+    show Liam happy at LiamMoveUp
+    show Emma nervous at emmaLeft
+    show Emma nervous at emmaMoveUp
+    show Lila happy at PopUp with dissolve
     L "We did it!"
+    show Lila happy at MoveUp with dissolve
+    show Emma nervous at PopUp with dissolve
     E "N-Nice..."
+    show Emma nervous at emmaMoveUp with dissolve
+    show Lila swirly eyes at PopUp with dissolve
     L "Emma are you ok?"
+    show Liam surprised with dissolve
+    show Lila swirly eyes at MoveUp with dissolve
+    show Emma smile at PopUp with dissolve
     E "Y-yeah."
+    show Emma nervous with dissolve
+    show Liam content with dissolve
+    show Liam smile with dissolve
     E "Just need a second...to breath."
+    show Emma nervous at emmaMoveUp with dissolve
+    show Lila surprised at PopUp with dissolve
     L "Oh ok..."
+    show Lila skeptical with dissolve
     L "Hmmm..."
     L "What does this say??"
+    show Lila skeptical at MoveUp with dissolve
+    show Emma surprised with dissolve
+    show Liam surprised at LiamPopUp with dissolve
     L2 "Let me take a look."
+    show Liam skeptical with dissolve
     L2 "Hmmmm..."
+    show Liam nervous with dissolve
     L2 "It's a bit complicated to decode."
+    show Lila Lila swirly eyes with dissolve
+    show Emma sigh with dissolve
+    show Emma dissapointed with dissolve
+    show Liam default with dissolve
     L2 "Let's find a nearby library where I can focus and do some research."
+    show Liam default at LiamMoveUp with dissolve
+    show Lila happy at PopUp with dissolve
     L "Ok!"
+    show Lila happy at MoveUp with dissolve
+    show Emma concern at PopUp with dissolve
     E "Guess we looking for a town next."
+    show Emma default with dissolve
     E "Let's go."
+    show Emma sigh with dissolve
     E "I'm exhausted."
+    show Emma sigh at emmaMoveUp with dissolve
+    show Lila smile at PopUp with dissolve
+    show Liam smile with dissolve
     L "Ok!"
+    show Lila skeptical with dissolve
+    show Lila happy with dissolve
     L "I wonder what adventurous awaits us next!"
+    hide Emma sigh with fade
+    hide Lila happy with fade
+    hide Liam smile with fade
+    hide image "CaveEntrance.png" with dissolve
+    show image "black.png" with fade
     "Mission Success."
     "Hurt status: No one is hurt."
     "Ending Achieved: Mysteries Await."
@@ -173,31 +368,64 @@ label MysteriesAwait:
 return
 
 label SaveMe1:
+    window show
+    show image "Vina death.png" with fade
     show screen negative_affection
     $affbarposi = False
     $affbarnegative = True
     $emma_points -= 1
     $liam_points -= 1
+    show Liam panic at right with moveinright
     L2 "Go save her first!"
     hide screen negative_affection
+    hide Liam panic with moveoutright
+    show Emma panic at left with moveinleft
     E "But!"
+    hide Emma panic with moveoutleft
+    show Liam panic at right with moveinright
     L2 "I'll be fine!"
+    hide Liam with moveoutright
+    show Emma yell with at left with moveinleft
     E "AHHHHHHHHHHH!" with hpunch
     $renpy.notify("Emma cuts the vines on you.")
+    show Emma envy with dissolve
     E "This is why you shouldn't have touched the crytsal!"
     $renpy.notify("Emma picks up your sharp rock.")
+    show Emma yell with dissolve
     E "Take this you dumb Vina Plant!"
     $renpy.notify("Emma throws it at one of the eyes on the Vina Plant.")
+    show Emma envy with dissolve
+    hide image "Vina death.png" with fade
+    show image VineHurt with fade
     E "Let's get out of here now!"
-    $renpy.notify("Stunned by the pain the Vina plant drops Liam.")
+    $renpy.notify("Stunned by the pain the Vina plant freed Liam.")
+    hide VineHurt with fade
+    show image "CaveEntrance.png" with dissolve
+    show Emma nervous with dissolve
     E "...."
+    show Emma envy with dissolve
     E "Stop weiling you idiot."
+    hide Emma envy with moveoutleft
+    show Lila angry cry at left with moveinleft
+    show Lila pout with dissolve
     L "But what about the page?"
+    hide Lila pout with moveoutleft
+    show Emma angry at left with moveinleft
     E "Why are you worried about that in this state?"
+    show Emma sigh with dissolve
     E "Not even medication can fix that brain of yours."
+    hide Emma sigh with moveoutleft
+    show Lila Sweats at left with moveinleft
     L "..."
+    hide Lila Sweats with moveoutleft
+    show Liam sigh at right with moveinright
     L2 "Let's find a place to rest up before we figure out the next step..."
+    hide Liam sigh with moveoutright
+    show Lila sad at left with moveinleft
     L "Ok..."
+    hide Lila sad with moveoutleft
+    hide image "CaveEntrance.png" with dissolve
+    show image "black.png" with fade
     "Mission failed."
     "Hurt status: No one is hurt."
     "Ending Achieved: Mysteries Await."
@@ -205,10 +433,16 @@ label SaveMe1:
 return
 
 label SaveMe2:
+    show image "Vina death.png" with fade
+    show Emma yell at left with moveinleft
     E "AHHHHHHHHHHH!" with hpunch
+    $renpy.notify("Emma choose to save Liam.")
+    show Emma panic with dissolve
     E "I-"
+    show Emma dissapointed with dissolve
     $renpy.notify("All you can see is the look of guilt.")
     E "I'm sorry..."
+    hide Emma dissapointed with moveoutleft
     "Mission failed."
     "Hurt status: unknown."
     "Ending Achieved: Results Of Being Selfish."
@@ -216,45 +450,109 @@ label SaveMe2:
 return
 
 label SaveLiam:
+    show image "Vina death.png" with fade
     show screen positive_affection
     $affbarposi = True
     $affbarnegative = False
     $emma_points += 1
     $liam_points += 1
+    show Liam panic at right with moveinright
     L2 "No!"
     hide screen positive_affection
     L2 "Save her first!"
+    hide Liam panic with moveoutright
+    show Emma panic at left with moveinleft
     E "But you-"
-    E "AAAAHHHHH!"
+    show Liam panic at right with moveinright
+    L2 "I'll be fine!"
+    hide Liam with moveoutright
+    show Emma yell with at left with moveinleft
+    E "AAAAHHHHH!" with hpunch
     $renpy.notify("Emma cuts the vines on you.")
+    show Emma envy with dissolve
     E "This is why you shouldn't have touched the crytsal!"
     $renpy.notify("Emma picks up your sharp rock.")
+    show Emma yell with dissolve
     E "Take this you dumb Vina Plant!"
     $renpy.notify("Emma throws it at one of the eyes on the Vina Plant.")
+    hide image "Vina death.png" with fade
+    show Vinehurt with fade
+    show Emma envy with dissolve
     E "Let's get out of here now!"
     $renpy.notify("Stunned by the pain the Vina plant drops Liam.")
+    hide Vinehurt with fade
+    show Cave with fade
+    show Emma panic at left with moveinleft
     E "...."
+    hide Emma panic with moveoutleft
+    show Lila tears at left with moveinleft
+    show Lila angry cry with dissolve
+    L "...."
+    hide Lila angry cry with moveoutleft
+    show Liam nervous at right with moveinright
     L2 "It's ok..."
+    show Liam smile with dissolve
     L2 "It's over now."
+    show Liam nervous with dissolve
     L2 "Sorry we couldn't get the page."
+    hide Liam nervous with moveoutright
+    show Lila angry cry at left with moveinleft
     L "I don't care about that right now..."
+    hide Lila angry cry with moveoutleft
+    show Mingluo no eyes at right with moveinright
     Q "You should care."
+    hide Mingluo no eyes with moveoutright
+    hide Cave with fade
+    window hide
+    show VineBurn with fade
+    pause
+    window show
     $renpy.notify("The wall of vines started to burn.")
+    show Emma shocked at left with moveinleft
     E "What-?!"
+    hide Emma shocked with moveoutleft
+    show Mingluo happy at right with moveinright
     M "Nice to see you guys doing well."
+    hide VineBurn with fade
+    window hide
+    show MingluoBurnPage with fade
+    pause
+    window show
     $renpy.notify("Minglou picks up the page.")
     E "..."
     L2 "..."
+    hide MingluoBurnPage with fade
+    show Cave with fade
+    show Lila happy at left with moveinleft
     L "Minglou!"
     $renpy.notify("You gave minglou a hug.")
+    show Mingluo disgust at right with moveinright
+    show Minglou happy with dissolve
+    M "..."
+    hide Lila happy with moveoutleft
+    show Minglou smirk with dissolve
     M "Looks like you're friends don't like seeing me."
+    show Minglou sigh with dissolve
     M "Makes me a bit sad."
+    hide Minglou sigh with moveoutright
+    show Lila skeptical at left with dissolve
     L "What are you doing here?"
+    hide Lila skeptical with moveoutleft
+    show Minglou smile at right with moveinright
     M "To help you of course!"
+    hide Minglou smile with moveoutright
+    show Emma intimidating at left with moveinleft
     E "You could have came earlier..."
+    hide Emma intimidating with moveoutleft
+    show Mingluo skeptical at right with moveinright
+    M "But there's no fun in that."
     M "What was the phase?"
+    show Mingluo happy with dissolve
     M "The main character never comes on time."
+    hide Mingluo happy with moveoutright
+    show Emma envy at left with moveinleft
     E "What a load of bull-"
+    hide Emma envy with moveoutleft
     M "Anyways!"
     M "Here you go."
     show screen inventory_button

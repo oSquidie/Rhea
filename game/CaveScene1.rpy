@@ -1595,36 +1595,81 @@ label CutVine2:
     show VineWall
     pause
     window show
+    show Emma concern at left with moveinleft
     E "Ok."
+    show Emma sigh with dissolve
     E "Here's the plan."
     E "Me and Liam will distract the main body of the Vina Plant."
+    hide Emma sigh with moveoutleft
+    hide window
+    hide VineWall with fade
+    show Vina neutral with fade
+    pause
+    window show
+    show Emma concern at left with moveinleft
     E "You will go cut the entangled vines around it."
+    hide Emma concern with moveoutleft
+    window hide
+    hide Vina neutral with fade
+    show VineWall with fade
+    pause
+    window show
+    show Emma angry at left with moveinleft
     E "Grab the page and cut your way out."
+    hide Emma angry with moveoutleft
+    show Lila sad at left with moveinleft
     L "What will happen if Liam gets caught?"
+    show Lila eyes closed sad with dissolve
     L "He don't have an sharp object on him like me."
+    hide Lila eyes closed sad with moveoutleft
+    show Emma envy at left with moveinleft
     E "I'm quick enough to save him."
+    show Emma angry with dissolve
     E "You focus on the wall of vines."
+    hide Emma angry with moveoutleft
+    show Lila nervous at left with moveinleft
     L "Ok!"
+    hide Lila nervous with moveoutleft
+    show Emma sigh at left with moveinleft
     E "Get in action on the count of 3!"
-    E "1!"
-    E "2!"
-    E "3!"
+    show Emma yell with dissolve
+    hide VineWall with fade
+    show image "black.png" with fade
+    E "1!" with vpunch
+    E "2!" with vpucnh
+    E "3!" with vpuch
+    hide Emma yell with moveoutleft
+    show Lila panic at left with moveinleft
     L "!" with vpunch
+    hide Lila panic with moveoutleft
+    show Emma shocked at left with moveinleft
     E "Crap!"
+    show Emma yell with dissolve
     E "Lila it smells the blood on your finger!"
+    show Emma nervous with dissolve
     E "Let's pull back-"
     $renpy.notify("The vines entangled you.")
+    show Emma panic with dissolve
     E "Lil-!"
     show screen inventory_button
     $renpy.notify("You dropped the sharp rock.")
+    show Emma concern with dissolve
+    show Emma yell with dissolve
     $renpy.notify("The Vina Plant look at you with hungry eyes.")
     $inventory.drop(Sharprock)
     E "Don't move I'm coming!"
     hide screen inventory_button
     $renpy.notify("Vines entangled Liam.")
+    hide Emma yell with moveoutleft
+    show Liam shocked at right with moveinright
     L2 "!" with vpunch
+    hide Liam shocked with moveoutright
     $renpy.notify("Emma is in a state of panic.")
+    show Emma panic at left with moveinleft
+    hide Emma panic with moveoutleft
+    show Lila panic at left with moveinleft
     L "What should I do?"
+    hide Lila panic with moveoutleft
     window hide
     if emma_points >= 3:
         if liam_points >= 2:
