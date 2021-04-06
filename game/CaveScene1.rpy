@@ -79,6 +79,7 @@ label CountingOnYou:
     E "Ado-!"
     show Emma pout with dissolve
     E "This is the only time I'm letting this go."
+    $renpy.notify("Drag the magnifying glass to interact with objects.")
     hide Emma pout with dissolve
     hide Lila blush with dissolve
     hide Liam content with dissolve
@@ -141,6 +142,7 @@ label DoNotNeed:
     show Lila eyes closed sad with dissolve
     show Liam nervous  with dissolve
     L "No more before we start to regret our actions and words."
+    $renpy.notify("Drag the magnifying glass to interact with objects.")
     hide Emma pout with dissolve
     hide Lila eyes closed sad with dissolve
     hide Liam nervous with dissolve
@@ -194,6 +196,7 @@ label NothingDan:
     show Lila stunned with dissolve
     show Liam nervous with dissolve
     show Liam embarrassed with dissolve
+    $renpy.notify("Drag the magnifying glass to interact with objects.")
     hide Emma pout with fade
     hide Lila stunned with fade
     hide Liam embarrassed with fade

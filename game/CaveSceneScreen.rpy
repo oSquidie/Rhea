@@ -16,7 +16,8 @@ screen slide_glass_screen:
     draggroup:
         drag:
             drag_name "You"
-            child "MagnifyingGlass.png"
+            idle_child "MagnifyingGlass.png"
+            hover_child "MagnifyingGlassHover.png"
             droppable False
             dragged glass_dragged
             xpos 700 ypos 650
@@ -24,25 +25,29 @@ screen slide_glass_screen:
         drag:
             drag_name "Crystal Door."
             draggable False
-            child "CrystalDoor.png"
+            idle_child "CrystalDoor.png"
+            selected_idle_child "CrystalDoorHover.png"
             xpos 1515 ypos 50
 
         drag:
             drag_name "Opus Door."
             draggable False
-            child "OpusDoor.png"
+            idle_child "OpusDoor.png"
+            selected_idle_child "OpusDoorHover.png"
             xpos 700 ypos 135
 
         drag:
             drag_name "Treasure Door."
             draggable False
-            child "TreasureDoor.png"
+            idle_child "TreasureDoor.png"
+            selected_idle_child "TreasureDoorHover.png"
             xpos 60  ypos 90
 
         drag:
             drag_name "a vine?"
             draggable False
-            child "VineDoor.png"
+            idle_child "VineDoor.png"
+            selected_idle_child "VineDoorHover.png"
             xpos 1500 ypos 650
 
         drag:
@@ -72,7 +77,8 @@ screen slide_glass_screen2:
     draggroup:
         drag:
             drag_name "You"
-            child "MagnifyingGlass.png"
+            idle_child "MagnifyingGlass.png"
+            hover_child "MagnifyingGlassHover.png"
             droppable False
             dragged glass_dragged
             xpos 700 ypos 650
@@ -80,25 +86,29 @@ screen slide_glass_screen2:
         drag:
             drag_name "Crystal Door."
             draggable False
-            child "CrystalDoor.png"
+            idle_child "CrystalDoor.png"
+            selected_idle_child "CrystalDoorHover.png"
             xpos 1515 ypos 50
 
         drag:
             drag_name "Opus Door."
             draggable False
-            child "OpusDoor.png"
+            idle_child "OpusDoor.png"
+            selected_idle_child "OpusDoorHover.png"
             xpos 700 ypos 135
 
         drag:
             drag_name "Treasure Door."
             draggable False
-            child "TreasureDoor.png"
+            idle_child "TreasureDoor.png"
+            selected_idle_child "TreasureDoorHover.png"
             xpos 60  ypos 90
 
         drag:
             drag_name "a vine?"
             draggable False
-            child "VineDoor.png"
+            idle_child "VineDoor.png"
+            selected_idle_child "VineDoorHover.png"
             xpos 1500 ypos 650
 
 return
