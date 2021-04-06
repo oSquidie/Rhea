@@ -2,10 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 234: invalid syntax
-    sharp rock = Item("Sharp Rock", image="gui/inv_sharprock.png")
-              ^
-    
+File "game/CaveScene1.rpy", line 1127: expected 'simple_expression' not found.
+    show Emma surprised at with moveinleft
+                           ^
+
+File "game/CaveScene1.rpy", line 1225: end of line expected.
+    show Lila surprised at left moveinleft
+                                ^
 
 Ren'Py Version: Ren'Py 7.4.3.1414
-Mon Mar 29 11:53:12 2021
+Tue Apr  6 01:03:00 2021

@@ -1,61 +1,100 @@
+#####For any character########
 transform middle:
-    xalign .5 yalign 1.0
+   xalign .5 #syalign 1.0
+   ypos 35
 
 transform flip:
-    xzoom -1
+   xzoom -1
+   ypos 35
+
+transform MoveUp:
+   ypos 35
+
+transform PopUp:
+   ypos -50
+
+transform shake:
+       ease .06 yoffset 24
+       ease .06 yoffset -24
+       ease .05 yoffset 20
+       ease .05 yoffset -20
+       ease .04 yoffset 16
+       ease .04 yoffset -16
+       ease .03 yoffset 12
+       ease .03 yoffset -12
+       ease .02 yoffset 8
+       ease .02 yoffset -8
+       ease .01 yoffset 4
+       ease .01 yoffset -4
+       ease .01 yoffset 0
+
+transform my_right:
+    xalign .9 yalign 1.0
+
+#########For Lila#######
+transform lilaflip: ####(Right)#####
+   xzoom -1
+   xalign -5 #yalign 1.0
+   ypos 35
+
+transform yflip: ####(Left)#####
+   xzoom 1
+   ypos 35
+
+#########For Emma########
 
 transform emmaflip:
+   xzoom -1
+   xalign .5 #yalign 1.0
+   ypos 5
+
+transform emmaflip2:
     xzoom -1
-    xalign .5 yalign 1.0
-transform yflip:
+
+transform emmaFaceRight:
     xzoom 1
+    xalign .5 #yalign 1.0
+    ypos 5
 
-transform lilaflip:
-    xzoom -1
-    xalign -5 yalign 1.0
+transform emmaLeft:
+   xpos -100
 
+transform emmaRight:
+   xpos 1500
+
+transform emmaMoveUp:
+   ypos 5
+
+transform emmaMiddle:
+   xalign .5
+   ypos 5
+
+#######For Liam######
+transform LiamMoveUp:
+   ypos -200
+
+transform LiamPopUp:
+   ypos -250
+
+transform LiamRight:
+   xpos 1000
+
+transform Liamflip:
+   xzoom -1
+
+#######For MingLou######
 transform MingLouFlip:
-    xzoom -1
-    xalign -5 yalign 1.0
+   xzoom -1
+   xalign -5 #yalign 1.0
+   ypos 35
 
-transform slide:
-    linear 0.5 xpos 0.85
-
+#####Pain in my ass(For polish)########
 image bblack:
-    "black.png"
-    alpha .6
-
+   "black.png"
+   alpha .6
 
 define fade = Fade(0.5, 0.0, 0.5) #scene transistions
-#Lila Sprites##
-image Lila happy =  im.Scale("LilaHappy.png", 800, 950)
-image Lilasad = im.Scale("LilaSad.png", 800, 950)
-image Lila angry = im.Scale("LilaAngry.png", 800, 950)
-image Lila smile = im.Scale("LilaSmile.png", 800, 950)
-image Lila stunned = im.Scale("LilaOFace.png", 800, 950)
-image Lila pout = im.Scale("LilaPout.png", 800, 950)
-image Lila shocked = im.Scale("LilaShocked.png", 800, 950)
-image Lila surprised = im.Scale("LilaSuprised.png", 800, 950)
-image Lila tears = im.Scale("LilaTears.png", 800, 950)
-image Lila eyes closed = im.Scale("LilaClosedEyes.png", 800, 950)
-image Lila default = im.Scale("LilaDefault.png", 800, 950)
-image Lila blush =  im.Scale("LilaBlush.png", 800, 950)
-image Lila nervous =  im.Scale("LilaArrowFace.png", 800, 950)
-image Lila eyes closed sad = im.Scale("LilaClosedEyesSad.png", 800, 950)
-image Lila angry cry = im.Scale("LilaCryAngry.png", 800, 950)
-image Lila relieved = im.Scale("LilaRelieved.png", 800, 950)
-image Lila embarrassed = im.Scale("LilaEmbarrassed.png", 800, 950)
-image Lila laugh = im.Scale("LilaLaugh.png", 800, 950)
-image Lila panic = im.Scale("LilaPanic.png", 800, 950)
-image Lila pain = im.Scale("LilaPain.png", 800, 950)
-image Lila swirly eyes = im.Scale("LilaSwirlyEyes.png", 800, 950)
-image Lila yell = im.Scale("LilaYell.png", 800, 950)
-image Lila skeptical = im.Scale("LilaSkeptical.png", 800, 950)
-image Lila Sweats =  im.Scale("LilaNervous.png", 800, 950)
-image Lila dumbfounded = im.Scale("LilaDumbfounded.png", 800, 950)
-image Lila confused = im.Scale("LilaConfused.png", 800, 950)
-image side Lila = im.Scale("images/LilaIcon.png", 200, 200, xoffset=20, yoffset=-50)
-############################################################################
+#################################################################################
 #BGs#
 image BGStart = "BGStart.png"
 image DefaultForest = "Forest_Default.png"
@@ -102,6 +141,35 @@ image Mingluo threat = im.Scale("MingluoThreat.png", 960, 1000)
 image Mingluo yell = im.Scale("MingluoYell.png", 960, 1000)
 image side Mingluo = im.Scale("images/MingluoIcon.png", 200, 200, xoffset=20, yoffset=-50)
 ############################################################################
+#Lila Sprites##
+image Lila happy =  im.Scale("LilaHappy.png", 800, 950)
+image Lila sad = im.Scale("LilaSad.png", 800, 950)
+image Lila angry = im.Scale("LilaAngry.png", 800, 950)
+image Lila smile = im.Scale("LilaSmile.png", 800, 950)
+image Lila stunned = im.Scale("LilaOFace.png", 800, 950)
+image Lila pout = im.Scale("LilaPout.png", 800, 950)
+image Lila shocked = im.Scale("LilaShocked.png", 800, 950)
+image Lila surprised = im.Scale("LilaSuprised.png", 800, 950)
+image Lila tears = im.Scale("LilaTears.png", 800, 950)
+image Lila eyes closed = im.Scale("LilaClosedEyes.png", 800, 950)
+image Lila default = im.Scale("LilaDefault.png", 800, 950)
+image Lila blush =  im.Scale("LilaBlush.png", 800, 950)
+image Lila nervous =  im.Scale("LilaArrowFace.png", 800, 950)
+image Lila eyes closed sad = im.Scale("LilaClosedEyesSad.png", 800, 950)
+image Lila angry cry = im.Scale("LilaCryAngry.png", 800, 950)
+image Lila relieved = im.Scale("LilaRelieved.png", 800, 950)
+image Lila embarrassed = im.Scale("LilaEmbarrassed.png", 800, 950)
+image Lila laugh = im.Scale("LilaLaugh.png", 800, 950)
+image Lila panic = im.Scale("LilaPanic.png", 800, 950)
+image Lila pain = im.Scale("LilaPain.png", 800, 950)
+image Lila swirly eyes = im.Scale("LilaSwirlyEyes.png", 800, 950)
+image Lila yell = im.Scale("LilaYell.png", 800, 950)
+image Lila skeptical = im.Scale("LilaSkeptical.png", 800, 950)
+image Lila Sweats =  im.Scale("LilaNervous.png", 800, 950)
+image Lila dumbfounded = im.Scale("LilaDumbfounded.png", 800, 950)
+image Lila confused = im.Scale("LilaConfused.png", 800, 950)
+image side Lila = im.Scale("images/LilaIcon.png", 200, 200, xoffset=20, yoffset=-50)
+############################################################################
 #Emma Sprites#
 image Emma happy = im.Scale("EmmaHappy.png", 760, 1000)
 image Emma angry = im.Scale("EmmaAngry.png", 760, 1000)
@@ -115,7 +183,7 @@ image Emma surprised = im.Scale("EmmaSurprised.png", 760, 1000)
 image Emma sigh = im.Scale("EmmaSigh.png", 760, 1000)
 image Emma smile = im.Scale("EmmaSmile.png", 760, 1000)
 image Emma smug  = im.Scale("EmmaSmug.png", 760, 1000)
-image Emma dissapointed  = im.Scale("EmmaDissapointed.png", 760, 1000)
+image Emma dissapointed = im.Scale("EmmaDissapointed.png", 760, 1000)
 image Emma embarrassed = im.Scale("EmmaEmbarassed.png", 760, 1000)
 image Emma envy = im.Scale("EmmaEnvy.png", 760, 1000)
 image Emma intimidating = im.Scale("EmmaIntimidating.png", 760, 1000)
@@ -158,6 +226,23 @@ image Liam dark smile = im.Scale("LiamDarkSmile.png", 960, 1200)
 image Liam blush = im.Scale("LiamBlush.png", 960, 1200)
 image side Liam = im.Scale("images/LiamIcon.png", 200, 200, xoffset=20, yoffset=-50)
 ##################################################################################
+#BGs#
+image BGStart = "BGStart.png"
+image DefaultForest = "Forest_Default.png"
+image Cave = "Cave.png"
+image InsideDen = "InsideDen.png"
+image Den = "OutsideDen.png"
+image FirstPage = "FirstPage.png"
+image TwoPaths = "TwoPaths.png"
+image SecondPage = "SecondPage.png"
+image Map = "Map.png"
+image TwoPaths = "Twopaths.png"
+image MingLouSmilesEvil = im.Scale("MingluoBurnCG.png", 1920, 1080)
+image CaveExploreMain = "CaveExploreMain.png" #This is the cave explore with the items inside the picture
+image CaveExploreMainEmpty = "CaveExploreMainEmpty.png" #Without the items(sprites) on the picture
+image CaveEntrance = "CaveEntrance.png"
+image VineWall = "VineWall.png"
+#################################################################################
 #CloseUp Images#
 image CloseupBerry = "CloseupBerry.png"
 image CloseupCrystal = "CloseupCrystal.png"
@@ -168,6 +253,12 @@ image CloseupPageCave = "CloseupPageCave.png"
 image CloseupPageDen = "CloseupPageDen.png"
 image CloseupVine = "CloseupVine.png"
 image CloseupWyrm = "CloseupWyrm.png"
+image OpusDistract = "OpusDistract1.png"
+image OpusDistract2 = "OpusDistract2.png"
+image OpusDistract3 = "OpusDistract3.png"
+image OpusDistract4 = "OpusDistract4.png"
+image OpusDistract5 = "OpusDistract5.png"
+image CloseupRock = "CloseupRock.png"
 #####################################################
 #Selectable Images and Magnifiying Glass#
 image Crystal = "Crystal.png"
@@ -196,7 +287,7 @@ image MingluoBurnPage = "MingluoBurnCG.png"
 image LilaIntro1 = "LilaIntro1.png"
 image LilaIntro2 = "LilaIntro2.png"
 image LilaIntro3 = "LilaIntro3.png"
+image LilaReachForRock = "ReachforRock.png"
+image LilaScareOfOpus = "LilaScaredOpus.png"
 image Emmavsbird = "Emmavsbird.png"
-image EmmaLiamProtect = "EmmaLiamProtect.png"
-image EmmaLiamProtect2 = "EmmaLiamProtect2.png"
 ##############################################################
