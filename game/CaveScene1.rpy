@@ -118,7 +118,7 @@ label DoNotNeed:
     E "I don't care if you feel this way about me..."
     show Emma yell with dissolve
     show Lila sad with dissolve
-    E "But how can you inculde Liam-"
+    E "But how can you include Liam-"
     show Liam sigh at LiamPopUp with dissolve
     L "It's fine Emma."
     show Emma shocked at emmaMoveUp with dissolve
@@ -130,7 +130,7 @@ label DoNotNeed:
     show Emma envy at PopUp with dissolve
     E "Well it wasn't funny..."
     show Emma angry with dissolve
-    E "I didn't get labeled as an outcast to protect an ungratful brat."
+    E "I didn't get labeled as an outcast to protect an ungrateful brat."
     show Emma angry at emmaMoveUp with dissolve
     show Liam sigh with dissolve
     show Liam angry at LiamPopUp with dissolve
@@ -748,7 +748,7 @@ label FeedingDeadBird:
     L "Your the best."
     hide Lila happy with moveoutleft
     show Emma surprised at left with moveinleft
-    show Emma Emma embarrassed with dissolve
+    show Emma embarrassed with dissolve
     show Emma blush with dissolve
     E "It's no big deal!"
     show Emma smug with dissolve
@@ -1008,7 +1008,7 @@ label ReachForIt:
     show Emma panic with dissolve
     E "..."
     hide image "black.png" with fade
-    show image Cave with fade
+    scene image "Cave.png" with dissolve
     hide Emma with moveoutleft
     show Lila angry cry at MoveUp
     show Emma dissapointed at emmaMoveUp
@@ -1095,6 +1095,7 @@ label TreasureDoor:
     hide Lila sad with moveoutleft
     show Liam surprised at right with moveinright
     L2 "Seems like there's an indent here."
+    show CloseupDoor2
     show Liam skeptical with dissolve
     L2 "There must be an object somewhere that can fit in here."
     hide Liam skeptical with moveoutright
@@ -1106,6 +1107,7 @@ label TreasureDoor:
     hide Liam wink with moveoutright
     show Lila confused at left with moveinleft
     L "???"
+    hide CloseupDoor2
     hide Lila confused with moveoutleft
     if GotRock == False:
         jump drag_glass
@@ -1251,7 +1253,7 @@ label ObserveVine:
     L "Huh?"
     hide Lila dumbfounded with moveoutleft
     show Liam skeptical at right with moveinright
-    L2 "Not only are these some thick vines but it's grauded by a {color=#00ffe8}carnivorous beast...{/color}"
+    L2 "Not only are these some thick vines but it's guarded by a {color=#00ffe8}carnivorous beast...{/color}"
     hide Liam skeptical with moveoutright
     show Lila shocked at left with moveinleft
     L "!" with vpunch
@@ -1285,7 +1287,7 @@ label EmmaDaggerInfo:
     E "Your actually thinking for once."
     hide screen positive_affection
     show Emma laugh with dissolve
-    E "God job!"
+    E "Good job!"
     hide Emma laugh with moveoutleft
     show Lila happy at left with moveinleft
     L "Thank you!"
@@ -1437,7 +1439,7 @@ label NoEmmaDaggerInfo:
     L2 "We need {color=#00ffe8}two tools{/color}."
     L2 "One for cuting regrowable vines."
     show Liam nervous with dissolve
-    L2 "One for fighting the monster that grauds here."
+    L2 "One for fighting the monster that guards here."
     hide Liam nervous with moveoutright
     show Lila confused at left with moveinleft
     L "Oh...ok?"
@@ -1553,7 +1555,7 @@ label CutVine:
     show Lila sad at left with moveinleft
     L "What will happen if Liam gets caught?"
     show Lila eyes closed sad with dissolve
-    L "He don't have an sharp object on him like me."
+    L "He doesn't have a sharp object on him like I do."
     hide Lila eyes closed sad with moveoutleft
     show Emma smile at left with moveinleft
     E "I'm quick enough to save him."
@@ -1569,10 +1571,10 @@ label CutVine:
     hide VineWall with fade
     show image "black.png" with fade
     E "1!" with vpunch
-    E "2!" with vpucnh
-    E "3!" with vpuch
+    E "2!" with vpunch
+    E "3!" with vpunch
     hide Emma yell with moveoutleft
-    show Lila Happy at left with moveinleft
+    show Lila happy at left with moveinleft
     L "!" with hpunch
     show Lila laugh with dissolve
     L "Got the page!"

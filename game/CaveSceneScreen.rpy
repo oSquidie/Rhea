@@ -96,7 +96,7 @@ screen slide_glass_screen2:
             xpos 60  ypos 90
 
         drag:
-            drag_name "a vine?"
+            drag_name "vine?"
             draggable False
             child "VineDoor.png"
             xpos 1500 ypos 650

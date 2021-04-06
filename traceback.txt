@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <'Image' u'LilaReachforRock.png'>:
-  File "game/CaveScene1.rpy", line 952, in script
-    show LilaReachForRock with dissolve
-IOError: Couldn't find file 'LilaReachforRock.png'.
+While loading <'Image' u'TearsEmmaLiamProtect.png'>:
+  File "game/Endings.rpy", line 260, in script
+    show image "TearsEmmaLiamProtect.png" with fade
+IOError: Couldn't find file 'TearsEmmaLiamProtect.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/CaveScene1.rpy", line 952, in script
-    show LilaReachForRock with dissolve
+  File "game/Endings.rpy", line 260, in script
+    show image "TearsEmmaLiamProtect.png" with fade
   File "renpy/ast.py", line 1397, in execute
     renpy.exports.with_statement(trans, paired)
   File "renpy/exports.py", line 1646, in with_statement
@@ -28,6 +28,10 @@ Full traceback:
     surf = render(child, width, height, cst, cat)
   File "render.pyx", line 170, in renpy.display.render.render
   File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/transition.py", line 181, in render
+    renpy.display.render.render(self.transitions[-1], width, height, 0, 0)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
   File "renpy/display/transition.py", line 368, in render
     top = render(self.new_widget, width, height, st, at)
   File "render.pyx", line 170, in renpy.display.render.render
@@ -44,21 +48,15 @@ Full traceback:
     return transform_render(self, width, height, st, at)
   File "accelerator.pyx", line 116, in renpy.display.accelerator.transform_render
   File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/image.py", line 501, in render
-    return wrap_render(self.target, width, height, st, at)
-  File "renpy/display/image.py", line 307, in wrap_render
-    rend = render(child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
   File "renpy/display/im.py", line 607, in render
     return cache.get(self, render=True)
   File "renpy/display/im.py", line 271, in get
     surf = image.load()
   File "renpy/display/im.py", line 688, in load
     raise e
-IOError: Couldn't find file 'LilaReachforRock.png'.
+IOError: Couldn't find file 'TearsEmmaLiamProtect.png'.
 
 Windows-10-10.0.19041
 Ren'Py 7.4.3.1414
  
-Tue Apr  6 00:09:09 2021
+Tue Apr  6 11:20:42 2021

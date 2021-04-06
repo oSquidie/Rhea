@@ -1,3 +1,4 @@
+
 #####For any character########
 transform middle:
    xalign .5 #syalign 1.0
@@ -94,6 +95,28 @@ image bblack:
    alpha .6
 
 define fade = Fade(0.5, 0.0, 0.5) #scene transistions
+
+
+image static: ##Glitch##
+    "FadeGlitchBlack.png" with Dissolve(0.15)
+    0.15
+    "FadeGlitchBlack2.png" with Dissolve(0.15)
+    0.15
+    "FadeGlitchBlack3.png" with Dissolve(0.15)
+    0.15
+    "FadeGlitchBlack4.png" with Dissolve(0.15)
+    0.15
+    repeat
+image static2: ##Glitch with a slight fade/transparency##
+    "FadeGlitchBlack5.png" with Dissolve(0.15)
+    0.15
+    "FadeGlitchBlack6.png" with Dissolve(0.15)
+    0.15
+    "FadeGlitchBlack7.png" with Dissolve(0.15)
+    0.15
+    "FadeGlitchBlack8.png" with Dissolve(0.15)
+    0.15
+    repeat
 #################################################################################
 #BGs#
 image BGStart = "BGStart.png"
@@ -242,6 +265,11 @@ image CaveExploreMain = "CaveExploreMain.png" #This is the cave explore with the
 image CaveExploreMainEmpty = "CaveExploreMainEmpty.png" #Without the items(sprites) on the picture
 image CaveEntrance = "CaveEntrance.png"
 image VineWall = "VineWall.png"
+image FadeGlitchBlack = "FadeGlitchBlack.png"
+image FadeGlitchBlack2 = "FadeGlitchBlack2.png"
+image FadeGlitchBlack3 = "FadeGlitchBlack3.png"
+image FadeGlitchBlack4 = "FadeGlitchBlack4.png"
+image White = "White.png"
 #################################################################################
 #CloseUp Images#
 image CloseupBerry = "CloseupBerry.png"
@@ -259,6 +287,8 @@ image OpusDistract3 = "OpusDistract3.png"
 image OpusDistract4 = "OpusDistract4.png"
 image OpusDistract5 = "OpusDistract5.png"
 image CloseupRock = "CloseupRock.png"
+image CloseupDoor = "CloseupDoor.png"
+image CloseupDoor2 = "CloseupDoor2.png"
 #####################################################
 #Selectable Images and Magnifiying Glass#
 image Crystal = "Crystal.png"
@@ -294,4 +324,5 @@ image LilaScareOfOpus = "LilaScaredOpus.png"
 image Emmavsbird = "Emmavsbird.png"
 image EmmaLiamProtect = "EmmaLiamProtect.png"
 image TearsEmmaLiamProtect = "EmmaLiamProtect2.png"
+image Riot = "Riot.png"
 ##############################################################

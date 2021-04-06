@@ -104,7 +104,7 @@ label start:
     L "Thank you!"
     show Lila happy at MoveUp with dissolve
     show Emma envy at PopUp with dissolve
-    E "That wasn't a complement."
+    E "That wasn't a compliment."
     show Emma envy at emmaMoveUp with dissolve
     show Liam sigh with dissolve
     show Liam nervous at LiamPopUp with dissolve
@@ -344,7 +344,7 @@ label Smell1:
     E "...Why?"
     show Emma concern at emmaMoveUp with dissolve
     show Lila happy at PopUp with dissolve
-    L2 "Just wondering."
+    L "Just wondering."
     show Lila happy at MoveUp with dissolve
     show Emma envy with dissolve
     show Liam laugh at LiamPopUp with dissolve

@@ -141,3 +141,6 @@ init -1:
     image tooltip_inventory_sharprock=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("A sharp rock.", style="tips_bottom")) #describe item
     image tooltip_inventory_gun=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("An gun that looks like something a cop would\ncarry around. Most effective on humans.", style="tips_bottom"))
     image tooltip_inventory_laser=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("An energy gun that shoots photon beams.\nMost effective on aliens.", style="tips_bottom"))
+    image tooltip_inventory_Drumstick=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("A Hercinia Drumstick", style="tips_bottom"))
+    image tooltip_inventory_LilaMushroom=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("A mushroom flashlight", style="tips_bottom"))
+    image tooltip_inventory_PageItem=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("An ancient artifact", style="tips_bottom"))

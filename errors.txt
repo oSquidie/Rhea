@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/Endings.rpy", line 882: expected 'simple_expression' not found.
-    show Emma envy with at left with moveinleft
-                        ^
-
-File "game/Endings.rpy", line 888: expected 'simple_expression' not found.
-    show Emma smug with at left with moveinleft
-                        ^
+File "game/images.rpy", line 2: u'tear' is not a keyword argument or valid child for the screen statement.
+    tear(20, 0.1, 0.1, 0, 40)
+        ^
 
 Ren'Py Version: Ren'Py 7.4.3.1414
-Tue Apr  6 06:54:32 2021
+Tue Apr  6 11:09:00 2021
