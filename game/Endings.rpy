@@ -579,7 +579,7 @@ label SaveMe2:
 return
 
 label SaveLiam:
-    show image "Vina death.png" with fade
+    show Vina death with fade
     show screen positive_affection
     $affbarposi = True
     $affbarnegative = False
@@ -605,7 +605,7 @@ label SaveLiam:
     E "Take this you dumb Vina Plant!"
     $renpy.notify("Emma throws it at one of the eyes on the Vina Plant.")
     hide image "Vina death.png" with fade
-    show Vinehurt with fade
+    show VineHurt with fade
     show Emma envy with dissolve
     E "Let's get out of here now!"
     $renpy.notify("Stunned by the pain the Vina plant drops Liam.")
@@ -730,7 +730,7 @@ label SaveLiam:
     show image "black.png" with fade
     "Mission Success."
     "Hurt status: No one is hurt."
-    "Ending Achieved: Mysteries Await."
+    "Ending Achieved: A 'friend' helps when your in need."
     "First Page obtained."
 return
 
