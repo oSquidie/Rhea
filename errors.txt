@@ -2,13 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/CaveScene1.rpy", line 1127: expected 'simple_expression' not found.
-    show Emma surprised at with moveinleft
-                           ^
+File "game/Endings.rpy", line 882: expected 'simple_expression' not found.
+    show Emma envy with at left with moveinleft
+                        ^
 
-File "game/CaveScene1.rpy", line 1225: end of line expected.
-    show Lila surprised at left moveinleft
-                                ^
+File "game/Endings.rpy", line 888: expected 'simple_expression' not found.
+    show Emma smug with at left with moveinleft
+                        ^
 
 Ren'Py Version: Ren'Py 7.4.3.1414
-Tue Apr  6 01:03:00 2021
+Tue Apr  6 06:54:32 2021
