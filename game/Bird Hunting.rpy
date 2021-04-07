@@ -79,7 +79,7 @@ label KillIt:
     hide Lila Sweats
     window hide
     show Emmavsbird with dissolve
-    pause
+    pause 1.5
     window show
     E "Thanks Liam!"
     L "..."

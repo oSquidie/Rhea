@@ -1,94 +1,63 @@
 label NearbyVillage:
     hide image "black.png" with fade
     show Cave with fade
+    window show
     show Lila angry cry at MoveUp
-    window show
     show Emma dissapointed at emmaMoveUp
-    window show
     show Emma dissapointed at emmaflip
-    window show
     show Emma dissapointed at emmaRight
-    window show
     show Emma sigh at PopUp with dissolve
-    window show
     E "You stay here."
     show Emma envy with dissolve
-    window show
     E "You might just cause more trouble if you tagged along."
     show Emma sigh at emmaMoveUp with dissolve
-    window show
     show Lila panic at PopUp with dissolve
-    window show
     L "But I'm worried."
     show Lila panic at MoveUp with dissolve
-    window show
     show Emma angry at PopUp with dissolve
-    window show
     E "Too late to be saying that now."
     show Emma sigh with dissolve
-    window show
     show Lila shocked with dissolve
-    window show
     show Lila sad with dissolve
-    window show
     E "I can't trust you to watch him."
     show Emma dissapointed with dissolve
-    window show
     E "And can't trust you to find a village either..."
     show Lila Sweats with dissolve
-    window show
     show Emma envy with dissolve
-    window show
     E "What good are you for?"
     show Emma envy at emmaMoveUp with dissolve
-    window show
     show Lila eyes closed sad at PopUp with dissolve
-    window show
     L "I'm sorry..."
     show Emma sigh at PopUp with dissolve
-    window show
     E "Forget it."
     show Emma dissapointed with dissolve
-    window show
     E "I'll carry him on my shoulder and look for a nearby villiage."
     show Emma concern with dissolve
-    window show
     E "While I'm gone..."
     show Emma envy with dissolve
-    window show
     E "Don't you dare touch anything."
     E "Or go anywhere."
     show Emma envy at emmaMoveUp with dissolve
-    window show
     show Lila sad at PopUp with dissolve
-    window show
     L "Ok..."
     show Lila sad at MoveUp with dissolve
-    window show
     show Emma sigh at PopUp with dissolve
-    window show
     E "Wait for us to come back."
     show Emma intimidating with dissolve
-    window show
     E "When I'm back and I find out you're gone..."
     E "I won't think twice and ditch you."
     hide Emma intimidating with fade
-    window show
     $renpy.notify("Emma left to find a village.")
     show Lila sad at middle with dissolve
-    window show
     L "You always leave me behind..."
     show Lila eyes closed sad with dissolve
-    window show
     L "Why?"
     L "Being alone in this cave feels so lonely and dark."
     show Lila tears with dissolve
-    window show
     L "Very dark."
     hide Lila tears with fade
-    window show
+    window hide
     hide Cave with fade
-    window show
     show image "black.png" with fade
     "Mission failed."
     "Hurt status: Liam was hurt."
@@ -99,49 +68,32 @@ return
 label EmmaGoGetHelp:
     hide image "black.png" with fade
     show Cave with fade
+    window show
     show Lila angry cry at MoveUp
     show Emma dissapointed at emmaMoveUp
-    window show
     show Emma dissapointed at emmaflip
-    window show
     show Emma dissapointed at emmaRight
-    window show
     show Emma concern at PopUp with dissolve
-    window show
     E "I can trust you to keep him safe?"
     show Lila shocked with dissolve
-    window show
     show Emma dissapointed with dissolve
-    window show
     E "He's defenseless right now."
     show Emma dissapointed at emmaMoveUp with dissolve
-    window show
     show Lila yell at PopUp with dissolve
-    window show
     L "I promise I won't leave his side."
     show Lila yell at MoveUp with dissolve
-    window show
     show Emma sigh at PopUp with dissolve
-    window show
     E "Fine."
     show Lila relieved with dissolve
-    window show
     show Emma soft with dissolve
-    window show
     E "I'll trust you one last time."
     show Lila smile with dissolve
-    window show
     show Emma intimidating with dissolve
-    window show
     E "Don't make me regret this choice."
     show Emma intimidating at emmaMoveUp with dissolve
-    window show
     show Lila Sweats at PopUp with dissolve
-    window show
     show Lila Sweats at MoveUp with dissolve
-    window show
     show Emma surprised at PopUp with dissolve
-    window show
     E "Also."
     show Emma concern with dissolve
     E "Take this."
@@ -151,36 +103,25 @@ label EmmaGoGetHelp:
     show Emma angry with dissolve
     E "Don't hesitate to kill."
     show Lila panic with dissolve
-    window show
     hide screen inventory_button
     show Emma sigh with dissolve
-    window show
     E "The things in this world aren't forgiving."
     show Emma sigh at emmaMoveUp with dissolve
-    window show
     show Lila Sweats at PopUp with dissolve
-    window show
     L "?"
     show Lila Sweats at MoveUp with dissolve
-    window show
     show Emma dissapointed at PopUp with dissolve
-    window show
     E "Forget it."
     show Emma sigh with dissolve
-    window show
     E "Just don't go anywhere."
     show Emma soft with dissolve
-    window show
     E "Wait for me to come back."
     show Emma soft at emmaMoveUp with dissolve
-    window show
     show Lila sad at PopUp with dissolve
-    window show
     L "Ok..."
     hide Emma soft with fade
-    window show
     hide Lila sad with dissolve
-    window show
+    window hide
     hide Cave with fade
     show image "black.png" with fade
     "Mission failed."

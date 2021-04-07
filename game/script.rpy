@@ -33,7 +33,10 @@ label start:
     stop music fadeout 1.0
     default preferences.text_cps = 50
     play music LilaIntro fadein 5.0 volume 0.3
+    window hide
     show LilaIntro1
+    pause 1
+    window show
     L "I've been told my entire life..."
     L "We live in a world without the existence of light."
     L "There was no such thing as the sun."
@@ -173,7 +176,7 @@ label OC1:
     hide image "Forest_Default.png" with dissolve
     window hide
     show image "CaveEntrance.png" with dissolve
-    pause
+    pause 1.5
     window show
     show Lila default at MoveUp
     show Liam default at LiamRight
@@ -217,6 +220,25 @@ label menu_OC1:
     window hide
 return
 
+label OC2:
+    show CaveEntrance with dissolve
+label menu_OC2:
+    window hide
+    menu:
+        "Look at the surroundings." if C_Sight1 == True:
+            jump Sight1
+        "Feel the surrounding." if C_Feel1 == True:
+            jump Feel1
+        "Listen to the area." if C_Sound1 == True:
+            jump Sound1
+        "Check out the scent in the area." if C_Smell1 == True:
+            jump Smell1
+        "Go back to Cave?":
+            jump Cave2
+    window hide
+    hide CaveEntrance with dissolve
+return
+
 label Sight1:
     window show
     show Lila default at MoveUp
@@ -244,6 +266,7 @@ label Sight1:
     E "It's called a {color=#00ffe8}dagger{/color} you dense idiot."
     $C_Sight1 = False
     $DaggerInfo = True
+    $NoDaggerInfo = False 
     hide Lila surprised with fade
     hide Emma sly with fade
     hide Liam default with fade

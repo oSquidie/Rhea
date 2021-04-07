@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/images.rpy", line 2: u'tear' is not a keyword argument or valid child for the screen statement.
-    tear(20, 0.1, 0.1, 0, 40)
-        ^
+File "game/CaveScene1.rpy", line 1287: reached end of line when expecting ':'.
+    if NoDaggerInfo == False
+                            ^
 
 Ren'Py Version: Ren'Py 7.4.3.1414
-Tue Apr  6 11:09:00 2021
+Wed Apr  7 19:42:19 2021

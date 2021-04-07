@@ -61,6 +61,7 @@ define LookAtVine = True
 define Distract_EmmaAndLiamCare = False
 define Distract_EmmaAndLiamDoNotCare = True
 define AskLiamForInfo = True
+define NoDaggerInfo = True
 define HaveNotMakeAChoice = True
 define SawVine = False
 

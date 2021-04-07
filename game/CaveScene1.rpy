@@ -204,6 +204,15 @@ label NothingDan:
     jump drag_glass
 return
 
+
+######If Players been to cave once already###############
+label Cave2:
+    if GotRock == False:
+        jump drag_glass
+    if GotRock == True:
+        jump drag_glass2
+return
+
 ##########The Door Options##########
 
 label drag_glass:
@@ -231,7 +240,7 @@ label drag_glass:
             jump CrystalDoor
         "Go through the Opus Door?" if store.object == "Opus Door.":
             jump OpusDoor
-        "Go through the Treasure Door" if store.object == "Treasure Door.":
+        "Go through the Treasure Door?" if store.object == "Treasure Door.":
             jump TreasureDoor
         "Look at rock?" if store.object == "Rock.":
             jump RockByCrystal
@@ -239,6 +248,7 @@ label drag_glass:
             jump VineWall
         "Go back":
             jump drag_glass
+    window hide
 return
 ######Rock by Crystal was found.#########
 label drag_glass2:
@@ -254,7 +264,12 @@ label drag_glass2:
     hide CloseupWyrm
     hide CloseupRock
     hide CloseupDoor
-    hide window
+    hide CaveEntrance
+    hide Vina neutral
+    hide Vina death
+    hide VineHurt
+    hide VineBurn
+    window hide
     "[glass] picked the [object]"
     menu:
         "Go through the Crystal Door?" if store.object == "Crystal Door.":
@@ -267,11 +282,23 @@ label drag_glass2:
             jump VineWall
         "Go back":
             jump drag_glass2
+    window hide
 return
 ##########Crystal Door###########
 label CrystalDoor:
     window hide
+    menu:
+        "Pretty Crystal" if CrystalLooked == True:
+            jump LookAtCrystal
+        "Pretty Crystal" if CrystalLooked == False:
+            jump Crystal_menu
+        "Back Away" if GotRock == False:
+            jump drag_glass
+        "Back Away" if GotRock == True:
+            jump drag_glass2
+    window hide
 label Crystal_menu:
+    window hide
     if emma_points >= 2:
         if thing == True:
             $TouchCrystal_EmmaCare = True
@@ -280,8 +307,6 @@ label Crystal_menu:
         if SawVine == True:
             $GotRock1 = False
     menu:
-        "Pretty Crystal" if CrystalLooked == True:
-            jump LookAtCrystal
         "Rub hand on crystal." if TouchCrystal_EmmaCare == True:
             jump TouchCrystal1
         "Rub hand on crystal." if TouchCrystal_EmmaDoNotCare == True:
@@ -296,6 +321,7 @@ label Crystal_menu:
             jump drag_glass
         "Back Away" if GotRock == True:
             jump drag_glass2
+    window hide
 return
 
 label LookAtCrystal:
@@ -324,8 +350,8 @@ label LookAtCrystal:
     show Lila Sweats with dissolve
     L "..."
     hide Lila Sweats with moveoutleft
-    window hide
     $CrystalLooked = False
+    window hide
     jump Crystal_menu
 return
 
@@ -541,12 +567,12 @@ label EarnedSharpRock2:
 label OpusDoor:
     window hide
     show CloseupOpus
-    pause
-    window show
 label Opus_Menu:
     menu:
         "Look at this blob!" if LookAtOpus == True:
             jump Opus
+        "Look at the Opus." if LookAtOpus == False:
+            jump Opus2
         "Pick up a rock by the floor." if RockFound_Opus == True:
             jump Rock
         "Pick up a rock by the floor." if RockFound_Opus2 == True:
@@ -555,6 +581,7 @@ label Opus_Menu:
             jump drag_glass
         "Back Away" if GotRock == True:
             jump drag_glass2
+    window hide
 return
 
 label Opus:
@@ -600,11 +627,28 @@ label Opus:
     window hide
     jump Opus_Menu
 return
+
+label Opus2:
+    window hide
+    show CloseupOpus
+    window show
+    show Lila smile at left with moveinleft
+    L "Hehe."
+    L "Look at it just bobble."
+    hide Lila smile with moveoutleft
+    show Emma sigh at left with moveinleft
+    E "..."
+    hide Emma sigh with moveoutleft
+    $LookAtOpus = False
+    window hide
+    jump Opus_Menu
+return
+
 ###########Still part of Opus Door but For rock options########
 label Rock:
     window hide
     show CloseupRock
-    pause
+    pause 1
     window show
     show Emma concern at left with moveinleft
     E "What are you doing?"
@@ -615,18 +659,22 @@ label Rock:
     show Emma envy at left with moveinleft
     E "Don't put your hand near it idiot."
     hide Emma envy with moveoutleft
+    $GotRock_Crystal = False
+    $RockFound_Opus = False
+    $RockFound_Opus2 = True
+    window hide
+label Rock_menu:
     if emma_points >= 2:
         if thing2 == True:
             $LookOpus_EmmaCare = True
             $LookOpus_EmmaDoNotCare = False
             $TakeRock_EmmaCare = True
             $TakeRock_EmmaDoNotCare = False
-    window hide
-label Rock_menu:
+    elif GotRock == True:
+        $TakeRock_EmmaDoNotCare = False
+        $TakeRock_EmmaCare = False
     window hide
     show CloseupRock
-    pause
-    window show
     menu:
         "Can we distract it somehow?" if LookOpus_EmmaDoNotCare == True:
             jump InformationOnOpus
@@ -644,11 +692,10 @@ label Rock_menu:
             jump ReachForIt
         "Just Reach for the rock." if GotRock == True:
             jump ReachForIt2
-        "Back away.":
-            jump OpusDoor
-    $GotRock_Crystal = False
-    $RockFound_Opus = False
-    $RockFound_Opus2 = True
+        "Guess I'll come back for it later." if GotRock == False:
+            jump drag_glass
+        "Back away from it." if GotRock == True:
+            jump drag_glass2
     window hide
 return
 
@@ -675,6 +722,9 @@ label InformationOnOpus:
     E "...Right."
     hide Emma pout with moveoutleft
     $LookOpus_EmmaCare = False
+    $GotRock_Crystal = False
+    $RockFound_Opus = False
+    $RockFound_Opus2 = True
     hide CloseupOpus
     window hide
     jump Rock_menu
@@ -698,6 +748,9 @@ label InformationOnOpus2:
     show Emma soft at left with moveinleft
     E "Of course."
     hide Emma soft with moveoutleft
+    $GotRock_Crystal = False
+    $RockFound_Opus = False
+    $RockFound_Opus2 = True
     $LookOpus_EmmaDoNotCare = False
     window hide
     jump Rock_menu
@@ -774,9 +827,15 @@ label FeedingDeadBird:
     $GotRock_Crystal = False
     $EorL_GetIt = False
     $JustReachForRock = False
+    $TakeRock_EmmaDoNotCare = False
+    $TakeRock_EmmaCare = False
     $GotRock = True
     $GotRock1 = True
     $GotRock2 = True
+    $GotRock_Crystal = False
+    $RockFound_Opus = False
+    $RockFound_Opus2 = True
+    $thing2 = False
     window hide
     jump drag_glass2
 return
@@ -800,6 +859,9 @@ label LiamOrYou:
     $TakeRock_EmmaDoNotCare = False
     $TakeRock_EmmaCare = False
     $thing2 = False
+    $GotRock_Crystal = False
+    $RockFound_Opus = False
+    $RockFound_Opus2 = True
     hide CloseupRock
     jump Rock_menu
 return
@@ -908,6 +970,9 @@ label LiamOrYou2:
     $TakeRock_EmmaDoNotCare = False
     $TakeRock_EmmaCare = False
     $thing2 = False
+    $GotRock_Crystal = False
+    $RockFound_Opus = False
+    $RockFound_Opus2 = True
     hide CloseupRock
     window hide
     jump drag_glass2
@@ -931,6 +996,9 @@ label LiamOrYou3:
     hide Emma envy with moveoutleft
     show Lila pout at left with moveinleft
     L "Ok."
+    $GotRock_Crystal = False
+    $RockFound_Opus = False
+    $RockFound_Opus2 = True
     hide CloseupRock
     window hide
     jump Rock_menu
@@ -1044,6 +1112,7 @@ label ReachForIt:
             jump EmmaGoGetHelp2
         "Let's just leave Liam here and move on.":
             jump BadEnd1
+    window hide
 return
 
 label ReachForIt2:
@@ -1067,6 +1136,9 @@ label ReachForIt2:
     show Lila pout at left with moveinleft
     L "ok..."
     hide Lila pout with moveoutleft
+    $GotRock_Crystal = False
+    $RockFound_Opus = False
+    $RockFound_Opus2 = True
     window hide
     jump Rock_menu
 return
@@ -1076,7 +1148,7 @@ return
 label TreasureDoor:
     window hide
     show CloseupDoor
-    pause
+    pause .5
     window show
     show Lila nervous at left with moveinleft
     show Lila swirly eyes with dissolve
@@ -1084,8 +1156,8 @@ label TreasureDoor:
     show Lila confused with dissolve
     L "Huh?"
     show Lila dumbfounded with dissolve
-    hide Lila dumbfounded with moveoutleft
     L "It won't open."
+    hide Lila dumbfounded with moveoutleft
     show Emma surprised at left with moveinleft
     E "She's right."
     show Emma sigh with dissolve
@@ -1112,10 +1184,15 @@ label TreasureDoor:
     L "???"
     hide CloseupDoor2
     hide Lila confused with moveoutleft
-    if GotRock == False:
-        jump drag_glass
-    if GotRock == True:
-        jump drag_glass2
+    window hide
+    menu:
+        "Go back to observe outside of the cave?":
+            jump OC2
+        "Go back away from door." if GotRock == False:
+            jump drag_glass
+        "Go back away from door." if GotRock == True:
+            jump drag_glass2
+    window hide
 return
 
 #####Rock by Crystal####
@@ -1143,6 +1220,7 @@ label RockMenu_Crystal:
             jump drag_glass
         "Back Away" if GotRock == True:
             jump drag_glass2
+    window hide
 return
 
 label TakeRock:
@@ -1183,8 +1261,15 @@ return
 label VineWall:
     window hide
     show VineWall
-    pause
-    window show
+    menu:
+        "Look at Vine" if LookAtVine == True:
+            jump ObserveVine
+        "Look at Vina Plant." if LookAtVine == False:
+            jump Vine_menu
+        "Go Back." if GotRock == False:
+            jump drag_glass
+        "Go Back." if GotRock == True:
+            jump drag_glass2
     if emma_points >= 2:
         if liam_points >=1:
             if thing == True:
@@ -1200,15 +1285,13 @@ label VineWall:
             $LilaBleed2 = False
 label Vine_menu:
     menu:
-        "Look at Vine" if LookAtVine == True:
-            jump ObserveVine
         "Emma, can't you cut it with your dagger?" if DaggerInfo == True:
             jump EmmaDaggerInfo
         "Can't you two distract while I get the page?" if Distract_EmmaAndLiamDoNotCare == True:
             jump YouTwoDistract
         "Can't you two distract while I get the page?" if Distract_EmmaAndLiamCare == True:
             jump YouTwoDistract2
-        "What can I use to cut the vines?" if DaggerInfo == False & HaveNotMakeAChoice == True:
+        "What can I use to cut the vines?" if DaggerInfo == False:
             jump NoEmmaDaggerInfo
         "Ask Liam for more information." if AskLiamForInfo == True:
             jump LiamInfo
@@ -1216,10 +1299,12 @@ label Vine_menu:
             jump CutVine
         "Cut it." if LilaBleed2 == True:
             jump CutVine2
-        "Understood." if GotRock == False:
+        "Go back." if GotRock == False:
             jump drag_glass
-        "Understood." if GotRock == True:
+        "Go back." if GotRock == True:
             jump drag_glass2
+    window hide
+return
 
 label ObserveVine:
     window hide
@@ -1269,11 +1354,8 @@ label ObserveVine:
     L2 "Yeah..."
     hide Liam nervouse with moveoutright
     $LookAtVine = False
-    if GotRock == False:
-        jump drag_glass
-    if GotRock == True:
-        jump drag_glass2
     window hide
+    jump Vine_menu
 return
 
 label EmmaDaggerInfo:
@@ -1311,7 +1393,6 @@ label EmmaDaggerInfo:
     $Distract_EmmaAndLiamDoNotCare == False
     $Distract_EmmaAndLiamCare = False
     $AskLiamForInfo = False
-    $HaveNotMakeAChoice = False
     $LookAtVine = False
     if GotRock == False:
         jump drag_glass
@@ -1369,7 +1450,6 @@ label YouTwoDistract:
     $DaggerInfo = False
     $Distract_EmmaAndLiamCare = False
     $AskLiamForInfo = False
-    $HaveNotMakeAChoice = False
     $thing = False
     $LookAtVine = False
     if GotRock == False:
@@ -1402,7 +1482,6 @@ label YouTwoDistract2:
     $Distract_EmmaAndLiamDoNotCare = False
     $DaggerInfo = False
     $Distract_EmmaAndLiamCare = False
-    $HaveNotMakeAChoice = False
     $AskLiamForInfo = False
     $thing = False
     $LookAtVine = False
@@ -1421,7 +1500,7 @@ label NoEmmaDaggerInfo:
     show Emma smug at left with moveinleft
     E "Well I do have my dagger."
     hide Emma smug with moveoutleft
-    show Liam sigh at left with moveinright
+    show Liam sigh at right with moveinright
     L2 "That won't be enough."
     hide Liam sigh with moveoutright
     show Emma dissapointed at left with moveinleft
@@ -1436,7 +1515,7 @@ label NoEmmaDaggerInfo:
     show Lila confused at left with moveinleft
     L "?"
     hide Lila confused with moveoutleft
-    show Liam sigh at left with moveinright
+    show Liam sigh at right with moveinright
     L2 "In other words..."
     show Liam smile with dissolve
     L2 "We need {color=#00ffe8}two tools{/color}."
@@ -1452,7 +1531,7 @@ label NoEmmaDaggerInfo:
     show Emma sigh with dissolve
     E "Vina Plants are unpredictable."
     hide Emma sigh with moveoutleft
-    show Liam nervous at left with moveinright
+    show Liam nervous at right with moveinright
     L2 "Doesn't hurt to try."
     hide Liam nervous with moveoutright
     show Emma soft at left with moveinleft
@@ -1461,7 +1540,6 @@ label NoEmmaDaggerInfo:
     $Distract_EmmaAndLiamDoNotCare = False
     $DaggerInfo = False
     $Distract_EmmaAndLiamCare = False
-    $HaveNotMakeAChoice = False
     $AskLiamForInfo = False
     $thing = False
     $LookAtVine = False
@@ -1517,7 +1595,6 @@ label LiamInfo:
     $Distract_EmmaAndLiamDoNotCare = False
     $DaggerInfo = False
     $Distract_EmmaAndLiamCare = False
-    $HaveNotMakeAChoice = False
     $AskLiamForInfo = False
     $thing = False
     $LookAtVine = False
@@ -1713,4 +1790,5 @@ label CutVine2:
             jump SaveYourself
         "Save Yourself!" if SaveYourSelf_DoNotCare == True:
             jump SaveYourself2
+    window hide
 return
