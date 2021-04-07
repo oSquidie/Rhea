@@ -325,4 +325,6 @@ image Emmavsbird = "Emmavsbird.png"
 image EmmaLiamProtect = "EmmaLiamProtect.png"
 image TearsEmmaLiamProtect = "EmmaLiamProtect2.png"
 image Riot = "Riot.png"
+image HandinHand = "WalkingHandInHand.png"
+image LiamKnockedOut = "LiamKnockedOut.png"
 ##############################################################
