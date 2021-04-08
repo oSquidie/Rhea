@@ -233,6 +233,11 @@ label drag_glass:
     hide OpusDistract3
     hide OpusDistract4
     hide OpusDistract5
+    hide Vina neutral
+    hide Vina death
+    hide VineHurt
+    hide VineBurn
+    hide VineWall
     window hide
     "[glass] picked the [object]"
     menu:
@@ -1026,11 +1031,11 @@ label ReachForIt:
     hide CloseupOpus
     hide CloseupRock
     show LilaReachForRock with dissolve
-    pause
+    pause 1
     hide LilaReachForRock with dissolve
     play music CaveBattleMusic fadein 5.0 volume 0.3
     show Opus death with dissolve
-    pause
+    pause 1
     window show
     show Liam shocked at right with moveinright
     L2 "Lila!" with vpunch
@@ -1038,7 +1043,7 @@ label ReachForIt:
     window hide
     hide Opus death with dissolve
     show LilaScareOfOpus with dissolve
-    pause
+    pause 1
     hide LilaScareOfOpus with dissolve
     $renpy.notify("Liam choose to save you.")
     window show
