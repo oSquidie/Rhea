@@ -1286,14 +1286,9 @@ label VineWall:
             if thing == True:
                 $Distract_EmmaAndLiamDoNotCare = False
                 $Distract_EmmaAndLiamCare = True
-    if GotSharpRock == True:
-        if LilaBleed == True:
-            $LilaDoNotBleed = False
-            $LilaBleed2 = True
-    if GotSharpRock == True:
-        if LilaBleed == False:
-            $LilaDoNotBleed = True
-            $LilaBleed2 = False
+    if GotSharpRock == False:
+        $LilaBleed = False
+        $LilaDoNotBleed = False
 label Vine_menu:
     menu:
         "Emma, can't you cut it with your dagger?" if DaggerInfo == True:
@@ -1308,7 +1303,7 @@ label Vine_menu:
             jump LiamInfo
         "Cut it." if LilaDoNotBleed == True:
             jump CutVine
-        "Cut it." if LilaBleed2 == True:
+        "Cut it." if LilaBleed == True:
             jump CutVine2
         "Go back." if GotRock == False:
             jump drag_glass
