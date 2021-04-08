@@ -516,6 +516,7 @@ label EarnedSharpRock:
     hide screen inventory_button
     hide Lila smile with moveoutleft
     $GotRock1 = False
+    $GotRock2 = False
     $thing3 = False
     $GotSharpRock = True
     window hide
