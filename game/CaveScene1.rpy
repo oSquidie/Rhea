@@ -1400,11 +1400,11 @@ label EmmaDaggerInfo:
     $Distract_EmmaAndLiamCare = False
     $AskLiamForInfo = False
     $LookAtVine = False
+    window hide
     if GotRock == False:
         jump drag_glass
     if GotRock == True:
         jump drag_glass2
-    window hide
 return
 
 label YouTwoDistract:

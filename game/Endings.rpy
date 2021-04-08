@@ -736,7 +736,7 @@ return
 
 label SaveYourself:
     window show
-    show image "Vina death.png" with fade
+    show Vina death with fade
     show screen positive_affection
     $affbarposi = True
     $affbarnegative = False
@@ -1035,7 +1035,7 @@ label SaveYourself2:
     $renpy.notify("Liam rushes to you.")
     show Emma panic at left with moveinleft
     E "I'm sorry!"
-    show Emma cry with dissolves
+    show Emma cry with dissolve
     E "I'm sorry!"
     show Emma yell cry with dissolve
     E "Lila!"
