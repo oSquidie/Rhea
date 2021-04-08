@@ -269,6 +269,7 @@ label drag_glass2:
     hide Vina death
     hide VineHurt
     hide VineBurn
+    hide VineWall
     window hide
     "[glass] picked the [object]"
     menu:
@@ -551,6 +552,7 @@ label EarnedSharpRock2:
     show Lila smile with dissolve
     L "It's so sharp!"
     hide screen inventory_button
+    hide Lila smile with moveoutleft
     show Emma sly at left with moveinleft
     E "..."
     show Emma sigh with dissolve
@@ -617,7 +619,7 @@ label Opus:
     L "Why?"
     hide Lila confused with moveoutleft
     show Liam dark smile at right with moveinright
-    L2 "You'll loss a finger or two."
+    L2 "You'll lose a finger or two."
     hide Liam dark smile with moveoutright
     show Lila panic at left with moveinleft
     show Lila Sweats with dissolve
@@ -1309,7 +1311,7 @@ return
 label ObserveVine:
     window hide
     show VineWall
-    pause
+    pause 1
     window show
     $SawVine = True
     show Lila surprised at left with moveinleft
@@ -1349,6 +1351,7 @@ label ObserveVine:
     show PageItem with fade
     show Lila panic with dissolve
     L "That looks scary..."
+    hide Vina neutral with fade
     hide Lila panic with moveoutleft
     show Liam nervous at right with moveinright
     L2 "Yeah..."
@@ -1361,7 +1364,7 @@ return
 label EmmaDaggerInfo:
     window hide
     show VineWall
-    pause
+    pause 1
     window show
     show screen positive_affection
     $affbarposi = True
@@ -1404,7 +1407,7 @@ return
 label YouTwoDistract:
     window hide
     show VineWall
-    pause
+    pause 1
     window show
     show screen negative_affection
     $affbarposi = False
@@ -1461,7 +1464,7 @@ return
 label YouTwoDistract2:
     window hide
     show VineWall
-    pause
+    pause 1
     window show
     show screen negative_affection
     $affbarposi = False
@@ -1495,7 +1498,7 @@ return
 label NoEmmaDaggerInfo:
     window hide
     show VineWall
-    pause
+    pause 1
     window show
     show Emma smug at left with moveinleft
     E "Well I do have my dagger."
@@ -1553,7 +1556,7 @@ return
 label LiamInfo:
     window hide
     show VineWall
-    pause
+    pause 1
     window show
     show screen positive_affection
     $affbarposi = True
@@ -1608,7 +1611,7 @@ return
 label CutVine:
     window hide
     show VineWall with fade
-    pause
+    pause 1
     window show
     show Emma sly at left with moveinleft
     E "Ok."
@@ -1627,7 +1630,7 @@ label CutVine:
     window hide
     hide Vina neutral with fade
     show VineWall with fade
-    pause
+    pause 1
     window show
     show Emma sly at left with moveinleft
     E "Grab the page and cut your way out."
@@ -1675,7 +1678,7 @@ return
 label CutVine2:
     window hide
     show VineWall
-    pause
+    pause 1
     window show
     show Emma concern at left with moveinleft
     E "Ok."

@@ -430,7 +430,7 @@ label MysteriesAwait:
     hide Lila happy with fade
     hide Liam smile with fade
     hide image "CaveEntrance.png" with dissolve
-    show image "black.png"
+    show image "black.png" with fade
     "Mission Success."
     "Hurt status: No one is hurt."
     "Ending Achieved: Mysteries Await."
@@ -545,7 +545,7 @@ label SaveLiam:
     show Emma yell with dissolve
     E "Take this you dumb Vina Plant!"
     $renpy.notify("Emma throws it at one of the eyes on the Vina Plant.")
-    hide image "Vina death.png" with fade
+    hide Vina death with fade
     show VineHurt with fade
     show Emma envy with dissolve
     E "Let's get out of here now!"
@@ -576,7 +576,7 @@ label SaveLiam:
     hide Cave with fade
     window hide
     show VineBurn with fade
-    pause
+    pause 1
     window show
     $renpy.notify("The wall of vines started to burn.")
     show Emma shocked at left with moveinleft
@@ -587,7 +587,7 @@ label SaveLiam:
     hide VineBurn with fade
     window hide
     show MingluoBurnPage with fade
-    pause
+    pause 1
     window show
     $renpy.notify("Minglou picks up the page.")
     E "..."
