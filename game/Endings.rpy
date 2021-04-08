@@ -468,12 +468,14 @@ label SaveMe1:
     hide image "Vina death.png" with fade
     show image VineHurt with fade
     E "Let's get out of here now!"
+    stop music fadeout 1.0
     $renpy.notify("Stunned by the pain the Vina plant freed Liam.")
     hide VineHurt with fade
     show image "CaveEntrance.png" with dissolve
     show Emma nervous with dissolve
     E "...."
     show Emma envy with dissolve
+    play music RheaSoundtrack fadein 5.0 volume 0.3
     E "Stop weiling you idiot."
     hide Emma envy with moveoutleft
     show Lila angry cry at left with moveinleft
@@ -496,6 +498,7 @@ label SaveMe1:
     hide Lila sad with moveoutleft
     hide image "CaveEntrance.png" with dissolve
     show image "black.png" with fade
+    stop music fadeout 1.0
     "Mission failed."
     "Hurt status: No one is hurt."
     "Ending Achieved: Mysteries Await."
@@ -506,6 +509,7 @@ label SaveMe2:
     show image "Vina death.png" with fade
     show Emma yell at left with moveinleft
     E "AHHHHHHHHHHH!" with hpunch
+    stop music fadeout 1.0
     $renpy.notify("Emma choose to save Liam.")
     show Emma panic with dissolve
     E "I-"
@@ -549,6 +553,7 @@ label SaveLiam:
     show VineHurt with fade
     show Emma envy with dissolve
     E "Let's get out of here now!"
+    stop music fadeout 1.0
     $renpy.notify("Stunned by the pain the Vina plant drops Liam.")
     hide Emma envy with moveoutleft
     hide Vinehurt with fade
@@ -561,6 +566,7 @@ label SaveLiam:
     L "...."
     hide Lila angry cry with moveoutleft
     show Liam nervous at right with moveinright
+    play music RheaSoundtrack fadein 5.0 volume 0.3
     L2 "It's ok..."
     show Liam smile with dissolve
     L2 "It's over now."
@@ -571,6 +577,7 @@ label SaveLiam:
     L "I don't care about that right now..."
     hide Lila angry cry with moveoutleft
     show Mingluo no eyes at right with moveinright
+    stop music fadeout 1.0
     Q "You should care."
     hide Mingluo no eyes with moveoutright
     hide Cave with fade
@@ -696,6 +703,7 @@ label SaveLiam2:
     show Liam yell cry with dissolve
     L2 "Lila!"
     $renpy.notify("Liam pushed Emma but Emma hold Liam back.")
+    stop music fadeout 1.0
     show Liam shocked with dissolve
     Q "How coldhearted..."
     hide image "black.png" with fade
@@ -744,11 +752,13 @@ label SaveYourself:
     show image VineHurt with fade
     E "Let's get out of here now!"
     $renpy.notify("Stunned by the pain the Vina plant drops Liam.")
+    stop music fadeout 1.0
     hide Emma envy with moveoutleft
     hide VineHurt with fade
     show image "CaveEntrance.png" with dissolve
     show Emma nervous at left with moveinleft
     E "...."
+    play music RheaSoundtrack fadein 5.0 volume 0.3
     E "Stop it you baby."
     show Emma sigh with dissolve
     E "Everything is fine now."
@@ -801,6 +811,7 @@ label SaveYourself:
     show Liam smile with dissolve
     L2 "I'll go find another rock to sharpen."
     hide Liam smile at moveoutright
+    stop music fadeout 1.0
     window hide
     menu:
         "Don't go. I don't want you to die.":
@@ -1027,6 +1038,7 @@ label SaveYourself2:
     show Emma yell cry with dissolve
     E "Lila!"
     hide Emma yell cry with moveoutleft
+    stop music fadeout 1.0
     show Lila eyes closed sad at left with moveinleft
     L "..."
     show Lila tears with dissolve
@@ -1039,7 +1051,7 @@ label SaveYourself2:
     hide image "black.png" with fade
     window hide
     show VineBurn with fade
-    pause
+    pause 1
     window show
     hide VineBurn with fade
     show image "black.png" with fade

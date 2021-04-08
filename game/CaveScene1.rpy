@@ -333,7 +333,7 @@ return
 label LookAtCrystal:
     window hide
     show CloseupCrystal
-    pause
+    pause 1
     window show
     show Lila surprised at left with moveinleft
     L "Whoa!"
@@ -364,7 +364,7 @@ return
 label TouchCrystal1:
     window hide
     show CloseupCrystal
-    pause
+    pause 1
     window show
     show Emma shocked at left with moveinleft
     E "Wha-!"
@@ -421,7 +421,7 @@ return
 label TouchCrystal2:
     window hide
     show CloseupCrystal
-    pause
+    pause 1
     window show
     show Lila pain at left with moveinleft
     L "Ouch!" with hpunch
@@ -455,7 +455,7 @@ return
 label TouchCrystal3:
     window hide
     show CloseupCrystalBlood
-    pause
+    pause 1
     window show
     show Emma intimidating at left with moveinleft
     E "Don't even think about it."
@@ -475,7 +475,7 @@ return
 label EarnedSharpRock:
     window hide
     show CloseupCrystal
-    pause
+    pause 1
     window show
     show Emma concern at left with moveinleft
     E "What do you think you are doing?"
@@ -525,7 +525,7 @@ return
 label EarnedSharpRock2:
     window hide
     show CloseupCrystal
-    pause
+    pause 1
     window show
     show Emma concern at left with moveinleft
     E "What do you think you are doing?"
@@ -594,7 +594,7 @@ return
 label Opus:
     window hide
     show CloseupOpus
-    pause
+    pause 1
     window show
     show Lila smile at left with moveinleft
     L "Look at this cute little thing!"
@@ -638,7 +638,7 @@ return
 label Opus2:
     window hide
     show CloseupOpus
-    window show
+    window show 1
     show Lila smile at left with moveinleft
     L "Hehe."
     L "Look at it just bobble."
@@ -711,7 +711,7 @@ return
 label InformationOnOpus:
     window hide
     show CloseupOpus
-    pause
+    pause 1
     window show
     show Emma dissapointed at left with moveinleft
     E "Not sure."
@@ -740,7 +740,7 @@ return
 label InformationOnOpus2:
     window hide
     show CloseupOpus
-    pause
+    pause 1
     window show
     show Emma dissapointed at left with moveinleft
     E "Hmmmmmm."
@@ -767,7 +767,7 @@ return
 label FeedingDeadBird:
     window hide
     show CloseupRock
-    pause
+    pause 1
     window show
     show screen positive_affection
     $affbarposi = True
@@ -850,7 +850,7 @@ return
 label LiamOrYou:
     window hide
     show CloseupRock
-    pause
+    pause 1
     window show
     show Emma concern at left with moveinleft
     E "You must be joking."
@@ -876,7 +876,7 @@ return
 label LiamOrYou2:
     window hide
     show CloseupRock
-    pause
+    pause 1
     window show
     show Emma default at left with moveinleft
     E "We might be able to."
@@ -895,7 +895,7 @@ label LiamOrYou2:
     window hide
     L "My Mushroom!"
     show OpusDistract
-    pause
+    pause 1
     window show
     L "Why did you throw over to the blob!"
     E "Shut up and just watch."
@@ -905,7 +905,7 @@ label LiamOrYou2:
     window hide
     hide OpusDistract
     show OpusDistract2
-    pause
+    pause 1
     window show
     L2 "Got it!"
     E "Nice!"
@@ -913,20 +913,21 @@ label LiamOrYou2:
     window hide
     hide OpusDistract2
     show OpusDistract3
-    pause
+    pause 1
     window show
     E "And got that too."
     hide window
     hide OpusDistract3
     show OpusDistract4
-    pause
+    pause 1
     window show
-    L "Whoa!"
     stop music fadeout 1.0
+    L "Whoa!"
+    play music RheaSoundtrack fadein 5.0 volume 0.3
     window hide
     hide OpusDistract4
     show OpusDistract5
-    pause
+    pause 1
     window show
     L "You guys are awesome!"
     hide OpusDistract5
@@ -1125,7 +1126,7 @@ return
 label ReachForIt2:
     window hide
     show CloseupRock
-    pause
+    pause 1
     window show
     show Emma intimidating at left with moveinleft
     E "Don't even think about it."
@@ -1155,7 +1156,7 @@ return
 label TreasureDoor:
     window hide
     show CloseupDoor
-    pause .5
+    pause 1
     window show
     show Lila nervous at left with moveinleft
     show Lila swirly eyes with dissolve
@@ -1207,7 +1208,7 @@ return
 label RockByCrystal:
     window hide
     show CloseupRock
-    pause
+    pause 1
     window show
     show Lila skeptical at left with moveinleft
     L "?"
@@ -1233,7 +1234,7 @@ return
 label TakeRock:
     window hide
     show CloseupRock
-    pause
+    pause 1
     window show
     show screen inventory_button
     $renpy.notify("You gained a Dull Rock.")
@@ -1730,6 +1731,7 @@ label CutVine2:
     E "3!" with vpunch
     hide Emma yell with moveoutleft
     show Lila panic at left with moveinleft
+    play music CaveBattleMusic fadein 5.0 volume 0.3
     L "!" with vpunch
     hide Lila panic with moveoutleft
     show Emma shocked at left with moveinleft
