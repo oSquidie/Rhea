@@ -58,7 +58,7 @@ label NearbyVillage:
     hide Lila tears with fade
     window hide
     hide Cave with fade
-    show image "black.png" with fade
+    show image "black.png" 
     "Mission failed."
     "Hurt status: Liam was hurt."
     "Ending Achieved: Waiting."
@@ -123,7 +123,7 @@ label EmmaGoGetHelp:
     hide Lila sad with dissolve
     window hide
     hide Cave with fade
-    show image "black.png" with fade
+    show image "black.png"
     "Mission failed."
     "Hurt status: Liam was hurt."
     "Ending Achieved: Waiting Together."
@@ -210,7 +210,7 @@ label EmmaGoGetHelp2:
     window show
     hide Cave with fade
     window show
-    show image "black.png" with fade
+    show image "black.png"
     window show
     "Mission failed."
     "Hurt status: Liam was hurt."
@@ -293,7 +293,7 @@ label BadEnd1:
     window show
     hide Cave with fade
     window hide
-    show image "black.png" with fade
+    show image "black.png"
     show static
     show text '{color=#00ffcd}{size=100}"She left..."{/size}{/color}' at text_effect
     $ renpy.pause()
@@ -358,7 +358,7 @@ label BadEnd1:
     L "What have I done?"
     #hide FriendBackTears with fade
     #hide bblack with fade
-    show image "black.png" with fade
+    show image "black.png"
     "Mission failed."
     "Hurt status: Liam is hurt."
     "Ending Achieved: Bad end 1(Overloaded)."
@@ -430,7 +430,7 @@ label MysteriesAwait:
     hide Lila happy with fade
     hide Liam smile with fade
     hide image "CaveEntrance.png" with dissolve
-    show image "black.png" with fade
+    show image "black.png"
     "Mission Success."
     "Hurt status: No one is hurt."
     "Ending Achieved: Mysteries Await."
@@ -497,7 +497,7 @@ label SaveMe1:
     L "Ok..."
     hide Lila sad with moveoutleft
     hide image "CaveEntrance.png" with dissolve
-    show image "black.png" with fade
+    show image "black.png"
     stop music fadeout 1.0
     "Mission failed."
     "Hurt status: No one is hurt."
@@ -675,7 +675,7 @@ label SaveLiam:
     E "Who knows."
     hide Emma intimidating with moveoutleft
     hide Cave with fade
-    show image "black.png" with fade
+    show image "black.png"
     "Mission Success."
     "Hurt status: No one is hurt."
     "Ending Achieved: A 'friend' helps when your in need."
@@ -715,7 +715,7 @@ label SaveLiam2:
     show Minglou soft at right with moveinright
     Q "You pitfully child."
     hide VineBurn with fade
-    show image "black.png" with fade
+    show image "black.png"
     hide Minglou soft with moveoutright
     L "Ming...lou..."
     $renpy.notify("You listened to her words...")
@@ -855,7 +855,7 @@ label DoNotDie:
     L "Ok."
     hide Lila relieved with moveoutleft
     hide image "CaveEntrance.png" with dissolve
-    show image "black.png" with fade
+    show image "black.png"
     "Mission Failed."
     "Hurt status: No one was hurt."
     "Ending Achieved: Learn Through Failure."
@@ -939,7 +939,7 @@ label Besafe:
     L2 "I wonder what awaits us after this."
     hide Liam smile with moveoutright
     hide image "CaveEntrance.png" with dissolve
-    show image "black.png" with fade
+    show image "black.png"
     "Mission Success."
     "Hurt status: No one was hurt."
     "Ending Achieved: Mysteries Await."
@@ -1006,7 +1006,7 @@ label YouSure:
     E "Who knows."
     hide Emma concern with moveoutleft
     hide image "CaveEntrance.png" with dissolve
-    show image "black.png" with fade
+    show image "black.png"
     "Mission Failed."
     "Hurt status: No one was hurt."
     "Ending Achieved: Learn Through Failure."

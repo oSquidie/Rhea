@@ -385,7 +385,7 @@ label TouchCrystal1:
     hide Emma angry with moveoutleft
     show Lila Sweats at left with moveinleft
     L "..."
-    hide LilaSweats with moveoutleft
+    hide Lila Sweats with moveoutleft
     show Emma angry at left with moveinleft
     E "Liam!"
     show Emma concern with dissolve
@@ -449,6 +449,7 @@ label TouchCrystal2:
     $TouchCrystal_EmmaCare = False
     $CrystalTouched = True
     $LilaBleed = True
+    $LilaDoNotBleed = False
     window hide
 jump drag_glass
 return
@@ -1355,9 +1356,10 @@ label ObserveVine:
     hide Liam skeptical with moveoutright
     show Lila shocked at left with moveinleft
     L "!" with vpunch
+    hide Lila shocked with moveoutleft
     show Vina neutral with fade
     show PageItem with fade
-    show Lila panic with dissolve
+    show Lila panic with moveinleft
     L "That looks scary..."
     hide Vina neutral with fade
     hide Lila panic with moveoutleft
