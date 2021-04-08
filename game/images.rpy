@@ -328,4 +328,6 @@ image Riot = "Riot.png"
 image HandinHand = "WalkingHandInHand.png"
 image LiamKnockedOut = "LiamKnockedOut.png"
 image MingluoCatchLila ="MingluoCatchLila.png"
+image LilaSharpRock = "LilaSharpRock.png"
+image LilaTouchCrystal = "LilaTouchCrystal.png"
 ##############################################################
