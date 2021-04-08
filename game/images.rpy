@@ -327,4 +327,5 @@ image TearsEmmaLiamProtect = "EmmaLiamProtect2.png"
 image Riot = "Riot.png"
 image HandinHand = "WalkingHandInHand.png"
 image LiamKnockedOut = "LiamKnockedOut.png"
+image MingluoCatchLila ="MingluoCatchLila.png"
 ##############################################################
