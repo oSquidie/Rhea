@@ -58,7 +58,7 @@ label NearbyVillage:
     hide Lila tears with fade
     window hide
     hide Cave with fade
-    show image "black.png" 
+    show image "black.png"
     "Mission failed."
     "Hurt status: Liam was hurt."
     "Ending Achieved: Waiting."
@@ -439,7 +439,7 @@ return
 
 label SaveMe1:
     window show
-    show image "Vina death.png" with fade
+    show Vina death with fade
     show screen negative_affection
     $affbarposi = False
     $affbarnegative = True
@@ -465,7 +465,7 @@ label SaveMe1:
     E "Take this you dumb Vina Plant!"
     $renpy.notify("Emma throws it at one of the eyes on the Vina Plant.")
     show Emma envy with dissolve
-    hide image "Vina death.png" with fade
+    hide Vina death
     show image VineHurt with fade
     E "Let's get out of here now!"
     stop music fadeout 1.0
@@ -506,11 +506,13 @@ label SaveMe1:
 return
 
 label SaveMe2:
-    show image "Vina death.png" with fade
+    show Vina death with fade
     show Emma yell at left with moveinleft
     E "AHHHHHHHHHHH!" with hpunch
     stop music fadeout 1.0
     $renpy.notify("Emma choose to save Liam.")
+    hide Vina death with fade
+    show image "black.png"
     show Emma panic with dissolve
     E "I-"
     show Emma dissapointed with dissolve
@@ -596,29 +598,29 @@ label SaveLiam:
     show MingluoBurnPage with fade
     pause 1
     window show
-    $renpy.notify("Minglou picks up the page.")
+    $renpy.notify("Mingluo picks up the page.")
     E "..."
     L2 "..."
     hide MingluoBurnPage with fade
     show Cave with fade
     show Lila happy at left with moveinleft
-    L "Minglou!"
-    $renpy.notify("You gave minglou a hug.")
+    L "Mingluo!"
+    $renpy.notify("You gave Mingluo a hug.")
     show Mingluo disgust at right with moveinright
-    show Minglou happy with dissolve
+    show Mingluo happy with dissolve
     M "..."
     hide Lila happy with moveoutleft
-    show Minglou smirk with dissolve
+    show Mingluo smirk with dissolve
     M "Looks like you're friends don't like seeing me."
-    show Minglou sigh with dissolve
+    show Mingluo sigh with dissolve
     M "Makes me a bit sad."
-    hide Minglou sigh with moveoutright
+    hide Mingluo sigh with moveoutright
     show Lila skeptical at left with dissolve
     L "What are you doing here?"
     hide Lila skeptical with moveoutleft
-    show Minglou smile at right with moveinright
+    show Mingluo smile at right with moveinright
     M "To help you of course!"
-    hide Minglou smile with moveoutright
+    hide Mingluo smile with moveoutright
     show Emma intimidating at left with moveinleft
     E "You could have came earlier..."
     hide Emma intimidating with moveoutleft
@@ -640,13 +642,13 @@ label SaveLiam:
     $renpy.notify("Page Found.")
     $inventory.add(Page1)
     show Lila smile at left with moveinleft
-    L "Thanks Minglou!"
+    L "Thanks Mingluo!"
     show Lila skeptical with dissolve
     L "Hm?"
     hide screen inventory_button
     L "I Don't know what it says."
     show Lila swirly eyes with dissolve
-    L "Can you help me Minglou-"
+    L "Can you help me Mingluo-"
     show Lila skeptical with dissolve
     L "Huh?"
     show Lila swirly eyes with dissolve
@@ -669,7 +671,7 @@ label SaveLiam:
     show Lila surprised at left with moveoutleft
     L "Oh ok!"
     show Lila swirly eyes with dissolve
-    L "I wonder why Minglou wants this page that bad..."
+    L "I wonder why Mingluo wants this page that bad..."
     hide Lila swirly eyes with moveoutleft
     show Emma intimidating at left with moveinleft
     E "Who knows."
@@ -712,11 +714,11 @@ label SaveLiam2:
     pause
     window show
     hide Liam shocked with moveoutright
-    show Minglou soft at right with moveinright
+    show Mingluo soft at right with moveinright
     Q "You pitfully child."
     hide VineBurn with fade
     show image "black.png"
-    hide Minglou soft with moveoutright
+    hide Mingluo soft with moveoutright
     L "Ming...lou..."
     $renpy.notify("You listened to her words...")
     M "Shhhhhh"
@@ -1055,10 +1057,10 @@ label SaveYourself2:
     window show
     hide VineBurn with fade
     show image "black.png" with fade
-    show Minglou soft at right with moveinright
+    show Mingluo soft at right with moveinright
     M "Shhhhhh"
     $renpy.notify("You listened to her words...")
-    hide Minglou soft with moveoutright
+    hide Mingluo soft with moveoutright
     L "?!"
     Q "I'm here now so don't worry."
     Q "Go to sleep."
