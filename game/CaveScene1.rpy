@@ -410,6 +410,7 @@ label TouchCrystal1:
     $TouchCrystal_EmmaDoNotCare = False
     $CrystalTouched = True
     $LilaBleed = False
+    $LilaDoNotBleed = True
     $thing = False
     if GotRock == False:
         jump drag_glass
@@ -794,7 +795,7 @@ label FeedingDeadBird:
     L "!" with vpunch
     hide image "black.png" with fade
     show screen inventory_button
-    $renpy.notify("Dumbstick has been tossed.")
+    $renpy.notify("Drumstick has been tossed.")
     $inventory.drop(drumstick)
     show Emma happy at left with moveinleft
     E "Got it!"

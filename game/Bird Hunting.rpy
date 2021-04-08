@@ -121,7 +121,7 @@ label KillIt:
     show Lila swirly eyes at PopUp with dissolve
     L "Huh?"
     show screen inventory_button
-    $renpy.notify("Dumbstick added to inventory.")
+    $renpy.notify("Drumstick added to inventory.")
     $inventory.add(drumstick)
     $GotDrumStick = True
     show Lila dumbfounded with dissolve
