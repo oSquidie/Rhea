@@ -162,7 +162,7 @@ image Mingluo smirk = im.Scale("MingluoSmirk.png", 960, 1000)
 image Mingluo smug = im.Scale("MingluoSmug.png", 960, 1000)
 image Mingluo threat = im.Scale("MingluoThreat.png", 960, 1000)
 image Mingluo yell = im.Scale("MingluoYell.png", 960, 1000)
-image side Mingluo = im.Scale("images/MingluoIcon.png", 200, 200, xoffset=20, yoffset=-50)
+image side Mingluo = im.Scale("images/MingluoIcon.png", 200, 200, xoffset=25, yoffset=-30)
 ############################################################################
 #Lila Sprites##
 image Lila happy =  im.Scale("LilaHappy.png", 800, 950)
@@ -191,7 +191,7 @@ image Lila skeptical = im.Scale("LilaSkeptical.png", 800, 950)
 image Lila Sweats =  im.Scale("LilaNervous.png", 800, 950)
 image Lila dumbfounded = im.Scale("LilaDumbfounded.png", 800, 950)
 image Lila confused = im.Scale("LilaConfused.png", 800, 950)
-image side Lila = im.Scale("images/LilaIcon.png", 200, 200, xoffset=20, yoffset=-50)
+image side Lila = im.Scale("images/LilaIcon.png", 200, 200, xoffset=25, yoffset=-30)
 ############################################################################
 #Emma Sprites#
 image Emma happy = im.Scale("EmmaHappy.png", 760, 1000)
@@ -219,7 +219,7 @@ image Emma yell = im.Scale("EmmaYell.png", 760, 1000)
 image Emma yell cry = im.Scale("EmmaYellCry.png", 760, 1000)
 image Emma soft = im.Scale("EmmaSoft.png", 760, 1000)
 image Emma excited = im.Scale("EmmaExcited.png", 760, 1000)
-image side Emma = im.Scale("images/EmmaIcon.png", 200, 200, xoffset=20, yoffset=-50)
+image side Emma = im.Scale("images/EmmaIcon.png", 200, 200, xoffset=25, yoffset=-30)
 #############################################################################
 #Liam Sprites#
 image Liam happy = im.Scale("LiamHappy.png", 960, 1200)
@@ -247,7 +247,7 @@ image Liam yell = im.Scale("LiamYell.png", 960, 1200)
 image Liam yell cry = im.Scale("LiamYellCry.png", 960, 1200)
 image Liam dark smile = im.Scale("LiamDarkSmile.png", 960, 1200)
 image Liam blush = im.Scale("LiamBlush.png", 960, 1200)
-image side Liam = im.Scale("images/LiamIcon.png", 200, 200, xoffset=20, yoffset=-50)
+image side Liam = im.Scale("images/LiamIcon.png", 200, 200, xoffset=25, yoffset=-30)
 ##################################################################################
 #BGs#
 image BGStart = "BGStart.png"

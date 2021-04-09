@@ -113,8 +113,8 @@ screen inventory_screen:
         if i+1 <= (inv_page+1)*9 and i+1>inv_page*9:
             $ x += 190
             if i%3==0:
-                $ y += 170
-                $ x = 515
+                $ y += 130
+                $ x = 778
             $ pic = item.image
             $ my_tooltip = "tooltip_inventory_" + pic.replace("gui/inv_", "").replace(".png", "") # we use tooltips to describe what the item does.
             imagebutton idle pic hover pic xpos x ypos y action [Hide("gui_tooltip"), Show("inventory_button"), SetVariable("item", item), Hide("inventory_screen"), item_use] hovered [ Play ("sound", "sfx/click.wav"), Show("gui_tooltip", my_picture=my_tooltip, my_tt_ypos=693) ] unhovered [Hide("gui_tooltip")] at inv_eff
@@ -124,7 +124,7 @@ screen inventory_screen:
         if len(inventory.items)>9:
             textbutton _("Next Page") action [SetVariable('inv_page', next_inv_page), Show("inventory_screen")] xpos .475 ypos .83
 
-screen gui_tooltip (my_picture="", my_tt_xpos=58, my_tt_ypos=687):
+screen gui_tooltip (my_picture="", my_tt_xpos=750, my_tt_ypos=200):
     add my_picture xpos my_tt_xpos ypos my_tt_ypos
 
 init -1:
@@ -137,10 +137,10 @@ init -1:
 
     image information = Text("INFORMATION", style="tips_top")
     #Tooltips-inventory:
-    image tooltip_inventory_rock=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("A dull rock", style="tips_bottom"))
-    image tooltip_inventory_sharprock=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("A sharp rock.", style="tips_bottom")) #describe item
-    image tooltip_inventory_gun=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("An gun that looks like something a cop would\ncarry around. Most effective on humans.", style="tips_bottom"))
-    image tooltip_inventory_laser=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("An energy gun that shoots photon beams.\nMost effective on aliens.", style="tips_bottom"))
-    image tooltip_inventory_Drumstick=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("A Hercinia Drumstick", style="tips_bottom"))
-    image tooltip_inventory_LilaMushroom=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("A mushroom flashlight", style="tips_bottom"))
-    image tooltip_inventory_PageItem=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("An ancient artifact", style="tips_bottom"))
+    image tooltip_inventory_rock=LiveComposite((665, 73), (100,-40), ImageReference("information"), (65,0), Text("A dull rock", style="tips_bottom"))
+    image tooltip_inventory_sharprock=LiveComposite((665, 73), (100,-40), ImageReference("information"), (65,0), Text("A sharp rock.", style="tips_bottom")) #describe item
+    image tooltip_inventory_gun=LiveComposite((665, 73), (100,-40), ImageReference("information"), (65,0), Text("An gun that looks like something a cop would\ncarry around. Most effective on humans.", style="tips_bottom"))
+    image tooltip_inventory_laser=LiveComposite((665, 73), (100,-40), ImageReference("information"), (65,0), Text("An energy gun that shoots photon beams.\nMost effective on aliens.", style="tips_bottom"))
+    image tooltip_inventory_Drumstick=LiveComposite((665, 73), (100,-40), ImageReference("information"), (65,0), Text("A Hercinia Drumstick", style="tips_bottom"))
+    image tooltip_inventory_LilaMushroom=LiveComposite((665, 73), (100,-40), ImageReference("information"), (65,0), Text("A mushroom flashlight", style="tips_bottom"))
+    image tooltip_inventory_PageItem=LiveComposite((665, 73), (100,-40), ImageReference("information"), (65,0), Text("An ancient artifact", style="tips_bottom"))
