@@ -254,7 +254,7 @@ label drag_glass:
             jump TreasureDoor
         "{color=#4469ff}Look at rock?{/color}" if store.object == "Rock.":
             jump RockByCrystal
-        "{color=#58f7ff}Look at the vine?" if store.object == "a vine?":
+        "{color=#58f7ff}Look at the vine?" if store.object == "vine?":
             jump VineWall
         "Go back":
             jump drag_glass
@@ -291,7 +291,7 @@ label drag_glass2:
             jump OpusDoor
         "{color=#c8c8ff}Go through the Treasure Door?{/color}" if store.object == "Treasure Door.":
             jump TreasureDoor
-        "{color=#58f7ff}Look at the vine?{/color}" if store.object == "a vine?":
+        "{color=#58f7ff}Look at the vine?{/color}" if store.object == "vine?":
             jump VineWall
         "Go back":
             jump drag_glass2
@@ -301,9 +301,9 @@ return
 label CrystalDoor:
     window hide
     menu:
-        "Pretty Crystal" if CrystalLooked == True:
+        "Look at pretty crystal?" if CrystalLooked == True:
             jump LookAtCrystal
-        "Pretty Crystal" if CrystalLooked == False:
+        "Look at pretty crystal?" if CrystalLooked == False:
             jump Crystal_menu
         "Back Away" if GotRock == False:
             jump drag_glass
@@ -652,7 +652,7 @@ return
 label Opus2:
     window hide
     show CloseupOpus
-    window show 1
+    window show
     show Lila smile at left with moveinleft
     L "Hehe."
     L "Look at it just bobble."
@@ -1353,7 +1353,7 @@ label ObserveVine:
     show Emma yell at left with moveinleft
     E "What the hell-"
     hide Emma yell with moveoutleft
-    show Liam sigh at right with moveinleft
+    show Liam sigh at right with moveinright
     show Liam angry with dissolve
     L2 "Let's argue later."
     show Liam sigh with dissolve
@@ -1369,7 +1369,7 @@ label ObserveVine:
     L "!" with vpunch
     hide Lila shocked with moveoutleft
     show Vina neutral with fade
-    show Lila panic with moveinleft
+    show Lila panic at left with moveinleft
     L "That looks scary..."
     hide Vina neutral with fade
     hide Lila panic with moveoutleft
@@ -1621,11 +1621,11 @@ label LiamInfo:
     $AskLiamForInfo = False
     $thing = False
     $LookAtVine = False
+    window hide
     if GotRock == False:
         jump drag_glass
     if GotRock == True:
         jump drag_glass2
-    window hide
 return
 
 label CutVine:

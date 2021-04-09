@@ -44,7 +44,7 @@ screen slide_glass_screen:
             xpos 60  ypos 90
 
         drag:
-            drag_name "a vine?"
+            drag_name "vine?"
             draggable False
             idle_child "VineDoor.png"
             selected_idle_child "VineDoorHover.png"
@@ -105,7 +105,7 @@ screen slide_glass_screen2:
             xpos 60  ypos 90
 
         drag:
-            drag_name "a vine?"
+            drag_name "vine?"
             draggable False
             idle_child "VineDoor.png"
             selected_idle_child "VineDoorHover.png"
