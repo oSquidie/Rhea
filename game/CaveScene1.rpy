@@ -207,10 +207,13 @@ return
 
 ######If Players been to cave once already###############
 label Cave2:
+    window hide
+    scene image "Cave.png" with dissolve
     if GotRock == False:
         jump drag_glass
     if GotRock == True:
         jump drag_glass2
+    window show
 return
 
 ##########The Door Options##########
@@ -238,6 +241,8 @@ label drag_glass:
     hide VineHurt
     hide VineBurn
     hide VineWall
+    hide LilaTouchCrystal
+    hide LilaSharpRock
     window hide
     "[glass] picked the [object]"
     menu:
@@ -275,6 +280,8 @@ label drag_glass2:
     hide VineHurt
     hide VineBurn
     hide VineWall
+    hide LilaTouchCrystal
+    hide LilaSharpRock
     window hide
     "[glass] picked the [object]"
     menu:
@@ -363,7 +370,7 @@ return
 
 label TouchCrystal1:
     window hide
-    show CloseupCrystal
+    show LilaTouchCrystal with dissolve
     pause 1
     window show
     show Emma shocked at left with moveinleft
@@ -372,6 +379,7 @@ label TouchCrystal1:
     hide Emma shocked at left with moveoutleft
     show Lila pain at left with moveinleft
     L "Ouch!" with hpunch
+    hide LilaTouchCrystal with dissolve
     show CloseupCrystalBlood
     hide Lila pain at left with moveoutleft
     show Emma angry at left with moveinleft
@@ -421,11 +429,12 @@ return
 
 label TouchCrystal2:
     window hide
-    show CloseupCrystal
+    show LilaTouchCrystal with dissolve
     pause 1
     window show
     show Lila pain at left with moveinleft
     L "Ouch!" with hpunch
+    hide LilaTouchCrystal with dissolve
     show CloseupCrystalBlood
     hide Lila pain with moveoutleft
     show Emma sigh at left with moveinleft
@@ -451,6 +460,7 @@ label TouchCrystal2:
     $LilaBleed = True
     $LilaDoNotBleed = False
     $LilaBleed2 = True
+    $thing = False
     window hide
 jump drag_glass
 return
@@ -477,11 +487,11 @@ return
 
 label EarnedSharpRock:
     window hide
-    show CloseupCrystal
+    show LilaSharpRock
     pause 1
     window show
     show Emma concern at left with moveinleft
-    E "What do you think you are doing?"
+    E "What are you are doing?"
     hide Emma concern with moveoutleft
     show Lila smile at left with moveinleft
     show Lila skeptical with dissolve
@@ -528,11 +538,11 @@ return
 
 label EarnedSharpRock2:
     window hide
-    show CloseupCrystal
+    show LilaSharpRock
     pause 1
     window show
     show Emma concern at left with moveinleft
-    E "What do you think you are doing?"
+    E "What are you are doing?"
     hide Emma concern with moveoutleft
     show Lila smile at left with moveinleft
     show Lila skeptical with dissolve
@@ -1019,7 +1029,7 @@ return
 label ReachForIt:
     window hide
     show CloseupOpus
-    pause
+    pause 1
     window show
     show screen negative_affection
     $affbarposi = False
@@ -1053,7 +1063,10 @@ label ReachForIt:
     $renpy.notify("Liam choose to save you.")
     window show
     L2 "!" with hpunch
-    show image "black.png" with dissolve
+    window hide
+    show LiamHurt with dissolve
+    pause 1
+    window show
     show Emma panic at left with moveinleft
     E "Liam!"
     hide Emma panic with moveoutleft
@@ -1082,6 +1095,11 @@ label ReachForIt:
     L2 "..."
     show Emma panic at left with moveinleft
     E "Liam?"
+    hide LiamHurt with dissolve
+    window hide
+    show LiamKnockedOut with dissolve
+    pause 1
+    window show
     hide Emma panic with moveoutleft
     show Lila panic at left with moveinleft
     L "Liam!"
@@ -1090,8 +1108,8 @@ label ReachForIt:
     E "Liam!" with vpunch
     show Emma panic with dissolve
     E "..."
-    hide image "black.png" with fade
-    scene image "Cave.png" with dissolve
+    hide image LiamKnockedOut with dissolve
+    show Cave
     hide Emma with moveoutleft
     show Lila angry cry at MoveUp
     show Emma dissapointed at emmaMoveUp
@@ -1351,7 +1369,6 @@ label ObserveVine:
     L "!" with vpunch
     hide Lila shocked with moveoutleft
     show Vina neutral with fade
-    show PageItem with fade
     show Lila panic with moveinleft
     L "That looks scary..."
     hide Vina neutral with fade

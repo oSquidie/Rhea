@@ -221,21 +221,23 @@ label menu_OC1:
 return
 
 label OC2:
-    show CaveEntrance with dissolve
-label menu_OC2:
     window hide
+    hide image "Forest_Default.png" with dissolve
+    show image "CaveEntrance.png" with dissolve
+    pause 1.5
+label menu_OC2:
     menu:
         "Look at the surroundings." if C_Sight1 == True:
-            jump Sight1
+            jump Sight2
         "Feel the surrounding." if C_Feel1 == True:
-            jump Feel1
+            jump Feel2
         "Listen to the area." if C_Sound1 == True:
-            jump Sound1
+            jump Sound2
         "Check out the scent in the area." if C_Smell1 == True:
-            jump Smell1
+            jump Smell2
         "Go back to Cave?":
             jump Cave2
-    window hide
+    window show
     hide CaveEntrance with dissolve
 return
 
@@ -266,7 +268,7 @@ label Sight1:
     E "It's called a {color=#00ffe8}dagger{/color} you dense idiot."
     $C_Sight1 = False
     $DaggerInfo = True
-    $NoDaggerInfo = False 
+    $NoDaggerInfo = False
     hide Lila surprised with fade
     hide Emma sly with fade
     hide Liam default with fade
@@ -387,7 +389,158 @@ label Smell1:
     hide Emma sigh with fade
     hide Liam smile with fade
     window hide
-jump menu_OC1
+jump menu_OC2
+return
+
+label Sight2:
+    window show
+    show Lila default at MoveUp
+    show Liam default at LiamMoveUp
+    show Liam default at LiamRight
+    show Emma default at emmaMoveUp
+    show Emma default at emmaMiddle
+    show Lila skeptical at PopUp with dissolve
+    L "Do you guys see anything from here?"
+    show Lila skeptical at MoveUp with dissolve
+    show Emma surprised at emmaflip with dissolve
+    show Liam surprised with dissolve
+    show Liam default with dissolve
+    show Emma dissapointed at PopUp with dissolve
+    E "Hmmmm...."
+    show Emma smug with dissolve
+    E "Besides the abnormal amount of formulated crystals no I don't see anything else."
+    show Emma smug at emmaMoveUp with dissolve
+    show Lila surprised at PopUp with dissolve
+    L "Those things look familiar..."
+    L "Oh right!"
+    L "Like your pocket knife."
+    show Lila surprised at MoveUp with dissolve
+    show Emma sly at PopUp with dissolve
+    E "It's called a {color=#00ffe8}dagger{/color} you dense idiot."
+    $C_Sight1 = False
+    $DaggerInfo = True
+    $NoDaggerInfo = False
+    hide Lila surprised with fade
+    hide Emma sly with fade
+    hide Liam default with fade
+    window hide
+jump menu_OC2
+return
+
+label Feel2:
+    window show
+    show Lila default at MoveUp
+    show Liam default at LiamMoveUp
+    show Liam default at LiamRight
+    show Emma default at emmaMoveUp
+    show Emma default at emmaMiddle
+    show Lila Sweats at PopUp with dissolve
+    L "Why does the cave make me feel so weird..."
+    show Lila Sweats at MoveUp with dissolve
+    show Liam surprised with dissolve
+    show Emma surprised at emmaflip with dissolve
+    show Emma concern at PopUp with dissolve
+    E "What are you on about?"
+    show Emma concern at emmaMoveUp with dissolve
+    show Lila skeptical at PopUp with dissolve
+    show Liam default with dissolve
+    L "There's just this bad feeling about it but also feels like something is pulling me in..."
+    show Lila skeptical at MoveUp with dissolve
+    show Emma sigh at PopUp with dissolve
+    show Liam smile with dissolve
+    E "I have no clue what you're on about."
+    show Liam nervous with dissolve
+    show Lila dumbfounded with dissolve
+    $C_Feel1 = False
+    hide Liam nervous with fade
+    hide Lila dumbfounded with fade
+    hide Emma sigh with fade
+    window hide
+jump menu_OC2
+return
+
+label Sound2:
+    window show
+    show Lila default at MoveUp
+    show Liam default at LiamRight
+    show Liam default at LiamMoveUp
+    show Emma default at emmaMoveUp
+    show Emma default at emmaMiddle
+    show Emma dissapointed at PopUp with dissolve
+    E "I hear nothing but insects."
+    show Emma dissapointed at emmaMoveUp with dissolve
+    show Lila skeptical at PopUp with dissolve
+    L "..."
+    L "Really?"
+    L "I hear some kind of...chirping?"
+    show Lila skeptical at MoveUp with dissolve
+    show Emma surprised at emmaflip with dissolve
+    show Liam surprised with dissolve
+    show Emma happy at PopUp with dissolve
+    E "Oh wait!"
+    show Lila surprised with dissolve
+    show Emma excited with dissolve
+    E "You're right!"
+    show Emma sly with dissolve
+    show Liam nervous with dissolve
+    show Liam default with dissolve
+    E "It's definitely a {color=#00ffe8}Hercinia{/color}."
+    show Emma excited with dissolve
+    E "Let's go hunt it down."
+    hide Lila surprised with fade
+    hide Liam default with fade
+    hide Emma excited with fade
+    window hide
+    menu:
+        "What! No! Don't do it!":
+            jump DidNotKill2
+        "Sure? I guess it's ok...":
+            jump KillIt2
+    window hide
+return
+
+label Smell2:
+    window show
+    show Lila default at MoveUp
+    show Liam default at LiamRight
+    show Liam default at LiamMoveUp
+    show Emma default at emmaMoveUp
+    show Emma default at emmaMiddle
+    show Emma surprised at PopUp with dissolve
+    E "What are you doing?"
+    show Emma surprised at emmaMoveUp with dissolve
+    show Lila stunned at PopUp with dissolve
+    L "Smelling the the area."
+    show Lila stunned at MoveUp with dissolve
+    show Lila smile with dissolve
+    show Liam laugh with dissolve
+    show Liam happy with dissolve
+    show Liam default with dissolve
+    show Emma concern at PopUp with dissolve
+    E "...Why?"
+    show Emma concern at emmaMoveUp with dissolve
+    show Lila happy at PopUp with dissolve
+    L "Just wondering."
+    show Lila happy at MoveUp with dissolve
+    show Emma envy with dissolve
+    show Liam laugh at LiamPopUp with dissolve
+    L2 "pft-"
+    show Liam laugh at LiamMoveUp with dissolve
+    show Lila surprised with dissolve
+    show Emma surprised with dissolve
+    show Liam smile at LiamPopUp with dissolve
+    L2 "What does it smell like?"
+    show Liam default at LiamMoveUp with dissolve
+    show Emma envy with dissolve
+    show Emma sigh with dissolve
+    show Lila smile at PopUp with dissolve
+    L "Fresh grass."
+    $C_Smell1 = False
+    hide Lila smile with fade
+    hide Emma sigh with fade
+    hide Liam smile with fade
+    window hide
+jump menu_OC2
 return
 
 label SaW1:
