@@ -246,15 +246,15 @@ label drag_glass:
     window hide
     "[glass] picked the [object]"
     menu:
-        "Go through the Crystal Door?" if store.object == "Crystal Door.":
+        "{color=#fb92ff}Go through the Crystal Door?{/color}" if store.object == "Crystal Door.":
             jump CrystalDoor
-        "Go through the Opus Door?" if store.object == "Opus Door.":
+        "{color=#4000ff}Go through the Opus Door?{/color}" if store.object == "Opus Door.":
             jump OpusDoor
-        "Go through the Treasure Door?" if store.object == "Treasure Door.":
+        "{color=#c8c8ff}Go through the Treasure Door?{/color}" if store.object == "Treasure Door.":
             jump TreasureDoor
-        "Look at rock?" if store.object == "Rock.":
+        "{color=#4469ff}Look at rock?{/color}" if store.object == "Rock.":
             jump RockByCrystal
-        "Look at the vine?" if store.object == "a vine?":
+        "{color=#58f7ff}Look at the vine?" if store.object == "a vine?":
             jump VineWall
         "Go back":
             jump drag_glass
@@ -285,13 +285,13 @@ label drag_glass2:
     window hide
     "[glass] picked the [object]"
     menu:
-        "Go through the Crystal Door?" if store.object == "Crystal Door.":
+        "{color=#fb92ff}Go through the Crystal Door?{/color}" if store.object == "Crystal Door.":
             jump CrystalDoor
-        "Go through the Opus Door?" if store.object == "Opus Door.":
+        "{color=#4000ff}Go through the Opus Door?{/color}" if store.object == "Opus Door.":
             jump OpusDoor
-        "Go through the Treasure Door" if store.object == "Treasure Door.":
+        "{color=#c8c8ff}Go through the Treasure Door?{/color}" if store.object == "Treasure Door.":
             jump TreasureDoor
-        "Look at the vine?" if store.object == "a vine?":
+        "{color=#58f7ff}Look at the vine?{/color}" if store.object == "a vine?":
             jump VineWall
         "Go back":
             jump drag_glass2
