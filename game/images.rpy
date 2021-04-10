@@ -332,4 +332,8 @@ image LiamHurt = "LiamHurt.png"
 image MingluoCatchLila ="MingluoCatchLila.png"
 image LilaSharpRock = "LilaSharpRock.png"
 image LilaTouchCrystal = "LilaTouchCrystal.png"
+image LilaandEmmaOpus = "LilaandEmmaOpus.png"
+image LilaCatchPage = "LilaCatchPage.png"
+image LilaThrowDrumstick = "LilaThrowDrumstick.png"
+image LilaThrowDrumstick2 = "LilaThrowDrumstick2.png"
 ##############################################################
