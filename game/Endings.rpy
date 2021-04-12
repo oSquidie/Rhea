@@ -528,6 +528,7 @@ label SaveLiam:
     hide Vinehurt with fade
     show Cave with fade
     show Emma panic at left with moveinleft
+    play music RheaSoundtrack fadein 5.0 volume 0.3
     E "...."
     hide Emma panic with moveoutleft
     show Lila tears at left with moveinleft
@@ -535,7 +536,6 @@ label SaveLiam:
     L "...."
     hide Lila angry cry with moveoutleft
     show Liam nervous at right with moveinright
-    play music RheaSoundtrack fadein 5.0 volume 0.3
     L2 "It's ok..."
     show Liam smile with dissolve
     L2 "It's over now."
@@ -546,8 +546,9 @@ label SaveLiam:
     L "I don't care about that right now..."
     hide Lila angry cry with moveoutleft
     show Mingluo no eyes at right with moveinright
-    stop music fadeout 1.0
+    stop music
     Q "You should care."
+    play music BadEnd fadein 5.0 volume 0.3
     hide Mingluo no eyes with moveoutright
     hide Cave with fade
     window hide
@@ -609,6 +610,7 @@ label SaveLiam:
     $renpy.notify("Page Found.")
     $inventory.add(Page1)
     show Lila smile at left with moveinleft
+    stop music fadeout 1.0
     play music GoodEnd fadein 5.0 volume 0.3
     L "Thanks Mingluo!"
     show Lila skeptical with dissolve
