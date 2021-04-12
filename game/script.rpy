@@ -59,7 +59,7 @@ label start:
     show LilaIntro3
     L "I refuse to become the outcast of my village with no clear reason."
     L "I have already found a lead."
-    L "Soon I will be able to gave soild proof to the existence called the sun."
+    L "Soon I will be able to gave solid proof to the existence called the sun."
     stop music fadeout 1.0
     $renpy.movie_cutscene("Movies/Test2.mpg")
     #############Start Dialogue Cutscene#########
@@ -319,6 +319,7 @@ label Sound1:
     E "I hear nothing but insects."
     show Emma dissapointed at emmaMoveUp with dissolve
     show Lila skeptical at PopUp with dissolve
+    play sound Bird fadein 5.0 volume 0.3
     L "..."
     L "Really?"
     L "I hear some kind of...chirping?"
@@ -336,6 +337,7 @@ label Sound1:
     E "It's definitely a {color=#00ffe8}Hercinia{/color}."
     show Emma excited with dissolve
     E "Let's go hunt it down."
+    stop music fadeout 1.0
     hide Lila surprised with fade
     hide Liam default with fade
     hide Emma excited with fade
@@ -355,6 +357,7 @@ label Smell1:
     show Liam default at LiamMoveUp
     show Emma default at emmaMoveUp
     show Emma default at emmaMiddle
+    show Emma default at emmaflip
     show Emma surprised at PopUp with dissolve
     E "What are you doing?"
     show Emma surprised at emmaMoveUp with dissolve
@@ -470,6 +473,7 @@ label Sound2:
     E "I hear nothing but insects."
     show Emma dissapointed at emmaMoveUp with dissolve
     show Lila skeptical at PopUp with dissolve
+    play sound Bird fadein 5.0 volume 0.3
     L "..."
     L "Really?"
     L "I hear some kind of...chirping?"
@@ -487,6 +491,7 @@ label Sound2:
     E "It's definitely a {color=#00ffe8}Hercinia{/color}."
     show Emma excited with dissolve
     E "Let's go hunt it down."
+    stop sound fadeout 1.0
     hide Lila surprised with fade
     hide Liam default with fade
     hide Emma excited with fade
@@ -506,6 +511,7 @@ label Smell2:
     show Liam default at LiamMoveUp
     show Emma default at emmaMoveUp
     show Emma default at emmaMiddle
+    show Emma default at emmaflip 
     show Emma surprised at PopUp with dissolve
     E "What are you doing?"
     show Emma surprised at emmaMoveUp with dissolve

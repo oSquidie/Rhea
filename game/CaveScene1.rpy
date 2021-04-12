@@ -243,6 +243,10 @@ label drag_glass:
     hide VineWall
     hide LilaTouchCrystal
     hide LilaSharpRock
+    hide LilaandEmmaOpus
+    hide LilaCatchPage
+    hide LilaThrowDrumstick
+    hide LilaThrowDrumstick2
     window hide
     "[glass] picked the [object]"
     menu:
@@ -282,6 +286,10 @@ label drag_glass2:
     hide VineWall
     hide LilaTouchCrystal
     hide LilaSharpRock
+    hide LilaandEmmaOpus
+    hide LilaCatchPage
+    hide LilaThrowDrumstick
+    hide LilaThrowDrumstick2
     window hide
     "[glass] picked the [object]"
     menu:
@@ -377,11 +385,9 @@ label TouchCrystal1:
     E "Wha-!"
     E "Stop!" with vpunch
     hide Emma shocked at left with moveoutleft
-    show Lila pain at left with moveinleft
     L "Ouch!" with hpunch
     hide LilaTouchCrystal with dissolve
     show CloseupCrystalBlood
-    hide Lila pain at left with moveoutleft
     show Emma angry at left with moveinleft
     E "You idiot!"
     show Emma concern with dissolve
@@ -432,11 +438,9 @@ label TouchCrystal2:
     show LilaTouchCrystal with dissolve
     pause 1
     window show
-    show Lila pain at left with moveinleft
     L "Ouch!" with hpunch
     hide LilaTouchCrystal with dissolve
     show CloseupCrystalBlood
-    hide Lila pain with moveoutleft
     show Emma sigh at left with moveinleft
     E "I just told you not to yet you went and did it."
     show Emma envy with dissolve
@@ -493,10 +497,10 @@ label EarnedSharpRock:
     show Emma concern at left with moveinleft
     E "What are you are doing?"
     hide Emma concern with moveoutleft
-    show Lila smile at left with moveinleft
-    show Lila skeptical with dissolve
     L "?"
-    show Lila smile with dissolve
+    hide LilaSharpRock with fade
+    show CloseupCrystal with fade
+    show Lila smile at left with moveinleft
     L "Sharpening the rock?"
     hide Lila smile with moveoutleft
     show Emma surprised with moveinleft
@@ -544,10 +548,10 @@ label EarnedSharpRock2:
     show Emma concern at left with moveinleft
     E "What are you are doing?"
     hide Emma concern with moveoutleft
-    show Lila smile at left with moveinleft
-    show Lila skeptical with dissolve
     L "?"
-    show Lila smile with dissolve
+    hide LilaSharpRock with fade
+    show CloseupCrystal with fade
+    show Lila smile at left with moveinleft
     L "Sharpening the rock?"
     hide Lila smile with moveoutleft
     show Emma surprised at left with moveinleft
@@ -607,7 +611,7 @@ return
 
 label Opus:
     window hide
-    show CloseupOpus
+    show LilaandEmmaOpus with dissolve
     pause 1
     window show
     show Lila smile at left with moveinleft
@@ -645,13 +649,14 @@ label Opus:
     L "Oh..."
     hide Lila Sweats with moveoutleft
     $LookAtOpus = False
+    hide LilaandEmmaOpus
     window hide
     jump Opus_Menu
 return
 
 label Opus2:
     window hide
-    show CloseupOpus
+    show LilaandEmmaOpus with dissolve
     window show
     show Lila smile at left with moveinleft
     L "Hehe."
@@ -661,6 +666,7 @@ label Opus2:
     E "..."
     hide Emma sigh with moveoutleft
     $LookAtOpus = False
+    hide LilaandEmmaOpus
     window hide
     jump Opus_Menu
 return
@@ -803,9 +809,14 @@ label FeedingDeadBird:
     E "3!"
     E "2!"
     E "1!"
-    show image "black.png" with fade
+    window hide
+    show LilaThrowDrumstick
+    pause 1
     L "!" with vpunch
-    hide image "black.png" with fade
+    hide LilaThrowDrumstick
+    show LilaThrowDrumstick2
+    pause 1
+    hide LilaThrowDrumstick2
     show screen inventory_button
     $renpy.notify("Drumstick has been tossed.")
     $inventory.drop(drumstick)
@@ -1475,6 +1486,7 @@ label YouTwoDistract:
     $AskLiamForInfo = False
     $thing = False
     $LookAtVine = False
+    window hide
     if GotRock == False:
         jump drag_glass
     if GotRock == True:
@@ -1508,11 +1520,11 @@ label YouTwoDistract2:
     $AskLiamForInfo = False
     $thing = False
     $LookAtVine = False
+    window hide
     if GotRock == False:
         jump drag_glass
     if GotRock == True:
         jump drag_glass2
-    window hide
 return
 
 label NoEmmaDaggerInfo:
@@ -1566,11 +1578,11 @@ label NoEmmaDaggerInfo:
     $AskLiamForInfo = False
     $thing = False
     $LookAtVine = False
+    window hide
     if GotRock == False:
         jump drag_glass
     if GotRock == True:
         jump drag_glass2
-    window hide
 return
 
 label LiamInfo:
@@ -1677,6 +1689,11 @@ label CutVine:
     E "2!" with vpunch
     E "3!" with vpunch
     hide Emma yell with moveoutleft
+    window hide
+    show LilaCatchPage with fade
+    pause 1
+    window show
+    hide LilaCatchPage with fade
     show Lila happy at left with moveinleft
     L "!" with hpunch
     show Lila laugh with dissolve
@@ -1814,5 +1831,4 @@ label CutVine2:
             jump SaveYourself
         "Save Yourself!" if SaveYourSelf_DoNotCare == True:
             jump SaveYourself2
-    window hide
 return

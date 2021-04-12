@@ -6,6 +6,8 @@ label NearbyVillage:
     show Emma dissapointed at emmaflip
     show Emma dissapointed at emmaRight
     show Emma sigh at PopUp with dissolve
+    stop music fadeout 1.0
+    play music BadEnd fadein 5.0 volume 0.3
     E "You stay here."
     show Emma envy with dissolve
     E "You might just cause more trouble if you tagged along."
@@ -72,6 +74,8 @@ label EmmaGoGetHelp:
     show Emma dissapointed at emmaflip
     show Emma dissapointed at emmaRight
     show Emma concern at PopUp with dissolve
+    stop music fadeout 1.0
+    play music GoodEnd fadein 5.0 volume 0.3
     E "I can trust you to keep him safe?"
     show Lila shocked with dissolve
     show Emma dissapointed with dissolve
@@ -136,6 +140,8 @@ label EmmaGoGetHelp2:
     show Emma envy at emmaflip
     show Emma envy at emmaRight
     show Emma envy at PopUp with dissolve
+    stop music fadeout 1.0
+    play music BadEnd fadein 5.0 volume 0.3
     E "As if I can trust you again."
     show Emma concern with dissolve
     show Lila shocked with dissolve
@@ -194,6 +200,8 @@ label BadEnd1:
     show Emma shocked at emmaflip
     show Emma shocked at emmaRight
     show Emma angry at PopUp with dissolve
+    stop music fadeout 1.0
+    play music BadEnd fadein 5.0 volume 0.3
     E "Are you serious?"
     show Emma envy with dissolve
     E "Feel your chest."
@@ -299,15 +307,11 @@ label BadEnd1:
     RV2 "Don't you dare come back!"
     L2 "Trust me."
     L2 "I won't."
-    #hide EmmaLiamProtect with fade
-    #show TearsEmmaLiamProtect with fade
     show static2 with fade
     show bblack
     L "They are all I need..."
     L "They were all I had."
     L "What have I done?"
-    #hide FriendBackTears with fade
-    #hide bblack with fade
     show image "black.png"
     "Mission failed."
     "Hurt status: Liam is hurt."
@@ -325,6 +329,7 @@ label MysteriesAwait:
     show Emma nervous at emmaLeft
     show Emma nervous at emmaMoveUp
     show Lila happy at PopUp with dissolve
+    play music RheaSoundtrack fadein 5.0 volume 0.3
     L "We did it!"
     show Lila happy at MoveUp with dissolve
     show Emma nervous at PopUp with dissolve
@@ -358,6 +363,8 @@ label MysteriesAwait:
     show Emma sigh with dissolve
     show Emma dissapointed with dissolve
     show Liam default with dissolve
+    stop music fadeout 1.0
+    play music GoodEnd fadein 5.0 volume 0.3
     L2 "Let's find a nearby library where I can focus and do some research."
     show Liam default at LiamMoveUp with dissolve
     show Lila happy at PopUp with dissolve
@@ -426,6 +433,7 @@ label SaveMe1:
     hide VineHurt with fade
     show image "CaveEntrance.png" with dissolve
     show Emma nervous with dissolve
+    play music GoodEnd fadein 5.0 volume 0.3
     E "...."
     show Emma envy with dissolve
     play music RheaSoundtrack fadein 5.0 volume 0.3
@@ -467,6 +475,7 @@ label SaveMe2:
     show Emma yell at left with moveinleft
     E "AHHHHHHHHHHH!" with hpunch
     stop music fadeout 1.0
+    play music BadEnd fadein 5.0 volume 0.3
     $renpy.notify("Emma choose to save Liam.")
     hide Vina death with fade
     show image "black.png"
@@ -600,6 +609,7 @@ label SaveLiam:
     $renpy.notify("Page Found.")
     $inventory.add(Page1)
     show Lila smile at left with moveinleft
+    play music GoodEnd fadein 5.0 volume 0.3
     L "Thanks Mingluo!"
     show Lila skeptical with dissolve
     L "Hm?"
@@ -648,6 +658,8 @@ return
 label SaveLiam2:
     show image "black.png" with fade
     window show
+    stop music fadeout 1.0
+    play music BadEnd fadein 5.0 volume 0.3
     show screen positive_affection
     $affbarposi = True
     $affbarnegative = False
@@ -791,6 +803,8 @@ label SaveYourself:
 return
 
 label DoNotDie:
+    stop music fadeout 1.0
+    play music GoodEnd fadein 5.0 volume 0.3
     show image "CaveEntrance.png" with dissolve
     window show
     show screen positive_affection
@@ -834,6 +848,8 @@ label DoNotDie:
 return
 
 label Besafe:
+    stop music fadeout 1.0
+    play music GoodEnd fadein 5.0 volume 0.3
     show image "CaveEntrance.png" with dissolve
     window show
     show screen positive_affection
@@ -921,6 +937,8 @@ label Besafe:
 return
 
 label YouSure:
+    stop music fadeout 1.0
+    play music GoodEnd fadein 5.0 volume 0.3
     show image "CaveEntrance.png" with dissolve
     window show
     show screen negative_affection
@@ -994,6 +1012,8 @@ return
 label SaveYourself2:
     show image "black.png"
     window show
+    stop music fadeout 1.0
+    play music GoodEnd fadein 5.0 volume 0.3
     show screen positive_affection
     $affbarposi = True
     $affbarnegative = False

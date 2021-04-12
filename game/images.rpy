@@ -117,23 +117,6 @@ image static2: ##Glitch with a slight fade/transparency##
     "FadeGlitchBlack8.png" with Dissolve(0.15)
     0.15
     repeat
-#################################################################################
-#BGs#
-image BGStart = "BGStart.png"
-image DefaultForest = "Forest_Default.png"
-image Cave = "Cave.png"
-image InsideDen = "InsideDen.png"
-image Den = "OutsideDen.png"
-image FirstPage = "FirstPage.png"
-image TwoPaths = "TwoPaths.png"
-image SecondPage = "SecondPage.png"
-image Map = "Map.png"
-image TwoPaths = "Twopaths.png"
-image MingLouSmilesEvil = im.Scale("MingluoBurnCG.png", 1920, 1080)
-image CaveExploreMain = "CaveExploreMain.png" #This is the cave explore with the items inside the picture
-image CaveExploreMainEmpty = "CaveExploreMainEmpty.png" #Without the items(sprites) on the picture
-image CaveEntrance = "CaveEntrance.png"
-image VineWall = "VineWall.png"
 ############################################################################
 #Mingluo Sprites#
 image Mingluo happy =  im.Scale("MingluoHappy.png", 960, 1000)

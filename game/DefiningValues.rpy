@@ -15,6 +15,9 @@ define audio.RheaSoundtrack ="audio/RheaSoundtrack.wav"
 define audio.RheaMain = "audio/RheaMainMenuMusic.wav"
 define audio.LilaIntro = "audio/Lila Intro 4.wav"
 define audio.CaveBattleMusic = "audio/CaveMusic.wav"
+define audio.BadEnd = "audio/Bad End music.wav"
+define audio.GoodEnd = "audio/Good End Music.wav"
+define audio.Bird = "audio/Brid Chirp.wav"
 
 ##################Defining Movies#############
 image opening movie = Movie(channel="movies", play="Movies/Test2.mpg")

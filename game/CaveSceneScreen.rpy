@@ -11,6 +11,7 @@ init python:
 
         return True
 window hide
+
 screen slide_glass_screen:
     add "CaveExploreMainEmpty.png"
     draggroup:
