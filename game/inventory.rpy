@@ -144,3 +144,4 @@ init -1:
     image tooltip_inventory_Drumstick=LiveComposite((665, 73), (100,-40), ImageReference("information"), (65,0), Text("A Hercinia Drumstick", style="tips_bottom"))
     image tooltip_inventory_LilaMushroom=LiveComposite((665, 73), (100,-40), ImageReference("information"), (65,0), Text("A mushroom flashlight", style="tips_bottom"))
     image tooltip_inventory_PageItem=LiveComposite((665, 73), (100,-40), ImageReference("information"), (65,0), Text("An ancient artifact", style="tips_bottom"))
+    image tooltip_inventory_Dagger=LiveComposite((665, 73), (100,-40), ImageReference("information"), (65,0), Text("It used to end lives...", style="tips_bottom"))

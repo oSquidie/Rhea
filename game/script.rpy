@@ -26,7 +26,7 @@ label start:
         drumstick = Item("DrumStick", image="gui/inv_Drumstick.png")
         dullrock = Item("A Dull Rock", image="gui/inv_rock.png")
         LilaMushroom = Item("A Glowing Mushroom", image="gui/inv_LilaMushroom.png")
-        EmmaDagger = Item("Emma's Dagger", image="gui/inv_Dagger.png")
+        Dagger = Item("Emma's Dagger", image="gui/inv_Dagger.png")
         Page1 = Item ("A Mysterious Page.", image= "gui/inv_PageItem.png")
         inventory = Inventory()
     hide screen inventory_button
@@ -511,7 +511,7 @@ label Smell2:
     show Liam default at LiamMoveUp
     show Emma default at emmaMoveUp
     show Emma default at emmaMiddle
-    show Emma default at emmaflip 
+    show Emma default at emmaflip
     show Emma surprised at PopUp with dissolve
     E "What are you doing?"
     show Emma surprised at emmaMoveUp with dissolve

@@ -1,30 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/Endings.rpy", line 754, in script
-    show image VineHurt with fade
-  File "game/Endings.rpy", line 754, in <module>
-    show image VineHurt with fade
-NameError: name 'VineHurt' is not defined
+  File "game/Endings.rpy", line 104, in script
+    $inventory.add(Dagger)
+  File "game/Endings.rpy", line 104, in <module>
+    $inventory.add(Dagger)
+NameError: name 'Dagger' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/Endings.rpy", line 754, in script
-    show image VineHurt with fade
-  File "renpy/ast.py", line 1191, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "renpy/ast.py", line 1147, in show_imspec
-    expression = renpy.python.py_eval(expression)
-  File "renpy/python.py", line 2249, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "renpy/python.py", line 2242, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/Endings.rpy", line 754, in <module>
-    show image VineHurt with fade
-NameError: name 'VineHurt' is not defined
+  File "game/Endings.rpy", line 104, in script
+    $inventory.add(Dagger)
+  File "renpy/ast.py", line 922, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 2218, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/Endings.rpy", line 104, in <module>
+    $inventory.add(Dagger)
+NameError: name 'Dagger' is not defined
 
 Windows-10-10.0.19041
 Ren'Py 7.4.3.1414
  
-Fri Apr  9 08:53:45 2021
+Mon Apr 12 16:15:58 2021
