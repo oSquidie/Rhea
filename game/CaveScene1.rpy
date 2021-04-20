@@ -220,6 +220,7 @@ return
 
 label drag_glass:
     call screen slide_glass_screen
+    stop sound
     hide CloseupBerry
     hide CloseupCrystal
     hide CloseupCrystalBlood
@@ -267,6 +268,7 @@ return
 ######Rock by Crystal was found.#########
 label drag_glass2:
     call screen slide_glass_screen2
+    stop sound
     hide CloseupBerry
     hide CloseupCrystal
     hide CloseupCrystalBlood
@@ -385,6 +387,7 @@ label TouchCrystal1:
     E "Wha-!"
     E "Stop!" with vpunch
     hide Emma shocked at left with moveoutleft
+    play sound Ouch fadein 5.0
     L "Ouch!" with hpunch
     hide LilaTouchCrystal with dissolve
     show CloseupCrystalBlood
@@ -438,6 +441,7 @@ label TouchCrystal2:
     show LilaTouchCrystal with dissolve
     pause 1
     window show
+    play sound Ouch fadein 5.0
     L "Ouch!" with hpunch
     hide LilaTouchCrystal with dissolve
     show CloseupCrystalBlood
@@ -593,6 +597,7 @@ label OpusDoor:
     window hide
     show CloseupOpus
 label Opus_Menu:
+    play sound Opus fadein 5.0
     menu:
         "Look at this blob!" if LookAtOpus == True:
             jump Opus
@@ -610,6 +615,7 @@ label Opus_Menu:
 return
 
 label Opus:
+    stop sound fadeout 1.0
     window hide
     show LilaandEmmaOpus with dissolve
     pause 1
@@ -655,6 +661,7 @@ label Opus:
 return
 
 label Opus2:
+    stop sound fadeout 1.0
     window hide
     show LilaandEmmaOpus with dissolve
     window show
@@ -673,6 +680,7 @@ return
 
 ###########Still part of Opus Door but For rock options########
 label Rock:
+    play sound Opus fadein 5.0
     window hide
     show CloseupRock
     pause 1
@@ -729,6 +737,7 @@ return
 #######Hints for Player######
 
 label InformationOnOpus:
+    play sound Opus fadein 5.0
     window hide
     show CloseupOpus
     pause 1
@@ -758,6 +767,7 @@ label InformationOnOpus:
 return
 
 label InformationOnOpus2:
+    play sound Opus fadein 5.0
     window hide
     show CloseupOpus
     pause 1
@@ -785,6 +795,7 @@ return
 
 ##########Interactions for rock#########
 label FeedingDeadBird:
+    play sound Opus fadein 5.0
     window hide
     show CloseupRock
     pause 1
@@ -873,6 +884,7 @@ label FeedingDeadBird:
 return
 
 label LiamOrYou:
+    play sound Opus fadein 5.0
     window hide
     show CloseupRock
     pause 1
@@ -899,6 +911,7 @@ label LiamOrYou:
 return
 
 label LiamOrYou2:
+    play sound Opus fadein 5.0
     window hide
     show CloseupRock
     pause 1
@@ -1012,6 +1025,7 @@ label LiamOrYou2:
 return
 
 label LiamOrYou3:
+    play sound Opus fadein 5.0
     window hide
     show CloseupRock
     pause
@@ -1038,6 +1052,7 @@ label LiamOrYou3:
 return
 
 label ReachForIt:
+    play sound Opus fadein 5.0
     window hide
     show CloseupOpus
     pause 1
@@ -1074,8 +1089,10 @@ label ReachForIt:
     $renpy.notify("Liam choose to save you.")
     window show
     L2 "!" with hpunch
+    play sound LiamFaint fadein 5.0
     window hide
     show LiamHurt with dissolve
+    stop sound
     pause 1
     window show
     show Emma panic at left with moveinleft
@@ -1157,6 +1174,7 @@ label ReachForIt:
 return
 
 label ReachForIt2:
+    play sound Opus fadein 5.0
     window hide
     show CloseupRock
     pause 1
@@ -1380,9 +1398,11 @@ label ObserveVine:
     L "!" with vpunch
     hide Lila shocked with moveoutleft
     show Vina neutral with fade
+    play sound VineEyes fadein 5.0
     show Lila panic at left with moveinleft
     L "That looks scary..."
     hide Vina neutral with fade
+    stop sound
     hide Lila panic with moveoutleft
     show Liam nervous at right with moveinright
     L2 "Yeah..."
@@ -1654,6 +1674,7 @@ label CutVine:
     hide window
     hide VineWall with fade
     show Vina neutral with fade
+    play sound VineEyes fadein 5.0
     pause
     window show
     show Emma smile at left with moveinleft
@@ -1661,6 +1682,7 @@ label CutVine:
     hide Emma smile with moveoutleft
     window hide
     hide Vina neutral with fade
+    stop sound
     show VineWall with fade
     pause 1
     window show
@@ -1726,6 +1748,7 @@ label CutVine2:
     hide window
     hide VineWall with fade
     show Vina neutral with fade
+    play sound VineEyes fadein 5.0
     pause
     window show
     show Emma concern at left with moveinleft
@@ -1733,6 +1756,7 @@ label CutVine2:
     hide Emma concern with moveoutleft
     window hide
     hide Vina neutral with fade
+    stop sound
     show VineWall with fade
     pause
     window show

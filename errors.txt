@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/CaveScene1.rpy", line 312: reached end of line when expecting ':'.
-    if TouchCrystal_EmmaCare == True
-                                    ^
-
-File "game/CaveScene1.rpy", line 314: expected statement.
-    elif TouchCrystal_EmmaDoNotCare == False
-                                    ^
-
-File "game/Endings.rpy", line 754: end of line expected.
-    show image Vine Hurt with fade
-                    ^
+File "game/CaveScene1.rpy", line 1399: expected end of line
+    stop sound fadein 5.0
+               ^
 
 Ren'Py Version: Ren'Py 7.4.3.1414
-Fri Apr  9 08:54:24 2021
+Tue Apr 20 13:09:52 2021

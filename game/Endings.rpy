@@ -398,6 +398,7 @@ label MysteriesAwait:
 return
 
 label SaveMe1:
+    play sound VineEyes fadein 5.0 volume 2
     show Vina death with fade
     window show
     show screen negative_affection
@@ -426,6 +427,7 @@ label SaveMe1:
     $renpy.notify("Emma throws it at one of the eyes on the Vina Plant.")
     show Emma envy with dissolve
     hide Vina death
+    stop sound
     show image VineHurt with fade
     E "Let's get out of here now!"
     stop music fadeout 1.0
@@ -470,6 +472,7 @@ label SaveMe1:
 return
 
 label SaveMe2:
+    play sound VineEyes fadein 5.0 volume 2
     show Vina death with fade
     window show
     show Emma yell at left with moveinleft
@@ -478,6 +481,7 @@ label SaveMe2:
     play music BadEnd fadein 5.0 volume 0.3
     $renpy.notify("Emma choose to save Liam.")
     hide Vina death with fade
+    hide sound
     show image "black.png"
     show Emma panic with dissolve
     E "I-"
@@ -492,6 +496,7 @@ label SaveMe2:
 return
 
 label SaveLiam:
+    play sound VineEyes fadein 5.0 volume 2
     show Vina death with fade
     window show
     show screen positive_affection
@@ -519,6 +524,7 @@ label SaveLiam:
     E "Take this you dumb Vina Plant!"
     $renpy.notify("Emma throws it at one of the eyes on the Vina Plant.")
     hide Vina death with fade
+    stop sound
     show VineHurt with fade
     show Emma envy with dissolve
     E "Let's get out of here now!"
@@ -715,6 +721,7 @@ label SaveLiam2:
 return
 
 label SaveYourself:
+    play sound VineEyes fadein 5.0 volume 2
     show Vina death with fade
     window show
     show screen positive_affection
@@ -731,6 +738,7 @@ label SaveYourself:
     $renpy.notify("Emma throws it at one of the eyes on the Vina Plant.")
     show Emma envy with dissolve
     hide Vina death with fade
+    stop sound
     show VineHurt with fade
     E "Let's get out of here now!"
     $renpy.notify("Stunned by the pain the Vina plant drops Liam.")

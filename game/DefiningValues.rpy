@@ -18,9 +18,17 @@ define audio.CaveBattleMusic = "audio/CaveMusic.wav"
 define audio.BadEnd = "audio/Bad End music.wav"
 define audio.GoodEnd = "audio/Good End Music.wav"
 define audio.Bird = "audio/Brid Chirp.wav"
+define audio.BirdDies = "audio/Bird dies.wav"
+define audio.BirdFalls = "audio/Bird falls.wav"
+define audio.EmmaSlash = "audio/Emma Slash.wav"
+define audio.Opus = "audio/Opus.wav"
+define audio.LiamFaint = "audio/Liam Faint.wav"
+define audio.Ouch = "audio/Ouch.wav"
+define audio.VineEyes = "audio/VineEYES.wav"
 
 ##################Defining Movies#############
 image opening movie = Movie(channel="movies", play="Movies/Test2.mpg")
+image ending movie = Movie(channel="movies", play="Movies/End Page.mpg")
 
 ###################For Senses in Cave##################
 define C_Sight1 = True

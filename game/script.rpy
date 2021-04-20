@@ -319,7 +319,7 @@ label Sound1:
     E "I hear nothing but insects."
     show Emma dissapointed at emmaMoveUp with dissolve
     show Lila skeptical at PopUp with dissolve
-    play sound Bird fadein 5.0 volume 0.3
+    play sound Bird fadein 5.0 volume 4
     L "..."
     L "Really?"
     L "I hear some kind of...chirping?"
@@ -473,7 +473,7 @@ label Sound2:
     E "I hear nothing but insects."
     show Emma dissapointed at emmaMoveUp with dissolve
     show Lila skeptical at PopUp with dissolve
-    play sound Bird fadein 5.0 volume 0.3
+    play sound Bird fadein 5.0 volume 4
     L "..."
     L "Really?"
     L "I hear some kind of...chirping?"
