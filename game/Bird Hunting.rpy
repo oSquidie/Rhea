@@ -84,9 +84,9 @@ label KillIt:
     E "Thanks Liam!"
     L "..."
     E "Aiming."
-    play sound EmmaSlash fadein 5.0 volume 6
+    play sound EmmaSlash
     E "Got it!"
-    play sound BirdFalls fadein 5.0 volume 2
+    play sound BirdFalls 
     hide Emmavsbird with dissolve
     show image "Forest_Default.png" with dissolve
     show Lila Sweats at MoveUp
