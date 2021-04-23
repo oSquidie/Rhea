@@ -429,11 +429,11 @@ label TouchCrystal1:
     $LilaBleed = False
     $LilaDoNotBleed = True
     $thing = False
+    window hide
     if GotRock == False:
         jump drag_glass
     if GotRock == True:
         jump drag_glass2
-    window hide
 return
 
 label TouchCrystal2:
@@ -1565,7 +1565,7 @@ label NoEmmaDaggerInfo:
     L "Why won't it be enough?"
     hide Lila skeptical with moveoutleft
     show Emma dissapointed at left with moveinleft
-    E "Becuase there's only one weapon but three problems."
+    E "Because there's only one weapon but three problems."
     hide Emma dissapointed with moveoutleft
     show Lila confused at left with moveinleft
     L "?"

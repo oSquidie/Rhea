@@ -32,7 +32,7 @@ label start:
     hide screen inventory_button
     stop music fadeout 1.0
     default preferences.text_cps = 50
-    play music LilaIntro fadein 5.0 volume 0.3
+    play music LilaIntro fadein 5.0 volume 0.3 loop
     window hide
     show LilaIntro1
     pause 1
