@@ -337,7 +337,6 @@ label Sound1:
     E "It's definitely a {color=#00ffe8}Hercinia{/color}."
     show Emma excited with dissolve
     E "Let's go hunt it down."
-    stop music fadeout 1.0
     hide Lila surprised with fade
     hide Liam default with fade
     hide Emma excited with fade
@@ -491,7 +490,6 @@ label Sound2:
     E "It's definitely a {color=#00ffe8}Hercinia{/color}."
     show Emma excited with dissolve
     E "Let's go hunt it down."
-    stop sound fadeout 1.0
     hide Lila surprised with fade
     hide Liam default with fade
     hide Emma excited with fade
