@@ -1,4 +1,7 @@
 label Cave1:
+    play sound Walk
+    stop music fadeout 1.0
+    play music NormalCaveMusic fadein 5.0 volume 0.3 loop
     window show
     scene image "Cave.png" with dissolve
     show Lila default at MoveUp
@@ -8,6 +11,7 @@ label Cave1:
     show Emma default at emmaLeft
     show Emma default at emmaMoveUp
     show Lila surprised at PopUp with dissolve
+    stop sound
     L "Oh my!"
     show Liam surprised with dissolve
     show Emma surprised with dissolve
@@ -219,6 +223,7 @@ return
 ##########The Door Options##########
 
 label drag_glass:
+    play sound Walk
     window hide
     stop sound
     call screen slide_glass_screen
@@ -267,6 +272,7 @@ label drag_glass:
 return
 ######Rock by Crystal was found.#########
 label drag_glass2:
+    play sound Walk
     window hide
     stop sound
     call screen slide_glass_screen2
@@ -321,6 +327,7 @@ label CrystalDoor:
             jump drag_glass2
     window hide
 label Crystal_menu:
+    play sound Walk
     window hide
     if emma_points >= 2:
         if thing == True:
@@ -379,16 +386,18 @@ label LookAtCrystal:
 return
 
 label TouchCrystal1:
+    E "Wha-!"
+    E "Stop!" with vpunch
     window hide
+    play sound EmmaSlash
     show LilaTouchCrystal with dissolve
     pause 1
     window show
     #show Emma shocked at left with moveinleft
-    E "Wha-!"
-    E "Stop!" with vpunch
     #hide Emma shocked at left with moveoutleft
-    play sound Ouch fadein 5.0
+    play sound Ouch
     L "Ouch!" with hpunch
+    stop sound
     hide LilaTouchCrystal with dissolve
     show CloseupCrystalBlood
     show Emma angry at left with moveinleft
@@ -438,11 +447,13 @@ return
 
 label TouchCrystal2:
     window hide
+    play sound EmmaSlash
     show LilaTouchCrystal with dissolve
     pause 1
     window show
-    play sound Ouch fadein 5.0
+    play sound Ouch
     L "Ouch!" with hpunch
+    stop sound
     hide LilaTouchCrystal with dissolve
     show CloseupCrystalBlood
     show Emma sigh at left with moveinleft
@@ -526,7 +537,7 @@ label EarnedSharpRock:
     show Emma sigh with dissolve
     E "Guess you're right."
     hide Emma sigh with moveoutleft
-    show Lila happy with moveinleft
+    show Lila happy at left with moveinleft
     L "Look."
     show screen inventory_button
     $inventory.add(Sharprock)
@@ -594,6 +605,7 @@ label EarnedSharpRock2:
 ###########Opus Door##############
 
 label OpusDoor:
+    play sound Walk
     window hide
     show CloseupOpus
 label Opus_Menu:
@@ -615,7 +627,7 @@ label Opus_Menu:
 return
 
 label Opus:
-    stop sound fadeout 1.0
+    play sound Walk
     window hide
     show LilaandEmmaOpus with dissolve
     pause 1
@@ -661,7 +673,7 @@ label Opus:
 return
 
 label Opus2:
-    stop sound fadeout 1.0
+    play sound Walk
     window hide
     show LilaandEmmaOpus with dissolve
     window show
@@ -819,18 +831,22 @@ label FeedingDeadBird:
     E "On the count of 3!"
     E "3!"
     E "2!"
-    E "1!"
+    E "1!" with vpunch
+    hide Emma excited with moveoutleft
     window hide
     show LilaThrowDrumstick
-    pause 1
-    L "!" with vpunch
+    play sound Whoosh
+    pause .4
     hide LilaThrowDrumstick
     show LilaThrowDrumstick2
+    play sound Crunch
     pause 1
     hide LilaThrowDrumstick2
+    stop sound
     show screen inventory_button
     $renpy.notify("Drumstick has been tossed.")
     $inventory.drop(drumstick)
+    window show
     show Emma happy at left with moveinleft
     E "Got it!"
     hide screen inventory_button
@@ -920,10 +936,10 @@ label LiamOrYou2:
     E "We might be able to."
     show Emma smug with dissolve
     E "Pass me that mushroom in your bag."
-    stop music fadeout 1.0
     hide Emma smug with moveoutleft
     show Lila confused at left with moveinleft
     L "Ok?"
+    play sound Whoosh
     show screen inventory_button
     $renpy.notify("You passed the mushroom to Emma.")
     $inventory.drop(LilaMushroom)
@@ -932,9 +948,11 @@ label LiamOrYou2:
     hide screen inventory_button
     window hide
     L "My Mushroom!"
+    play sound DeeperThump
     show OpusDistract
     pause 1
     window show
+    stop sound
     L "Why did you throw over to the blob!"
     E "Shut up and just watch."
     L "?"
@@ -942,14 +960,17 @@ label LiamOrYou2:
     E "Liam grab the rock!"
     window hide
     hide OpusDistract
+    play sound Whoosh
     show OpusDistract2
     pause 1
     window show
     L2 "Got it!"
+    stop sound
     E "Nice!"
     E "I'll go take back the mushroom."
     window hide
     hide OpusDistract2
+    play sound Whoosh
     show OpusDistract3
     pause 1
     window show
@@ -971,8 +992,10 @@ label LiamOrYou2:
     hide OpusDistract5
     show CloseupOpus
     E "Here take back your mushroom."
+    play sound Whoosh
     hide CloseupOpus
     show CloseupRock
+    stop sound
     show screen inventory_button
     $renpy.notify("Emma gave back the mushroom.")
     $inventory.add(LilaMushroom)
@@ -1088,7 +1111,9 @@ label ReachForIt:
     hide LilaScareOfOpus with dissolve
     $renpy.notify("Liam choose to save you.")
     window show
+    play sound DeeperThump
     L2 "!" with hpunch
+    stop sound
     play sound LiamFaint fadein 5.0
     window hide
     show LiamHurt with dissolve
@@ -1125,9 +1150,11 @@ label ReachForIt:
     E "Liam?"
     hide LiamHurt with dissolve
     window hide
+    play sound DeeperThump
     show LiamKnockedOut with dissolve
     pause 1
     window show
+    stop sound
     ##hide Emma panic with moveoutleft
     #show Lila panic at left with moveinleft
     L "Liam!"
@@ -1205,6 +1232,7 @@ return
 ##########For Hidden Door##########
 
 label TreasureDoor:
+    play sound Walk
     window hide
     show CloseupDoor
     pause 1
@@ -1257,6 +1285,7 @@ return
 #####Rock by Crystal####
 
 label RockByCrystal:
+    play sound Walk
     window hide
     show CloseupRock
     pause 1
@@ -1288,6 +1317,7 @@ label TakeRock:
     pause 1
     window show
     show screen inventory_button
+    play sound Whoosh
     $renpy.notify("You gained a Dull Rock.")
     $inventory.add(dullrock)
     show Emma concern at left with moveinleft
@@ -1312,12 +1342,14 @@ label TakeRock:
     $GotRock2 = True
     $RockFound_Opus = False
     $RockFound_Opus2 = False
+    stop sound
     window hide
     jump drag_glass2
 return
 
 ########################Vine Wall###########
 label VineWall:
+    play sound Walk
     window hide
     show VineWall
     menu:
@@ -1398,7 +1430,7 @@ label ObserveVine:
     L "!" with vpunch
     hide Lila shocked with moveoutleft
     show Vina neutral with fade
-    play sound VineEyes fadein 5.0
+    play sound VineEyes
     show Lila panic at left with moveinleft
     L "That looks scary..."
     hide Vina neutral with fade
@@ -1669,22 +1701,21 @@ label CutVine:
     E "Ok."
     show Emma smile with dissolve
     E "Here's the plan."
+    hide Emma Smile at left with moveoutleft
+    window hide
+    show Vina neutral with fade
+    play sound VineEyes
+    pause 1
+    window show
+    show Emma smile at left with moveinleft
     E "Me and Liam will distract the main body of the Vina Plant."
     hide Emma smile with moveoutleft
-    hide window
-    hide VineWall with fade
-    show Vina neutral with fade
-    play sound VineEyes fadein 5.0
-    pause
+    window hide
+    hide Vina neutral with fade
     window show
     show Emma smile at left with moveinleft
     E "You will go cut the entangled vines around it."
     hide Emma smile with moveoutleft
-    window hide
-    hide Vina neutral with fade
-    stop sound
-    show VineWall with fade
-    pause 1
     window show
     show Emma sly at left with moveinleft
     E "Grab the page and cut your way out."
@@ -1707,14 +1738,17 @@ label CutVine:
     show Emma yell with dissolve
     hide VineWall with fade
     show image "black.png" with fade
-    E "1!" with vpunch
-    E "2!" with vpunch
+    E "1!"
+    E "2!"
     E "3!" with vpunch
+    play sound EmmaSlash
     hide Emma yell with moveoutleft
     window hide
+    play sound PaperFall
     show LilaCatchPage with fade
     pause 1
     window show
+    stop sound
     hide LilaCatchPage with fade
     show Lila happy at left with moveinleft
     L "!" with hpunch
@@ -1741,26 +1775,25 @@ label CutVine2:
     window show
     show Emma concern at left with moveinleft
     E "Ok."
-    show Emma sigh with dissolve
+    show Emma sigh at left with dissolve
     E "Here's the plan."
+    hide Emma sigh with moveoutleft
+    window hide
+    play sound VineEyes
+    show Vina neutral with fade
+    pause 1
+    window show
+    show Emma sigh at left with moveinleft
     E "Me and Liam will distract the main body of the Vina Plant."
     hide Emma sigh with moveoutleft
-    hide window
-    hide VineWall with fade
-    show Vina neutral with fade
-    play sound VineEyes fadein 5.0
-    pause
+    window hide
+    stop sound
+    hide Vina neutral with fade
+    pause 1
     window show
     show Emma concern at left with moveinleft
     E "You will go cut the entangled vines around it."
-    hide Emma concern with moveoutleft
-    window hide
-    hide Vina neutral with fade
-    stop sound
-    show VineWall with fade
-    pause
-    window show
-    show Emma angry at left with moveinleft
+    show Emma angry with dissolve
     E "Grab the page and cut your way out."
     hide Emma angry with moveoutleft
     show Lila sad at left with moveinleft
@@ -1781,13 +1814,17 @@ label CutVine2:
     show Emma yell with dissolve
     hide VineWall with fade
     show image "black.png" with fade
-    E "1!" with vpunch
-    E "2!" with vpunch
+    E "1!"
+    E "2!"
     E "3!" with vpunch
+    play sound EmmaSlash
     hide Emma yell with moveoutleft
     show Lila panic at left with moveinleft
     play music CaveBattleMusic fadein 5.0 volume 0.3
+    stop sound
+    play sound DeeperThump
     L "!" with vpunch
+    stop sound
     hide Lila panic with moveoutleft
     show Emma shocked at left with moveinleft
     E "Crap!"
@@ -1809,7 +1846,9 @@ label CutVine2:
     $renpy.notify("Vines entangled Liam.")
     hide Emma yell with moveoutleft
     show Liam shocked at right with moveinright
+    play sound DeeperThump
     L2 "!" with vpunch
+    stop sound
     hide Liam shocked with moveoutright
     $renpy.notify("Emma is in a state of panic.")
     show Emma panic at left with moveinleft

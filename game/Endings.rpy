@@ -48,6 +48,7 @@ label NearbyVillage:
     E "When I'm back and I find out you're gone..."
     E "I won't think twice and ditch you."
     hide Emma intimidating with fade
+    play sound Walk
     $renpy.notify("Emma left to find a village.")
     show Lila sad at middle with dissolve
     L "You always leave me behind..."
@@ -64,6 +65,23 @@ label NearbyVillage:
     "Hurt status: Liam was hurt."
     "Ending Achieved: Waiting."
     "No Pages Obtained."
+    show Cave with fade
+    window show
+    show Mingluo no eyes at right with moveinright
+    play sound Walk
+    Q "If you have chosen your actions more wisely this wouldn't have happened."
+    hide Mingluo no eyes with moveoutright
+    show Lila shocked at left with moveinleft
+    L "Who's there!"
+    show Lila surprised with dissolve
+    L "!"
+    show Lila panic with dissolve
+    L "You're..."
+    hide Lila surprised with moveoutleft
+    window hide
+    hide Cave with fade
+    show image "black.png"
+    #$renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label EmmaGoGetHelp:
@@ -118,6 +136,7 @@ label EmmaGoGetHelp:
     E "Just don't go anywhere."
     show Emma soft with dissolve
     E "Wait for me to come back."
+    play sound Walk
     show Emma soft at emmaMoveUp with dissolve
     show Lila sad at PopUp with dissolve
     L "Ok..."
@@ -130,6 +149,7 @@ label EmmaGoGetHelp:
     "Hurt status: Liam was hurt."
     "Ending Achieved: Waiting Together."
     "No Pages Obtained."
+    #$renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label EmmaGoGetHelp2:
@@ -174,6 +194,7 @@ label EmmaGoGetHelp2:
     E "When I'm back and I find out you're gone..."
     E "I won't think twice and ditch you."
     hide Emma angry with fade
+    play sound Walk
     $renpy.notify("Emma left to find a village.")
     show Lila sad at middle with dissolve
     L "You always leave me behind..."
@@ -190,6 +211,21 @@ label EmmaGoGetHelp2:
     "Hurt status: Liam was hurt."
     "Ending Achieved: Waiting."
     "No Pages Obtained."
+    window show
+    show Mingluo no eyes at right with moveinright
+    Q "If you have chosen your actions more wisely this wouldn't have happened."
+    hide Mingluo no eyes with moveoutright
+    show Lila shocked at left with moveinleft
+    L "Who's there!"
+    show Lila surprised with dissolve
+    L "!"
+    show Lila panic with dissolve
+    L "You're..."
+    hide Lila surprised with moveoutleft
+    window hide
+    hide Cave with fade
+    show image "black.png"
+    #$renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label BadEnd1:
@@ -229,6 +265,7 @@ label BadEnd1:
     show Emma cry with dissolve
     show Emma dissapointed with dissolve
     E "Your safety no long concerns me."
+    play sound Walk
     show Emma dissapointed at emmaMoveUp with dissolve
     hide Emma dissapointed with fade
     show Lila panic at middle with dissolve
@@ -317,9 +354,11 @@ label BadEnd1:
     "Hurt status: Liam is hurt."
     "Ending Achieved: Bad end 1(Overloaded)."
     "No Pages Obtained."
+    #$renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label MysteriesAwait:
+    play sound Run
     scene image "CaveEntrance.png" with dissolve
     window show
     show Lila happy at MoveUp
@@ -395,10 +434,28 @@ label MysteriesAwait:
     "Hurt status: No one is hurt."
     "Ending Achieved: Mysteries Await."
     "First Page obtained."
+    hide HandinHand
+    show image "black.png"
+    show DefaultForest with fade
+    show Mingluo soft at MingLuoUp
+    show Mingluo soft at MingLuoMiddle
+    Q "Lila."
+    Q "I see that you've grown."
+    show Mingluo smirk with dissolve
+    show Mingluo smile with dissolve
+    Q "Keep growing."
+    Q "Soften that heart and eventually..."
+    show Mingluo evil with dissolve
+    show Mingluo happy with dissolve
+    Q "You'll be of use to me."
+    hide Mingluo happy with dissolve
+    window hide
+    hide DefaultForest with fade
+    #$renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label SaveMe1:
-    play sound VineEyes fadein 5.0 volume 2
+    play sound VineEyes
     show Vina death with fade
     window show
     show screen negative_affection
@@ -419,19 +476,22 @@ label SaveMe1:
     show Emma yell at left with moveinleft
     E "AHHHHHHHHHHH!" with hpunch
     $renpy.notify("Emma cuts the vines on you.")
+    play sound EmmaSlash
     show Emma envy with dissolve
     E "This is why you shouldn't have touched the crytsal!"
     $renpy.notify("Emma picks up your sharp rock.")
     show Emma yell with dissolve
     E "Take this you dumb Vina Plant!"
+    play sound Whoosh
     $renpy.notify("Emma throws it at one of the eyes on the Vina Plant.")
     show Emma envy with dissolve
     hide Vina death
-    stop sound
-    show image VineHurt with fade
+    play sound Squash
+    show image VineHurt
     E "Let's get out of here now!"
     stop music fadeout 1.0
     $renpy.notify("Stunned by the pain the Vina plant freed Liam.")
+    play sound Run
     hide VineHurt with fade
     show image "CaveEntrance.png" with dissolve
     show Emma nervous with dissolve
@@ -469,10 +529,27 @@ label SaveMe1:
     "Hurt status: No one is hurt."
     "Ending Achieved: Mysteries Await."
     "No Page obtained."
+    show image "black.png"
+    show DefaultForest with fade
+    show Mingluo annoyed at MingLuoUp
+    show Mingluo annoyed at MingLuoMiddle
+    Q "Tch."
+    Q "Still as dumb as she always have been."
+    show Mingluo smirk with dissolve
+    Q "At least she got that page for me."
+    show Mingluo sigh with dissolve
+    Q "Grow up faster please child."
+    show Mingluo evil with dissolve
+    show Mingluo happy with dissolve
+    Q "Then eventually you'll be of use to me."
+    hide Mingluo happy with dissolve
+    window hide
+    hide DefaultForest with fade
+    #$renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label SaveMe2:
-    play sound VineEyes fadein 5.0 volume 2
+    play sound VineEyes
     show Vina death with fade
     window show
     show Emma yell at left with moveinleft
@@ -480,11 +557,12 @@ label SaveMe2:
     stop music fadeout 1.0
     play music BadEnd fadein 5.0 volume 0.3
     $renpy.notify("Emma choose to save Liam.")
+    play sound EmmaSlash
     hide Vina death with fade
-    hide sound
     show image "black.png"
     show Emma panic with dissolve
     E "I-"
+    stop sound
     show Emma dissapointed with dissolve
     $renpy.notify("All you can see is the look of guilt.")
     E "I'm sorry..."
@@ -493,10 +571,11 @@ label SaveMe2:
     "Hurt status: unknown."
     "Ending Achieved: Results Of Being Selfish."
     "No Page obtained."
+    #$renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label SaveLiam:
-    play sound VineEyes fadein 5.0 volume 2
+    play sound VineEyes
     show Vina death with fade
     window show
     show screen positive_affection
@@ -517,17 +596,20 @@ label SaveLiam:
     show Emma yell at left with moveinleft
     E "AAAAHHHHH!" with hpunch
     $renpy.notify("Emma cuts the vines on you.")
+    play sound EmmaSlash
     show Emma envy with dissolve
     E "This is why you shouldn't have touched the crytsal!"
     $renpy.notify("Emma picks up your sharp rock.")
     show Emma yell with dissolve
     E "Take this you dumb Vina Plant!"
+    play sound Whoosh
     $renpy.notify("Emma throws it at one of the eyes on the Vina Plant.")
     hide Vina death with fade
-    stop sound
+    play sound Squash
     show VineHurt with fade
     show Emma envy with dissolve
     E "Let's get out of here now!"
+    play sound Run
     stop music fadeout 1.0
     $renpy.notify("Stunned by the pain the Vina plant drops Liam.")
     hide Emma envy with moveoutleft
@@ -558,6 +640,7 @@ label SaveLiam:
     hide Mingluo no eyes with moveoutright
     hide Cave with fade
     window hide
+    play sound Fire
     show VineBurn with fade
     pause 1
     window show
@@ -567,22 +650,25 @@ label SaveLiam:
     hide Emma shocked with moveoutleft
     show Mingluo happy at right with moveinright
     M "Nice to see you guys doing well."
+    stop sound
     hide VineBurn with fade
     window hide
     show MingluoBurnPage with fade
     pause 1
     window show
+    play sound PaperFall
     $renpy.notify("Mingluo picks up the page.")
     E "..."
     L2 "..."
     hide MingluoBurnPage with fade
     show Cave with fade
     show Lila happy at left with moveinleft
-    L "Mingluo!"
+    L "Mingluo!" with vpunch
+    play sound hug
     $renpy.notify("You gave Mingluo a hug.")
     show Mingluo disgust at right with moveinright
     show Mingluo happy with dissolve
-    M "..."
+    M "..." with vpunch
     hide Lila happy with moveoutleft
     show Mingluo smirk with dissolve
     M "Looks like you're friends don't like seeing me."
@@ -612,6 +698,7 @@ label SaveLiam:
     show Mingluo page with dissolve
     M "Here you go."
     hide Mingluo page with moveoutright
+    play sound PaperFall
     show screen inventory_button
     $renpy.notify("Page Found.")
     $inventory.add(Page1)
@@ -661,6 +748,7 @@ label SaveLiam:
     "Hurt status: No one is hurt."
     "Ending Achieved: A 'friend' helps when your in need."
     "First Page obtained."
+    #$renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label SaveLiam2:
@@ -681,6 +769,7 @@ label SaveLiam2:
     show Emma cry with dissolve
     E "I'm sorry Lila."
     $renpy.notify("Emma choose to free Liam.")
+    play sound EmmaSlash
     hide Emma cry with moveoutleft
     show Liam shocked at right with moveinright
     L2 "NO Emma!" with vpunch
@@ -692,12 +781,14 @@ label SaveLiam2:
     Q "How coldhearted..."
     hide image "black.png" with fade
     window hide
+    play sound Fire
     show VineBurn with fade
     pause 1
     window show
     hide Liam shocked with moveoutright
     show Mingluo soft at right with moveinright
     Q "You pitful child."
+    stop sound
     hide VineBurn with fade
     hide Mingluo soft with moveoutright
     window hide
@@ -718,10 +809,11 @@ label SaveLiam2:
     "Hurt status: unknown."
     "Ending Achieved: Mysteries Await."
     "No Page obtained."
+    #$renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label SaveYourself:
-    play sound VineEyes fadein 5.0 volume 2
+    play sound VineEyes
     show Vina death with fade
     window show
     show screen positive_affection
@@ -730,18 +822,21 @@ label SaveYourself:
     $emma_points += 1
     $renpy.notify("Emma choose to save you first.")
     show Emma envy at left with moveinleft
+    play sound EmmaSlash
     E "You must be really stupid if you I'll only save myself."
     hide screen positive_affection
     $renpy.notify("Emma picks up your sharp rock.")
     show Emma yell cry with dissolve
+    play sound Whoosh
     E "Take this you dumb Vina Plant!"
     $renpy.notify("Emma throws it at one of the eyes on the Vina Plant.")
     show Emma envy with dissolve
     hide Vina death with fade
-    stop sound
+    play sound Squash
     show VineHurt with fade
     E "Let's get out of here now!"
     $renpy.notify("Stunned by the pain the Vina plant drops Liam.")
+    play sound Run
     stop music fadeout 1.0
     hide Emma envy with moveoutleft
     hide VineHurt with fade
@@ -845,6 +940,7 @@ label DoNotDie:
     hide Emma soft with moveoutleft
     show Lila relieved at left with moveinleft
     L "Ok."
+    play sound Walk
     hide Lila relieved with moveoutleft
     #hide image "CaveEntrance.png"
     window hide
@@ -855,6 +951,7 @@ label DoNotDie:
     "Hurt status: No one was hurt."
     "Ending Achieved: Learn Through Failure."
     "No Page obtained."
+    #$renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label Besafe:
@@ -944,6 +1041,7 @@ label Besafe:
     "Hurt status: No one was hurt."
     "Ending Achieved: Mysteries Await."
     "First Page obtained."
+    #$renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label YouSure:
@@ -1017,6 +1115,7 @@ label YouSure:
     "Hurt status: No one was hurt."
     "Ending Achieved: Learn Through Failure."
     "No Page Obtained."
+    #$renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label SaveYourself2:
@@ -1060,9 +1159,11 @@ label SaveYourself2:
     Q "You pitful child."
     hide image "black.png" with fade
     window hide
+    play sound Fire
     show VineBurn with fade
     pause 1
     window show
+    stop sound
     hide VineBurn with fade
     window hide
     show MinglouCatchLila with dissolve
@@ -1085,4 +1186,5 @@ label SaveYourself2:
     "Hurt status: unknown."
     "Ending Achieved: Mysteries Await."
     "No Page obtained."
+    #$renpy.movie_cutscene("Movies/End Page.mpg")
 return

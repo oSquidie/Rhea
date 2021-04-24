@@ -89,6 +89,12 @@ transform MingLouFlip:
    xalign -5 #yalign 1.0
    ypos 35
 
+transform MingLuoUp:
+    ypos -100
+    
+transform MingLuoMiddle:
+    xalign .5
+
 #####Pain in my ass(For polish)########
 image bblack:
    "black.png"

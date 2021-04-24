@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/CaveSceneScreen.rpy", line 78: u'stop' is not a keyword argument or valid child for the screen statement.
-    stop sound fadeout 1.0
-        ^
+File "game/Endings.rpy", line 553: play requires a file
+    play EmmaSlash
+                  ^
+
+File "game/Endings.rpy", line 1156: expected end of line
+    stop sound Fire
+               ^
 
 Ren'Py Version: Ren'Py 7.4.3.1414
-Sat Apr 24 10:37:36 2021
+Sat Apr 24 15:19:57 2021

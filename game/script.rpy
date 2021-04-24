@@ -43,7 +43,9 @@ label start:
     L "Only the soft glows of luminescence lead us through the darkness."
     L "{cps=2}...{/cps}"
     show LilaIntro2
+    play sound Thump
     L "All of that was just a lie." with vpunch
+    stop sound
     show LilaIntro3
     hide LilaIntro2
     L "No matter where I went."
@@ -55,7 +57,9 @@ label start:
     L "Why is it gone?"
     L "Why cover the truth?"
     show LilaIntro2
+    play sound Thump
     L "I will dig the truth out of these dirty lies." with vpunch
+    stop sound
     show LilaIntro3
     L "I refuse to become the outcast of my village with no clear reason."
     L "I have already found a lead."
@@ -72,10 +76,12 @@ label start:
     show Liam default at LiamMoveUp
     show Emma default at emmaMoveUp
     show Emma default at emmaMiddle
+    play sound Shuffle
     show Lila swirly eyes at shake
     $inventory.add(LilaMushroom)
     play music RheaSoundtrack fadein 5.0 volume 0.3
     L "Huh?"
+    stop sound
     show Lila swirly eyes at PopUp with dissolve
     show Emma surprised at emmaflip with dissolve
     show Liam surprised with dissolve
@@ -134,6 +140,7 @@ label start:
 
 ###########First branching paths###############
 label menu_Observe:
+    play sound Walk
     hide image "Forest_Default.png" with dissolve
     show image "Twopaths.png" with dissolve
     menu:
@@ -144,6 +151,7 @@ label menu_Observe:
         "Sit and wait." if sitWait == True:
                 jump SaW1
     window hide
+    stop sound
 return
 ###########First branching paths###############
 label ObserveFirst:
@@ -172,10 +180,12 @@ label ObserveFirst:
 return
 #######################Cave Observation###########################
 label OC1:
+    play sound Walk
     window show
     hide image "Forest_Default.png" with dissolve
     window hide
     show image "CaveEntrance.png" with dissolve
+    stop sound
     pause 1.5
     window show
     show Lila default at MoveUp
@@ -337,7 +347,6 @@ label Sound1:
     E "It's definitely a {color=#00ffe8}Hercinia{/color}."
     show Emma excited with dissolve
     E "Let's go hunt it down."
-    stop music fadeout 1.0
     hide Lila surprised with fade
     hide Liam default with fade
     hide Emma excited with fade
@@ -491,7 +500,7 @@ label Sound2:
     E "It's definitely a {color=#00ffe8}Hercinia{/color}."
     show Emma excited with dissolve
     E "Let's go hunt it down."
-    stop sound fadeout 1.0
+    stop sound
     hide Lila surprised with fade
     hide Liam default with fade
     hide Emma excited with fade

@@ -1,4 +1,5 @@
 label DidNotKill:
+    play sound Walk
     window show
     hide image "CaveEntrance.png"
     hide image "Twopaths.png"
@@ -9,6 +10,7 @@ label DidNotKill:
     show Emma default at emmaMoveUp
     show Emma default at emmaMiddle
     show Lila panic at PopUp with dissolve
+    stop sound
     L "No!"
     show Lila panic at MoveUp with dissolve
     show Emma surprised at emmaflip with dissolve
@@ -47,6 +49,7 @@ label DidNotKill:
 jump menu_OC1
 
 label KillIt:
+    play sound Walk
     window show
     hide image "CaveEntrance.png"
     hide image "Twopaths.png"
@@ -62,6 +65,7 @@ label KillIt:
     $emma_points += 1
     show Lila Sweats with dissolve
     show Liam surprised at LiamPopUp with dissolve
+    stop sound 
     L2 "Did you find it?"
     show Liam surprised at LiamMoveUp with dissolve
     show Emma pout at PopUp with dissolve
