@@ -792,7 +792,7 @@ label SaveLiam2:
     hide VineBurn with fade
     hide Mingluo soft with moveoutright
     window hide
-    show MinglouCatchLila with dissolve
+    show image "MingluoCatchLila.png" with dissolve
     pause 1
     window show
     L "Ming...lou..."
@@ -1166,7 +1166,7 @@ label SaveYourself2:
     stop sound
     hide VineBurn with fade
     window hide
-    show MinglouCatchLila with dissolve
+    show image "MingluoCatchLila.png" with dissolve
     pause 1
     window show
     #show Mingluo soft at right with moveinright

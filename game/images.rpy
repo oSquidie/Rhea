@@ -91,7 +91,7 @@ transform MingLouFlip:
 
 transform MingLuoUp:
     ypos -100
-    
+
 transform MingLuoMiddle:
     xalign .5
 
@@ -318,7 +318,7 @@ image HandinHand = "WalkingHandInHand.png"
 image WalkingHomeNorm = "WalkHomeNoHand.png"
 image LiamKnockedOut = "LiamKnockedOut.png"
 image LiamHurt = "LiamHurt.png"
-image MingluoCatchLila ="MingluoCatchLila.png"
+image MingluoCatchLila = "MingluoCatchLila.png"
 image LilaSharpRock = "LilaSharpRock.png"
 image LilaTouchCrystal = "LilaTouchCrystal.png"
 image LilaandEmmaOpus = "LilaandEmmaOpus.png"
