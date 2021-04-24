@@ -219,8 +219,8 @@ return
 ##########The Door Options##########
 
 label drag_glass:
-    stop sound
     call screen slide_glass_screen
+    stop sound
     hide CloseupBerry
     hide CloseupCrystal
     hide CloseupCrystalBlood
@@ -267,8 +267,8 @@ label drag_glass:
 return
 ######Rock by Crystal was found.#########
 label drag_glass2:
-    stop sound
     call screen slide_glass_screen2
+    stop sound
     hide CloseupBerry
     hide CloseupCrystal
     hide CloseupCrystalBlood
@@ -486,12 +486,11 @@ label TouchCrystal3:
     hide Lila Sweats with moveinleft
     $TouchCrystal_EmmaDoNotCare = False
     $TouchCrystal_EmmaCare = False
-    window hide
     if GotRock == False:
         jump drag_glass
     if GotRock == True:
         jump drag_glass2
-
+    window hide
 return
 
 label EarnedSharpRock:
@@ -612,7 +611,6 @@ label Opus_Menu:
             jump drag_glass
         "Back Away" if GotRock == True:
             jump drag_glass2
-    stop sound fadeout 1.0
     window hide
 return
 
@@ -909,7 +907,6 @@ label LiamOrYou:
     $RockFound_Opus = False
     $RockFound_Opus2 = True
     hide CloseupRock
-    window hide
     jump Rock_menu
 return
 

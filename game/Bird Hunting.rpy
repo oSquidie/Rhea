@@ -86,7 +86,7 @@ label KillIt:
     E "Aiming."
     play sound EmmaSlash
     E "Got it!"
-    play sound BirdFalls
+    play sound BirdFalls 
     hide Emmavsbird with dissolve
     show image "Forest_Default.png" with dissolve
     show Lila Sweats at MoveUp
