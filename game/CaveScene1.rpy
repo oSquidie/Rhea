@@ -219,8 +219,9 @@ return
 ##########The Door Options##########
 
 label drag_glass:
-    call screen slide_glass_screen
+    window hide
     stop sound
+    call screen slide_glass_screen
     hide CloseupBerry
     hide CloseupCrystal
     hide CloseupCrystalBlood
@@ -248,7 +249,6 @@ label drag_glass:
     hide LilaCatchPage
     hide LilaThrowDrumstick
     hide LilaThrowDrumstick2
-    window hide
     "[glass] picked the [object]"
     menu:
         "{color=#fb92ff}Go through the Crystal Door?{/color}" if store.object == "Crystal Door.":
@@ -267,8 +267,9 @@ label drag_glass:
 return
 ######Rock by Crystal was found.#########
 label drag_glass2:
-    call screen slide_glass_screen2
+    window hide
     stop sound
+    call screen slide_glass_screen2
     hide CloseupBerry
     hide CloseupCrystal
     hide CloseupCrystalBlood
@@ -292,7 +293,6 @@ label drag_glass2:
     hide LilaCatchPage
     hide LilaThrowDrumstick
     hide LilaThrowDrumstick2
-    window hide
     "[glass] picked the [object]"
     menu:
         "{color=#fb92ff}Go through the Crystal Door?{/color}" if store.object == "Crystal Door.":
@@ -383,10 +383,10 @@ label TouchCrystal1:
     show LilaTouchCrystal with dissolve
     pause 1
     window show
-    show Emma shocked at left with moveinleft
+    #show Emma shocked at left with moveinleft
     E "Wha-!"
     E "Stop!" with vpunch
-    hide Emma shocked at left with moveoutleft
+    #hide Emma shocked at left with moveoutleft
     play sound Ouch fadein 5.0
     L "Ouch!" with hpunch
     hide LilaTouchCrystal with dissolve
@@ -498,9 +498,9 @@ label EarnedSharpRock:
     show LilaSharpRock
     pause 1
     window show
-    show Emma concern at left with moveinleft
+    #show Emma concern at left with moveinleft
     E "What are you are doing?"
-    hide Emma concern with moveoutleft
+    #hide Emma concern with moveoutleft
     L "?"
     hide LilaSharpRock with fade
     show CloseupCrystal with fade
@@ -524,7 +524,7 @@ label EarnedSharpRock:
     show Emma pout at left with moveinleft
     E "Hmf."
     show Emma sigh with dissolve
-    E "Guess your right."
+    E "Guess you're right."
     hide Emma sigh with moveoutleft
     show Lila happy with moveinleft
     L "Look."
@@ -620,40 +620,40 @@ label Opus:
     show LilaandEmmaOpus with dissolve
     pause 1
     window show
-    show Lila smile at left with moveinleft
+    #show Lila smile at left with moveinleft
     L "Look at this cute little thing!"
-    hide Lila smile with moveoutleft
-    show Emma nervous at left with moveinleft
+    #hide Lila smile with moveoutleft
+    #show Emma nervous at left with moveinleft
     E "Cute thing?"
-    show Emma sigh at left with dissolve
+    #show Emma sigh at left with dissolve
     E "Where?"
-    hide Emma sigh with moveoutleft
-    show Lila confused at left with moveinleft
+    #hide Emma sigh with moveoutleft
+    #show Lila confused at left with moveinleft
     L "?"
-    show Lila skeptical with dissolve
+    #show Lila skeptical with dissolve
     L "The blob right here."
-    hide Lila skeptical with moveoutleft
-    show Emma shocked at left with moveinleft
+    #hide Lila skeptical with moveoutleft
+    #show Emma shocked at left with moveinleft
     E "The Opus?"
-    hide Emma shocked with moveoutleft
-    show Lila smile at left with moveinleft
+    #hide Emma shocked with moveoutleft
+    #show Lila smile at left with moveinleft
     L "Is that what it's called?"
-    hide Lila smile at left with moveoutleft
-    show Liam smile at right with moveinright
+    #hide Lila smile at left with moveoutleft
+    #show Liam smile at right with moveinright
     L2 "Yep."
-    show Liam default with dissolve
+    #show Liam default with dissolve
     L2 "As cute as it looks {color=#00ffe8}don't go near it.{/color}"
-    hide Liam default with moveoutright
-    show Lila confused at left with moveinleft
+    #hide Liam default with moveoutright
+    #show Lila confused at left with moveinleft
     L "Why?"
-    hide Lila confused with moveoutleft
-    show Liam dark smile at right with moveinright
+    #hide Lila confused with moveoutleft
+    #show Liam dark smile at right with moveinright
     L2 "You'll lose a finger or two."
-    hide Liam dark smile with moveoutright
-    show Lila panic at left with moveinleft
-    show Lila Sweats with dissolve
+    #hide Liam dark smile with moveoutright
+    #show Lila panic at left with moveinleft
+    #show Lila Sweats with dissolve
     L "Oh..."
-    hide Lila Sweats with moveoutleft
+    #hide Lila Sweats with moveoutleft
     $LookAtOpus = False
     hide LilaandEmmaOpus
     window hide
@@ -665,13 +665,13 @@ label Opus2:
     window hide
     show LilaandEmmaOpus with dissolve
     window show
-    show Lila smile at left with moveinleft
+    #show Lila smile at left with moveinleft
     L "Hehe."
     L "Look at it just bobble."
-    hide Lila smile with moveoutleft
-    show Emma sigh at left with moveinleft
+    #hide Lila smile with moveoutleft
+    #show Emma sigh at left with moveinleft
     E "..."
-    hide Emma sigh with moveoutleft
+    #hide Emma sigh with moveoutleft
     $LookAtOpus = False
     hide LilaandEmmaOpus
     window hide
@@ -844,7 +844,7 @@ label FeedingDeadBird:
     L "Thanks Emma!"
     hide screen inventory_button
     show Lila happy with dissolve
-    L "Your the best."
+    L "You're the best."
     hide Lila happy with moveoutleft
     show Emma surprised at left with moveinleft
     show Emma embarrassed with dissolve
@@ -1095,48 +1095,48 @@ label ReachForIt:
     stop sound
     pause 1
     window show
-    show Emma panic at left with moveinleft
+    #show Emma panic at left with moveinleft
     E "Liam!"
-    hide Emma panic with moveoutleft
-    show Lila panic at left with moveinleft
+    #hide Emma panic with moveoutleft
+    #show Lila panic at left with moveinleft
     L "Liam!"
-    show Lila angry cry with dissolve
+    #show Lila angry cry with dissolve
     L "Are you ok?!"
-    hide Lila panic with moveoutleft
-    show Emma yell at left with moveinleft
+    #hide Lila panic with moveoutleft
+    #show Emma yell at left with moveinleft
     E "You!" with vpunch
-    show Emma yell cry with dissolve
+    #show Emma yell cry with dissolve
     E "Lila!"
     E "This all your fault!"
-    hide Emma yell cry with moveoutleft
-    show Liam nervous at right with moveinright
+    #hide Emma yell cry with moveoutleft
+    #show Liam nervous at right with moveinright
     L2 "It's ok..."
-    show Liam panic with dissolve
+    #show Liam panic with dissolve
     L2 "I-"
     L2 "I just need to rest for a while."
-    show Liam nervous with dissolve
+    #show Liam nervous with dissolve
     L2 "You guys should move on without me."
-    hide Liam nervous with moveoutright
-    show Emma yell cry at left with moveinleft
+    #hide Liam nervous with moveoutright
+    #show Emma yell cry at left with moveinleft
     E "How can you expect me to leave you by yourself?"
-    hide Emma yell cry with moveoutleft
+    ##hide Emma yell cry with moveoutleft
     L2 "..."
-    show Emma panic at left with moveinleft
+    ##show Emma panic at left with moveinleft
     E "Liam?"
     hide LiamHurt with dissolve
     window hide
     show LiamKnockedOut with dissolve
     pause 1
     window show
-    hide Emma panic with moveoutleft
-    show Lila panic at left with moveinleft
+    ##hide Emma panic with moveoutleft
+    #show Lila panic at left with moveinleft
     L "Liam!"
-    hide Lila panic with moveoutleft
-    show Emma shocked at left with moveoutleft
+    #hide Lila panic with moveoutleft
+    #show Emma shocked at left with moveoutleft
     E "Liam!" with vpunch
-    show Emma panic with dissolve
+    #show Emma panic with dissolve
     E "..."
-    hide image LiamKnockedOut with dissolve
+    hide LiamKnockedOut with dissolve
     show Cave
     hide Emma with moveoutleft
     show Lila angry cry at MoveUp
@@ -1227,19 +1227,19 @@ label TreasureDoor:
     show Lila sad at left with moveinleft
     L "Nope."
     hide Lila sad with moveoutleft
-    show Liam surprised at right with moveinright
+    #show Liam surprised at right with moveinright
     L2 "Seems like there's an indent here."
     show CloseupDoor2
-    show Liam skeptical with dissolve
+    #show Liam skeptical with dissolve
     L2 "There must be an object somewhere that can fit in here."
-    hide Liam skeptical with moveoutright
-    show Emma excited at left with moveinleft
+    #hide Liam skeptical with moveoutright
+    #show Emma excited at left with moveinleft
     E "So we need some kind of key?"
-    hide Emma excited with moveoutleft
-    show Liam wink at right with moveinright
+    #hide Emma excited with moveoutleft
+    #show Liam wink at right with moveinright
     L2 "Correct!"
-    hide Liam wink with moveoutright
-    show Lila confused at left with moveinleft
+    #hide Liam wink with moveoutright
+    #show Lila confused at left with moveinleft
     L "???"
     hide CloseupDoor2
     hide Lila confused with moveoutleft
@@ -1423,7 +1423,7 @@ label EmmaDaggerInfo:
     $emma_points += 1
     show Emma surprised at left with moveinleft
     show Emma smile with dissolve
-    E "Your actually thinking for once."
+    E "You're actually thinking for once."
     hide screen positive_affection
     show Emma laugh with dissolve
     E "Good job!"

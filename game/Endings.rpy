@@ -386,9 +386,9 @@ label MysteriesAwait:
     hide Emma sigh with fade
     hide Lila happy with fade
     hide Liam smile with fade
-    hide image "CaveEntrance.png" with dissolve
+    #hide image "CaveEntrance.png"
     window hide
-    show HandinHand
+    show HandinHand with fade
     pause 1
     window show
     "Mission Success."
@@ -697,7 +697,7 @@ label SaveLiam2:
     window show
     hide Liam shocked with moveoutright
     show Mingluo soft at right with moveinright
-    Q "You pitfully child."
+    Q "You pitful child."
     hide VineBurn with fade
     hide Mingluo soft with moveoutright
     window hide
@@ -713,7 +713,7 @@ label SaveLiam2:
     M "When you wake up again"
     M "Everything will be fine again."
     show image "black.png"
-    $renpy.notify("And fell into a deep sleep.")
+    $renpy.notify("You fell into a deep sleep.")
     "Mission Failed."
     "Hurt status: unknown."
     "Ending Achieved: Mysteries Await."
@@ -846,9 +846,9 @@ label DoNotDie:
     show Lila relieved at left with moveinleft
     L "Ok."
     hide Lila relieved with moveoutleft
-    hide image "CaveEntrance.png" with dissolve
+    #hide image "CaveEntrance.png"
     window hide
-    show HandinHand
+    show HandinHand with fade
     pause 1
     window show
     "Mission Failed."
@@ -909,7 +909,7 @@ label Besafe:
     show Emma nervous with dissolve
     E "As much as I hate her..."
     show Emma sigh with dissolve
-    E "She is undeniablly strong."
+    E "She is undeniably strong."
     hide Emma sigh with moveoutleft
     show Lila default at left with moveinleft
     L "Ok."
@@ -1030,7 +1030,7 @@ label SaveYourself2:
     $emma_points += 1
     $renpy.notify("Emma choose to save Liam first.")
     show Emma envy at left with moveinleft
-    E "You must be really stupid if you I'll only save myself."
+    E "You must be really stupid if you think I'll only save myself."
     hide screen positive_affection
     hide Emma sigh with moveoutleft
     $renpy.notify("Emma rushes to you.")
@@ -1057,7 +1057,7 @@ label SaveYourself2:
     show Lila eyes closed sad with dissolve
     L "..."
     hide Lila eyes closed sad with moveoutleft
-    Q "You pitfully child."
+    Q "You pitful child."
     hide image "black.png" with fade
     window hide
     show VineBurn with fade
@@ -1068,17 +1068,17 @@ label SaveYourself2:
     show MinglouCatchLila with dissolve
     pause 1
     window show
-    show Mingluo soft at right with moveinright
+    #show Mingluo soft at right with moveinright
     M "Shhhhhh"
     $renpy.notify("You listened to her words...")
-    hide Mingluo soft with moveoutright
+    #hide Mingluo soft with moveoutright
     L "?!"
     Q "I'm here now so don't worry."
     Q "Go to sleep."
     Q "Once you're awake."
     Q "Everything will be fine again."
     L "Ming...lou?..."
-    L "I suddenly felt very tired "
+    L "I suddenly feel very tired"
     show image "black.png"
     $renpy.notify("You eyelids closed listening to her words.")
     "Mission Failed."
