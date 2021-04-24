@@ -234,7 +234,7 @@ label BadEnd1:
     show Lila panic at middle with dissolve
     L "Emma!"
     show Lila yell with dissolve
-    L "Don't leave!"
+    L "Don't Leave!"
     show Lila angry cry with dissolve
     L "Listen to me!"
     L "Emma!"
@@ -386,9 +386,9 @@ label MysteriesAwait:
     hide Emma sigh with fade
     hide Lila happy with fade
     hide Liam smile with fade
-    show image "CaveEntrance.png" with dissolve
+    hide image "CaveEntrance.png" with dissolve
     window hide
-    show HandinHand with fade
+    show HandinHand
     pause 1
     window show
     "Mission Success."
@@ -846,9 +846,9 @@ label DoNotDie:
     show Lila relieved at left with moveinleft
     L "Ok."
     hide Lila relieved with moveoutleft
-    show image "CaveEntrance.png" with dissolve
+    hide image "CaveEntrance.png" with dissolve
     window hide
-    show HandinHand with fade
+    show HandinHand
     pause 1
     window show
     "Mission Failed."
