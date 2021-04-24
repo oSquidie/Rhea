@@ -14,7 +14,6 @@ window hide
 
 screen slide_glass_screen:
     add "CaveExploreMainEmpty.png"
-    stop sound fadeout 1.0
     draggroup:
         drag:
             drag_name "You"
@@ -76,7 +75,6 @@ window hide
 
 screen slide_glass_screen2:
     add "CaveExploreMainEmpty.png"
-    stop sound fadeout 1.0
     draggroup:
         drag:
             drag_name "You"
