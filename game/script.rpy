@@ -71,7 +71,7 @@ label start:
     hide LilaIntro2
     hide LilaIntro1
     show image "Forest_Default.png" with dissolve
-    show Lila default at MoveUp
+    show Lila swirly eyes at MoveUp
     show Liam default at LiamRight
     show Liam default at LiamMoveUp
     show Emma default at emmaMoveUp

@@ -258,9 +258,9 @@ label drag_glass:
     menu:
         "{color=#fb92ff}Go through the Crystal Door?{/color}" if store.object == "Crystal Door.":
             jump CrystalDoor
-        "{color=#4000ff}Go through the Opus Door?{/color}" if store.object == "Opus Door.":
+        "{color=#4A2FFA}Go through the Opus Door?{/color}" if store.object == "Opus Door.":
             jump OpusDoor
-        "{color=#c8c8ff}Go through the Treasure Door?{/color}" if store.object == "Treasure Door.":
+        "{color=#D96FCD}Go through the Treasure Door?{/color}" if store.object == "Treasure Door.":
             jump TreasureDoor
         "{color=#4469ff}Look at rock?{/color}" if store.object == "Rock.":
             jump RockByCrystal
@@ -303,9 +303,9 @@ label drag_glass2:
     menu:
         "{color=#fb92ff}Go through the Crystal Door?{/color}" if store.object == "Crystal Door.":
             jump CrystalDoor
-        "{color=#4000ff}Go through the Opus Door?{/color}" if store.object == "Opus Door.":
+        "{color=#4A2FFA}Go through the Opus Door?{/color}" if store.object == "Opus Door.":
             jump OpusDoor
-        "{color=#c8c8ff}Go through the Treasure Door?{/color}" if store.object == "Treasure Door.":
+        "{color=#D96FCD}Go through the Treasure Door?{/color}" if store.object == "Treasure Door.":
             jump TreasureDoor
         "{color=#58f7ff}Look at the vine?{/color}" if store.object == "vine?":
             jump VineWall
@@ -514,17 +514,16 @@ label EarnedSharpRock:
     #hide Emma concern with moveoutleft
     L "?"
     hide LilaSharpRock with fade
-    show CloseupCrystal with fade
     show Lila smile at left with moveinleft
     L "Sharpening the rock?"
     hide Lila smile with moveoutleft
-    show Emma surprised with moveinleft
+    show Emma surprised at left with moveinleft
     E "But why?"
     hide Emma surprised with moveoutleft
-    show Lila skeptical with moveinleft
+    show Lila skeptical at left with moveinleft
     L "Not sure."
     hide Lila skeptical with moveoutleft
-    show Emma sigh with moveinleft
+    show Emma sigh at left with moveinleft
     E "Why don't you ever think about your actions?"
     hide Emma sigh with moveoutleft
     show Liam nervous at right with moveinright
@@ -534,7 +533,7 @@ label EarnedSharpRock:
     hide Liam smile with moveoutright
     show Emma pout at left with moveinleft
     E "Hmf."
-    show Emma sigh with dissolve
+    show Emma sigh at left with dissolve
     E "Guess you're right."
     hide Emma sigh with moveoutleft
     show Lila happy at left with moveinleft
@@ -697,15 +696,15 @@ label Rock:
     show CloseupRock
     pause 1
     window show
-    show Emma concern at left with moveinleft
+    #show Emma concern at left with moveinleft
     E "What are you doing?"
-    hide Emma concern with moveoutleft
-    show Lila default at left with moveinleft
+    #hide Emma concern with moveoutleft
+    #show Lila default at left with moveinleft
     L "Trying to get this rock."
-    hide Lila default with moveoutleft
-    show Emma envy at left with moveinleft
+    #hide Lila default with moveoutleft
+    #show Emma envy at left with moveinleft
     E "Don't put your hand near it idiot."
-    hide Emma envy with moveoutleft
+    #hide Emma envy with moveoutleft
     $GotRock_Crystal = False
     $RockFound_Opus = False
     $RockFound_Opus2 = True
