@@ -651,6 +651,7 @@ label SaveLiam:
     hide Emma shocked with moveoutleft
     show Mingluo happy at right with moveinright
     M "Nice to see you guys doing well."
+    hide Mingluo happy with moveoutright
     stop sound
     hide VineBurn with fade
     window hide
