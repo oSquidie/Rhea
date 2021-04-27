@@ -751,7 +751,7 @@ label SaveLiam:
     window show
     "Mission Success."
     "Hurt status: No one is hurt."
-    "Ending Achieved: A 'friend' helps when your in need."
+    "Ending Achieved: A 'friend' helps when you're in need."
     "First Page obtained."
     #$renpy.movie_cutscene("Movies/End Page.mpg")
 return
