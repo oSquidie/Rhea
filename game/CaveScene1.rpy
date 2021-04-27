@@ -819,23 +819,23 @@ label FeedingDeadBird:
     $affbarposi = True
     $affbarnegative = False
     $emma_points += 1
-    show Emma excited at left with moveinleft
+    #show Emma excited at left with moveinleft
     E "That's a great idea!"
-    hide screen positive_affection
-    show Emma smug with dissolve
+    #hide screen positive_affection
+    #show Emma smug with dissolve
     E "You go ahead and toss the meat to it."
-    show Emma sly with dissolve
+    #show Emma sly with dissolve
     E "I'll swoop in and grab the rock."
-    hide Emma sly with moveoutleft
-    show Lila smile at left with moveinleft
+    #hide Emma sly with moveoutleft
+    #show Lila smile at left with moveinleft
     L "Ok!"
-    hide Lila smile with moveoutleft
-    show Emma excited at left with moveinleft
+    #hide Lila smile with moveoutleft
+    #show Emma excited at left with moveinleft
     E "On the count of 3!"
     E "3!"
     E "2!"
     E "1!" with vpunch
-    hide Emma excited with moveoutleft
+    #hide Emma excited with moveoutleft
     window hide
     show LilaThrowDrumstick
     play sound Whoosh
@@ -850,40 +850,40 @@ label FeedingDeadBird:
     $renpy.notify("Drumstick has been tossed.")
     $inventory.drop(drumstick)
     window show
-    show Emma happy at left with moveinleft
+    #show Emma happy at left with moveinleft
     E "Got it!"
     hide screen inventory_button
-    show Emma smug with dissolve
+    #show Emma smug with dissolve
     E "Here you go."
     show screen inventory_button
     $renpy.notify("You gained a Dull Rock.")
     $inventory.add(dullrock)
-    hide Emma smug with moveoutleft
-    show Lila smile at left with moveinleft
+    #hide Emma smug with moveoutleft
+    #show Lila smile at left with moveinleft
     L "Thanks Emma!"
     hide screen inventory_button
-    show Lila happy with dissolve
+    #show Lila happy with dissolve
     L "You're the best."
-    hide Lila happy with moveoutleft
-    show Emma surprised at left with moveinleft
-    show Emma embarrassed with dissolve
-    show Emma blush with dissolve
+    #hide Lila happy with moveoutleft
+    #show Emma surprised at left with moveinleft
+    #show Emma embarrassed with dissolve
+    #show Emma blush with dissolve
     E "It's no big deal!"
-    show Emma smug with dissolve
+    #show Emma smug with dissolve
     E "But what do you plan to do with it?"
-    hide Emma smug with moveoutleft
-    show Lila skeptical at left with moveinleft
+    #hide Emma smug with moveoutleft
+    #show Lila skeptical at left with moveinleft
     L "Hmmmm...."
-    show Lila dumbfounded with dissolve
+    #show Lila dumbfounded with dissolve
     L "Good question."
-    hide Lila dumbfounded with moveoutleft
-    show Liam smile at right with moveinright
-    show Liam wink with dissolve
+    #hide Lila dumbfounded with moveoutleft
+    #show Liam smile at right with moveinright
+    #show Liam wink with dissolve
     L2 "{color=#00ffe8}We might be able to something with it or use it for something{/color}."
-    hide Liam wink with moveoutright
-    show Lila confused at left with moveinleft
+    #hide Liam wink with moveoutright
+    #show Lila confused at left with moveinleft
     L "?"
-    hide Lila confused with moveoutleft
+    #hide Lila confused with moveoutleft
     $GotDrumStick = False
     $GotRock_Opus = True
     $GotRock_Crystal = False
@@ -908,17 +908,17 @@ label LiamOrYou:
     show CloseupRock
     pause 1
     window show
-    show Emma concern at left with moveinleft
+    #show Emma concern at left with moveinleft
     E "You must be joking."
-    show Emma envy with dissolve
+    #show Emma envy with dissolve
     E "I'm not risking my life for your stupid whims."
-    show Emma dissapointed with dissolve
+    #show Emma dissapointed with dissolve
     E "I know what you are thinking."
-    show Emma sigh with dissolve
+    #show Emma sigh with dissolve
     E "Don't even think about it."
-    show Emma angry with dissolve
+    #show Emma angry with dissolve
     E "I'm not letting Liam get hurt either."
-    hide Emma angry with moveoutleft
+    #hide Emma angry with moveoutleft
     $TakeRock_EmmaDoNotCare = False
     $TakeRock_EmmaCare = False
     $thing2 = False
@@ -935,18 +935,18 @@ label LiamOrYou2:
     show CloseupRock
     pause 1
     window show
-    show Emma default at left with moveinleft
+    #show Emma default at left with moveinleft
     E "We might be able to."
-    show Emma smug with dissolve
+    #show Emma smug with dissolve
     E "Pass me that mushroom in your bag."
-    hide Emma smug with moveoutleft
-    show Lila confused at left with moveinleft
+    #hide Emma smug with moveoutleft
+    #show Lila confused at left with moveinleft
     L "Ok?"
     play sound Whoosh
     show screen inventory_button
     $renpy.notify("You passed the mushroom to Emma.")
     $inventory.drop(LilaMushroom)
-    hide Lila confused with moveinleft
+    #hide Lila confused with moveinleft
     L "?!" with hpunch
     hide screen inventory_button
     window hide
@@ -1002,36 +1002,36 @@ label LiamOrYou2:
     show screen inventory_button
     $renpy.notify("Emma gave back the mushroom.")
     $inventory.add(LilaMushroom)
-    show Emma smug at left with moveinleft
+    #show Emma smug at left with moveinleft
     E "Well Liam's got you your rock too."
-    hide Emma smug with moveoutleft
+    #hide Emma smug with moveoutleft
     hide screen inventory_button
-    show Liam smile at right with moveinright
+    #show Liam smile at right with moveinright
     L2 "Here you go."
-    hide Liam smile with moveoutright
+    #hide Liam smile with moveoutright
     show screen inventory_button
     $renpy.notify("Liam gave you the dull rock.")
     $inventory.add(dullrock)
-    show Lila happy at left with moveinleft
+    #show Lila happy at left with moveinleft
     L "Thanks guys!"
-    hide Lila happy with moveoutleft
+    #hide Lila happy with moveoutleft
     hide screen inventory_button
-    show Emma concern at left with moveinleft
+    #show Emma concern at left with moveinleft
     E "What do you plan to do with it?"
-    hide Emma concern with moveoutleft
-    show Lila skeptical at left with moveinleft
+    #hide Emma concern with moveoutleft
+    #show Lila skeptical at left with moveinleft
     L "Hmmmmm{cps=2}...{/cps}"
-    show Lila confused with dissolve
+    #show Lila confused with dissolve
     L "I'm not sure."
-    hide Lila confused with moveoutleft
-    show Liam nervous at right with moveinright
+    #hide Lila confused with moveoutleft
+    #show Liam nervous at right with moveinright
     L2 "Maybe check around the {color=#00ffe8}other areas{/color}."
-    show Liam smile with dissolve
+    #show Liam smile with dissolve
     L2 "{color=#00ffe8}We might be able to something to it or use it for something{/color}."
-    hide Liam smile with moveoutright
-    show Lila default at left with moveinleft
+    #hide Liam smile with moveoutright
+    #show Lila default at left with moveinleft
     L "Ok."
-    hide Lila default with moveoutleft
+    #hide Lila default with moveoutleft
     $GotDrumStick = False
     $GotRock = True
     $GotRock1 = True
@@ -1056,18 +1056,18 @@ label LiamOrYou3:
     show CloseupRock
     pause
     window show
-    show Emma sigh at left with moveinleft
+    #show Emma sigh at left with moveinleft
     E "You already have a rock."
-    hide Emma sigh with moveoutleft
-    show Lila stunned at left with moveinleft
+    #hide Emma sigh with moveoutleft
+    #show Lila stunned at left with moveinleft
     L "Oh right."
-    hide Lila stunned with moveoutleft
-    show Emma concern at left with moveinleft
+    #hide Lila stunned with moveoutleft
+    #show Emma concern at left with moveinleft
     E "Getting the rock by this opus will be dangerous."
-    show Emma envy with dissolve
+    #show Emma envy with dissolve
     E "I'm not going to get another one if you have one already."
-    hide Emma envy with moveoutleft
-    show Lila pout at left with moveinleft
+    #hide Emma envy with moveoutleft
+    #show Lila pout at left with moveinleft
     L "Ok."
     $GotRock_Crystal = False
     $RockFound_Opus = False
@@ -1209,22 +1209,22 @@ label ReachForIt2:
     show CloseupRock
     pause 1
     window show
-    show Emma intimidating at left with moveinleft
+    #show Emma intimidating at left with moveinleft
     E "Don't even think about it."
-    hide Emma intimidating with moveoutleft
-    show Lila Sweats at left with moveinleft
+    #hide Emma intimidating with moveoutleft
+    #show Lila Sweats at left with moveinleft
     L "Think about what?"
-    hide Lila Sweats with moveoutleft
-    show Emma envy at left with moveinleft
+    #hide Lila Sweats with moveoutleft
+    #show Emma envy at left with moveinleft
     E "Grabbing the rock."
-    show Emma angry with dissolve
+    #show Emma angry with dissolve
     E "Leave it."
-    show Emma envy with dissolve
+    #show Emma envy with dissolve
     E "You have one already."
-    hide Emma envy with moveoutleft
-    show Lila pout at left with moveinleft
+    #hide Emma envy with moveoutleft
+    #show Lila pout at left with moveinleft
     L "ok..."
-    hide Lila pout with moveoutleft
+    #hide Lila pout with moveoutleft
     $GotRock_Crystal = False
     $RockFound_Opus = False
     $RockFound_Opus2 = True
@@ -1258,9 +1258,10 @@ label TreasureDoor:
     show Lila sad at left with moveinleft
     L "Nope."
     hide Lila sad with moveoutleft
-    #show Liam surprised at right with moveinright
+    show Liam surprised at right with moveinright
     L2 "Seems like there's an indent here."
     show CloseupDoor2
+    hide Liam surprised
     #show Liam skeptical with dissolve
     L2 "There must be an object somewhere that can fit in here."
     #hide Liam skeptical with moveoutright
@@ -1293,15 +1294,15 @@ label RockByCrystal:
     show CloseupRock
     pause 1
     window show
-    show Lila skeptical at left with moveinleft
+    #show Lila skeptical at left with moveinleft
     L "?"
     L "There's a rock just lying here..."
-    hide Lila skeptical with moveoutleft
-    show Emma surprised at left with moveinleft
+    #hide Lila skeptical with moveoutleft
+    #show Emma surprised at left with moveinleft
     E "Oh..."
-    show Emma sigh with dissolve
+    #show Emma sigh with dissolve
     E "So?"
-    hide Emma sigh with moveoutleft
+    #hide Emma sigh with moveoutleft
     window hide
 label RockMenu_Crystal:
     menu:
@@ -1323,21 +1324,21 @@ label TakeRock:
     play sound Whoosh
     $renpy.notify("You gained a Dull Rock.")
     $inventory.add(dullrock)
-    show Emma concern at left with moveinleft
+    #show Emma concern at left with moveinleft
     E "Why do you need a rock for?"
     hide screen inventory_button
-    hide Emma concern with moveoutleft
-    show Lila skeptical at left with moveinleft
+    #hide Emma concern with moveoutleft
+    #show Lila skeptical at left with moveinleft
     L "Hmmmm..."
-    show Lila swirly eyes with dissolve
+    #show Lila swirly eyes with dissolve
     L "Good question."
-    hide Lila swirly eyes with moveoutleft
-    show Liam skeptical at right with moveinright
+    #hide Lila swirly eyes with moveoutleft
+    #show Liam skeptical at right with moveinright
     L2 "{color=#00ffe8}We might be able to something with it or use it for something{/color}."
-    hide Liam skeptical with moveoutright
-    show Lila skeptical at left with moveinleft
+    #hide Liam skeptical with moveoutright
+    #show Lila skeptical at left with moveinleft
     L "I wonder..."
-    hide Lila skeptical with moveoutleft
+    #hide Lila skeptical with moveoutleft
     $GotRock_Crystal = False
     $GotRock_Opus = False
     $GotRock = True
