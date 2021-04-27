@@ -710,7 +710,7 @@ label SaveLiam:
     show Lila skeptical with dissolve
     L "Hm?"
     hide screen inventory_button
-    L "I Don't know what it says."
+    L "I don't know what it says."
     show Lila swirly eyes with dissolve
     L "Can you help me Mingluo-"
     show Lila skeptical with dissolve
