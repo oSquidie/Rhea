@@ -667,12 +667,15 @@ label SaveLiam:
     show Lila happy at left with moveinleft
     L "Mingluo!" with vpunch
     play sound hug
-    $renpy.notify("You gave Mingluo a hug.")
-    show Mingluo disgust at right with moveinright
-    show Mingluo happy with dissolve
+    show Mingluo happy at right with moveinright
     M "..." with vpunch
+    $renpy.notify("You gave Mingluo a hug.")
+    show Mingluo disgust with dissolve
+    show Mingluo nervous with dissolve
+    show Mingluo happy with dissolve
     hide Lila happy with moveoutleft
     show Mingluo smirk with dissolve
+    $renpy.notify("Mingluo pushed you away.")
     M "Looks like you're friends don't like seeing me."
     show Mingluo sigh with dissolve
     M "Makes me a bit sad."
