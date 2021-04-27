@@ -232,7 +232,7 @@ return
 
 label OC2:
     stop music
-    play RheaSoundtrack fadein 5.0 volume 0.3
+    play music RheaSoundtrack fadein 5.0 volume 0.3
     window hide
     hide image "Forest_Default.png" with dissolve
     hide image CloseupDoor
