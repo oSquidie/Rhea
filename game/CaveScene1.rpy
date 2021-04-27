@@ -277,7 +277,7 @@ label drag_glass2:
     play sound Walk
     window hide
     stop music fadeout 1.0
-    play music NormalCaveMusic fadein 5.0 volume 0.3 
+    play music NormalCaveMusic fadein 5.0 volume 0.3
     stop sound
     call screen slide_glass_screen2
     hide CloseupBerry
@@ -518,7 +518,7 @@ label EarnedSharpRock:
     pause 1
     window show
     #show Emma concern at left with moveinleft
-    E "What are you are doing?"
+    E "What are you doing?"
     #hide Emma concern with moveoutleft
     L "?"
     hide LilaSharpRock with fade
@@ -567,9 +567,9 @@ label EarnedSharpRock2:
     show LilaSharpRock
     pause 1
     window show
-    show Emma concern at left with moveinleft
+    #show Emma concern at left with moveinleft
     E "What are you are doing?"
-    hide Emma concern with moveoutleft
+    #hide Emma concern with moveoutleft
     L "?"
     hide LilaSharpRock with fade
     show CloseupCrystal with fade
