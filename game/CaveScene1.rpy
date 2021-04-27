@@ -1,7 +1,7 @@
 label Cave1:
     play sound Walk
     stop music fadeout 1.0
-    play music NormalCaveMusic fadein 5.0 volume 0.3 loop
+    play music NormalCaveMusic fadein 5.0 volume 0.3
     window show
     scene image "Cave.png" with dissolve
     show Lila default at MoveUp
@@ -225,6 +225,8 @@ return
 label drag_glass:
     play sound Walk
     window hide
+    stop music fadeout 1.0
+    play music NormalCaveMusic fadein 5.0 volume 0.3
     stop sound
     call screen slide_glass_screen
     hide CloseupBerry
@@ -274,6 +276,8 @@ return
 label drag_glass2:
     play sound Walk
     window hide
+    stop music fadeout 1.0
+    play music NormalCaveMusic fadein 5.0 volume 0.3 
     stop sound
     call screen slide_glass_screen2
     hide CloseupBerry
