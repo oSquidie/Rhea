@@ -487,7 +487,7 @@ label SaveMe1:
     show Emma envy with dissolve
     hide Vina death
     play sound Squash
-    show image VineHurt
+    show VineHurt
     E "Let's get out of here now!"
     stop music fadeout 1.0
     $renpy.notify("Stunned by the pain the Vina plant freed Liam.")
@@ -498,7 +498,6 @@ label SaveMe1:
     play music GoodEnd fadein 5.0 volume 0.3
     E "...."
     show Emma envy with dissolve
-    play music RheaSoundtrack fadein 5.0 volume 0.3
     E "Stop weiling you idiot."
     hide Emma envy with moveoutleft
     show Lila angry cry at left with moveinleft
@@ -533,6 +532,7 @@ label SaveMe1:
     show DefaultForest with fade
     show Mingluo annoyed at MingLuoUp
     show Mingluo annoyed at MingLuoMiddle
+    play music BadEnd
     Q "Tch."
     Q "Still as dumb as she always have been."
     show Mingluo smirk with dissolve
@@ -544,6 +544,7 @@ label SaveMe1:
     Q "Then eventually you'll be of use to me."
     hide Mingluo happy with dissolve
     window hide
+    hide WalkingHomeNorm
     hide DefaultForest with fade
     #$renpy.movie_cutscene("Movies/End Page.mpg")
 return
@@ -791,6 +792,7 @@ label SaveLiam2:
     stop sound
     hide VineBurn with fade
     hide Mingluo soft with moveoutright
+    play music BadEnd
     window hide
     show image "MingluoCatchLila.png" with dissolve
     pause 1
@@ -1170,7 +1172,7 @@ label SaveYourself2:
     pause 1
     window show
     #show Mingluo soft at right with moveinright
-    M "Shhhhhh"
+    Q "Shhhhhh"
     $renpy.notify("You listened to her words...")
     #hide Mingluo soft with moveoutright
     L "?!"

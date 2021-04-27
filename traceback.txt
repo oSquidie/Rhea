@@ -1,17 +1,17 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/Endings.rpy", line 1169, in script
-    show image MingluoCatchLila with dissolve
-  File "game/Endings.rpy", line 1169, in <module>
-    show image MingluoCatchLila with dissolve
-NameError: name 'MingluoCatchLila' is not defined
+  File "game/Endings.rpy", line 490, in script
+    show image VineHurt
+  File "game/Endings.rpy", line 490, in <module>
+    show image VineHurt
+NameError: name 'VineHurt' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/Endings.rpy", line 1169, in script
-    show image MingluoCatchLila with dissolve
+  File "game/Endings.rpy", line 490, in script
+    show image VineHurt
   File "renpy/ast.py", line 1191, in execute
     show_imspec(self.imspec, atl=getattr(self, "atl", None))
   File "renpy/ast.py", line 1147, in show_imspec
@@ -20,11 +20,11 @@ Full traceback:
     return py_eval_bytecode(code, globals, locals)
   File "renpy/python.py", line 2242, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/Endings.rpy", line 1169, in <module>
-    show image MingluoCatchLila with dissolve
-NameError: name 'MingluoCatchLila' is not defined
+  File "game/Endings.rpy", line 490, in <module>
+    show image VineHurt
+NameError: name 'VineHurt' is not defined
 
 Windows-10-10.0.19041
 Ren'Py 7.4.3.1414
  
-Sat Apr 24 16:14:20 2021
+Tue Apr 27 10:38:16 2021

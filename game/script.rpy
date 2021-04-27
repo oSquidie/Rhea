@@ -233,6 +233,7 @@ return
 label OC2:
     window hide
     hide image "Forest_Default.png" with dissolve
+    hide image CloseupDoor
     show image "CaveEntrance.png" with dissolve
     pause 1.5
 label menu_OC2:

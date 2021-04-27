@@ -65,7 +65,7 @@ label KillIt:
     $emma_points += 1
     show Lila Sweats with dissolve
     show Liam surprised at LiamPopUp with dissolve
-    stop sound 
+    stop sound
     L2 "Did you find it?"
     show Liam surprised at LiamMoveUp with dissolve
     show Emma pout at PopUp with dissolve
@@ -149,6 +149,8 @@ label KillIt:
     hide Lila pount with fade
     hide Emma sly with fade
     hide Liam smile with fade
+    hide image "Forest_Default.png"
+    show image "CaveEntrance.png"
     window hide
 jump menu_OC1
 
@@ -156,6 +158,35 @@ label DidNotKill2:
     window show
     hide image "CaveEntrance.png"
     hide image "Twopaths.png"
+    hide Cave
+    hide CloseupBerry
+    hide CloseupCrystal
+    hide CloseupCrystalBlood
+    hide CloseupCrystalHandPrint
+    hide CloseupOpus
+    hide CloseupPageCave
+    hide CloseupPageDen
+    hide CloseupVine
+    hide CloseupWyrm
+    hide CloseupRock
+    hide CloseupDoor
+    hide OpusDistract
+    hide OpusDistract2
+    hide OpusDistract3
+    hide OpusDistract4
+    hide OpusDistract5
+    hide Vina neutral
+    hide Vina death
+    hide VineHurt
+    hide VineBurn
+    hide VineWall
+    hide LilaTouchCrystal
+    hide LilaSharpRock
+    hide LilaandEmmaOpus
+    hide LilaCatchPage
+    hide LilaThrowDrumstick
+    hide LilaThrowDrumstick2
+    show image "black.png"
     show image "Forest_Default.png" with dissolve
     show Lila default at MoveUp
     show Liam default at LiamRight
@@ -197,6 +228,7 @@ label DidNotKill2:
     hide Emma pout with fade
     hide Liam smile with fade
     hide Lila sad with fade
+    hide image "Forest_Default.png"
     window hide
 jump menu_OC2
 
@@ -204,6 +236,35 @@ label KillIt2:
     window show
     hide image "CaveEntrance.png"
     hide image "Twopaths.png"
+    hide image "Cave.png"
+    hide CloseupBerry
+    hide CloseupCrystal
+    hide CloseupCrystalBlood
+    hide CloseupCrystalHandPrint
+    hide CloseupOpus
+    hide CloseupPageCave
+    hide CloseupPageDen
+    hide CloseupVine
+    hide CloseupWyrm
+    hide CloseupRock
+    hide CloseupDoor
+    hide OpusDistract
+    hide OpusDistract2
+    hide OpusDistract3
+    hide OpusDistract4
+    hide OpusDistract5
+    hide Vina neutral
+    hide Vina death
+    hide VineHurt
+    hide VineBurn
+    hide VineWall
+    hide LilaTouchCrystal
+    hide LilaSharpRock
+    hide LilaandEmmaOpus
+    hide LilaCatchPage
+    hide LilaThrowDrumstick
+    hide LilaThrowDrumstick2
+    show image "black.png"
     show image "Forest_Default.png" with dissolve
     show Lila default at MoveUp
     show Liam default at LiamMoveUp
@@ -299,5 +360,7 @@ label KillIt2:
     hide Lila pount with fade
     hide Emma sly with fade
     hide Liam smile with fade
+    hide image "Forest_Default.png"
+    show image "CaveEntrance.png"
     window hide
 jump menu_OC2

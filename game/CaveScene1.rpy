@@ -315,7 +315,9 @@ label drag_glass2:
 return
 ##########Crystal Door###########
 label CrystalDoor:
+    play sound Walk
     window hide
+    show CloseupCrystal
     menu:
         "Look at pretty crystal?" if CrystalLooked == True:
             jump LookAtCrystal
@@ -326,9 +328,10 @@ label CrystalDoor:
         "Back Away" if GotRock == True:
             jump drag_glass2
     window hide
+
 label Crystal_menu:
-    play sound Walk
     window hide
+    show CloseupCrystal
     if emma_points >= 2:
         if thing == True:
             $TouchCrystal_EmmaCare = True
@@ -355,6 +358,7 @@ label Crystal_menu:
 return
 
 label LookAtCrystal:
+    play sound Walk
     window hide
     show CloseupCrystal
     pause 1
@@ -1857,7 +1861,7 @@ label CutVine2:
     hide Lila panic with moveoutleft
     window hide
     if emma_points >= 3:
-        if liam_points >= 2:
+        if liam_points >= 1:
             $SaveMe_AllCare = True
             $SaveMe_DoNotCare = False
             $SaveLiam_AllCare = True

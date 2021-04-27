@@ -11,6 +11,7 @@ define RV3 = Character ('Random Villager 3')
 define config.has_autosave = False
 
 ##################Defining Audio#######################
+###################Music##########################
 define audio.RheaSoundtrack ="audio/RheaSoundtrack.wav"
 define audio.RheaMain = "audio/RheaMainMenuMusic.wav"
 define audio.LilaIntro = "audio/Lila Intro 4.wav"
@@ -18,6 +19,7 @@ define audio.CaveBattleMusic = "audio/CaveMusic.wav"
 define audio.NormalCaveMusic = "audio/CaveMusic2.wav"
 define audio.BadEnd = "audio/Bad End music.wav"
 define audio.GoodEnd = "audio/Good End Music.wav"
+################Sound effects###################
 define audio.Bird = "audio/Brid Chirp.wav"
 define audio.BirdDies = "audio/Bird dies.wav"
 define audio.BirdFalls = "audio/Bird falls.wav"
