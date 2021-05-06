@@ -81,7 +81,7 @@ label NearbyVillage:
     window hide
     hide Cave with fade
     show image "black.png"
-    #$renpy.movie_cutscene("Movies/End Page.mpg")
+    $renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label EmmaGoGetHelp:
@@ -149,7 +149,7 @@ label EmmaGoGetHelp:
     "Hurt status: Liam was hurt."
     "Ending Achieved: Waiting Together."
     "No Pages Obtained."
-    #$renpy.movie_cutscene("Movies/End Page.mpg")
+    $renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label EmmaGoGetHelp2:
@@ -225,7 +225,7 @@ label EmmaGoGetHelp2:
     window hide
     hide Cave with fade
     show image "black.png"
-    #$renpy.movie_cutscene("Movies/End Page.mpg")
+    $renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label BadEnd1:
@@ -354,7 +354,7 @@ label BadEnd1:
     "Hurt status: Liam is hurt."
     "Ending Achieved: Bad end 1(Overloaded)."
     "No Pages Obtained."
-    #$renpy.movie_cutscene("Movies/End Page.mpg")
+    $renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label MysteriesAwait:
@@ -451,7 +451,7 @@ label MysteriesAwait:
     hide Mingluo happy with dissolve
     window hide
     hide DefaultForest with fade
-    #$renpy.movie_cutscene("Movies/End Page.mpg")
+    $renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label SaveMe1:
@@ -546,7 +546,7 @@ label SaveMe1:
     window hide
     hide WalkingHomeNorm
     hide DefaultForest with fade
-    #$renpy.movie_cutscene("Movies/End Page.mpg")
+    $renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label SaveMe2:
@@ -572,7 +572,7 @@ label SaveMe2:
     "Hurt status: unknown."
     "Ending Achieved: Results Of Being Selfish."
     "No Page obtained."
-    #$renpy.movie_cutscene("Movies/End Page.mpg")
+    $renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label SaveLiam:
@@ -753,7 +753,7 @@ label SaveLiam:
     "Hurt status: No one is hurt."
     "Ending Achieved: A 'friend' helps when you're in need."
     "First Page obtained."
-    #$renpy.movie_cutscene("Movies/End Page.mpg")
+    $renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label SaveLiam2:
@@ -815,7 +815,7 @@ label SaveLiam2:
     "Hurt status: unknown."
     "Ending Achieved: Mysteries Await."
     "No Page obtained."
-    #$renpy.movie_cutscene("Movies/End Page.mpg")
+    $renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label SaveYourself:
@@ -957,7 +957,7 @@ label DoNotDie:
     "Hurt status: No one was hurt."
     "Ending Achieved: Learn Through Failure."
     "No Page obtained."
-    #$renpy.movie_cutscene("Movies/End Page.mpg")
+    $renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label Besafe:
@@ -1047,7 +1047,7 @@ label Besafe:
     "Hurt status: No one was hurt."
     "Ending Achieved: Mysteries Await."
     "First Page obtained."
-    #$renpy.movie_cutscene("Movies/End Page.mpg")
+    $renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label YouSure:
@@ -1121,7 +1121,7 @@ label YouSure:
     "Hurt status: No one was hurt."
     "Ending Achieved: Learn Through Failure."
     "No Page Obtained."
-    #$renpy.movie_cutscene("Movies/End Page.mpg")
+    $renpy.movie_cutscene("Movies/End Page.mpg")
 return
 
 label SaveYourself2:
@@ -1192,5 +1192,5 @@ label SaveYourself2:
     "Hurt status: unknown."
     "Ending Achieved: Mysteries Await."
     "No Page obtained."
-    #$renpy.movie_cutscene("Movies/End Page.mpg")
+    $renpy.movie_cutscene("Movies/End Page.mpg")
 return
